@@ -1,30 +1,15 @@
 const prisma = require("../prisma");
 
-/** Seeds the database with a user and some tasks */
-const seed = async () => {
-  await prisma.user.upsert({
-    where: {
-      username: "foo",
-    },
-    update: {},
-    create: {
-      username: "foo",
-      password: "bar",
-      tasks: {
-        create: [
-          { description: "task 1" },
-          { description: "task 2" },
-          { description: "task 3" },
-        ],
-      },
-    },
-  });
-};
+const { users, topics, categories } = require("./seeddata");
 
-seed()
-  .then(async () => await prisma.$disconnect())
-  .catch(async (err) => {
-    console.error(err);
-    await prisma.$disconnect();
-    process.exit(1);
-  });
+const {
+  football_questions,
+  ledZeppelinData,
+  nhlData,
+  beethovenData,
+  nbaData,
+  harryPotterData,
+  starWarsData,
+  lotrData,
+  beatlesData,
+} = require("./questions_seed");

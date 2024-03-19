@@ -10,65 +10,89 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Player {
-  id              Int    @id @default(autoincrement())
-  user_name       String @unique
+model User {
+  id              Int           @id @default(autoincrement())
+  username        String        @unique
   password        String
   name            String
   aggregate_score Int
   quiz_count      Int
+  quizzes         Quiz[]
+  user_topics     User_topics[]
 }
 
-model quizzes {
-  id             Int      @id @default(autoincrement())
-  player_id      Int
+model Quiz {
+  id             Int             @id @default(autoincrement())
+  User           User            @relation(fields: [user_id], references: [id])
+  user_id        Int
+  category       Categories      @relation(fields: [categoriesId], references: [id])
+  category_id    Int
+  topic          Topics          @relation(fields: [topicsId], references: [id])
   topic_id       Int
-  subtopic_id    Int
   date_time      DateTime
   quiz_completed Boolean
+  questions      Quiz_problems[]
+  categoriesId   Int
+  topicsId       Int
 }
 
-model quiz_questions {
-  id            Int     @id @default(autoincrement())
-  quiz_id       Int
-  question_id   Int
-  player_answer String
-  answer_value  Boolean
+model Quiz_problems {
+  id           Int        @id @default(autoincrement())
+  quiz         Quiz       @relation(fields: [quiz_id], references: [id])
+  quiz_id      Int
+  question     Question[]
+  question_id  Int
+  user_answer  String
+  answer_value Boolean
 }
 
-model questions {
-  id             Int    @id @default(autoincrement())
+model Question {
+  id             Int           @id @default(autoincrement())
   difficulty     String
   question       String
   correct_answer String
   fun_fact       String
+  category       Categories    @relation(fields: [category_id], references: [id])
+  category_id    Int
+  topic          Topics        @relation(fields: [topic_id], references: [id])
   topic_id       Int
-  subtopic_id    Int
   answer_a       String
   answer_b       String
   answer_c       String
   answer_d       String
+  quiz_problems  Quiz_problems @relation(fields: [quiz_id], references: [id])
+  quiz_id        Int
 }
 
-model top_subtopics {
-  id           Int @id @default(autoincrement())
-  player_id    Int
-  subtopic1_id Int
-  subtopic2_id Int
-  subtopic3_id Int
+model User_topics {
+  id       Int    @id @default(autoincrement())
+  user     User   @relation(fields: [user_id], references: [id])
+  user_id  Int
+  Topics   Topics @relation(fields: [topic_id], references: [id])
+  topic_id Int
 }
 
-model topics {
-  id   Int    @id @default(autoincrement())
-  name String
+model Categories {
+  id              Int                 @id @default(autoincrement())
+  name            String
+  Category_topics Categories_topics[]
+  Quiz            Quiz[]
+  Question        Question[]
 }
 
-model subtopics {
-  id   Int    @id @default(autoincrement())
-  name String
+model Topics {
+  id                Int                 @id @default(autoincrement())
+  name              String
+  User_topics       User_topics[]
+  Quiz              Quiz[]
+  Question          Question[]
+  Categories_topics Categories_topics[]
 }
 
-model topic_connections {
-  topic_id    Int @id @default(autoincrement())
-  subtopic_id Int
+model Categories_topics {
+  id          Int        @id @default(autoincrement())
+  Categories  Categories @relation(fields: [category_id], references: [id])
+  category_id Int
+  topic       Topics     @relation(fields: [topic_id], references: [id])
+  topic_id    Int
 }
