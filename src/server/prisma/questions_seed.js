@@ -2224,7 +2224,7 @@ const beethovenData = [
   },
 ];
 
-export default {
+module.exports = {
   football_questions,
   ledZeppelinData,
   nhlData,

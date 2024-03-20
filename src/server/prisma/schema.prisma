@@ -25,16 +25,14 @@ model Quiz {
   id             Int             @id @default(autoincrement())
   User           User            @relation(fields: [user_id], references: [id])
   user_id        Int
-  category       Categories      @relation(fields: [categoriesId], references: [id])
+  category       Categories      @relation(fields: [category_id], references: [id])
   category_id    Int
-  topic          Topics          @relation(fields: [topicsId], references: [id])
+  topic          Topics          @relation(fields: [topic_id], references: [id])
   topic_id       Int
-  date_time      DateTime
+  date_time      DateTime        @default(now())
   quiz_completed Boolean
   questions      Quiz_problems[]
-  categoriesId   Int
-  topicsId       Int
-  image_word_id  Image_word      @relation(fields: [image_Word_id], references: [id])
+  image_word     Image_word      @relation(fields: [image_Word_id], references: [id])
   image_Word_id  Int
 }
 

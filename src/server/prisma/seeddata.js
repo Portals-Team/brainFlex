@@ -45,125 +45,362 @@ const users = [
 
 const categories = [
   {
-    id: 1,
     name: "Fantasy",
-    description:
-      "transports readers into realms where magic reigns supreme, propelling heroes on epic quests against dark forces. In these enchanting worlds, mythical creatures roam ancient landscapes, and destiny is shaped by the wielders of powerful sorcery. Through tales of bravery and wonder, fantasy literature invites readers to journey beyond the confines of reality and explore the boundless depths of imagination.",
   },
   {
-    id: 2,
     name: "Music",
-    description:
-      "Music, an art form spanning cultures, combines sounds and silence to express emotions and ideas. It encompasses a variety of genres and instruments, integral to human rituals and celebrations. This universal medium reflects the rich diversity of human experiences.",
   },
   {
-    id: 3,
     name: "Sports",
-    description:
-      "Sports encompass competitive physical activities and games, fostering fitness, skill, and teamwork. They range from individual challenges to team confrontations, deeply embedded in global cultures and societies. This dynamic field not only entertains but also unites people across boundaries through shared passions and rivalries.",
   },
 ];
 
 const topics = [
   {
-    id: 1,
     name: "Lord Of The Rings",
-    description:
-      "The Lord of the Rings, by J.R.R. Tolkien, is an epic fantasy saga set in the mythic Middle-earth, exploring themes of courage, friendship, and the fight between good and evil. Its rich narrative and detailed world have made it a pivotal work in fantasy literature and film, enchanting a global audience.",
   },
   {
-    id: 2,
     name: "Harry Potter",
-    description:
-      "Harry Potter, a series by J.K. Rowling, weaves the tale of a young wizard's journey through magical education and the battle against dark forces. Set in a richly imagined world blending the mundane and the magical, it explores themes of friendship, bravery, and the complexity of good vs. evil. This beloved series has left a lasting impact on literature and film, captivating readers and viewers worldwide with its enchanting story and characters.",
   },
   {
-    id: 3,
     name: "Star Wars",
-    description:
-      "Star Wars, created by George Lucas, is a sprawling space opera set in a galaxy of diverse planets and species, chronicling the battle between the Rebel Alliance and the tyrannical Empire. Blending adventure, fantasy, and science fiction, it explores themes of heroism, destiny, and the struggle between light and dark. This iconic franchise has profoundly influenced popular culture, cinema, and storytelling, captivating audiences around the globe with its epic tales and memorable characters.",
   },
   {
-    id: 4,
     name: "The Beatles",
-    description:
-      "The Beatles revolutionized the music industry, captivating audiences worldwide with their innovative sound and timeless melodies. Comprised of John Lennon, Paul McCartney, George Harrison, and Ringo Starr, the band's unparalleled creativity and cultural influence shaped the 1960s and beyond. From the energetic charm of A Hard Day's Night to the psychedelic journey of Sgt. Pepper's Lonely Hearts Club Band, The Beatles' legacy endures as a beacon of artistic brilliance and musical excellence.",
   },
   {
-    id: 5,
     name: "Beethoven",
-    description:
-      "Beethoven, a towering figure in classical music, composed symphonies and sonatas that transcend time, stirring the depths of human emotion. His groundbreaking works, such as the transcendent Symphony No. 9 and the poignant Moonlight Sonata, continue to inspire generations with their profound beauty and depth of expression. Despite facing deafness and personal struggles, Beethoven's enduring legacy as a musical genius is marked by his ability to create transcendent masterpieces that resonate with the human spirit.",
   },
   {
-    id: 6,
     name: "Led Zeplin",
-    description:
-      "Led Zeppelin, an iconic British rock band, is renowned for its influential fusion of blues, rock, and folk music, setting the foundation for heavy metal. With their virtuosic musicianship and groundbreaking albums, they captivated audiences worldwide, leaving a lasting legacy on rock music. Known for their dynamic sound and complex compositions, Led Zeppelin's impact extends beyond their era, inspiring countless musicians and shaping the genre's evolution.",
   },
   {
-    id: 7,
     name: "Football",
-    description:
-      "American football, a contact team sport known for its strategic complexity and physical intensity, involves two teams competing to score points by advancing the ball into the opponent's end zone. Characterized by specialized roles, including quarterbacks, receivers, and linemen, it combines strategy, skill, and athleticism. As a cornerstone of American culture, it brings communities together, especially during the Super Bowl, the sport's pinnacle event, showcasing its widespread appeal and significance in the U.S.",
   },
   {
-    id: 8,
     name: "Basketball",
-    description:
-      "Basketball is a high-energy team sport where players score by shooting a ball through the opponent's hoop. Emphasizing speed, skill, and teamwork, its global appeal is evident in leagues like the NBA and international tournaments. This sport unites fans worldwide, showcasing athleticism and competitive spirit.",
   },
   {
-    id: 9,
     name: "Hockey",
-    description:
-      "Hockey is a fast-paced sport played on ice, where two teams compete to score goals by shooting a puck into the opposing team's net. Players skillfully maneuver across the rink, using sticks to pass, shoot, and defend, while goalies guard their nets with lightning reflexes. With its combination of speed, strategy, and physicality, hockey captivates fans around the world, delivering exhilarating moments of skill and intensity on the ice.",
   },
 ];
 
-const Image_word = [
+const image_word = [
   {
     topic_word: "Princess Leia",
     image_url:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1710951200/Fantasy/Star%20Wars/Princess_Leia_27s_characteristic_hairstyle_rn1kjh.jpg",
     topic_id: 3,
-    category_id: 1,
+    categories_id: 1,
   },
   {
     topic_word: "DarthVader",
     image_url:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1710951111/Fantasy/Star%20Wars/CW_DarthVaderFinale_Milestone_05__87681.1695056865_qngsjv.jpg",
     topic_id: 3,
-    category_id: 1,
+    categories_id: 1,
   },
   {
     topic_word: "Jar Jar Binks",
     image_url:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1710951178/Fantasy/Star%20Wars/databank_jarjarbinks_01_169_c70767ab_bsuwxi.jpg",
     topic_id: 3,
-    category_id: 1,
+    categories_id: 1,
   },
   {
     topic_word: "Luke Skywalker",
     image_url:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1710951129/Fantasy/Star%20Wars/swbf2-refresh-hero-large-heroes-page-luke-skywalker-16x9-xl.jpg.adapt.crop1x1.320w_a89cmc.jpg",
     topic_id: 3,
-    category_id: 1,
+    categories_id: 1,
   },
   {
     topic_word: "Anakin Skywalker",
     image_url:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1710951153/Fantasy/Star%20Wars/636239782868557609-MAG-HAYDEN-7730471_vdqdjv.jpg",
     topic_id: 3,
-    category_id: 1,
+    categories_id: 1,
   },
   {
-    topic_word: "Anakin Skywalker",
+    topic_word: "Harry Potter",
     image_url:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951111/Fantasy/Star%20Wars/CW_DarthVaderFinale_Milestone_05__87681.1695056865_qngsjv.jpg",
-    topic: 3,
-    category: 1,
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950775/Fantasy/Harry%20Potter/Harry_Potter_character_poster_wdc4z9.jpg",
+    topic_id: 2,
+    categories_id: 1,
+  },
+  {
+    topic_word: "Rubeus Hagrid",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950785/Fantasy/Harry%20Potter/RubeusHagrid_gwlkiw.jpg",
+    topic_id: 2,
+    categories_id: 1,
+  },
+  {
+    topic_word: "Dumbledore",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950796/Fantasy/Harry%20Potter/220px-Dumbledore_-_Prisoner_of_Azkaban_ncbuap.jpg",
+    topic_id: 2,
+    categories_id: 1,
+  },
+  {
+    topic_word: "Hermione Granger",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950803/Fantasy/Harry%20Potter/220px-Hermione_Granger_poster_qjyx2c.jpg",
+    topic_id: 2,
+    categories_id: 1,
+  },
+  {
+    topic_word: "Ronald Weasley",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950819/Fantasy/Harry%20Potter/Ron_Weasley_poster_l3mcts.jpg",
+    topic_id: 2,
+    categories_id: 1,
+  },
+  {
+    topic_word: "Gollum",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951042/Fantasy/Lord%20Of%20The%20Rings/does-anyone-else-thinks-that-smeagol-has-a-preciously-v0-9vhhn3sq0cua1_dynrkn.jpg",
+    topic_id: 1,
+    categories_id: 1,
+  },
+  {
+    topic_word: "Gandalfthe",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951001/Fantasy/Lord%20Of%20The%20Rings/gandalf-042223-2000-6eca4461d296452d87f86df0a36ba955_f3erdx.jpg",
+    topic_id: 1,
+    categories_id: 1,
+  },
+  {
+    topic_word: "Samwise Gamgee",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950947/Fantasy/Lord%20Of%20The%20Rings/88bd700ff25685b947082e676a382694_bxr1jx.jpg",
+    topic_id: 1,
+    categories_id: 1,
+  },
+  {
+    topic_word: "Frodo Baggins",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950875/Fantasy/Lord%20Of%20The%20Rings/g243_u118192_frodo1_thzcaz.jpg",
+    topic_id: 1,
+    categories_id: 1,
+  },
+  {
+    topic_word: "Aragorn",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950849/Fantasy/Lord%20Of%20The%20Rings/aragorn_part_01__into_the_dark_forest_by_mheamindesign_dg49kit-fullview.jpg_ad0z8t.jpg",
+    topic_id: 1,
+    categories_id: 1,
+  },
+  {
+    topic_word: "Jason Peters",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950767/sports/football/jason_peters.jpg",
+    topic_id: 7,
+    categories_id: 3,
+  },
+  {
+    topic_word: "Devin White",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950745/sports/football/devin_white.jpg",
+    topic_id: 7,
+    categories_id: 3,
+  },
+  {
+    topic_word: "Marshawn Lynch",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950586/sports/football/marshawn_lynch.jpg",
+    topic_id: 7,
+    categories_id: 3,
+  },
+  {
+    topic_word: "Brian Dawkins",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950566/sports/football/brian_dawkins.jpg",
+    topic_id: 7,
+    categories_id: 3,
+  },
+  {
+    topic_word: "Saquon Barkley",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950545/sports/football/saquon_barkley.jpg",
+    topic_id: 7,
+    categories_id: 3,
+  },
+  {
+    topic_word: "Lebron James",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710952708/sports/basketball/lebron_james.jpg",
+    topic_id: 8,
+    categories_id: 3,
+  },
+  {
+    topic_word: "Chris Paul",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710952686/sports/basketball/chris_paul.jpg",
+    topic_id: 8,
+    categories_id: 3,
+  },
+  {
+    topic_word: "Giannis Antetokounmpo",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710952664/sports/basketball/giannis_antetokounmpo.png",
+    topic_id: 8,
+    categories_id: 3,
+  },
+  {
+    topic_word: "Steph Curry",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710952641/sports/basketball/steph_curry.jpg",
+    topic_id: 8,
+    categories_id: 3,
+  },
+  {
+    topic_word: "Joel Embiid",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710952612/sports/basketball/joel_embiid.jpg",
+    topic_id: 8,
+    categories_id: 3,
+  },
+  {
+    topic_word: "Wayne Gretzky",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951496/sports/hockey/wayne_gretzky.jpg",
+    topic_id: 9,
+    categories_id: 3,
+  },
+  {
+    topic_word: "Connor McDavid",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951482/sports/hockey/connor_mcdavid.jpg",
+    topic_id: 9,
+    categories_id: 3,
+  },
+  {
+    topic_word: "Alex Ovechkin",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951365/sports/hockey/alex_ovechkin.jpg",
+    topic_id: 9,
+    categories_id: 3,
+  },
+  {
+    topic_word: "Connor Bedard",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951510/sports/hockey/connor_bedard.jpg",
+    topic_id: 9,
+    categories_id: 3,
+  },
+  {
+    topic_word: "Leon Draisaitl",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951524/sports/hockey/leon_draistaitl.jpg",
+    topic_id: 9,
+    categories_id: 3,
+  },
+  {
+    topic_word: "sheet music",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951446/1_ygL2uafx16Xy2mlEOJ5KUg_kwnqzh.jpg",
+    topic_id: 5,
+    categories_id: 2,
+  },
+  {
+    topic_word: "Ludwig van Beethoven",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951415/Beethoven_s99zw9.jpg",
+    topic_id: 5,
+    categories_id: 2,
+  },
+  {
+    topic_word: "Bonn Germany",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951375/GettyImages-481567714-a82f149b178e4bb8a5fd6f43807b01b6_p36yaf.jpg",
+    topic_id: 5,
+    categories_id: 2,
+  },
+  {
+    topic_word: "symphony",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951336/A2SO_stbwap.jpg",
+    topic_id: 5,
+    categories_id: 2,
+  },
+  {
+    topic_word: "grand piano",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951310/lorenzo-spoleti-MlhJNEUQpBs-unsplash_pbexsw.jpg",
+    topic_id: 5,
+    categories_id: 2,
+  },
+  {
+    topic_word: "Led Zeppelin 3",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951282/Led-Zeppelin-III-Walmart-Exclusive-Rock-Vinyl-LP-Rhino_975c275c-2679-499a-b278-76603c85a529.f9493c6cee91411c0a40aba88e226794_z6swhb.jpg",
+    topic_id: 6,
+    categories_id: 2,
+  },
+  {
+    topic_word: "Zoso logo",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951237/B-203Z4S-SET-1_ulxj5c.jpg",
+    topic_id: 6,
+    categories_id: 2,
+  },
+  {
+    topic_word: "Flight of Icarus",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951163/gowyicarus_abr6m5.jpg",
+    topic_id: 6,
+    categories_id: 2,
+  },
+  {
+    topic_word: "Hindenburg",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951117/Hindenburg-stadium-Olympic-Berlin-Germany-August-1936_fz0njm.jpg",
+    topic_id: 6,
+    categories_id: 2,
+  },
+  {
+    topic_word: "Stairway to Heaven",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951075/artworks-6oPOQTZYHoUKgdhv-0TFwFA-t500x500_y1u843.jpg",
+    topic_id: 6,
+    categories_id: 2,
+  },
+  {
+    topic_word: "Abbey Road",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950721/596109_njnbn3.webp",
+    topic_id: 4,
+    categories_id: 2,
+  },
+  {
+    topic_word: "Yellow Submarine",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950862/SUB_SUB_009_20drew_20_0_nkbod2.jpg",
+    topic_id: 4,
+    categories_id: 2,
+  },
+  {
+    topic_word: "Sgt. Pepper",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950902/Paul-Sgt-Pepper_mmjhn9.jpg",
+    topic_id: 4,
+    categories_id: 2,
+  },
+  {
+    topic_word: "Liverpool",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710950973/IUK-090223-ThreeGracesInLiverpool-Getty481992744_wewxov.jpg",
+    topic_id: 4,
+    categories_id: 2,
+  },
+  {
+    topic_word: "The Beatles Help",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1710951037/TheBeatles_Help__1copy_f9hcvh.jpg",
+    topic_id: 4,
+    categories_id: 2,
   },
 ];
 
-export default { users, topics, categories };
+module.exports = { users, topics, categories, image_word };
