@@ -18,9 +18,11 @@ CREATE TABLE "Quiz" (
     "quiz_completed" BOOLEAN NOT NULL,
     "categoriesId" INTEGER NOT NULL,
     "topicsId" INTEGER NOT NULL,
+    "image_Word_id" INTEGER NOT NULL,
     CONSTRAINT "Quiz_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "User" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT "Quiz_categoriesId_fkey" FOREIGN KEY ("categoriesId") REFERENCES "Categories" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
-    CONSTRAINT "Quiz_topicsId_fkey" FOREIGN KEY ("topicsId") REFERENCES "Topics" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+    CONSTRAINT "Quiz_topicsId_fkey" FOREIGN KEY ("topicsId") REFERENCES "Topics" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT "Quiz_image_Word_id_fkey" FOREIGN KEY ("image_Word_id") REFERENCES "Image_word" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 -- CreateTable
@@ -50,6 +52,17 @@ CREATE TABLE "Question" (
     CONSTRAINT "Question_category_id_fkey" FOREIGN KEY ("category_id") REFERENCES "Categories" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT "Question_topic_id_fkey" FOREIGN KEY ("topic_id") REFERENCES "Topics" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT "Question_quiz_id_fkey" FOREIGN KEY ("quiz_id") REFERENCES "Quiz_problems" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+);
+
+-- CreateTable
+CREATE TABLE "Image_word" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "topic_word" TEXT NOT NULL,
+    "image_url" TEXT NOT NULL,
+    "topic_id" INTEGER NOT NULL,
+    "categories_id" INTEGER NOT NULL,
+    CONSTRAINT "Image_word_topic_id_fkey" FOREIGN KEY ("topic_id") REFERENCES "Topics" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT "Image_word_categories_id_fkey" FOREIGN KEY ("categories_id") REFERENCES "Categories" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 -- CreateTable

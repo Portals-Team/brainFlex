@@ -34,6 +34,8 @@ model Quiz {
   questions      Quiz_problems[]
   categoriesId   Int
   topicsId       Int
+  image_word_id  Image_word      @relation(fields: [image_Word_id], references: [id])
+  image_Word_id  Int
 }
 
 model Quiz_problems {
@@ -64,6 +66,17 @@ model Question {
   quiz_id        Int
 }
 
+model Image_word {
+  id            Int        @id @default(autoincrement())
+  topic_word    String
+  image_url     String
+  topic         Topics     @relation(fields: [topic_id], references: [id])
+  topic_id      Int
+  category      Categories @relation(fields: [categories_id], references: [id])
+  categories_id Int
+  Quiz          Quiz[]
+}
+
 model User_topics {
   id       Int    @id @default(autoincrement())
   user     User   @relation(fields: [user_id], references: [id])
@@ -78,6 +91,7 @@ model Categories {
   Category_topics Categories_topics[]
   Quiz            Quiz[]
   Question        Question[]
+  Image_Word      Image_word[]
 }
 
 model Topics {
@@ -87,6 +101,7 @@ model Topics {
   Quiz              Quiz[]
   Question          Question[]
   Categories_topics Categories_topics[]
+  Image_Word        Image_word[]
 }
 
 model Categories_topics {
