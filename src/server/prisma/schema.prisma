@@ -37,31 +37,29 @@ model Quiz {
 }
 
 model Quiz_problems {
-  id           Int        @id @default(autoincrement())
-  quiz         Quiz       @relation(fields: [quiz_id], references: [id])
-  quiz_id      Int
-  question     Question[]
-  question_id  Int
-  user_answer  String
-  answer_value Boolean
+  id          Int      @id @default(autoincrement())
+  quiz        Quiz     @relation(fields: [quiz_id], references: [id])
+  quiz_id     Int
+  user_answer String
+  question    Question @relation(fields: [question_id], references: [id])
+  question_id Int
 }
 
 model Question {
-  id             Int           @id @default(autoincrement())
+  id             Int             @id @default(autoincrement())
   difficulty     String
   question       String
   correct_answer String
   fun_fact       String
-  category       Categories    @relation(fields: [category_id], references: [id])
+  category       Categories      @relation(fields: [category_id], references: [id])
   category_id    Int
-  topic          Topics        @relation(fields: [topic_id], references: [id])
+  topic          Topics          @relation(fields: [topic_id], references: [id])
   topic_id       Int
   answer_a       String
   answer_b       String
   answer_c       String
   answer_d       String
-  quiz_problems  Quiz_problems @relation(fields: [quiz_id], references: [id])
-  quiz_id        Int
+  quiz_problems  Quiz_problems[]
 }
 
 model Image_word {
@@ -77,7 +75,7 @@ model Image_word {
 
 model User_topics {
   id       Int    @id @default(autoincrement())
-  user     User   @relation(fields: [user_id], references: [id])
+  User     User   @relation(fields: [user_id], references: [id])
   user_id  Int
   Topics   Topics @relation(fields: [topic_id], references: [id])
   topic_id Int
@@ -95,7 +93,7 @@ model Categories {
 model Topics {
   id                Int                 @id @default(autoincrement())
   name              String
-  User_topics       User_topics[]
+  user_topics       User_topics[]
   Quiz              Quiz[]
   Question          Question[]
   Categories_topics Categories_topics[]

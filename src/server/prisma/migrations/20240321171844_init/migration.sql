@@ -27,10 +27,10 @@ CREATE TABLE "Quiz" (
 CREATE TABLE "Quiz_problems" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "quiz_id" INTEGER NOT NULL,
-    "question_id" INTEGER NOT NULL,
     "user_answer" TEXT NOT NULL,
-    "answer_value" BOOLEAN NOT NULL,
-    CONSTRAINT "Quiz_problems_quiz_id_fkey" FOREIGN KEY ("quiz_id") REFERENCES "Quiz" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+    "question_id" INTEGER NOT NULL,
+    CONSTRAINT "Quiz_problems_quiz_id_fkey" FOREIGN KEY ("quiz_id") REFERENCES "Quiz" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT "Quiz_problems_question_id_fkey" FOREIGN KEY ("question_id") REFERENCES "Question" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 -- CreateTable
@@ -46,10 +46,8 @@ CREATE TABLE "Question" (
     "answer_b" TEXT NOT NULL,
     "answer_c" TEXT NOT NULL,
     "answer_d" TEXT NOT NULL,
-    "quiz_id" INTEGER NOT NULL,
     CONSTRAINT "Question_category_id_fkey" FOREIGN KEY ("category_id") REFERENCES "Categories" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
-    CONSTRAINT "Question_topic_id_fkey" FOREIGN KEY ("topic_id") REFERENCES "Topics" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
-    CONSTRAINT "Question_quiz_id_fkey" FOREIGN KEY ("quiz_id") REFERENCES "Quiz_problems" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+    CONSTRAINT "Question_topic_id_fkey" FOREIGN KEY ("topic_id") REFERENCES "Topics" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 -- CreateTable
