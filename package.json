@@ -7,7 +7,7 @@
     "node": ">=18.16.0"
   },
   "scripts": {
-    "dev": "nodemon src/server/index.js",
+    "dev": "vite",
     "build": "vite build",
     "start": "node src/server",
     "deploy": "prisma migrate deploy && prisma db seed"
