@@ -1,8 +1,7 @@
-import {createSlice} from "@reduxjs/toolkit";
 import api from "../../store/api";
 
-const dashboardAPI = api.injectEndpoints({
-    endpoints: builder = ({})
+const gameApi = api.injectEndpoints({
+  endpoints: (builder) => ({}),
 });
 
-export const {} = dashboardAPI;
+export const {} = gameApi;
