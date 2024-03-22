@@ -6,6 +6,7 @@ export default function ChooseTopics() {
     
     return (
         <ul className="categoryList">
+          <h1>Pick Your Favorite Three Topics</h1>
           <li>
             {categories.map(category => (
               <>
