@@ -1,12 +1,24 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import { selectToken } from "../auth/authSlice";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 export default function Home() {
+  const token = useSelector(selectToken);
 
-    return (
+  return (
     <>
-        <h1>Home</h1>
-        <NavLink to="/game">Play Now</NavLink>
-        <NavLink to="/dashboard/pick">Pick Random Quiz</NavLink>
+      <h1>Home</h1>
+      <h1>Image</h1>
+      {token ? (
+        <NavLink to="/dashboard/pick">
+          <button>Play Now</button>
+        </NavLink>
+      ) : (
+        <NavLink to="/auth">
+          <button>Play Now</button>
+        </NavLink>
+      )}
     </>
-  )
+  );
 }
