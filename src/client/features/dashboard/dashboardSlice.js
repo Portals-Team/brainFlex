@@ -1,3 +1,4 @@
+
 import api from "../../store/api";
 
 const gameApi = api.injectEndpoints({
@@ -5,3 +6,4 @@ const gameApi = api.injectEndpoints({
 });
 
 export const {} = gameApi;
+
