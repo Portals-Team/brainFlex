@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 /*Current question will fetch from the database Quiz_problems to show the tally of how many questions have been answered in the quiz*/
 
 /*image will be fetch from the database Image_Word table to show the image for that quiz*/
@@ -35,8 +37,8 @@ export default function GameHome() {
         </form>
       </section>
       <section>
-        <button>SOLVE</button>
-        <button>READY FOR NEXT QUESTION</button>
+        <Link to="/game/submit">SOLVE</Link>
+        <Link to="/game/quiz">READY FOR NEXT QUESTION</Link>
       </section>
     </>
   );
