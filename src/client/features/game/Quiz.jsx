@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 /*Current question will fetch from the database Quiz_problems to show the tally of how many questions have been answered in the quiz*/
 
 /*Question will fetch from the database via the Question table to display the question*/
@@ -20,24 +21,31 @@ export default function Quiz() {
           <ol>
             {/*function-upon entering an answer the user will be directed to the quiz answer page*/}
             <li>
-              <input type="radio" id="answerA" name="answer" />
-              <label for="answerA">ANSWER A</label>
+              <label for="answerA">
+                ANSWER A <input type="radio" id="answerA" name="answer" />
+              </label>
             </li>
             <li>
-              <input type="radio" id="answerB" name="answer" />
-              <label for="answerB">ANSWER B</label>
+              <label for="answerA">
+                ANSWER B <input type="radio" id="answerA" name="answer" />
+              </label>
             </li>
             <li>
-              <input type="radio" id="answerC" name="answer" />
-              <label for="answerC">ANSWER C</label>
+              <label for="answerA">
+                ANSWER C <input type="radio" id="answerA" name="answer" />
+              </label>
             </li>
             <li>
-              <input type="radio" id="answerD" name="answer" />
-              <label for="answerD">ANSWER D</label>
+              <label for="answerA">
+                ANSWER D <input type="radio" id="answerA" name="answer" />
+              </label>
             </li>
           </ol>
         </div>
         <li>Score</li>
+      </section>
+      <section>
+        <Link to="/game">BACK</Link>
       </section>
     </>
   );
