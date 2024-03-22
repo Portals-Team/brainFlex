@@ -20,22 +20,10 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="top">
-      <h1>Task Tracker</h1>
-      <menu>
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        {token ? (
-          <li>
-            <a onClick={handleLogout}>Log Out</a>
-          </li>
-        ) : (
-          <li>
-            <NavLink to="/login">Log In</NavLink>
-          </li>
-        )}
-      </menu>
+    <nav className="navbar">
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/account">Account</NavLink>
+      <NavLink to="/auth">Login/Logout</NavLink>
     </nav>
   );
 }
