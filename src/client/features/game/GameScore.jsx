@@ -40,7 +40,7 @@ export default function GameScore() {
         <li>FINAL QUIZ SCORE</li>
       </section>
       <section>
-        <Link to="/game">BACK TO GAME HOME</Link>
+        <Link to="/dashboard">HOME</Link>
       </section>
     </>
   );
