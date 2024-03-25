@@ -6,6 +6,7 @@ export default function UserStats() {
   const {data: me} = useGetMeQuery();
   const { data: usertopics } = useGetUserTopicsQuery();
   const { data: topicsdata } = useGetTopicQuery();
+  
   function getUserTopicById(id) {
     //gets all information for a specific user topic from the id of that user_topic
     const userTopics = usertopics.id;

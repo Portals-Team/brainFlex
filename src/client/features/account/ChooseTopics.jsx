@@ -5,8 +5,8 @@ export default function ChooseTopics() {
     const {data: categories} = useGetCategoriesQuery();
     
     return (
+      <h1>Pick Your Favorite Three Topics</h1>
         <ul className="categoryList">
-          <h1>Pick Your Favorite Three Topics</h1>
           <li>
             {categories.map(category => (
               <>

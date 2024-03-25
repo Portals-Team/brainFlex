@@ -11,11 +11,11 @@ import GameScore from "./features/game/GameScore.jsx";
 import Quiz from "./features/game/Quiz.jsx";
 import QuizAnswer from "./features/game/QuizAnswer.jsx";
 import SubmitAnswer from "./features/game/SubmitAnswer.jsx";
-import Home from "./features/dashboard/Home.jsx";
-import PickQuizPage from "./features/dashboard/PickQuizPage.jsx";
+//import Home from "./features/dashboard/Home.jsx";
+//import PickQuizPage from "./features/dashboard/PickQuizPage.jsx";
 import AuthForm from "./features/auth/AuthForm";
-import ChooseTopics from "./features/account/ChooseTopics.jsx"
-import UserStats from "./features/account/UserStats.jsx";
+//mport ChooseTopics from "./features/account/ChooseTopics.jsx"
+//import UserStats from "./features/account/UserStats.jsx";
 import Root from "./layout/Root.jsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -24,16 +24,16 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     children: [
-      { path: "/account", element: <UserStats /> },
-      { path: "/topics", element: <ChooseTopics /> },
+      //{ path: "/account", element: <UserStats /> },
+      // { path: "/topics", element: <ChooseTopics /> },
       { path: "/auth", element: <AuthForm /> },
       { path: "/game", element: <GameHome /> },
       { path: "/game/score", element: <GameScore /> },
       { path: "/game/quiz", element: <Quiz /> },
       { path: "/game/quiz/answer", element: <QuizAnswer /> },
       { path: "/game/submit", element: <SubmitAnswer /> },
-      { path: "/dashboard", element: <Home /> },
-      { path: "/dashboard/pick", element: <PickQuizPage /> },
+      //{ path: "/dashboard", element: <Home /> },
+      //{ path: "/dashboard/pick", element: <PickQuizPage /> },
     ],
   },
 ]);
