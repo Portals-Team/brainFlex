@@ -17,6 +17,7 @@ CREATE TABLE "Quiz" (
     "date_time" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "quiz_completed" BOOLEAN NOT NULL,
     "image_Word_id" INTEGER NOT NULL,
+    "current_question" INTEGER NOT NULL,
     CONSTRAINT "Quiz_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "User" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT "Quiz_category_id_fkey" FOREIGN KEY ("category_id") REFERENCES "Categories" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT "Quiz_topic_id_fkey" FOREIGN KEY ("topic_id") REFERENCES "Topics" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,

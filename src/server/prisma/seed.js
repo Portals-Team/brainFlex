@@ -56,6 +56,7 @@ const seed = async () => {
       topic_id: 1,
       quiz_completed: false,
       image_Word_id: 12,
+      current_question: 1,
     },
   });
   for (let i = 0; i < users.length; i++) {
