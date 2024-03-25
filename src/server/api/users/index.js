@@ -1,8 +1,9 @@
-const prisma = require("../prisma");
+const prisma = require("../../prisma");
 const router = require("express").Router();
 module.exports = router;
 
-router.get("/user/:id", async (req, res, next) => {
+// GET /api/users/:id
+router.get("/:id", async (req, res, next) => {
     const {id} = req.params;
     try {
         const user = await prisma.user.findUnique({where: {id: +id}});
@@ -18,10 +19,11 @@ router.get("/user/:id", async (req, res, next) => {
     }
 });
 
-router.patch("user/:id", async (req, res, next) => {
+// PATCH /api/users/:id
+router.patch("/:id", async (req, res, next) => {
     const {id} = req.params;
-    const {username, password, name, aggregate_score, quiz_count} = req.body;
-    try{
+
+    try {
         if(!res.locals.user) {
             return next({
                 status: 400,
@@ -41,11 +43,7 @@ router.patch("user/:id", async (req, res, next) => {
         const updatedUser = await prisma.user.update({
             where: {id: +id},
             data: {
-                username: username,
-                password: username,
-                name: name,
-                aggregate_score: +aggregate_score + 1,
-                quiz_count: +quiz_count
+                aggregate_score: user.aggregate_score + 1,
             }
         });
         

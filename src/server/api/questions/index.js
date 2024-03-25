@@ -1,8 +1,9 @@
-const prisma = require("../prisma");
+const prisma = require("../../prisma");
 const router = require("express").Router();
 module.exports = router;
 
-router.get("/question/:id", async (req, res, next) => {
+// GET /api/questions/:id
+router.get("/:id", async (req, res, next) => {
     const {id} = req.params;
     try {
         const question = await prisma.question.findUnique({where: {id: +id}});

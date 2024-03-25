@@ -1,21 +1,21 @@
-const prisma = require("../prisma");
+const prisma = require("../../prisma");
 const router = require("express").Router();
 module.exports = router;
 
 
-//get quiz problems where quiz_id is the id
+// GET /api/quiz_problems/:id
 router.get("/:id", async (req, res, next) => {
     try {
-      const id = +req.params.quiz_id;
+      const {id} = +req.params;
       const quizProblems = await prisma.quiz_problems.findMany({ where: { id } });
       res.json(quizProblems);
     } catch {
       next();
     }
-  });
+});
  
-  //patch quiz_problems/id && body: user_answer
-  router.patch("/quiz_problems/:id", async (req, res, next) => {
+// PATCH /api/quiz_problems/:id
+router.patch("/:id", async (req, res, next) => {
     const { user_answer } = req.body;
     const { id } = req.params;
     try {
@@ -35,15 +35,4 @@ router.get("/:id", async (req, res, next) => {
           .send("An error occurred while updating the quiz problem.");
       }
     }
-  });
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+});

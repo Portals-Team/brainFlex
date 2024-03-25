@@ -1,9 +1,9 @@
-const prisma = require("../prisma");
+const prisma = require("../../prisma");
 const game = require("express").Router();
-module.exports = router;
+module.exports = game;
 
-
-game.get("/quiz/:id", async (req, res, next) => {
+// GET /api/quizes/:id
+game.get("/:id", async (req, res, next) => {
     const { id } = req.params;
     try {
       if (!res.locals.user) {
@@ -24,7 +24,9 @@ game.get("/quiz/:id", async (req, res, next) => {
       next(e);
     }
   });
-  game.patch("quiz/:id", async (req, res, next) => {
+  
+  // PATCH /api/quizes/:id
+  game.patch("/:id", async (req, res, next) => {
     const { id } = req.params;
     try {
       if (!res.locals.user) {
@@ -61,6 +63,8 @@ game.get("/quiz/:id", async (req, res, next) => {
       next(e);
     }
   });
+  
+  // PATCH /api/quizes/:id
   game.patch("quiz/:id", async (req, res, next) => {
     const { id } = req.params;
     try {
