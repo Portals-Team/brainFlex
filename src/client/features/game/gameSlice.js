@@ -53,10 +53,40 @@ const gameApi = api.injectEndpoints({
       invalidatesTags: ["quizes"],
       transformResponse: (response) => response.quizes,
     }),
+
+    /**
+     * @description getQuizProblem query gets the quiz problem by id
+     * @method GET
+     */
+
+    getQuizProblems: builder.query({
+      query: () => "/quiz_problems/" + id,
+      providesTags: ["quiz_problems"],
+      transformResponse: (response) => response.users,
+      transformErrorResponse: (response) => response.data.error.message,
+    }),
+
+    /**
+     * @description updateProblem query updates the logged in users current question answer on their quiz
+     * @method PATCH
+     */
+
+    updateProblem: builder.mutation({
+      query: (id) => ({
+        url: "/quiz_problems/" + id,
+        method: "PATCH",
+      }),
+      invalidatesTags: ["quizes"],
+      transformResponse: (response) => response.quizes,
+    }),
   }),
 });
 
-export const {} = gameApi;
-("hello world");
-("Hello again");
-("Hello again again");
+export const {
+  useGetUsersQuery,
+  useUpdatedUserMutation,
+  useGetGameQuery,
+  useUpdatedQuizQuestionMutation,
+  useGetQuizProblemsQuery,
+  useUpdateProblemMutation,
+} = gameApi;
