@@ -60,7 +60,7 @@ const gameApi = api.injectEndpoints({
      */
 
     getQuizProblems: builder.query({
-      query: () => "/quiz_problems/" + id,
+      query: (id) => "/quiz_problems/" + id,
       providesTags: ["quiz_problems"],
       transformResponse: (response) => response.users,
       transformErrorResponse: (response) => response.data.error.message,
@@ -81,7 +81,7 @@ const gameApi = api.injectEndpoints({
     }),
 
     /**
-     * @description getQuiestions query gets by id
+     * @description getQuestions query gets a question id
      * @method GET
      */
 
@@ -89,6 +89,18 @@ const gameApi = api.injectEndpoints({
       query: (id) => "/questions/" + id,
       providesTags: ["questions"],
       transformResponse: (response) => response.questions,
+      transformErrorResponse: (response) => response.data.error.message,
+    }),
+
+    /**
+     * @description getImageWords query gets Image_Word by id
+     * @method GET
+     */
+
+    getQuestions: builder.query({
+      query: (id) => "/image_word/" + id,
+      providesTags: ["image_word"],
+      transformResponse: (response) => response.image_word,
       transformErrorResponse: (response) => response.data.error.message,
     }),
   }),
@@ -101,4 +113,5 @@ export const {
   useUpdatedQuizQuestionMutation,
   useGetQuizProblemsQuery,
   useUpdateProblemMutation,
+  useGetQuestionsQuery,
 } = gameApi;
