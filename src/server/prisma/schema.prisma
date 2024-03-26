@@ -15,8 +15,8 @@ model User {
   username        String        @unique
   password        String
   name            String
-  aggregate_score Int
-  quiz_count      Int
+  aggregate_score Int           @default(0)
+  quiz_count      Int           @default(0)
   quizzes         Quiz[]
   user_topics     User_topics[]
 }

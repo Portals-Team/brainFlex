@@ -28,7 +28,7 @@ router.post("/register", async (req, res, next) => {
 
     // Create new user
     const newUser = await prisma.user.create({
-      data: { name, username, password },
+      data: { name, username, password, aggregate_score: 0, quiz_count: 0 },
     });
 
     const token = jwt.sign({ id: newUser.id });
