@@ -35,31 +35,34 @@ export default function Quiz() {
       <h1>Quiz</h1>
       {/*flex this section into a row*/}
       <section>
-        <li>Current Question</li>
+        <li>{quiz.current_question}</li>
         <div>
-          <h3>
-            QUESTION: this is the current question fetched from the database
-          </h3>
+          <h3>{question.question}</h3>
+          {/*this will display the question*/}
           <ol>
             {/*function-upon entering an answer the user will be directed to the quiz answer page*/}
             <li>
               <label for="answerA">
-                ANSWER A <input type="radio" id="answerA" name="answer" />
+                {question.answer_a}
+                <input type="radio" id="answerA" name="answer" />
               </label>
             </li>
             <li>
               <label for="answerA">
-                ANSWER B <input type="radio" id="answerA" name="answer" />
+                {question.answer_b}
+                <input type="radio" id="answerA" name="answer" />
               </label>
             </li>
             <li>
               <label for="answerA">
-                ANSWER C <input type="radio" id="answerA" name="answer" />
+                {question.answer_c}
+                <input type="radio" id="answerA" name="answer" />
               </label>
             </li>
             <li>
               <label for="answerA">
-                ANSWER D <input type="radio" id="answerA" name="answer" />
+                {question.answer_d}
+                <input type="radio" id="answerA" name="answer" />
               </label>
             </li>
           </ol>
