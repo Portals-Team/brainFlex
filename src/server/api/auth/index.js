@@ -8,7 +8,7 @@ module.exports = router;
 /** Creates new account and returns token */
 router.post("/register", async (req, res, next) => {
   try {
-    const { username, password } = req.body;
+    const { name, username, password } = req.body;
 
     // Check if username and password provided
     if (!username || !password) {
@@ -28,7 +28,7 @@ router.post("/register", async (req, res, next) => {
 
     // Create new user
     const newUser = await prisma.user.create({
-      data: { username, password },
+      data: { name, username, password },
     });
 
     const token = jwt.sign({ id: newUser.id });
@@ -41,10 +41,10 @@ router.post("/register", async (req, res, next) => {
 /** Returns token for account if credentials valid */
 router.post("/login", async (req, res, next) => {
   try {
-    const { username, password } = req.body;
+    const { name, username, password } = req.body;
 
     // Check if username and password provided
-    if (!username || !password) {
+    if (!name || !username || !password) {
       throw new ServerError(400, "Username and password required.");
     }
 
