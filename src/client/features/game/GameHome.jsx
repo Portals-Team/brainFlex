@@ -28,7 +28,7 @@ export default function GameHome() {
       <section>
         <li>Current Question</li>
         {/*image will be blurred and come into focus when a question is answered correctly*/}
-        <img src={imageWord.image_url} />
+        <img src={"www.google.com/url?sa=i&url=https%3A%2F%2Fwww.theatlantic.com%2Ftechnology%2Farchive%2F2012%2F05%2Fthe-tao-of-shutterstock-what-makes-a-stock-photo-a-stock-photo%2F257280%2F&psig=AOvVaw3WNZMQqeagRC6CPZD7UORC&ust=1711567028654000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDG05jSkoUDFQAAAAAdAAAAABAE"} />
         <li>Score</li>
       </section>
       <section>
