@@ -79,6 +79,18 @@ const gameApi = api.injectEndpoints({
       invalidatesTags: ["quizes"],
       transformResponse: (response) => response.quizes,
     }),
+
+    /**
+     * @description getQuiestions query gets by id
+     * @method GET
+     */
+
+    getQuestions: builder.query({
+      query: (id) => "/questions/" + id,
+      providesTags: ["questions"],
+      transformResponse: (response) => response.questions,
+      transformErrorResponse: (response) => response.data.error.message,
+    }),
   }),
 });
 
