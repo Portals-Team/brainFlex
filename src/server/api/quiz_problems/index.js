@@ -6,8 +6,20 @@ module.exports = router;
 // GET /api/quiz_problems/:id
 router.get("/:id", async (req, res, next) => {
     try {
-      const {id} = +req.params;
-      const quizProblems = await prisma.quiz_problems.findMany({ where: { id } });
+      if(!res.locals.user) {
+        return next({
+            status: 400,
+            message: "You are not logged into the correct account"
+        });
+      }
+      const {id} = req.params;
+      const quizProblems = await prisma.quiz_problems.findUnique({ where: { id: +id } });
+      if(!quizProblems) {
+        return next({
+          status: 401,
+          message: "does this throw"
+        });
+      }
       res.json(quizProblems);
     } catch {
       next();
@@ -27,7 +39,7 @@ router.patch("/:id", async (req, res, next) => {
       }
 
       const quizProblemId = +id;
-      if (error.code === "P2025") {
+      if (!quizProblemId) {
         return next({
           status: 404,
           message: `Quiz problem with id ${id} not found.`
@@ -35,7 +47,7 @@ router.patch("/:id", async (req, res, next) => {
       } 
       const updateProblem = await prisma.quiz_problems.update({
         where: { id: quizProblemId },
-        data: { user_answer },
+        data: { user_answer: user_answer },
       });
       if (!updateProblem) {
         return next({
