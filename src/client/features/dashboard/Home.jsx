@@ -1,17 +1,16 @@
-/*
-import { NavLink } from "react-router-dom";
-import { selectToken } from "../auth/authSlice";
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
+// import { selectToken } from "../auth/authSlice";
+// import { useSelector } from "react-redux";
+// import { Link } from "react-router-dom";
 
 export default function Home() {
-  const token = useSelector(selectToken);
+  // const token = useSelector(selectToken);
 
   return (
     <>
-      <h1>Home</h1>
-      <h1>Image</h1>
-      {token ? (
+      <h1>Dashboard Home</h1>
+
+      {/* {token ? (
         <NavLink to="/dashboard/pick">
           <button>Play Now</button>
         </NavLink>
@@ -19,8 +18,7 @@ export default function Home() {
         <NavLink to="/auth">
           <button>Play Now</button>
         </NavLink>
-      )}
+      )} */}
     </>
   );
 }
-*/
