@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 /*Current question will fetch from the database Quiz_problems to show the tally of how many questions have been answered in the quiz*/
 
 /*image will be fetch from the database Image_Word table to show the image for that quiz*/
@@ -12,20 +10,17 @@ import { Link } from "react-router-dom";
 
 /*ready for next question button will allow the user to toggle back and forth from Quiz component and the GameHome component*/
 
-import {useGetQuizQuery, useGetImageWordsQuery} from "./gameSlice"
-import {useGetMeQuery} from "../auth/authSlice"
+// import {useGetQuizQuery, useGetImageWordsQuery} from "./gameSlice"
+// import {useGetMeQuery} from "../auth/authSlice"
 
 export default function GameHome() {
-  const {id} = useParams();
+  // const {id} = useParams();
 
-  const {data: quiz} = useGetQuizQuery(id);
-  const {data: imageWord} = useGetImageWordsQuery(quiz.id);
+  // const {data: quiz} = useGetQuizQuery(id);
+  // const {data: imageWord} = useGetImageWordsQuery(quiz.id);
 
-  const {data: me} = useGetMeQuery();
-  
-  
-  
-  
+  // const {data: me} = useGetMeQuery();
+
   return (
     <>
       <h1>GameHome</h1>
@@ -52,8 +47,8 @@ export default function GameHome() {
         </form>
       </section>
       <section>
-        <Link to="/game/submit">SOLVE</Link>
-        <Link to="/game/quiz">READY FOR NEXT QUESTION</Link>
+        {/* <Link to="/game/submit">SOLVE</Link>
+        <Link to="/game/quiz">READY FOR NEXT QUESTION</Link> */}
       </section>
     </>
   );

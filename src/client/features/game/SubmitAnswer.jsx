@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 /*Current question will fetch from the database Quiz_problems to show the tally of how many questions have been answered in the quiz*/
 
