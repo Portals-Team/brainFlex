@@ -12,7 +12,20 @@ import { Link } from "react-router-dom";
 
 /*ready for next question button will allow the user to toggle back and forth from Quiz component and the GameHome component*/
 
+import {useGetQuizQuery, useGetImageWordsQuery} from "./gameSlice"
+import {useGetMeQuery} from "../auth/authSlice"
+
 export default function GameHome() {
+  const {id} = useParams();
+
+  const {data: quiz} = useGetQuizQuery(id);
+  const {data: imageWord} = useGetImageWordsQuery(quiz.id);
+
+  const {data: me} = useGetMeQuery();
+  
+  
+  
+  
   return (
     <>
       <h1>GameHome</h1>
@@ -20,7 +33,7 @@ export default function GameHome() {
       <section>
         <li>Current Question</li>
         {/*image will be blurred and come into focus when a question is answered correctly*/}
-        <img src="https://picsum.photos/id/237/200/300" />
+        <img src={imageWord.image_url} />
         <li>Score</li>
       </section>
       <section>
