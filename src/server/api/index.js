@@ -27,4 +27,8 @@ router.use(async (req, res, next) => {
 });
 
 router.use("/auth", require("./auth"));
-router.use("/tasks", require("./tasks"));
+router.use("/users", require("./users"));
+router.use("/questions", require("./questions"));
+router.use("/quizes", require("./quizes"));
+router.use("/quiz_problems", require("./quiz_problems"));
+router.use("/image_words", require(".image_words"));
