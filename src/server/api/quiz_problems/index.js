@@ -25,7 +25,7 @@ router.patch("/:id", async (req, res, next) => {
             message: "You are not logged into the correct account"
         });
       }
-      
+
       const quizProblemId = +id;
       if (error.code === "P2025") {
         return next({
