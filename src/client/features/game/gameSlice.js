@@ -3,7 +3,7 @@ import api from "../../store/api";
 const gameApi = api.injectEndpoints({
   endpoints: (builder) => ({
     /**
-     * @description getUsers query gets a list of all users.
+     * @description getUsers query gets a list of all Users.
      * @method GET
      */
     getUsers: builder.query({
@@ -14,7 +14,7 @@ const gameApi = api.injectEndpoints({
     }),
 
     /**
-     * @description updatedUser query updates the logged in users aggregate score
+     * @description updatedUser query updates the logged in Users.aggregate_score
      * @method PATCH
      */
 
@@ -28,7 +28,8 @@ const gameApi = api.injectEndpoints({
     }),
 
     /**
-     * @description getGame query gets a quiz for the logged in user
+     * @description getGame query gets a Quiz for the logged in user
+     * @param {integer} id
      * @method GET
      */
     //do I need to speficy the user id here as well?
@@ -40,7 +41,8 @@ const gameApi = api.injectEndpoints({
     }),
 
     /**
-     * @description updatedQuizQuestion query updates the logged in users current question on their quiz to show they have completed the question
+     * @description updatedQuizQuestion query updates the logged in users Quiz.current_question to show they have completed the question
+     * @param {integer} id
      * @method PATCH
      */
 
@@ -55,7 +57,8 @@ const gameApi = api.injectEndpoints({
     }),
 
     /**
-     * @description getQuizProblem query gets the quiz problem by id
+     * @description getQuizProblem query gets the Quiz_problems by id
+     * @param {integer} id
      * @method GET
      */
 
@@ -67,7 +70,8 @@ const gameApi = api.injectEndpoints({
     }),
 
     /**
-     * @description updateProblem query updates the logged in users current question answer on their quiz
+     * @description updateProblem query updates the logged in users Quiz_problems.user_answer on their quiz
+     * @param {integer} id
      * @method PATCH
      */
 
@@ -81,7 +85,8 @@ const gameApi = api.injectEndpoints({
     }),
 
     /**
-     * @description getQuestions query gets a question id
+     * @description getQuestions query gets Question by id
+     * @param {integer} id
      * @method GET
      */
 
@@ -94,6 +99,7 @@ const gameApi = api.injectEndpoints({
 
     /**
      * @description getImageWords query gets Image_Word by id
+     * @param {integer} id
      * @method GET
      */
 
