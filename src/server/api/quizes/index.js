@@ -28,12 +28,24 @@ game.get("/:id", async (req, res, next) => {
   // PATCH /api/quizes/:id  -- updates current_question
   game.patch("/:id", async (req, res, next) => {
     const { id } = req.params;
+    const {solved} = req.body;
     try {
       if (!res.locals.user) {
         return next({
           status: 401,
           message:
             "You are not allowed to access this information. Please Log In",
+        });
+      }
+      if(solved) {
+        const updatedQuizCompleted = await prisma.quiz.update({
+          where: {
+            id: +id,
+            user_id: res.locals.user.id,
+          },
+          data: {
+            quiz_completed: true,
+          },
         });
       }
       const currentQuiz = await prisma.quiz.findUnique({
@@ -77,29 +89,4 @@ game.get("/:id", async (req, res, next) => {
       next(e);
     }
   });
-  
-  // PATCH /api/quizes/:id -- updates quiz_complete to true
-  game.patch("quiz/:id", async (req, res, next) => {
-    const { id } = req.params;
-    try {
-      if (!res.locals.user) {
-        return next({
-          status: 401,
-          message:
-            "You are not allowed to access this information. Please Log In",
-        });
-      }
-      const updatedQuizCompleted = await prisma.quiz.update({
-        where: {
-          id: +id,
-          user_id: res.locals.user.id,
-        },
-        data: {
-          quiz_completed: true,
-        },
-      });
-      res.json(updatedQuizCompleted);
-    } catch (e) {
-      next(e);
-    }
-  });
+ 
