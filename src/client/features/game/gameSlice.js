@@ -103,7 +103,7 @@ const gameApi = api.injectEndpoints({
      * @method GET
      */
 
-    getQuestions: builder.query({
+    getImageWord: builder.query({
       query: (id) => "/image_word/" + id,
       providesTags: ["image_word"],
       transformResponse: (response) => response.image_word,
@@ -120,4 +120,5 @@ export const {
   useGetQuizProblemsQuery,
   useUpdateProblemMutation,
   useGetQuestionsQuery,
+  useGetImageWordQuery,
 } = gameApi;

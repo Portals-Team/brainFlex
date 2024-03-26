@@ -6,17 +6,17 @@ module.exports = game;
 game.get("/:id", async (req, res, next) => {
   const { id } = req.params;
   try {
-    if (!res.locals.user) {
-      return next({
-        status: 401,
-        message: "You are not allowed to access this information. Please Log In"
-      });
-    }
+    // if (!res.locals.user) {
+    //   return next({
+    //     status: 401,
+    //     message: "You are not allowed to access this information. Please Log In"
+    //   });
+    // }
     const quizById = await prisma.quiz.findUnique({
       where: {
         id: +id,
-        user_id: res.locals.user.id
-      }
+        user_id: res.locals.user.id,
+      },
     });
     res.json(quizById);
   } catch (e) {
@@ -33,41 +33,42 @@ game.patch("/:id", async (req, res, next) => {
     if (!res.locals.user) {
       return next({
         status: 401,
-        message: "You are not allowed to access this information. Please Log In"
+        message:
+          "You are not allowed to access this information. Please Log In",
       });
     }
     if (solved) {
       const updatedQuizCompleted = await prisma.quiz.update({
         where: {
           id: +id,
-          user_id: res.locals.user.id
+          user_id: res.locals.user.id,
         },
         data: {
-          quiz_completed: true
-        }
+          quiz_completed: true,
+        },
       });
     }
     const currentQuiz = await prisma.quiz.findUnique({
       where: {
         id: +id,
-        user_id: res.locals.user.id
-      }
+        user_id: res.locals.user.id,
+      },
     });
     if (currentQuiz.quiz_completed) {
       return next({
         status: 500,
-        message: "Quiz is already completed"
+        message: "Quiz is already completed",
       });
     }
     if (currentQuiz.current_question === 10) {
       const updatedQuizCompleted = await prisma.quiz.update({
         where: {
           id: +id,
-          user_id: res.locals.user.id
+          user_id: res.locals.user.id,
         },
         data: {
-          quiz_completed: true
-        }
+          quiz_completed: true,
+        },
       });
       res.json(updatedQuizCompleted);
     }
@@ -75,11 +76,11 @@ game.patch("/:id", async (req, res, next) => {
       const updatedQuizQuestions = await prisma.quiz.update({
         where: {
           id: +id,
-          user_id: res.locals.user.id
+          user_id: res.locals.user.id,
         },
         data: {
-          current_question: currentQuiz.current_question + 1
-        }
+          current_question: currentQuiz.current_question + 1,
+        },
       });
       res.json(updatedQuizQuestions);
     }
