@@ -76,12 +76,13 @@ const gameApi = api.injectEndpoints({
      */
 
     updateProblem: builder.mutation({
-      query: (id) => ({
-        url: "/quiz_problems/" + id,
+      query: (payload) => ({
+        url: "/quiz_problems/" + payload.id,
         method: "PATCH",
+        body: { user_answer: payload.user_answer },
       }),
       invalidatesTags: ["quizes"],
-      transformResponse: (response) => response.quizes,
+      // transformResponse: (response) => response.quizes,
     }),
 
     /**

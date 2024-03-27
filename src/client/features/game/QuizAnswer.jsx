@@ -39,25 +39,25 @@ export default function QuizAnswer() {
           <ol>
             {/*function-iternary operator if question answer {true} display 'check' : display 'x'*/}
             <li>
-              <label for="answerA">
+              <label htmlFor="answerA">
                 {question?.answer_a}
                 <input type="checkbox" id="answerA" name="answerA" />
               </label>
             </li>
             <li>
-              <label for="answerA">
+              <label htmlFor="answerA">
                 {question?.answer_b}
                 <input type="checkbox" id="answerB" name="answerB" />
               </label>
             </li>
             <li>
-              <label for="answerA">
+              <label htmlFor="answerA">
                 {question?.answer_c}
                 <input type="checkbox" id="answerC" name="answerC" />
               </label>
             </li>
             <li>
-              <label for="answerA">
+              <label htmlFor="answerA">
                 {question?.answer_d}
                 <input type="checkbox" id="answerD" name="answerD" />
               </label>
