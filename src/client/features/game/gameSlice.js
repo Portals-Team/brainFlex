@@ -104,10 +104,8 @@ const gameApi = api.injectEndpoints({
      */
 
     getImageWord: builder.query({
-      query: (id) => "/image_word/" + id,
+      query: (id) => "/image_words/" + id,
       providesTags: ["image_word"],
-      transformResponse: (response) => response.image_word,
-      transformErrorResponse: (response) => response.data.error.message,
     }),
   }),
 });

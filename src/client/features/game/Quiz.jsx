@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import React from "react";
 
 import {
-  useGetQuizProblemsQuery,
   useGetQuestionsQuery,
   useGetGameQuery,
 } from "../game/gameSlice";
@@ -22,10 +21,7 @@ export default function Quiz() {
   //every page of game logic will have in the URL quiz id as the parameter.
   //will get the id from use params, the id will be the current quiz that we are on id
   const { data: quiz } = useGetGameQuery(id);
-  console.log(quiz);
-  console.log(quiz?.current_question);
   const { data: question } = useGetQuestionsQuery(quiz?.current_question);
-  console.log(question);
 
   return (
     <>
