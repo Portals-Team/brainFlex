@@ -39,7 +39,6 @@ export default function Quiz() {
       id: quiz?.current_question,
       user_answer,
     }).unwrap();
-    useNavigate(`/game/quiz/answer/${id}`);
   };
 
   return (
