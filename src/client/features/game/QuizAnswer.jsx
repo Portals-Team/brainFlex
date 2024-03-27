@@ -1,3 +1,11 @@
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import React from "react";
+import {
+  useGetQuizProblemsQuery,
+  useGetQuestionsQuery,
+  useGetGameQuery,
+} from "../game/gameSlice";
 // import { Link } from "react-router-dom";
 
 /*Current question will fetch from the database Quiz_problems to show the tally of how many questions have been answered in the quiz*/
@@ -9,12 +17,21 @@
 /*Fun fact will fetch from the database via the question table to display a fact about the answered question*/
 
 export default function QuizAnswer() {
+  const { id } = useParams();
+  //every page of game logic will have in the URL quiz id as the parameter.
+  //will get the id from use params, the id will be the current quiz that we are on id
+  const { data: quiz } = useGetGameQuery(id);
+  console.log(quiz);
+  console.log(quiz?.current_question);
+  const { data: question } = useGetQuestionsQuery(quiz?.current_question);
+  console.log(question);
+
   return (
     <>
       <h1>QuizAnswer</h1>
       {/*flex this section into a row*/}
       <section>
-        <li>Current Question</li>
+        <li>{question?.question}</li>
         <div>
           <h3>
             QUESTION: this is the current question fetched from the database
@@ -22,23 +39,27 @@ export default function QuizAnswer() {
           <ol>
             {/*function-iternary operator if question answer {true} display 'check' : display 'x'*/}
             <li>
-              <label for="answerA">
-                ANSWER A <input type="checkbox" id="answerA" name="answer" />
+              <label htmlFor="answerA">
+                {question?.answer_a}
+                <input type="checkbox" id="answerA" name="answerA" />
               </label>
             </li>
             <li>
-              <label for="answerA">
-                ANSWER B <input type="checkbox" id="answerA" name="answer" />
+              <label htmlFor="answerA">
+                {question?.answer_b}
+                <input type="checkbox" id="answerB" name="answerB" />
               </label>
             </li>
             <li>
-              <label for="answerA">
-                ANSWER C <input type="checkbox" id="answerA" name="answer" />
+              <label htmlFor="answerA">
+                {question?.answer_c}
+                <input type="checkbox" id="answerC" name="answerC" />
               </label>
             </li>
             <li>
-              <label for="answerA">
-                ANSWER D <input type="checkbox" id="answerA" name="answer" />
+              <label htmlFor="answerA">
+                {question?.answer_d}
+                <input type="checkbox" id="answerD" name="answerD" />
               </label>
             </li>
           </ol>
@@ -46,9 +67,7 @@ export default function QuizAnswer() {
         <li>Score</li>
       </section>
       <section>
-        <h4>
-          FUN FACT: this is the fun fact for the answer of the current question
-        </h4>
+        <h4>{question?.fun_fact}</h4>
       </section>
       <section>
         <Link to="/game">BACK</Link>
