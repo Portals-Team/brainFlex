@@ -10,25 +10,26 @@
 
 /*ready for next question button will allow the user to toggle back and forth from Quiz component and the GameHome component*/
 
-// import {useGetQuizQuery, useGetImageWordsQuery} from "./gameSlice"
-// import {useGetMeQuery} from "../auth/authSlice"
+import { useGetImageWordQuery, useGetGameQuery,} from "../game/gameSlice"
+import { useParams } from "react-router-dom";
 
 export default function GameHome() {
-  // const {id} = useParams();
+  const { id } = useParams();
+  const { data: quiz } = useGetGameQuery(+id);
+  const {data: image_word} = useGetImageWordQuery(quiz?.image_Word_id);
+  const gameWord = image_word?.topic_word;
 
-  // const {data: quiz} = useGetQuizQuery(id);
-  // const {data: imageWord} = useGetImageWordsQuery(quiz.id);
-
-  // const {data: me} = useGetMeQuery();
+ 
 
   return (
     <>
+      {console.log(image_word)}
       <h1>GameHome</h1>
       {/*flex this section into a row*/}
       <section>
         <li>Current Question</li>
         {/*image will be blurred and come into focus when a question is answered correctly*/}
-        <img src={"www.google.com/url?sa=i&url=https%3A%2F%2Fwww.theatlantic.com%2Ftechnology%2Farchive%2F2012%2F05%2Fthe-tao-of-shutterstock-what-makes-a-stock-photo-a-stock-photo%2F257280%2F&psig=AOvVaw3WNZMQqeagRC6CPZD7UORC&ust=1711567028654000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDG05jSkoUDFQAAAAAdAAAAABAE"} />
+        <img className="mainGameImage" src={image_word?.image_url} />
         <li>Score</li>
       </section>
       <section>
@@ -38,11 +39,11 @@ export default function GameHome() {
           {/*in CSS resize the width of each input container to be the length 
           of one letter*/}
           <div>
-            <input type="text" maxlength="1" class="letter" />
-            <input type="text" maxlength="1" class="letter" />
-            <input type="text" maxlength="1" class="letter" />
-            <input type="text" maxlength="1" class="letter" />
-            <input type="text" maxlength="1" class="letter" />
+            {console.log(gameWord?.split(""))}
+            {gameWord?.split("").map(letter => {
+              return <input maxLength="1"/>
+            })}
+            
           </div>
         </form>
       </section>

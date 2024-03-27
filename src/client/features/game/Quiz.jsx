@@ -4,7 +4,6 @@ import React from "react";
 import { useState } from "react";
 
 import {
-  useGetQuizProblemsQuery,
   useGetQuestionsQuery,
   useGetGameQuery,
   useUpdateProblemMutation,
@@ -30,6 +29,7 @@ export default function Quiz() {
   const { data: quiz } = useGetGameQuery(id);
   const { data: question } = useGetQuestionsQuery(quiz?.current_question);
 
+  
   //this will on click of one of the input radio buttons, send to the database the answer they picked
   //and this will also redirect them to the correct quiz answer page
   const pickAnswer = async (evt) => {
@@ -40,6 +40,7 @@ export default function Quiz() {
       user_answer,
     }).unwrap();
   };
+
 
   return (
     <>
