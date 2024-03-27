@@ -16,6 +16,7 @@ export default function AuthForm() {
   // Controlled form fields
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
 
   // Form submission
   const [login, { isLoading: loginLoading, error: loginError }] =
@@ -28,7 +29,7 @@ export default function AuthForm() {
     evt.preventDefault();
 
     const authMethod = isLogin ? login : register;
-    const credentials = { username, password };
+    const credentials = { name, username, password };
 
     // We don't want to navigate if there's an error.
     // `unwrap` will throw an error if there is one
@@ -45,6 +46,15 @@ export default function AuthForm() {
     <>
       <h1>{authAction}</h1>
       <form onSubmit={attemptAuth}>
+        <label>
+          Name
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            autoComplete="name"
+          />
+        </label>
         <label>
           Username
           <input
