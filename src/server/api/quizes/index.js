@@ -3,7 +3,7 @@ const game = require("express").Router();
 module.exports = game;
 
 // GET /api/quizes/
-router.get("/", async (req, res, next) => {
+game.get("/", async (req, res, next) => {
   try {
     const quizes = await prisma.quiz.findMany();
     if(!users) {
