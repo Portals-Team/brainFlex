@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink, useNavigate, useHistory } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import React from "react";
+import { useState } from "react";
 
 import {
   useGetQuizProblemsQuery,
   useGetQuestionsQuery,
   useGetGameQuery,
+  useUpdateProblemMutation,
 } from "../game/gameSlice";
 // will need the quiz problem, that corresponds with the current question of the quiz table, and the question of the get quiz problem id
 
@@ -19,13 +21,25 @@ import {
 
 export default function Quiz() {
   const { id } = useParams();
+  const [user_answer, setUserAnswer] = useState("");
+  const [updateProblem, { isLoading, isError, isSuccess, error }] =
+    useUpdateProblemMutation();
+
   //every page of game logic will have in the URL quiz id as the parameter.
   //will get the id from use params, the id will be the current quiz that we are on id
   const { data: quiz } = useGetGameQuery(id);
-  console.log(quiz);
-  console.log(quiz?.current_question);
   const { data: question } = useGetQuestionsQuery(quiz?.current_question);
-  console.log(question);
+
+  //this will on click of one of the input radio buttons, send to the database the answer they picked
+  //and this will also redirect them to the correct quiz answer page
+  const pickAnswer = async (evt) => {
+    evt.preventDefault();
+    console.log(typeof quiz?.current_question);
+    updateProblem({
+      id: quiz?.current_question,
+      user_answer,
+    }).unwrap();
+  };
 
   return (
     <>
@@ -34,35 +48,62 @@ export default function Quiz() {
       <section>
         <li>Quiz Current</li>
         <div>
-          <h3>{question.question}</h3>
+          <h3>{question?.question}</h3>
           {/*this will display the question*/}
           <ol>
             {/*function-upon entering an answer the user will be directed to the quiz answer page*/}
             <li>
               <label htmlFor="answerA">
-                {question.answer_a}
-                <input type="radio" id="answerA" name="answer" />
+                {question?.answer_a}
+                <input
+                  type="radio"
+                  id="answerA"
+                  name="answer"
+                  value="A"
+                  onChange={(e) => setUserAnswer(e.target.value)}
+                />
               </label>
             </li>
             <li>
               <label htmlFor="answerA">
-                {question.answer_b}
-                <input type="radio" id="answerA" name="answer" />
+                {question?.answer_b}
+                <input
+                  type="radio"
+                  id="answerB"
+                  name="answer"
+                  value="B"
+                  onChange={(e) => setUserAnswer(e.target.value)}
+                />
               </label>
             </li>
             <li>
               <label htmlFor="answerA">
-                {question.answer_c}
-                <input type="radio" id="answerA" name="answer" />
+                {question?.answer_c}
+                <input
+                  type="radio"
+                  id="answerC"
+                  name="answer"
+                  value="C"
+                  onChange={(e) => setUserAnswer(e.target.value)}
+                />
               </label>
             </li>
             <li>
               <label htmlFor="answerA">
-                {question.answer_d}
-                <input type="radio" id="answerA" name="answer" />
+                {question?.answer_d}
+                <input
+                  type="radio"
+                  id="answerD"
+                  name="answer"
+                  value="D"
+                  onChange={(e) => setUserAnswer(e.target.value)}
+                />
               </label>
             </li>
           </ol>
+          <form onSubmit={pickAnswer}>
+            <button>Submit Answer</button>
+          </form>
         </div>
         <li>Score</li>
       </section>
