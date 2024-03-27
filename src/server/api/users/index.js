@@ -2,6 +2,22 @@ const prisma = require("../../prisma");
 const router = require("express").Router();
 module.exports = router;
 
+// GET /api/users/
+router.get("/", async (req, res, next) => {
+  try {
+    const users = await prisma.user.findMany();
+    if(!users) {
+      return next({
+        status: 404,
+        message: "No Users found"
+      });
+    }
+    res.json(users);
+  } catch (e) {
+    next(e);
+  }
+});
+
 // GET /api/users/:id
 router.get("/:id", async (req, res, next) => {
   const { id } = req.params;

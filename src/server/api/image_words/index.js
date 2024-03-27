@@ -2,6 +2,22 @@ const prisma = require("../../prisma");
 const router = require("express").Router();
 module.exports = router;
 
+// GET /api/image_words/
+router.get("/", async (req, res, next) => {
+  try {
+    const image_words = await prisma.image_word.findMany();
+    if(!image_words) {
+      return next({
+        status: 404,
+        message: "No Users found"
+      });
+    }
+    res.json(image_words);
+  } catch (e) {
+    next(e);
+  }
+});
+
 // GET /api/image_words/:id
 router.get("/:id", async (req, res, next) => {
   try {

@@ -2,6 +2,22 @@ const prisma = require("../../prisma");
 const game = require("express").Router();
 module.exports = game;
 
+// GET /api/quizes/
+router.get("/", async (req, res, next) => {
+  try {
+    const quizes = await prisma.quiz.findMany();
+    if(!users) {
+      return next({
+        status: 404,
+        message: "No Quizes found"
+      });
+    }
+    res.json(quizes);
+  } catch (e) {
+    next(e);
+  }
+});
+
 // GET /api/quizes/:id
 game.get("/:id", async (req, res, next) => {
   const { id } = req.params;
