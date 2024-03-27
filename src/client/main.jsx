@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       { path: "/auth", element: <AuthForm /> },
       { path: "/game", element: <GameHome /> },
       { path: "/game/score", element: <GameScore /> },
-      { path: "/game/quiz", element: <Quiz /> },
+      { path: "/game/quiz/:id", element: <Quiz /> },
       { path: "/game/quiz/answer", element: <QuizAnswer /> },
       { path: "/game/submit", element: <SubmitAnswer /> },
       { path: "/dashboard", element: <Home /> },

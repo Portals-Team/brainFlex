@@ -19,13 +19,12 @@ router.get("/", async (req, res, next) => {
 });
 
 // GET /api/users/:id
+//WORKING PROPERLY!
 router.get("/:id", async (req, res, next) => {
   const { id } = req.params;
   try {
-    // Do we need info from any related table? If so add more to the query
-    // with and includes: ... statement
     const user = await prisma.user.findUnique({
-      where: { id: +id, user_id: res.locals.user.id },
+      where: { id: +id },
     });
     if (!user) {
       return next({
