@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import React from "react";
+
 import {
   useGetQuizProblemsQuery,
   useGetQuestionsQuery,
@@ -19,29 +21,16 @@ export default function Quiz() {
   const { id } = useParams();
   //every page of game logic will have in the URL quiz id as the parameter.
   //will get the id from use params, the id will be the current quiz that we are on id
-  const { data: quiz, isLoading, isError } = useGetGameQuery(id);
+  const { data: quiz } = useGetGameQuery(id);
   console.log(quiz);
-  console.log(quiz.questions);
-  //will get the data from the associated quiz
-  const { data: currentQuizProblem } = useGetQuizProblemsQuery(
-    quiz.questions[quiz.current_question - 1]
-  );
-  //because quiz has an array of questions, this will get the quizProblem at index of questions in quiz at the current_question index. so if on question 5, will get
-  // quiz problem at index position 4
-  const { data: question } = useGetQuestionsQuery(
-    currentQuizProblem.question_id
-  );
-  //this will get the question information specific to the current quiz problem question id so that the answers can be shown and everything.
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-  if (isError) {
-    return <div>Error Loading Quiz Data</div>;
-  }
+  console.log(quiz?.current_question);
+  const { data: question } = useGetQuestionsQuery(quiz?.current_question);
+  console.log(question);
+
   return (
     <>
       <h1>Quiz</h1>
-      {/*flex this section into a row*/}
+      flex this section into a row
       <section>
         <li>Quiz Current</li>
         <div>
@@ -50,26 +39,26 @@ export default function Quiz() {
           <ol>
             {/*function-upon entering an answer the user will be directed to the quiz answer page*/}
             <li>
-              <label for="answerA">
+              <label htmlFor="answerA">
                 {question.answer_a}
                 <input type="radio" id="answerA" name="answer" />
               </label>
             </li>
             <li>
-              <label for="answerA">
-                {question.answer_a}
+              <label htmlFor="answerA">
+                {question.answer_b}
                 <input type="radio" id="answerA" name="answer" />
               </label>
             </li>
             <li>
-              <label for="answerA">
-                {question.answer_a}
+              <label htmlFor="answerA">
+                {question.answer_c}
                 <input type="radio" id="answerA" name="answer" />
               </label>
             </li>
             <li>
-              <label for="answerA">
-                {question.answer_a}
+              <label htmlFor="answerA">
+                {question.answer_d}
                 <input type="radio" id="answerA" name="answer" />
               </label>
             </li>

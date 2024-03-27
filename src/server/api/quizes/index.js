@@ -15,7 +15,7 @@ game.get("/:id", async (req, res, next) => {
     const quizById = await prisma.quiz.findUnique({
       where: {
         id: +id,
-        user_id: res.locals.user.id,
+        // user_id: res.locals.user.id,
       },
     });
     res.json(quizById);

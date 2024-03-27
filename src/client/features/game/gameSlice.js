@@ -36,8 +36,8 @@ const gameApi = api.injectEndpoints({
     getGame: builder.query({
       query: (id) => "/quizes/" + id,
       providesTags: ["quizes"],
-      transformResponse: (response) => response.quizes,
-      transformErrorResponse: (response) => response.data.error.message,
+      // transformResponse: (response) => response.quizes,
+      // transformErrorResponse: (response) => response.data.error.message,
     }),
 
     /**
@@ -65,8 +65,8 @@ const gameApi = api.injectEndpoints({
     getQuizProblems: builder.query({
       query: (id) => "/quiz_problems/" + id,
       providesTags: ["quiz_problems"],
-      transformResponse: (response) => response.users,
-      transformErrorResponse: (response) => response.data.error.message,
+      // transformResponse: (response) => response.users,
+      // transformErrorResponse: (response) => response.data.error.message,
     }),
 
     /**
@@ -93,8 +93,8 @@ const gameApi = api.injectEndpoints({
     getQuestions: builder.query({
       query: (id) => "/questions/" + id,
       providesTags: ["questions"],
-      transformResponse: (response) => response.questions,
-      transformErrorResponse: (response) => response.data.error.message,
+      // transformResponse: (response) => response.questions,
+      // transformErrorResponse: (response) => response.data.error.message,
     }),
 
     /**
