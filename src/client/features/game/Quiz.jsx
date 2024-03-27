@@ -34,31 +34,31 @@ export default function Quiz() {
       <section>
         <li>Quiz Current</li>
         <div>
-          <h3>{question.question}</h3>
+          <h3>{question?.question}</h3>
           {/*this will display the question*/}
           <ol>
             {/*function-upon entering an answer the user will be directed to the quiz answer page*/}
             <li>
               <label htmlFor="answerA">
-                {question.answer_a}
+                {question?.answer_a}
                 <input type="radio" id="answerA" name="answer" />
               </label>
             </li>
             <li>
               <label htmlFor="answerA">
-                {question.answer_b}
+                {question?.answer_b}
                 <input type="radio" id="answerA" name="answer" />
               </label>
             </li>
             <li>
               <label htmlFor="answerA">
-                {question.answer_c}
+                {question?.answer_c}
                 <input type="radio" id="answerA" name="answer" />
               </label>
             </li>
             <li>
               <label htmlFor="answerA">
-                {question.answer_d}
+                {question?.answer_d}
                 <input type="radio" id="answerA" name="answer" />
               </label>
             </li>
