@@ -5,7 +5,9 @@ const accountApi = api.injectEndpoints({
     //write query to get user info by id'
     getUser: builder.query({
       query: (id) => "/users/" + id,
-      provideTags: ["users"],
+      providesTags: ["User"],
+      /*transformResponse: (response) => response.users,*/
+      /*transformErrorResponse: (response) => response.data.error.message,*/
     }),
   }),
 });
