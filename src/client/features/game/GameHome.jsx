@@ -17,7 +17,9 @@ export default function GameHome() {
   const { id } = useParams();
   const { data: quiz } = useGetGameQuery(+id);
   const {data: image_word} = useGetImageWordQuery(quiz?.image_Word_id);
-  console.log(quiz?.image_Word_id);
+  const gameWord = image_word?.topic_word;
+
+ 
 
   return (
     <>
@@ -27,7 +29,7 @@ export default function GameHome() {
       <section>
         <li>Current Question</li>
         {/*image will be blurred and come into focus when a question is answered correctly*/}
-        <img src={image_word?.image_url} />
+        <img className="mainGameImage" src={image_word?.image_url} />
         <li>Score</li>
       </section>
       <section>
@@ -37,11 +39,11 @@ export default function GameHome() {
           {/*in CSS resize the width of each input container to be the length 
           of one letter*/}
           <div>
-            <input type="text" maxLength="1" className="letter" />
-            <input type="text" maxLength="1" className="letter" />
-            <input type="text" maxLength="1" className="letter" />
-            <input type="text" maxLength="1" className="letter" />
-            <input type="text" maxLength="1" className="letter" />
+            {console.log(gameWord?.split(""))}
+            {gameWord?.split("").map(letter => {
+              return <input maxLength="1"/>
+            })}
+            
           </div>
         </form>
       </section>
