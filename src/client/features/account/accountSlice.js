@@ -1,7 +1,13 @@
 import api from "../../store/api";
 
 const accountApi = api.injectEndpoints({
-  endpoints: (builder) => ({}),
+  endpoints: (builder) => ({
+    //write query to get user info by id'
+    getUser: builder.query({
+      query: (id) => "/users/" + id,
+      provideTags: ["users"],
+    }),
+  }),
 });
 
-export const {} = accountApi;
+export const { useGetUserQuery } = accountApi;
