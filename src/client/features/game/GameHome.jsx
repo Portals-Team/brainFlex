@@ -12,6 +12,7 @@
 
 import { useGetImageWordQuery, useGetGameQuery,} from "../game/gameSlice"
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function GameHome() {
   const { id } = useParams();
@@ -54,6 +55,16 @@ export default function GameHome() {
       <section>
         {/* <Link to="/game/submit">SOLVE</Link>
         <Link to="/game/quiz">READY FOR NEXT QUESTION</Link> */}
+        <button>
+          <Link to={`/game/submit/${id}`}>
+            Solve
+          </Link>
+        </button>
+        <button>
+          <Link to={`/game/quiz/${id}`}>
+          Ready for Next Question?
+          </Link>
+        </button>
       </section>
     </>
   );
