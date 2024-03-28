@@ -1,4 +1,4 @@
-import { Link, NavLink, useNavigate, useHistory } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import React from "react";
 import { useState } from "react";
@@ -21,6 +21,7 @@ import {
 export default function Quiz() {
   const { id } = useParams();
   const [user_answer, setUserAnswer] = useState("");
+  const navigate = useNavigate();
   const [updateProblem, { isLoading, isError, isSuccess, error }] =
     useUpdateProblemMutation();
 
@@ -29,7 +30,6 @@ export default function Quiz() {
   const { data: quiz } = useGetGameQuery(id);
   const { data: question } = useGetQuestionsQuery(quiz?.current_question);
 
-  
   //this will on click of one of the input radio buttons, send to the database the answer they picked
   //and this will also redirect them to the correct quiz answer page
   const pickAnswer = async (evt) => {
@@ -39,8 +39,8 @@ export default function Quiz() {
       id: quiz?.current_question,
       user_answer,
     }).unwrap();
+    navigate(`/game/quiz/answer/${id}`);
   };
-
 
   return (
     <>
