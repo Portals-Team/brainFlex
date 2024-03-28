@@ -56,7 +56,7 @@ export default function GameHome() {
         {/* <Link to="/game/submit">SOLVE</Link>
         <Link to="/game/quiz">READY FOR NEXT QUESTION</Link> */}
         <button>
-          <Link to={`/game/submit/${id}`}>
+          <Link to={`/game/score/${id}`}>
             Solve
           </Link>
         </button>
