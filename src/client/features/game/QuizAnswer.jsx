@@ -26,16 +26,17 @@ export default function QuizAnswer() {
     quiz?.questions[currentQuestionIndex].question.question;
 
   const compareAnswer = (letter) => {
-    let letterAnswer = "answer_" + letter;
-    console.log(letterAnswer);
-    console.log(quiz?.questions[currentQuestionIndex].question[letterAnswer]);
-    console.log(quiz?.questions[currentQuestionIndex].question.correct_answer);
     if (
       quiz?.questions[currentQuestionIndex].question.correct_answer === letter
     ) {
       return <span>&#10003;</span>;
     } else {
       return <span>&#10005;</span>;
+    }
+  };
+  const yourAnswer = (letter) => {
+    if (quiz?.questions[currentQuestionIndex].user_answer === letter) {
+      return <span>Your Answer</span>;
     }
   };
 
@@ -56,6 +57,7 @@ export default function QuizAnswer() {
                 {quiz?.questions[currentQuestionIndex].question.answer_a}
 
                 {compareAnswer("A")}
+                {yourAnswer("A")}
               </label>
             </li>
             <li>
@@ -63,18 +65,21 @@ export default function QuizAnswer() {
                 {quiz?.questions[currentQuestionIndex].question.answer_b}
               </label>
               {compareAnswer("B")}
+              {yourAnswer("B")}
             </li>
             <li>
               <label htmlFor="answerA">
                 {quiz?.questions[currentQuestionIndex].question.answer_c}
               </label>
               {compareAnswer("C")}
+              {yourAnswer("C")}
             </li>
             <li>
               <label htmlFor="answerA">
                 {quiz?.questions[currentQuestionIndex].question.answer_d}
               </label>
               {compareAnswer("D")}
+              {yourAnswer("D")}
             </li>
           </ol>
         </div>
