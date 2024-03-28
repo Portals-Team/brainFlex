@@ -24,12 +24,28 @@ const accountApi = api.injectEndpoints({
       query: (id) => "/user_topics/" + id,
       providesTags: ["UserTopics"],
     }),
+    //write a query to get all categories
+    getCategories: builder.query({
+      query: () => "/categories",
+      providesTags: ["Categories"],
+    }),
+    //write PATCH query to update a users user_topics
+    updateUserTopics: builder.mutation({
+      query: (payload) => ({
+        url: "/user_topics/" + payload.id,
+        method: "PATCH",
+        body: { topicIds: payload.topicIds },
+      }),
+      invalidatesTags: ["UserTopics"],
+    }),
   }),
 });
 
 export const {
   useGetUsersQuery,
   useGetUserQuery,
+  useGetCategoriesQuery,
   useGetTopicsQuery,
   useGetUserTopicsQuery,
+  useUpdateUserTopicsMutation,
 } = accountApi;
