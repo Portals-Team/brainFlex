@@ -42,6 +42,7 @@ export default function QuizAnswer() {
               <label htmlFor="answerA">
                 {question?.answer_a}
                 <input type="checkbox" id="answerA" name="answerA" />
+                <span>&#10003;</span>
               </label>
             </li>
             <li>
@@ -49,6 +50,7 @@ export default function QuizAnswer() {
                 {question?.answer_b}
                 <input type="checkbox" id="answerB" name="answerB" />
               </label>
+              <span>&#10005;</span>
             </li>
             <li>
               <label htmlFor="answerA">
@@ -70,7 +72,9 @@ export default function QuizAnswer() {
         <h4>{question?.fun_fact}</h4>
       </section>
       <section>
-        <Link to="/game">BACK</Link>
+        <Link to="/game">
+          BACK When clicked should increase current question by 1
+        </Link>
       </section>
     </>
   );
