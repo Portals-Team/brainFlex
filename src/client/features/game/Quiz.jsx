@@ -7,6 +7,7 @@ import {
   useGetQuestionsQuery,
   useGetGameQuery,
   useUpdateProblemMutation,
+  useUpdateQuizQuestionUnsolvedMutation,
 } from "../game/gameSlice";
 // will need the quiz problem, that corresponds with the current question of the quiz table, and the question of the get quiz problem id
 
@@ -24,19 +25,22 @@ export default function Quiz() {
   const navigate = useNavigate();
   const [updateProblem, { isLoading, isError, isSuccess, error }] =
     useUpdateProblemMutation();
+  const { data: quiz } = useGetGameQuery(id);
+  const currentQuestionIndex = quiz?.current_question - 1; // Adjusting for zero-based indexing
+  const currentQuestion =
+    quiz?.questions[currentQuestionIndex].question.question;
+  const [setNextQuestion] = useUpdateQuizQuestionUnsolvedMutation();
 
+  console.log(currentQuestion);
   //every page of game logic will have in the URL quiz id as the parameter.
   //will get the id from use params, the id will be the current quiz that we are on id
-  const { data: quiz } = useGetGameQuery(id);
-  const { data: question } = useGetQuestionsQuery(quiz?.current_question);
 
   //this will on click of one of the input radio buttons, send to the database the answer they picked
   //and this will also redirect them to the correct quiz answer page
   const pickAnswer = async (evt) => {
     evt.preventDefault();
-    console.log(typeof quiz?.current_question);
     updateProblem({
-      id: quiz?.current_question,
+      id: quiz?.questions[currentQuestionIndex].id,
       user_answer,
     }).unwrap();
     navigate(`/game/quiz/answer/${id}`);
@@ -49,13 +53,13 @@ export default function Quiz() {
       <section>
         <li>Quiz Current</li>
         <div>
-          <h3>{question?.question}</h3>
+          <h3>{quiz?.questions[currentQuestionIndex].question.question}</h3>
           {/*this will display the question*/}
           <ol>
             {/*function-upon entering an answer the user will be directed to the quiz answer page*/}
             <li>
               <label htmlFor="answerA">
-                {question?.answer_a}
+                {quiz?.questions[currentQuestionIndex].question.answer_a}
                 <input
                   type="radio"
                   id="answerA"
@@ -67,7 +71,7 @@ export default function Quiz() {
             </li>
             <li>
               <label htmlFor="answerA">
-                {question?.answer_b}
+                {quiz?.questions[currentQuestionIndex].question.answer_b}
                 <input
                   type="radio"
                   id="answerB"
@@ -79,7 +83,7 @@ export default function Quiz() {
             </li>
             <li>
               <label htmlFor="answerA">
-                {question?.answer_c}
+                {quiz?.questions[currentQuestionIndex].question.answer_c}
                 <input
                   type="radio"
                   id="answerC"
@@ -91,7 +95,7 @@ export default function Quiz() {
             </li>
             <li>
               <label htmlFor="answerA">
-                {question?.answer_d}
+                {quiz?.questions[currentQuestionIndex].question.answer_d}
                 <input
                   type="radio"
                   id="answerD"
@@ -108,9 +112,7 @@ export default function Quiz() {
         </div>
         <li>Score</li>
       </section>
-      <section>
-        <Link to="/game">BACK</Link>
-      </section>
+      <NavLink to={`/game/home/${id}`}>Back To Game Home</NavLink>
     </>
   );
 }

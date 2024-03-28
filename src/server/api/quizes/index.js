@@ -33,6 +33,14 @@ game.get("/:id", async (req, res, next) => {
         id: +id,
         // user_id: res.locals.user.id,
       },
+      //what this does is it gets the quiz, and also joins it with the questions table because they have a relational foreign key, and it then joins the quiz_problems table with their associated questions.
+      include: {
+        questions: {
+          include: {
+            question: true,
+          },
+        },
+      },
     });
     res.json(quizById);
   } catch (e) {
@@ -40,34 +48,35 @@ game.get("/:id", async (req, res, next) => {
   }
 });
 
-// PATCH /api/quizes/:id  -- updates current_question
+// PATCH /api/quizes/:id  -- updates current_question. GO BACK TO THIS
 game.patch("/:id", async (req, res, next) => {
   // Make sure this works the way you want
   const { id } = req.params;
   const { solved } = req.body;
   try {
-    if (!res.locals.user) {
-      return next({
-        status: 401,
-        message:
-          "You are not allowed to access this information. Please Log In",
-      });
-    }
-    if (solved) {
+    // if (!res.locals.user) {
+    //   return next({
+    //     status: 401,
+    //     message:
+    //       "You are not allowed to access this information. Please Log In",
+    //   });
+    // }
+    if (solved === true) {
       const updatedQuizCompleted = await prisma.quiz.update({
         where: {
           id: +id,
-          user_id: res.locals.user.id,
+          //user_id: res.locals.user.id,
         },
         data: {
           quiz_completed: true,
         },
       });
+      res.json(updatedQuizCompleted);
     }
     const currentQuiz = await prisma.quiz.findUnique({
       where: {
         id: +id,
-        user_id: res.locals.user.id,
+        // user_id: res.locals.user.id,
       },
     });
     if (currentQuiz.quiz_completed) {
@@ -92,7 +101,7 @@ game.patch("/:id", async (req, res, next) => {
       const updatedQuizQuestions = await prisma.quiz.update({
         where: {
           id: +id,
-          user_id: res.locals.user.id,
+          //user_id: res.locals.user.id,
         },
         data: {
           current_question: currentQuiz.current_question + 1,
