@@ -18,8 +18,10 @@ export default function GameHome() {
   const { data: quiz } = useGetGameQuery(+id);
   const {data: image_word} = useGetImageWordQuery(quiz?.image_Word_id);
   const gameWord = image_word?.topic_word;
-
- 
+  const currentQuestion = quiz?.current_question;
+  const blur = 50-(5*(currentQuestion-1));
+  const blurClass = `blur-${blur}`;
+  let acc = 1;
 
   return (
     <>
@@ -29,7 +31,7 @@ export default function GameHome() {
       <section>
         <li>Current Question</li>
         {/*image will be blurred and come into focus when a question is answered correctly*/}
-        <img className="mainGameImage" src={image_word?.image_url} />
+        <img className={blurClass} src={image_word?.image_url} />
         <li>Score</li>
       </section>
       <section>
@@ -39,9 +41,11 @@ export default function GameHome() {
           {/*in CSS resize the width of each input container to be the length 
           of one letter*/}
           <div>
-            {console.log(gameWord?.split(""))}
-            {gameWord?.split("").map(letter => {
-              return <input maxLength="1"/>
+            {gameWord?.split("").map((letter) => {
+              const currentAcc = acc++;
+              return (
+                currentAcc < currentQuestion ? <p>{letter}</p> : <input maxLength="1" />
+              )
             })}
             
           </div>
