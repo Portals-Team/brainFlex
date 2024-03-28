@@ -1,22 +1,32 @@
 import { useParams } from "react-router-dom";
 import { useGetUserQuery } from "./accountSlice";
+import { useGetTopicsQuery } from "./accountSlice";
 import { useGetUserTopicsQuery } from "./accountSlice";
+
+function TopicCard({ topic }) {
+  return (
+    <section>
+      <li>
+        <h4>{topic.name}</h4>
+      </li>
+    </section>
+  );
+}
 
 export default function UserStats() {
   const { id } = useParams();
   const { data: user } = useGetUserQuery(id);
   console.log(user);
 
+  const { data: topics } = useGetTopicsQuery();
+  console.log(topics);
+
   const { data: userTopics } = useGetUserTopicsQuery(id);
   console.log(userTopics);
-  // const { data: usertopics } = useGetUserTopicsQuery();
-  // const { data: topicsdata } = useGetTopicQuery();
 
-  // function getUserTopicById(id) {
-  //   //gets all information for a specific user topic from the id of that user_topic
-  //   const userTopics = usertopics.id;
-  //   return userTopics.topic_id;
-  // }
+  //we've got user topics but each user topic does not have a name and needs to refer to the topics table for its name.
+
+  // const { data: topicsdata } = useGetTopicQuery();
 
   // function getTopicName(id) {
   //   //this gets all information about a topic from a topic_id
@@ -35,6 +45,12 @@ export default function UserStats() {
         <p>Quiz Count: {user?.quiz_count}</p>
         {/* Add more user details here */}
       </div>
+      <h2>Topics:</h2>
+      <ul>
+        {topics?.map((topic) => (
+          <TopicCard key={topic.id} topic={topic} />
+        ))}
+      </ul>
     </>
   );
 }

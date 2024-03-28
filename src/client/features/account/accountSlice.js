@@ -7,6 +7,12 @@ const accountApi = api.injectEndpoints({
       providesTags: ["User"],
     }),
 
+    //create an endpoint to get all topics
+    getTopics: builder.query({
+      query: () => "/topics",
+      provideTags: ["Topics"],
+    }),
+
     //create an endpoint that will display the users user_topics
     getUserTopics: builder.query({
       query: (id) => "/user_topics/" + id,
@@ -15,4 +21,5 @@ const accountApi = api.injectEndpoints({
   }),
 });
 
-export const { useGetUserQuery, useGetUserTopicsQuery } = accountApi;
+export const { useGetUserQuery, useGetTopicsQuery, useGetUserTopicsQuery } =
+  accountApi;
