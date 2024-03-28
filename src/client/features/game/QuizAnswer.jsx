@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import React from "react";
 import {
   useGetQuizProblemsQuery,
   useGetQuestionsQuery,
   useGetGameQuery,
+  useUpdateQuizQuestionUnsolvedMutation,
 } from "../game/gameSlice";
 // import { Link } from "react-router-dom";
 
@@ -21,17 +22,38 @@ export default function QuizAnswer() {
   //every page of game logic will have in the URL quiz id as the parameter.
   //will get the id from use params, the id will be the current quiz that we are on id
   const { data: quiz } = useGetGameQuery(id);
-  console.log(quiz);
-  console.log(quiz?.current_question);
-  const { data: question } = useGetQuestionsQuery(quiz?.current_question);
-  console.log(question);
+  const currentQuestionIndex = quiz?.current_question - 1; // Adjusting for zero-based indexing
+  const currentQuestion =
+    quiz?.questions[currentQuestionIndex].question.question;
+  const [setNextQuestion] = useUpdateQuizQuestionUnsolvedMutation();
+  const navigate = useNavigate();
+
+  const compareAnswer = (letter) => {
+    if (
+      quiz?.questions[currentQuestionIndex].question.correct_answer === letter
+    ) {
+      return <span>&#10003;</span>;
+    } else {
+      return <span>&#10005;</span>;
+    }
+  };
+  const yourAnswer = (letter) => {
+    if (quiz?.questions[currentQuestionIndex].user_answer === letter) {
+      return <span>Your Answer</span>;
+    }
+  };
+  const goBackIncreaseQuestion = async (evt) => {
+    evt.preventDefault();
+    setNextQuestion(quiz?.id);
+    navigate(`/game/home/${id}`);
+  };
 
   return (
     <>
       <h1>QuizAnswer</h1>
       {/*flex this section into a row*/}
       <section>
-        <li>{question?.question}</li>
+        <h3>{quiz?.questions[currentQuestionIndex].question.question}</h3>
         <div>
           <h3>
             QUESTION: this is the current question fetched from the database
@@ -40,41 +62,44 @@ export default function QuizAnswer() {
             {/*function-iternary operator if question answer {true} display 'check' : display 'x'*/}
             <li>
               <label htmlFor="answerA">
-                {question?.answer_a}
-                <input type="checkbox" id="answerA" name="answerA" />
-                <span>&#10003;</span>
+                {quiz?.questions[currentQuestionIndex].question.answer_a}
+
+                {compareAnswer("A")}
+                {yourAnswer("A")}
               </label>
             </li>
             <li>
               <label htmlFor="answerA">
-                {question?.answer_b}
-                <input type="checkbox" id="answerB" name="answerB" />
+                {quiz?.questions[currentQuestionIndex].question.answer_b}
               </label>
-              <span>&#10005;</span>
+              {compareAnswer("B")}
+              {yourAnswer("B")}
             </li>
             <li>
               <label htmlFor="answerA">
-                {question?.answer_c}
-                <input type="checkbox" id="answerC" name="answerC" />
+                {quiz?.questions[currentQuestionIndex].question.answer_c}
               </label>
+              {compareAnswer("C")}
+              {yourAnswer("C")}
             </li>
             <li>
               <label htmlFor="answerA">
-                {question?.answer_d}
-                <input type="checkbox" id="answerD" name="answerD" />
+                {quiz?.questions[currentQuestionIndex].question.answer_d}
               </label>
+              {compareAnswer("D")}
+              {yourAnswer("D")}
             </li>
           </ol>
         </div>
         <li>Score</li>
       </section>
       <section>
-        <h4>{question?.fun_fact}</h4>
+        <h4>{quiz?.questions[currentQuestionIndex].question.fun_fact}</h4>
       </section>
       <section>
-        <Link to="/game">
-          BACK When clicked should increase current question by 1
-        </Link>
+        <form onSubmit={goBackIncreaseQuestion}>
+          <button>Back To Game Home</button>
+        </form>
       </section>
     </>
   );
