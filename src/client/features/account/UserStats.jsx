@@ -4,20 +4,20 @@ import { useGetTopicsQuery } from "./accountSlice";
 import { useGetUserTopicsQuery } from "./accountSlice";
 import { useGetUsersQuery } from "./accountSlice";
 
-function UserScores({ user }) {
-  return (
-    <ul>
-      <li>{user.name}</li>
-      <li>{user.aggregate_score}</li>
-    </ul>
-  );
-}
-
 function TopicCard({ topic }) {
   return (
     <li>
       <h4>{topic.name}</h4>
     </li>
+  );
+}
+
+function UserScores({ user }) {
+  return (
+    <ul>
+      <li>{user.name}</li>
+      <li>Score: {user.aggregate_score}</li>
+    </ul>
   );
 }
 
@@ -65,12 +65,11 @@ export default function UserStats() {
       <div>
         <h3>TOP PLAYERS:</h3>
         <ul>
-          {[...users]
-            .sort((a, b) => b.aggregate_score - a.aggregate_score)
-            .slice(0, 3)
-            .map((user) => (
-              <UserScores key={user.id} user={user} />
-            ))}
+          {users?.length > 0 &&
+            [...users]
+              .sort((a, b) => b.aggregate_score - a.aggregate_score)
+              .slice(0, 3)
+              .map((user) => <UserScores key={user.id} user={user} />)}
         </ul>
       </div>
     </>
