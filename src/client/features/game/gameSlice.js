@@ -41,19 +41,33 @@ const gameApi = api.injectEndpoints({
     }),
 
     /**
-     * @description updatedQuizQuestion query updates the logged in users Quiz.current_question to show they have completed the question
+     * @description updatedQuizQuestion query updates the logged in users Quiz.current_question to show they have completed quiz
      * @param {integer} id
      * @method PATCH
      */
 
-    updatedQuizQuestion: builder.mutation({
+    updateQuizQuestionSolved: builder.mutation({
       query: (id) => ({
         url: "/quizes/" + id,
         method: "PATCH",
         body: { solved: true },
       }),
       invalidatesTags: ["quizes"],
-      transformResponse: (response) => response.quizes,
+      // transformResponse: (response) => response.quizes,
+    }),
+    /**
+     * @description updatedQuizQuestionUnsolved query updates the logged in users Quiz.current_question to increase question by 1
+     * @param {integer} id
+     * @method PATCH
+     */
+    updateQuizQuestionUnsolved: builder.mutation({
+      query: (id) => ({
+        url: "/quizes/" + id,
+        method: "PATCH",
+        body: { solved: false },
+      }),
+      invalidatesTags: ["quizes"],
+      // transformResponse: (response) => response.quizes,
     }),
 
     /**
@@ -115,7 +129,8 @@ export const {
   useGetUsersQuery,
   useUpdatedUserMutation,
   useGetGameQuery,
-  useUpdatedQuizQuestionMutation,
+  useUpdateQuizQuestionSolvedMutation,
+  useUpdateQuizQuestionUnsolvedMutation,
   useGetQuizProblemsQuery,
   useUpdateProblemMutation,
   useGetQuestionsQuery,

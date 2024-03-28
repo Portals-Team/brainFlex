@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import React from "react";
 import {
   useGetQuizProblemsQuery,
   useGetQuestionsQuery,
   useGetGameQuery,
+  useUpdateQuizQuestionUnsolvedMutation,
 } from "../game/gameSlice";
 // import { Link } from "react-router-dom";
 
@@ -24,6 +25,8 @@ export default function QuizAnswer() {
   const currentQuestionIndex = quiz?.current_question - 1; // Adjusting for zero-based indexing
   const currentQuestion =
     quiz?.questions[currentQuestionIndex].question.question;
+  const [setNextQuestion] = useUpdateQuizQuestionUnsolvedMutation();
+  const navigate = useNavigate();
 
   const compareAnswer = (letter) => {
     if (
@@ -38,6 +41,11 @@ export default function QuizAnswer() {
     if (quiz?.questions[currentQuestionIndex].user_answer === letter) {
       return <span>Your Answer</span>;
     }
+  };
+  const goBackIncreaseQuestion = async (evt) => {
+    evt.preventDefault();
+    setNextQuestion(quiz?.id);
+    navigate(`/game/home/${id}`);
   };
 
   return (
@@ -89,9 +97,9 @@ export default function QuizAnswer() {
         <h4>{quiz?.questions[currentQuestionIndex].question.fun_fact}</h4>
       </section>
       <section>
-        <Link to="/game">
-          BACK When clicked should increase current question by 1
-        </Link>
+        <form onSubmit={goBackIncreaseQuestion}>
+          <button>Back To Game Home</button>
+        </form>
       </section>
     </>
   );

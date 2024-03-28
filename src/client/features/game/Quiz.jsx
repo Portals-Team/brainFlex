@@ -7,6 +7,7 @@ import {
   useGetQuestionsQuery,
   useGetGameQuery,
   useUpdateProblemMutation,
+  useUpdateQuizQuestionUnsolvedMutation,
 } from "../game/gameSlice";
 // will need the quiz problem, that corresponds with the current question of the quiz table, and the question of the get quiz problem id
 
@@ -28,6 +29,7 @@ export default function Quiz() {
   const currentQuestionIndex = quiz?.current_question - 1; // Adjusting for zero-based indexing
   const currentQuestion =
     quiz?.questions[currentQuestionIndex].question.question;
+  const [setNextQuestion] = useUpdateQuizQuestionUnsolvedMutation();
 
   console.log(currentQuestion);
   //every page of game logic will have in the URL quiz id as the parameter.
@@ -37,9 +39,8 @@ export default function Quiz() {
   //and this will also redirect them to the correct quiz answer page
   const pickAnswer = async (evt) => {
     evt.preventDefault();
-    console.log(typeof quiz?.current_question);
     updateProblem({
-      id: quiz?.current_question,
+      id: quiz?.questions[currentQuestionIndex].id,
       user_answer,
     }).unwrap();
     navigate(`/game/quiz/answer/${id}`);
@@ -111,9 +112,7 @@ export default function Quiz() {
         </div>
         <li>Score</li>
       </section>
-      <section>
-        <Link to="/game">BACK</Link>
-      </section>
+      <NavLink to={`/game/home/${id}`}>Back To Game Home</NavLink>
     </>
   );
 }
