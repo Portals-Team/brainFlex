@@ -14,7 +14,6 @@ import GameHome from "./features/game/GameHome.jsx";
 import GameScore from "./features/game/GameScore.jsx";
 import Quiz from "./features/game/Quiz.jsx";
 import QuizAnswer from "./features/game/QuizAnswer.jsx";
-import SubmitAnswer from "./features/game/SubmitAnswer.jsx";
 import Home from "./features/dashboard/Home.jsx";
 import PickQuizPage from "./features/dashboard/PickQuizPage.jsx";
 
