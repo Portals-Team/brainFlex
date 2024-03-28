@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   useGetCategoriesQuery,
   useUpdateUserTopicsMutation,
 } from "./accountSlice";
-import { useUpdateProblemMutation } from "../game/gameSlice";
 import { useNavigate, useParams } from "react-router-dom";
 
 //user can sumbit topics and it will update their acoount PATCH
@@ -34,7 +34,6 @@ export default function ChooseTopics() {
       console.log(selectedTopics);
       console.log(id);
       await updateUserTopics({ id, topicIds: selectedTopics }).unwrap();
-      navigate("/account");
     } catch (error) {
       console.error("Failed to update user topics:", error);
     }
@@ -79,7 +78,9 @@ export default function ChooseTopics() {
           ))}
         </ul>
       </div>
-      <button onClick={handleSumbit}>Submit Topics</button>
+      <button onClick={handleSumbit}>
+        <Link to={`/account/${id}`}>Submit Topics</Link>
+      </button>
     </>
   );
 }

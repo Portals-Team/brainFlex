@@ -7,7 +7,7 @@ import { useGetUsersQuery } from "./accountSlice";
 function TopicCard({ topic }) {
   return (
     <li>
-      <h4>{topic.name}</h4>
+      <h4>{topic?.name}</h4>
     </li>
   );
 }
@@ -15,8 +15,8 @@ function TopicCard({ topic }) {
 function UserScores({ user }) {
   return (
     <ul>
-      <li>{user.name}</li>
-      <li>Score: {user.aggregate_score}</li>
+      <li>{user?.name}</li>
+      <li>Score: {user?.aggregate_score}</li>
     </ul>
   );
 }
@@ -45,7 +45,7 @@ export default function UserStats() {
         <h2>Topics:</h2>
         <ul>
           {topics?.map((topic) => (
-            <TopicCard key={topic.id} topic={topic} />
+            <TopicCard key={topic?.id} topic={topic} />
           ))}
         </ul>
       </div>
@@ -53,7 +53,7 @@ export default function UserStats() {
         <h2>{user?.name}'s Topics: </h2>
         <ul>
           {userTopicPicks?.map((topic) => (
-            <TopicCard key={topic.id} topic={topic} />
+            <TopicCard key={topic?.id} topic={topic} />
           ))}
           <button>Change topics</button>
         </ul>
