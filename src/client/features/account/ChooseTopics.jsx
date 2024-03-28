@@ -1,29 +1,38 @@
-import { useGetTopicsQuery } from "./accountSlice";
+import React, { useState } from "react";
 import { useGetCategoriesQuery } from "./accountSlice";
 
+//create a checkbox for each topic
+//let a user only select three topics
+//user can sumbit topics and it will update their acoount PATCH
 export default function ChooseTopics() {
-  const { data: topics } = useGetTopicsQuery();
-  console.log(topics);
   const { data: categories } = useGetCategoriesQuery();
-  console.log(categories);
-  //get topics
-  //get categories
-  //get categories topics
-  function CategoriesCard({ category }) {
+
+  function CategoryItem({ category }) {
     return (
-      <li>
-        <h4>{category.name}</h4>
-      </li>
+      <div>
+        <h3>{category.name}</h3>
+        <ul>
+          {category.Category_topics.map(({ topic }) => (
+            <li key={topic.id}>
+              <label>
+                <input type="checkbox" value={topic.id} />
+                {topic.name}
+              </label>
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   }
+
   return (
     <>
-      <h1>From our 3 Categoreis pick your Favorite Three Topics</h1>
+      <h1>from our 3 Categories pick your favorite three topics</h1>
       <div>
         <h2>Categories:</h2>
         <ul>
           {categories?.map((category) => (
-            <CategoriesCard key={category.id} category={category} />
+            <CategoryItem key={category.id} category={category} />
           ))}
         </ul>
       </div>
