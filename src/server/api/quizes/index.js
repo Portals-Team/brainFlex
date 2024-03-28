@@ -22,17 +22,16 @@ game.get("/", async (req, res, next) => {
 game.get("/:id", async (req, res, next) => {
   const { id } = req.params;
   try {
-    if (!res.locals.user) {
-      return next({
-        status: 401,
-        message:
-          "You are not allowed to access this information. Please Log In",
-      });
-    }
+    // if (!res.locals.user) {
+    //   return next({
+    //     status: 401,
+    //     message: "You are not allowed to access this information. Please Log In"
+    //   });
+    // }
     const quizById = await prisma.quiz.findUnique({
       where: {
         id: +id,
-        user_id: res.locals.user.id,
+        // user_id: res.locals.user.id,
       },
     });
     res.json(quizById);

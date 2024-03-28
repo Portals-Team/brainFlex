@@ -36,8 +36,8 @@ const gameApi = api.injectEndpoints({
     getGame: builder.query({
       query: (id) => "/quizes/" + id,
       providesTags: ["quizes"],
-      transformResponse: (response) => response.quizes,
-      transformErrorResponse: (response) => response.data.error.message,
+      // transformResponse: (response) => response.quizes,
+      // transformErrorResponse: (response) => response.data.error.message,
     }),
 
     /**
@@ -65,8 +65,8 @@ const gameApi = api.injectEndpoints({
     getQuizProblems: builder.query({
       query: (id) => "/quiz_problems/" + id,
       providesTags: ["quiz_problems"],
-      transformResponse: (response) => response.users,
-      transformErrorResponse: (response) => response.data.error.message,
+      // transformResponse: (response) => response.users,
+      // transformErrorResponse: (response) => response.data.error.message,
     }),
 
     /**
@@ -76,12 +76,13 @@ const gameApi = api.injectEndpoints({
      */
 
     updateProblem: builder.mutation({
-      query: (id) => ({
-        url: "/quiz_problems/" + id,
+      query: (payload) => ({
+        url: "/quiz_problems/" + payload.id,
         method: "PATCH",
+        body: { user_answer: payload.user_answer },
       }),
       invalidatesTags: ["quizes"],
-      transformResponse: (response) => response.quizes,
+      // transformResponse: (response) => response.quizes,
     }),
 
     /**
@@ -93,8 +94,8 @@ const gameApi = api.injectEndpoints({
     getQuestions: builder.query({
       query: (id) => "/questions/" + id,
       providesTags: ["questions"],
-      transformResponse: (response) => response.questions,
-      transformErrorResponse: (response) => response.data.error.message,
+      // transformResponse: (response) => response.questions,
+      // transformErrorResponse: (response) => response.data.error.message,
     }),
 
     /**
@@ -103,11 +104,9 @@ const gameApi = api.injectEndpoints({
      * @method GET
      */
 
-    getQuestions: builder.query({
-      query: (id) => "/image_word/" + id,
+    getImageWord: builder.query({
+      query: (id) => "/image_words/" + id,
       providesTags: ["image_word"],
-      transformResponse: (response) => response.image_word,
-      transformErrorResponse: (response) => response.data.error.message,
     }),
   }),
 });
@@ -120,4 +119,5 @@ export const {
   useGetQuizProblemsQuery,
   useUpdateProblemMutation,
   useGetQuestionsQuery,
+  useGetImageWordQuery,
 } = gameApi;

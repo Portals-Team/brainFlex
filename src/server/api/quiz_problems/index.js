@@ -6,10 +6,10 @@ module.exports = router;
 router.get("/", async (req, res, next) => {
   try {
     const quiz_problems = await prisma.quiz_problems.findMany();
-    if(!quiz_problems) {
+    if (!quiz_problems) {
       return next({
         status: 404,
-        message: "No Quiz Problems found"
+        message: "No Quiz Problems found",
       });
     }
     res.json(quiz_problems);
@@ -24,17 +24,17 @@ router.get("/:id", async (req, res, next) => {
     if (!res.locals.user) {
       return next({
         status: 400,
-        message: "You are not logged into the correct account"
+        message: "You are not logged into the correct account",
       });
     }
     const { id } = req.params;
     const quizProblems = await prisma.quiz_problems.findUnique({
-      where: { id: +id }
+      where: { id: +id },
     });
     if (!quizProblems) {
       return next({
         status: 401,
-        message: "does this throw"
+        message: "does this throw",
       });
     }
     res.json(quizProblems);
@@ -48,28 +48,28 @@ router.patch("/:id", async (req, res, next) => {
   const { user_answer } = req.body;
   const { id } = req.params;
   try {
-    if (!res.locals.user) {
-      return next({
-        status: 400,
-        message: "You are not logged into the correct account"
-      });
-    }
+    // if (!res.locals.user) {
+    //   return next({
+    //     status: 400,
+    //     message: "You are not logged into the correct account"
+    //   });
+    // }
 
     const quizProblemId = +id;
     if (!quizProblemId) {
       return next({
         status: 404,
-        message: `Quiz problem with id ${id} not found.`
+        message: `Quiz problem with id ${id} not found.`,
       });
     }
     const updateProblem = await prisma.quiz_problems.update({
       where: { id: quizProblemId },
-      data: { user_answer: user_answer }
+      data: { user_answer: user_answer },
     });
     if (!updateProblem) {
       return next({
         status: 500,
-        message: "An error occurred while updating the quiz problem."
+        message: "An error occurred while updating the quiz problem.",
       });
     }
     res.json(updateProblem);
