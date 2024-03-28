@@ -6,10 +6,10 @@ module.exports = game;
 game.get("/", async (req, res, next) => {
   try {
     const quizes = await prisma.quiz.findMany();
-    if(!users) {
+    if (!users) {
       return next({
         status: 404,
-        message: "No Quizes found"
+        message: "No Quizes found",
       });
     }
     res.json(quizes);
