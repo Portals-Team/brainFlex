@@ -33,6 +33,14 @@ game.get("/:id", async (req, res, next) => {
         id: +id,
         // user_id: res.locals.user.id,
       },
+      //what this does is it gets the quiz, and also joins it with the questions table because they have a relational foreign key, and it then joins the quiz_problems table with their associated questions.
+      include: {
+        questions: {
+          include: {
+            question: true,
+          },
+        },
+      },
     });
     res.json(quizById);
   } catch (e) {
