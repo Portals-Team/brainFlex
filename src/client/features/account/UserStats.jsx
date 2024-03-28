@@ -4,11 +4,14 @@ import { useGetTopicsQuery } from "./accountSlice";
 import { useGetUserTopicsQuery } from "./accountSlice";
 import { useGetUsersQuery } from "./accountSlice";
 
+/*create logic to render top players by their aggregate score
+ *const sortedScores = users?.aggregate_scores.sort(a, b) => b -a );
+ *const topThreeScores = sortedScores.slice(0, 3)*/
 function UserScores({ user }) {
   return (
     <ul>
       <li>{user.name}</li>
-      <li>{user.aggregate_score}</li>
+      <li>Score: {user.aggregate_score}</li>
     </ul>
   );
 }
@@ -23,14 +26,24 @@ function TopicCard({ topic }) {
 
 export default function UserStats() {
   const { id } = useParams();
+
   const { data: users } = useGetUsersQuery();
+  console.log(users);
+
   const { data: user } = useGetUserQuery(id);
+
   const { data: topics } = useGetTopicsQuery();
+
   const { data: userTopics } = useGetUserTopicsQuery(id);
 
   const userTopicPicks = userTopics?.map((userTopics) => {
     return topics?.find((topics) => topics.id === userTopics.topic_id);
   });
+
+  /*const sortedUsers = [...users].sort(
+    (a, b) => b.aggregate_score - a.aggregate_score
+  );
+  const topPlayers = sortedUsers?.slice(0, 3);*/
 
   return (
     <>
@@ -64,13 +77,11 @@ export default function UserStats() {
       </div>
       <div>
         <h3>TOP PLAYERS:</h3>
+        {/*getUsers if users.aggregate score is in the top 3 return those players and there score*/}
         <ul>
-          {[...users]
-            .sort((a, b) => b.aggregate_score - a.aggregate_score)
-            .slice(0, 3)
-            .map((user) => (
-              <UserScores key={user.id} user={user} />
-            ))}
+          {users?.map((user) => (
+            <UserScores key={user.id} user={user} />
+          ))}
         </ul>
       </div>
     </>
