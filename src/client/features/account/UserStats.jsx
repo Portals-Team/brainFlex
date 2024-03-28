@@ -2,6 +2,16 @@ import { useParams } from "react-router-dom";
 import { useGetUserQuery } from "./accountSlice";
 import { useGetTopicsQuery } from "./accountSlice";
 import { useGetUserTopicsQuery } from "./accountSlice";
+import { useGetUsersQuery } from "./accountSlice";
+
+function UserScores({ user }) {
+  return (
+    <ul>
+      <li>{user.name}</li>
+      <li>{user.aggregate_score}</li>
+    </ul>
+  );
+}
 
 function TopicCard({ topic }) {
   return (
@@ -13,21 +23,11 @@ function TopicCard({ topic }) {
 
 export default function UserStats() {
   const { id } = useParams();
+  const { data: users } = useGetUsersQuery();
   const { data: user } = useGetUserQuery(id);
-
   const { data: topics } = useGetTopicsQuery();
-
   const { data: userTopics } = useGetUserTopicsQuery(id);
 
-  //we've got user topics but each user topic does not have a name and needs to refer to the topics table for its name.
-
-  // const { data: topicsdata } = useGetTopicQuery();
-
-  // function getTopicName(id) {
-  //   //this gets all information about a topic from a topic_id
-  //   const topicById = topicsdata.id;
-  //   return topicById.name;
-  // }
   const userTopicPicks = userTopics?.map((userTopics) => {
     return topics?.find((topics) => topics.id === userTopics.topic_id);
   });
@@ -50,11 +50,27 @@ export default function UserStats() {
         </ul>
       </div>
       <div>
-        <h2>User Topics: </h2>
+        <h2>{user?.name}'s Topics: </h2>
         <ul>
           {userTopicPicks?.map((topic) => (
             <TopicCard key={topic.id} topic={topic} />
           ))}
+          <button>Change topics</button>
+        </ul>
+      </div>
+      <div>
+        <h3>YOUR RANK</h3>
+        <h4>*this is still to be determined*</h4>
+      </div>
+      <div>
+        <h3>TOP PLAYERS:</h3>
+        <ul>
+          {[...users]
+            .sort((a, b) => b.aggregate_score - a.aggregate_score)
+            .slice(0, 3)
+            .map((user) => (
+              <UserScores key={user.id} user={user} />
+            ))}
         </ul>
       </div>
     </>
