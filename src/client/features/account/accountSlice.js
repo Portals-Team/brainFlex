@@ -24,12 +24,18 @@ const accountApi = api.injectEndpoints({
       query: (id) => "/user_topics/" + id,
       providesTags: ["UserTopics"],
     }),
+    //write a query to get all categories
+    getCategories: builder.query({
+      query: () => "/categories",
+      providesTags: ["Categories"],
+    }),
   }),
 });
 
 export const {
   useGetUsersQuery,
   useGetUserQuery,
+  useGetCategoriesQuery,
   useGetTopicsQuery,
   useGetUserTopicsQuery,
 } = accountApi;
