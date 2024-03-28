@@ -29,6 +29,15 @@ const accountApi = api.injectEndpoints({
       query: () => "/categories",
       providesTags: ["Categories"],
     }),
+    //write PATCH query to update a users user_topics
+    updateUserTopics: builder.mutation({
+      query: (payload) => ({
+        url: "/user_topics/" + payload.id,
+        method: "PATCH",
+        body: { topicIds: payload.topicIds },
+      }),
+      invalidatesTags: ["UserTopics"],
+    }),
   }),
 });
 
@@ -38,4 +47,5 @@ export const {
   useGetCategoriesQuery,
   useGetTopicsQuery,
   useGetUserTopicsQuery,
+  useUpdateUserTopicsMutation,
 } = accountApi;

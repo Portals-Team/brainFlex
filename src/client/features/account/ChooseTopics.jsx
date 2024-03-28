@@ -1,11 +1,19 @@
 import React, { useState } from "react";
-import { useGetCategoriesQuery } from "./accountSlice";
+import {
+  useGetCategoriesQuery,
+  useUpdateUserTopicsMutation,
+} from "./accountSlice";
+import { useUpdateProblemMutation } from "../game/gameSlice";
+import { useNavigate, useParams } from "react-router-dom";
 
 //user can sumbit topics and it will update their acoount PATCH
 //create a patch request, if nothing is there patch if something is there then update.
 export default function ChooseTopics() {
   const { data: categories } = useGetCategoriesQuery();
   const [selectedTopics, setSelectedTopics] = useState([]);
+  const [updateUserTopics] = useUpdateUserTopicsMutation();
+  const navigate = useNavigate();
+  const { id } = useParams();
 
   const handleCheckChange = (topicId, isChecked) => {
     if (isChecked) {
@@ -18,6 +26,17 @@ export default function ChooseTopics() {
       setSelectedTopics((prevSelected) =>
         prevSelected.filter((id) => id !== topicId)
       );
+    }
+  };
+
+  const handleSumbit = async () => {
+    try {
+      console.log(selectedTopics);
+      console.log(id);
+      await updateUserTopics({ id, topicIds: selectedTopics }).unwrap();
+      navigate("/account");
+    } catch (error) {
+      console.error("Failed to update user topics:", error);
     }
   };
 
@@ -60,7 +79,7 @@ export default function ChooseTopics() {
           ))}
         </ul>
       </div>
-      <p>Submit Topics</p>
+      <button onClick={handleSumbit}>Submit Topics</button>
     </>
   );
 }
