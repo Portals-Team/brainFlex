@@ -20,10 +20,12 @@ a {
   }
 }
 
-#userStats {
+#userStats, #yourTopics {
     display: flex;
     flex-direction: row;
 }
+
+
 
 
 
