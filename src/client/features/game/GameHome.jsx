@@ -78,7 +78,6 @@ function isQuessCorrect(guessWord) {
           {isQuessCorrect(userInput.join("")) ? <Link to={`/game/score/correct/${id}`}>Solve</Link> : <Link to={`/game/score/incorrect/${id}`}>Solve</Link>}
         </button>
         <button>
-        {console.log(`${showRevealedLetters(currentQuestion)}${userInput.join("")}`)}
           <Link to={`/game/quiz/${id}`}>
           Ready for Next Question?
           </Link>
