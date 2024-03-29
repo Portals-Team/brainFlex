@@ -41,14 +41,15 @@ router.get("/:id", async (req, res, next) => {
 // PATCH /api/users/:id
 router.patch("/:id", async (req, res, next) => {
   const { id } = req.params;
+  const { quizScore } = req.body;
 
   try {
-    if (!res.locals.user) {
-      return next({
-        status: 400,
-        message: "You are not logged into the correct account",
-      });
-    }
+    // if (!res.locals.user) {
+    //   return next({
+    //     status: 400,
+    //     message: "You are not logged into the correct account",
+    //   });
+    // }
 
     const user = await prisma.user.findFirst({ where: { id: +id } });
 
@@ -62,7 +63,7 @@ router.patch("/:id", async (req, res, next) => {
     const updatedUser = await prisma.user.update({
       where: { id: +id },
       data: {
-        aggregate_score: user.aggregate_score + 1,
+        aggregate_score: user.aggregate_score + +quizScore,
       },
     });
 
