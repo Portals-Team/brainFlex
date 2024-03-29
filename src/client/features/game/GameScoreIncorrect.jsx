@@ -10,7 +10,7 @@ and the full answer will be revealed*/
 
 /*final quiz score will be fetched via ... to display the users final score for the game*/
 
-export default function GameScore() {
+export default function GameScoreIncorrect() {
   return (
     <>
       <h1>GameScore</h1>
