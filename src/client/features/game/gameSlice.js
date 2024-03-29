@@ -19,12 +19,12 @@ const gameApi = api.injectEndpoints({
      */
 
     updatedUser: builder.mutation({
-      query: (payload) => ({
-        url: "/users/" + payload.id,
+      query: ({id, quizScore}) => ({
+        url: "/users/" + id,
         method: "PATCH",
-        body: { quizScore: payload.quizScore },
+        body: { quizScore: quizScore },
       }),
-      // invalidatesTags: ["users"],
+      //invalidatesTags: ["users"],
       // transformResponse: (response) => response.users,
     }),
 

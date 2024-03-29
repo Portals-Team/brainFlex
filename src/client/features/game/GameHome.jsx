@@ -10,15 +10,16 @@
 
 /*ready for next question button will allow the user to toggle back and forth from Quiz component and the GameHome component*/
 
-import { useGetImageWordQuery, useGetGameQuery,} from "../game/gameSlice"
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useGetImageWordQuery, useGetGameQuery,useUpdatedUserMutation} from "../game/gameSlice"
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function GameHome() {
   const { id } = useParams();
   const { data: quiz } = useGetGameQuery(+id);
   const {data: image_word} = useGetImageWordQuery(quiz?.image_Word_id);
+  const navigate = useNavigate();
+  const [updateUser] = useUpdatedUserMutation();
   const gameWord = image_word?.topic_word;
   const currentQuestion = quiz?.current_question;
   const blur = 50-(5*(currentQuestion-1));
@@ -26,11 +27,11 @@ export default function GameHome() {
   let acc = 1;
   const [userInput, setUserInput] = useState(Array(gameWord?.length).fill(""));
 
-const handleInputChange = (index, value) => {
-  const updatedInput = [...userInput];
-  updatedInput[index] = value;
-  setUserInput(updatedInput);
-}
+  const handleInputChange = (index, value) => {
+    const updatedInput = [...userInput];
+    updatedInput[index] = value;
+    setUserInput(updatedInput);
+  }
 
 function showRevealedLetters(currentQuestion) {
   let revealedLetters = "";
@@ -40,10 +41,24 @@ function showRevealedLetters(currentQuestion) {
   return revealedLetters;
 }
 
-function isQuessCorrect(guessWord) {
+function isGuessCorrect(guessWord) {
   return ((showRevealedLetters(currentQuestion)+guessWord).toLowerCase() === gameWord?.toLowerCase())
 }
 
+function submitAnswer(guessWord) {
+  if(isGuessCorrect(guessWord)) {
+    updateAggregateScore();
+    navigate(`/game/score/correct/${id}`);
+  }
+  else navigate(`/game/score/incorrect/${id}`);
+}
+
+const updateAggregateScore = async () => {
+  await updateUser({
+      id: quiz?.user_id,
+      quizScore: 11-currentQuestion
+  }).unwrap();
+};
 
 
   return (
@@ -74,9 +89,11 @@ function isQuessCorrect(guessWord) {
         </form>
       </section>
       <section>
-        <button>
-          {isQuessCorrect(userInput.join("")) ? <Link to={`/game/score/correct/${id}`}>Solve</Link> : <Link to={`/game/score/incorrect/${id}`}>Solve</Link>}
-        </button>
+        <form onSubmit={e=>submitAnswer(userInput.join(""))}>
+          <button type="submit">
+            Solve
+          </button>
+        </form>
         <button>
           <Link to={`/game/quiz/${id}`}>
           Ready for Next Question?

@@ -29,12 +29,12 @@ export default function GameScoreCorrect() {
   const { data: imageandword } = useGetImageWordQuery(quiz?.image_Word_id);
   const [updateUser] = useUpdatedUserMutation();
   console.log(11 - quiz?.current_question);
-  useEffect(() => {
-    updateUser({
-      id: quiz?.user_id,
-      quizScore: 11 - quiz?.current_question,
-    });
-  }, []);
+  // useEffect(() => {
+  //   updateUser({
+  //     id: quiz?.user_id,
+  //     quizScore: 11 - quiz?.current_question,
+  //   });
+  // }, []);
 
   return (
     <>

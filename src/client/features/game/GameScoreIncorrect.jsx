@@ -18,13 +18,12 @@ and the full answer will be revealed*/
 
 /*final quiz score will be fetched via ... to display the users final score for the game*/
 
-export default function GameScoreCorrect() {
+export default function GameScoreIncorrect() {
   const { id } = useParams();
   const { data: quiz } = useGetGameQuery(id);
   const { data: imageandword } = useGetImageWordQuery(quiz?.image_Word_id);
   const [updateUser] = useUpdatedUserMutation();
-  console.log(11 - quiz?.current_question);
-
+  
   return (
     <>
       {/*flex this section into a row*/}
