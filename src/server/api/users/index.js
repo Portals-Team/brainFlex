@@ -18,8 +18,7 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-// GET /api/users/:id
-//WORKING PROPERLY add to this to also get user_topics and get all topics
+// GET /api/users/:id *includes user_topics and topics joined tables
 router.get("/:id", async (req, res, next) => {
   const { id } = req.params;
   try {

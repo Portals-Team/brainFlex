@@ -2,7 +2,9 @@ const prisma = require("../../prisma");
 const router = require("express").Router();
 module.exports = router;
 
-//GET /api/user_topics/:id WORKING PROPERLY!
+//we don't need this because getUser provides thsi information
+//leave here til final clean up incase we need it
+//GET /api/user_topics/:id
 router.get("/:id", async (req, res, next) => {
   const { id } = req.params;
   try {
@@ -20,7 +22,7 @@ router.patch("/:id", async (req, res, next) => {
   const { id } = req.params;
   const { topicIds } = req.body;
   try {
-    // if you do already have 3 topics, we gotta delete them
+    // if user has 3 topics delete them
     const user_topics = await prisma.user_topics.findMany({
       where: {
         user_id: +id,
@@ -40,7 +42,7 @@ router.patch("/:id", async (req, res, next) => {
     // make sure we're logged in
 
     const user_topics_arr = [];
-    // if we dont have any topics
+    // if user has no user_topics create them
     for (const topicId of topicIds) {
       const user_topic = await prisma.user_topics.create({
         data: {
