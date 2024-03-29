@@ -61,10 +61,9 @@ export default function ChooseTopics() {
 
   return (
     <>
-      <h1>from our 3 Categories pick your favorite three topics</h1>
+      <h2>Pick 3 Favorite Quiz Topics</h2>
       <div>
-        <h2>Categories:</h2>
-        <ul>
+        <ul id="pickTopics">
           {categories?.map((category) => (
             <CategoryItem
               key={category.id}
