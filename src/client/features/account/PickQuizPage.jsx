@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import { useGetUserQuery } from "./accountSlice";
-import { useGetTopicsQuery } from "./accountSlice";
-import { useGetUserTopicsQuery } from "./accountSlice";
 
 function TopicCard({ topic }) {
   return (
@@ -18,12 +16,6 @@ function TopicCard({ topic }) {
 export default function PickQuizPage() {
   const { id } = useParams();
   const { data: user } = useGetUserQuery(id);
-  const { data: topics } = useGetTopicsQuery();
-  const { data: userTopics } = useGetUserTopicsQuery(id);
-
-  const userTopicPicks = userTopics?.map((userTopics) => {
-    return topics?.find((topics) => topics.id === userTopics.topic_id);
-  });
 
   return (
     <>
@@ -31,8 +23,8 @@ export default function PickQuizPage() {
       <div>
         <h2>Your Topics: </h2>
         <ul>
-          {userTopicPicks?.map((topic) => (
-            <TopicCard key={topic?.id} topic={topic} />
+          {user?.user_topics?.map(({ Topics }) => (
+            <TopicCard key={Topics?.id} topic={Topics} />
           ))}
           {/* make this button a Link tag to generated random quiz for the users picked topic*/}
           <button>Play Random Quiz</button>
