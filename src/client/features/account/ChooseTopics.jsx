@@ -4,15 +4,12 @@ import {
   useGetCategoriesQuery,
   useUpdateUserTopicsMutation,
 } from "./accountSlice";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-//user can sumbit topics and it will update their acoount PATCH
-//create a patch request, if nothing is there patch if something is there then update.
 export default function ChooseTopics() {
   const { data: categories } = useGetCategoriesQuery();
   const [selectedTopics, setSelectedTopics] = useState([]);
   const [updateUserTopics] = useUpdateUserTopicsMutation();
-  const navigate = useNavigate();
   const { id } = useParams();
 
   const handleCheckChange = (topicId, isChecked) => {
@@ -64,10 +61,9 @@ export default function ChooseTopics() {
 
   return (
     <>
-      <h1>from our 3 Categories pick your favorite three topics</h1>
+      <h2>Pick 3 Favorite Quiz Topics</h2>
       <div>
-        <h2>Categories:</h2>
-        <ul>
+        <ul id="pickTopics">
           {categories?.map((category) => (
             <CategoryItem
               key={category.id}
