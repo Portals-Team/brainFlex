@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+
 import { useGetUserQuery } from "./accountSlice";
 import { useGetTopicsQuery } from "./accountSlice";
 import { useGetUserTopicsQuery } from "./accountSlice";
@@ -41,21 +43,23 @@ export default function UserStats() {
         <p>Aggregate Score: {user?.aggregate_score}</p>
         <p>Quiz Count: {user?.quiz_count}</p>
       </div>
-      <div>
+      {/*<div>
         <h2>Topics:</h2>
         <ul>
           {topics?.map((topic) => (
             <TopicCard key={topic?.id} topic={topic} />
           ))}
         </ul>
-      </div>
+          </div>*/}
       <div>
-        <h2>{user?.name}'s Topics: </h2>
+        <h2>Your Topics: </h2>
         <ul>
           {userTopicPicks?.map((topic) => (
             <TopicCard key={topic?.id} topic={topic} />
           ))}
-          <button>Change topics</button>
+          <button>
+            <Link to={`/topics/${id}`}>Change Topics</Link>
+          </button>
         </ul>
       </div>
       <div>
@@ -69,7 +73,7 @@ export default function UserStats() {
             [...users]
               .sort((a, b) => b.aggregate_score - a.aggregate_score)
               .slice(0, 3)
-              .map((user) => <UserScores key={user.id} user={user} />)}
+              .map((user) => <UserScores key={user?.id} user={user} />)}
         </ul>
       </div>
     </>
