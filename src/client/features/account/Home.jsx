@@ -1,9 +1,24 @@
+import { selectToken } from "../auth/authSlice";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 export default function Home() {
-  //   this page will show an image with a game graphic and a button to play game, if the user is logged in the user will be directed to the PickQuizPage and if is not logged in they will be directed to the AuthForm page
+  const { id } = useParams();
+  const token = useSelector(selectToken);
 
   return (
     <>
       <h1>Main Landing Page</h1>
+      {token ? (
+        <Link to={`/pickquiz/${id}`}>
+          <button>Play Game!</button>
+        </Link>
+      ) : (
+        <Link to={"/auth"}>
+          <button>Play Game!</button>
+        </Link>
+      )}
     </>
   );
 }
