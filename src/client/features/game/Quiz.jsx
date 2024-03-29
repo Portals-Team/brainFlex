@@ -31,7 +31,6 @@ export default function Quiz() {
     quiz?.questions[currentQuestionIndex].question.question;
   const [setNextQuestion] = useUpdateQuizQuestionUnsolvedMutation();
 
-  console.log(currentQuestion);
   //every page of game logic will have in the URL quiz id as the parameter.
   //will get the id from use params, the id will be the current quiz that we are on id
 

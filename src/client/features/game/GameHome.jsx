@@ -10,23 +10,71 @@
 
 /*ready for next question button will allow the user to toggle back and forth from Quiz component and the GameHome component*/
 
-import { useGetImageWordQuery, useGetGameQuery,} from "../game/gameSlice"
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useGetImageWordQuery, useGetGameQuery,useUpdatedUserMutation} from "../game/gameSlice"
+import { useParams, Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function GameHome() {
+  
   const { id } = useParams();
   const { data: quiz } = useGetGameQuery(+id);
   const {data: image_word} = useGetImageWordQuery(quiz?.image_Word_id);
+  const numberOfCorrectQuestions = numberOfAnswersCorrect();
+  const navigate = useNavigate();
+  const [updateUser] = useUpdatedUserMutation();
   const gameWord = image_word?.topic_word;
   const currentQuestion = quiz?.current_question;
-  const blur = 50-(5*(currentQuestion-1));
+  const blur = 50-(5*(numberOfCorrectQuestions));
   const blurClass = `blur-${blur}`;
   let acc = 1;
+  const [userInput, setUserInput] = useState(Array(gameWord?.length).fill(""));
+
+  const handleInputChange = (index, value) => {
+    const updatedInput = [...userInput];
+    updatedInput[index] = value;
+    setUserInput(updatedInput);
+  }
+
+  function numberOfAnswersCorrect() {
+    let numberOfCorrectQuestions = 0;
+    for(let i = 0; i < 10; i++) {
+      if(quiz?.questions[i].user_answer === quiz?.questions[i].question.correct_answer) {
+        numberOfCorrectQuestions++;
+      }
+    }
+    return numberOfCorrectQuestions;
+  }
+
+function showRevealedLetters(numberOfCorrectQuestions) {
+  let revealedLetters = "";
+  for(let i = 0; i < numberOfCorrectQuestions-1; i++) {
+    revealedLetters+=gameWord?.charAt(i);
+  }
+  return revealedLetters;
+}
+
+function isGuessCorrect(guessWord) {
+  return ((showRevealedLetters(numberOfCorrectQuestions)+guessWord).toLowerCase() === gameWord?.toLowerCase())
+}
+
+function submitAnswer(guessWord) {
+  if(isGuessCorrect(guessWord)) {
+    updateAggregateScore();
+    navigate(`/game/score/correct/${id}`);
+  }
+  else navigate(`/game/score/incorrect/${id}`);
+}
+
+const updateAggregateScore = async () => {
+  await updateUser({
+      id: quiz?.user_id,
+      quizScore: 11-currentQuestion
+  }).unwrap();
+};
+
 
   return (
     <>
-      {console.log(image_word)}
       <h1>GameHome</h1>
       {/*flex this section into a row*/}
       <section>
@@ -42,10 +90,10 @@ export default function GameHome() {
           {/*in CSS resize the width of each input container to be the length 
           of one letter*/}
           <div>
-            {gameWord?.split("").map((letter) => {
+            {gameWord?.split("").map((letter, index) => {
               const currentAcc = acc++;
               return (
-                currentAcc < currentQuestion ? <p>{letter}</p> : <input maxLength="1" />
+                currentAcc < numberOfCorrectQuestions ? <p>{letter}</p> : <input maxLength="1" key={index} value={userInput[index]} onChange={e => handleInputChange(index, e.target.value)}/>
               )
             })}
             
@@ -53,13 +101,11 @@ export default function GameHome() {
         </form>
       </section>
       <section>
-        {/* <Link to="/game/submit">SOLVE</Link>
-        <Link to="/game/quiz">READY FOR NEXT QUESTION</Link> */}
-        <button>
-          <Link to={`/game/score/${id}`}>
+        <form onSubmit={e=>submitAnswer(userInput.join(""))}>
+          <button type="submit">
             Solve
-          </Link>
-        </button>
+          </button>
+        </form>
         <button>
           <Link to={`/game/quiz/${id}`}>
           Ready for Next Question?
