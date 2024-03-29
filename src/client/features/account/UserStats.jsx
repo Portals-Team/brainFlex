@@ -30,38 +30,44 @@ export default function UserStats() {
 
   return (
     <>
-      <p>User Stats!</p>
-      <div>
-        <h1>Welcome! {user?.name}</h1>
-        <p>Username: {user?.username}</p>
-        <p>Aggregate Score: {user?.aggregate_score}</p>
-        <p>Quiz Count: {user?.quiz_count}</p>
-      </div>
-      <div>
-        <h2>Your Topics: </h2>
-        <ul>
-          {user?.user_topics?.map(({ Topics }) => (
-            <TopicCard key={Topics?.id} topic={Topics} />
-          ))}
-          <button>
-            <Link to={`/topics/${id}`}>Change Topics</Link>
-          </button>
-        </ul>
-      </div>
-      <div>
-        <h3>YOUR RANK</h3>
-        <h4>*this is still to be determined*</h4>
-      </div>
-      <div>
-        <h3>TOP PLAYERS:</h3>
-        <ul>
-          {users?.length > 0 &&
-            [...users]
-              .sort((a, b) => b.aggregate_score - a.aggregate_score)
-              .slice(0, 3)
-              .map((user) => <UserScores key={user?.id} user={user} />)}
-        </ul>
-      </div>
+      <p>User Stats</p>
+      <article id="userStats">
+        <section>
+          <div>
+            <h1>Welcome {user?.name}!</h1>
+            <p>Username: {user?.username}</p>
+            <p>Aggregate Score: {user?.aggregate_score}</p>
+            <p>Quiz Count: {user?.quiz_count}</p>
+          </div>
+          <div>
+            <h2>Your Topics: </h2>
+            <ul>
+              {user?.user_topics?.map(({ Topics }) => (
+                <TopicCard key={Topics?.id} topic={Topics} />
+              ))}
+              <button>
+                <Link to={`/topics/${id}`}>Change Topics</Link>
+              </button>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div>
+            <h3>YOUR RANK</h3>
+            <h4>*this is still to be determined*</h4>
+          </div>
+          <div>
+            <h3>TOP PLAYERS:</h3>
+            <ul>
+              {users?.length > 0 &&
+                [...users]
+                  .sort((a, b) => b.aggregate_score - a.aggregate_score)
+                  .slice(0, 3)
+                  .map((user) => <UserScores key={user?.id} user={user} />)}
+            </ul>
+          </div>
+        </section>
+      </article>
     </>
   );
 }
