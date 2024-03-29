@@ -13,6 +13,7 @@
 import { useGetImageWordQuery, useGetGameQuery,} from "../game/gameSlice"
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function GameHome() {
   const { id } = useParams();
@@ -23,10 +24,30 @@ export default function GameHome() {
   const blur = 50-(5*(currentQuestion-1));
   const blurClass = `blur-${blur}`;
   let acc = 1;
+  const [userInput, setUserInput] = useState(Array(gameWord?.length).fill(""));
+
+const handleInputChange = (index, value) => {
+  const updatedInput = [...userInput];
+  updatedInput[index] = value;
+  setUserInput(updatedInput);
+}
+
+function showRevealedLetters(currentQuestion) {
+  let revealedLetters = "";
+  for(let i = 0; i < currentQuestion-1; i++) {
+    revealedLetters+=gameWord?.charAt(i);
+  }
+  return revealedLetters;
+}
+
+function isQuessCorrect(guessWord) {
+  return ((showRevealedLetters(currentQuestion)+guessWord).toLowerCase() === gameWord?.toLowerCase())
+}
+
+
 
   return (
     <>
-      {console.log(image_word)}
       <h1>GameHome</h1>
       {/*flex this section into a row*/}
       <section>
@@ -42,10 +63,10 @@ export default function GameHome() {
           {/*in CSS resize the width of each input container to be the length 
           of one letter*/}
           <div>
-            {gameWord?.split("").map((letter) => {
+            {gameWord?.split("").map((letter, index) => {
               const currentAcc = acc++;
               return (
-                currentAcc < currentQuestion ? <p>{letter}</p> : <input maxLength="1" />
+                currentAcc < currentQuestion ? <p>{letter}</p> : <input maxLength="1" key={index} value={userInput[index]} onChange={e => handleInputChange(index, e.target.value)}/>
               )
             })}
             
@@ -53,14 +74,11 @@ export default function GameHome() {
         </form>
       </section>
       <section>
-        {/* <Link to="/game/submit">SOLVE</Link>
-        <Link to="/game/quiz">READY FOR NEXT QUESTION</Link> */}
         <button>
-          <Link to={`/game/score/${id}`}>
-            Solve
-          </Link>
+          {isQuessCorrect(userInput.join("")) ? <Link to={`/game/score/correct/${id}`}>Solve</Link> : <Link to={`/game/score/incorrect/${id}`}>Solve</Link>}
         </button>
         <button>
+        {console.log(`${showRevealedLetters(currentQuestion)}${userInput.join("")}`)}
           <Link to={`/game/quiz/${id}`}>
           Ready for Next Question?
           </Link>
