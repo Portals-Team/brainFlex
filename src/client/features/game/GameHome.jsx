@@ -15,14 +15,16 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function GameHome() {
+  
   const { id } = useParams();
   const { data: quiz } = useGetGameQuery(+id);
   const {data: image_word} = useGetImageWordQuery(quiz?.image_Word_id);
+  const numberOfCorrectQuestions = numberOfAnswersCorrect();
   const navigate = useNavigate();
   const [updateUser] = useUpdatedUserMutation();
   const gameWord = image_word?.topic_word;
   const currentQuestion = quiz?.current_question;
-  const blur = 50-(5*(currentQuestion-1));
+  const blur = 50-(5*(numberOfCorrectQuestions-1));
   const blurClass = `blur-${blur}`;
   let acc = 1;
   const [userInput, setUserInput] = useState(Array(gameWord?.length).fill(""));
@@ -33,16 +35,26 @@ export default function GameHome() {
     setUserInput(updatedInput);
   }
 
-function showRevealedLetters(currentQuestion) {
+  function numberOfAnswersCorrect() {
+    let numberOfCorrectQuestions = 0;
+    for(let i = 0; i < 10; i++) {
+      if(quiz?.questions[i].user_answer === quiz?.questions[i].question.correct_answer) {
+        numberOfCorrectQuestions++;
+      }
+    }
+    return numberOfCorrectQuestions;
+  }
+
+function showRevealedLetters(numberOfCorrectQuestions) {
   let revealedLetters = "";
-  for(let i = 0; i < currentQuestion-1; i++) {
+  for(let i = 0; i < numberOfCorrectQuestions-1; i++) {
     revealedLetters+=gameWord?.charAt(i);
   }
   return revealedLetters;
 }
 
 function isGuessCorrect(guessWord) {
-  return ((showRevealedLetters(currentQuestion)+guessWord).toLowerCase() === gameWord?.toLowerCase())
+  return ((showRevealedLetters(numberOfCorrectQuestions)+guessWord).toLowerCase() === gameWord?.toLowerCase())
 }
 
 function submitAnswer(guessWord) {
@@ -81,7 +93,7 @@ const updateAggregateScore = async () => {
             {gameWord?.split("").map((letter, index) => {
               const currentAcc = acc++;
               return (
-                currentAcc < currentQuestion ? <p>{letter}</p> : <input maxLength="1" key={index} value={userInput[index]} onChange={e => handleInputChange(index, e.target.value)}/>
+                currentAcc < numberOfCorrectQuestions ? <p>{letter}</p> : <input maxLength="1" key={index} value={userInput[index]} onChange={e => handleInputChange(index, e.target.value)}/>
               )
             })}
             
