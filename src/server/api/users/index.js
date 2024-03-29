@@ -19,12 +19,19 @@ router.get("/", async (req, res, next) => {
 });
 
 // GET /api/users/:id
-//WORKING PROPERLY!
+//WORKING PROPERLY add to this to also get user_topics and get all topics
 router.get("/:id", async (req, res, next) => {
   const { id } = req.params;
   try {
     const user = await prisma.user.findUnique({
       where: { id: +id },
+      include: {
+        user_topics: {
+          include: {
+            Topics: true,
+          },
+        },
+      },
     });
     if (!user) {
       return next({

@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-//there should be a more concise query to get all of this information
+
 import { useGetUserQuery } from "./accountSlice";
-import { useGetTopicsQuery } from "./accountSlice";
-import { useGetUserTopicsQuery } from "./accountSlice";
 import { useGetUsersQuery } from "./accountSlice";
 
 function TopicCard({ topic }) {
@@ -29,12 +27,6 @@ export default function UserStats() {
   const { id } = useParams();
   const { data: users } = useGetUsersQuery();
   const { data: user } = useGetUserQuery(id);
-  const { data: topics } = useGetTopicsQuery();
-  const { data: userTopics } = useGetUserTopicsQuery(id);
-
-  const userTopicPicks = userTopics?.map((userTopics) => {
-    return topics?.find((topics) => topics.id === userTopics.topic_id);
-  });
 
   return (
     <>
@@ -45,19 +37,11 @@ export default function UserStats() {
         <p>Aggregate Score: {user?.aggregate_score}</p>
         <p>Quiz Count: {user?.quiz_count}</p>
       </div>
-      {/*<div>
-        <h2>Topics:</h2>
-        <ul>
-          {topics?.map((topic) => (
-            <TopicCard key={topic?.id} topic={topic} />
-          ))}
-        </ul>
-          </div>*/}
       <div>
         <h2>Your Topics: </h2>
         <ul>
-          {userTopicPicks?.map((topic) => (
-            <TopicCard key={topic?.id} topic={topic} />
+          {user?.user_topics?.map(({ Topics }) => (
+            <TopicCard key={Topics?.id} topic={Topics} />
           ))}
           <button>
             <Link to={`/topics/${id}`}>Change Topics</Link>
