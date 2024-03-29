@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-
+//there should be a more concise query to get all of this information
 import { useGetUserQuery } from "./accountSlice";
 import { useGetTopicsQuery } from "./accountSlice";
 import { useGetUserTopicsQuery } from "./accountSlice";
