@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import "./index.less";
+import "./index.css";
 
 import { Provider } from "react-redux";
 import store from "./store";
 
 import AuthForm from "./features/auth/AuthForm";
+import Home from "./features/account/Home.jsx";
 import ChooseTopics from "./features/account/ChooseTopics.jsx";
 import UserStats from "./features/account/UserStats.jsx";
 import Root from "./layout/Root.jsx";
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     children: [
+      { path: "/", element: <Home /> },
       { path: "/account/:id", element: <UserStats /> },
       { path: "/topics/:id", element: <ChooseTopics /> },
       { path: "/auth", element: <AuthForm /> },
