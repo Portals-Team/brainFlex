@@ -10,6 +10,8 @@ function TopicCard({ topic }) {
   return (
     <li>
       <h4>{topic?.name}</h4>
+      <button>Play {topic?.name} Quiz</button>
+      {/* make this button a Link tag to generated quiz for the users picked topic*/}
     </li>
   );
 }
