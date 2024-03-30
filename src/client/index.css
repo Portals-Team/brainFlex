@@ -40,7 +40,7 @@ a {
   flex-direction: row;
 }
 
-/*game home & score correct styling*/
+/*game home & score correct & score incorrect styling*/
 #imageContainer {
   margin-left: 1rem;
   margin-right: 1rem;

@@ -23,23 +23,27 @@ export default function GameScoreIncorrect() {
   const { data: quiz } = useGetGameQuery(id);
   const { data: imageandword } = useGetImageWordQuery(quiz?.image_Word_id);
   const [updateUser] = useUpdatedUserMutation();
-  
+
   return (
     <>
       {/*flex this section into a row*/}
-      <section>
+      <section id="imageContainer">
         {/*image will be in full focus for the final game score view*/}
-        <img src={imageandword?.image_url} />
+        <img id="image" src={imageandword?.image_url} />
       </section>
-      <section>
+      <section id="correctAnswer">
         {/*answer grid should be a controlled form*/}
         <h1>The Correct Word Was: {imageandword?.topic_word}</h1>
       </section>
-      <section>
-        <li>FINAL QUIZ SCORE: 0/10</li>
+      <section id="quizScore">
+        <p>FINAL QUIZ SCORE: 0/10</p>
       </section>
       <section>
-        <Link to="/dashboard">HOME</Link>
+        <button id="buttonGame">
+          <Link id="link" to="/dashboard">
+            HOME
+          </Link>
+        </button>
       </section>
     </>
   );
