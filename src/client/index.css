@@ -150,7 +150,7 @@ a {
   color: #5e80a8;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  border: 0.1rem solid #71adf1;
+  filter: drop-shadow(0px 0px .1rem #62a3ee);
   background-color: white;
   padding: 1rem;
   margin: 1rem;
@@ -158,15 +158,16 @@ a {
 }
 
 #userCardItem {
-  color: #0654ad;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5e80a8;
   margin: .5rem;
 }
 
 #yourTopicsCard {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  color: #0654ad;
-  border: 0.1rem solid #71adf1;
+  color: #5e80a8;
+  filter: drop-shadow(0px 0px .1rem #62a3ee);
   background-color: white;
   padding: 1rem;
   margin: 1rem;
@@ -174,18 +175,23 @@ a {
 }
 
 #yourTopicsHeadline, #userCardHeadline, #topPlayersHeadline {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
   color: #5e80a8;
   margin-bottom: 1rem;
+}
+
+#topicName {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin-bottom: .2rem;
 }
 
 #playQuizButton {
   color: #5e80a8;
   border: 0.1rem solid #71adf1;
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: rgb(232, 238, 243);
-  margin: 0.5rem;
+  margin-bottom: .5rem;
   padding: 0.4rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -208,8 +214,8 @@ a {
 
 #topPlayersCard {
   font-family: Arial, Helvetica, sans-serif;
-  color: #0654ad;
-  border: 0.1rem solid #71adf1;
+  color: #5e80a8;
+  filter: drop-shadow(0px 0px .1rem #62a3ee);
   background-color: white;
   padding: 1rem;
   margin: 1rem;
@@ -217,6 +223,7 @@ a {
 }
 
 #topUserScores {
+  font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 1rem;
 }
 

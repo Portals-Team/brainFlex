@@ -7,7 +7,7 @@ import { useGetUsersQuery } from "./accountSlice";
 function TopicCard({ topic }) {
   return (
     <li>
-      <p>{topic?.name}</p>
+      <p id="topicName">{topic?.name}</p>
       <button id="playQuizButton">Play Quiz</button>
       {/* make this button a Link tag to generated quiz for the users picked topic*/}
     </li>
@@ -61,7 +61,7 @@ export default function UserStats() {
               </div>*/}
           <div id="topPlayersCard">
             <h3 id="topPlayersHeadline">Top Players:</h3>
-            <ul>
+            <ul id="topPlayers">
               {users?.length > 0 &&
                 [...users]
                   .sort((a, b) => b.aggregate_score - a.aggregate_score)
