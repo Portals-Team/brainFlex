@@ -57,10 +57,9 @@ a {
 }
 
 #answerGridTitle {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
-  color: #354353;
-  margin-top: 0.7rem;
+  color: rgb(248, 119, 54);
+  margin: 0.7rem;
   text-align: center;
 }
 
@@ -73,7 +72,7 @@ a {
 
 #userLetter,
 #revealedLetter {
-  color: #0654ad;
+  color: rgb(20, 144, 218);
   background-color: rgb(248, 247, 242);
   font-family: monospace;
   font-size: 25px;
@@ -86,7 +85,7 @@ a {
 }
 
 #revealedLetter {
-  background-color: #0654ad;
+  background-color:rgb(20, 144, 218);
   color: white;
 }
 
@@ -97,6 +96,7 @@ a {
 }
 
 #button {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   color: #5e80a8;
   border: 0.1rem solid #71adf1;

@@ -75,7 +75,7 @@ export default function GameHome() {
         <img id="image" className={blurClass} src={image_word?.image_url} />
       </section>
       <section>
-        <p id="answerGridTitle">fill in the empty letters to solve</p>
+        <p id="answerGridTitle">Fill in the Empty Letters to Solve</p>
         <form>
           <div id="answerGrid">
             {gameWord?.split("").map((letter, index) => {
