@@ -39,19 +39,26 @@ export default function GameScoreCorrect() {
   return (
     <>
       {/*flex this section into a row*/}
-      <section>
+      <section id="imageContainer">
         {/*image will be in full focus for the final game score view*/}
-        <img src={imageandword?.image_url} />
+        <img id="image" src={imageandword?.image_url} />
       </section>
-      <section>
+      <section id="correctAnswer">
         {/*answer grid should be a controlled form*/}
-        <h1>The Correct Word Was: {imageandword?.topic_word}</h1>
+        <h1>Correct! : {imageandword?.topic_word}</h1>
       </section>
       <section>
-        <li>FINAL QUIZ SCORE: {calculateScore(quiz?.current_question)}</li>
+        <p id="quizScore">
+          FINAL QUIZ SCORE: {calculateScore(quiz?.current_question)}
+        </p>
       </section>
       <section>
-        <Link to="/dashboard">HOME</Link>
+        <button id="buttonGame">
+          {/* there is no longer a dashboard page*/}
+          <Link id="link" to="/dashboard">
+            HOME
+          </Link>
+        </button>
       </section>
     </>
   );
