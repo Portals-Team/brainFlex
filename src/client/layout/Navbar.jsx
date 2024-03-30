@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import { logout, selectToken } from "../features/auth/authSlice";
 
-import "./Navbar.less";
+import "../index.css";
 
 /**
  * A simple navigation bar that displays "Log In" if the user is not logged in,
@@ -21,9 +21,16 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/account">Account</NavLink>
-      <NavLink to="/auth">Login/Logout</NavLink>
+      <p id="navbarEmoji">🧠</p>
+      <NavLink id="navLink" to="/">
+        Home
+      </NavLink>
+      <NavLink id="navLink" to="/account">
+        Account
+      </NavLink>
+      <NavLink id="navLink" to="/auth">
+        Login/Logout
+      </NavLink>
     </nav>
   );
 }

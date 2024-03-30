@@ -87,7 +87,7 @@ export default function GameHome() {
         <img id="image" className={blurClass} src={image_word?.image_url} />
       </section>
       <section>
-        <h1 id="answerGridTitle">Guess the Word</h1>
+        <p id="answerGridTitle">fill in the empty letters to solve</p>
         <form>
           <div id="answerGrid">
             {gameWord?.split("").map((letter, index) => {

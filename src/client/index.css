@@ -1,9 +1,21 @@
 * {
-  background-color: white;
+  /*background-color: rgb(241, 243, 247);*/
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   border: 0px solid green;
+}
+
+body {
+  background: linear-gradient(rgb(250, 251, 252), rgb(177, 190, 235));
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
 }
 
 ul,
@@ -13,12 +25,9 @@ menu {
 }
 
 a {
+  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 #userStats,
@@ -31,10 +40,10 @@ a {
 #imageContainer {
   margin-left: 1rem;
   margin-right: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   border-radius: 25px;
   overflow: hidden;
-  border: 1.5px solid green;
 }
 #image {
   max-width: 100%;
@@ -44,7 +53,8 @@ a {
 
 #answerGridTitle {
   font-family: Arial, Helvetica, sans-serif;
-  color: green;
+  font-size: 1.5rem;
+  color: #354353;
   margin-top: 0.7rem;
   text-align: center;
 }
@@ -53,24 +63,26 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 0.5rem;
+  margin: 1rem;
 }
 
 #userLetter,
 #revealedLetter {
-  background-color: white;
+  color: #0654ad;
+  background-color: rgb(248, 247, 242);
   font-family: monospace;
   font-size: 25px;
+  text-align: center;
   width: 30px;
   height: 40px;
   margin: 0.1rem;
-  border: 1px solid;
   box-sizing: border-box;
-  text-align: center;
+  border-radius: 5px;
+  
 }
 
 #revealedLetter {
-  background-color: rgb(13, 170, 13);
+  background-color: #0654ad;
   color: white;
 }
 
@@ -81,12 +93,49 @@ a {
 }
 
 #button {
-  background-color: aqua;
+  font-size: 1rem;
+  color: #5e80a8;
+  border: .1rem solid #71adf1;
+  border-radius: 15px;
+  background-color: rgb(232, 238, 243);
+  padding: .4rem;
   padding: 0.5rem;
   margin: 0.5rem;
   border-radius: 10px;
 }
 
 #link {
-  background-color: aqua;
+  background-color: rgb(232, 238, 243);
+}
+
+/* navbar styling*/
+.navbar {
+  background-color: rgb(248, 247, 242);
+  border-bottom: .3rem solid rgb(191, 189, 196);
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+}
+
+#navbarEmoji {
+  font-size: 2.5rem;
+  padding: .5rem;
+  border-radius: 25% 10%;
+  background: linear-gradient(#dfe5f0, #71adf1);
+  filter: drop-shadow(2px 5px 2px rgb(128, 131, 129));  
+}
+
+#navLink {
+  color: #5e80a8;
+  border: .1rem solid #71adf1;
+  border-radius: 15px;
+  background-color: rgb(232, 238, 243);
+  padding: .4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
 }
