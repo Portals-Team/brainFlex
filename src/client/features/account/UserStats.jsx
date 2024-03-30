@@ -7,8 +7,8 @@ import { useGetUsersQuery } from "./accountSlice";
 function TopicCard({ topic }) {
   return (
     <li>
-      <h4>{topic?.name}</h4>
-      <button>Play {topic?.name} Quiz</button>
+      <p>{topic?.name}</p>
+      <button id="playQuizButton">Play Quiz</button>
       {/* make this button a Link tag to generated quiz for the users picked topic*/}
     </li>
   );
@@ -17,8 +17,8 @@ function TopicCard({ topic }) {
 function UserScores({ user }) {
   return (
     <ul>
-      <li>{user?.name}</li>
-      <li>Score: {user?.aggregate_score}</li>
+      <h3>{user?.name}</h3>
+      <li id="topUserScores">Score: {user?.aggregate_score}</li>
     </ul>
   );
 }
@@ -30,34 +30,37 @@ export default function UserStats() {
 
   return (
     <>
-      <p>User Stats</p>
       <article id="userStats">
         <section>
-          <div>
-            <h1>Welcome {user?.name}!</h1>
-            <p>Username: {user?.username}</p>
-            <p>Aggregate Score: {user?.aggregate_score}</p>
-            <p>Quiz Count: {user?.quiz_count}</p>
+          <div id="userCard">
+            <h3 id="userCardHeadline">Welcome {user?.name}!</h3>
+            <p id="userCardItem">Username: {user?.username}</p>
+            <p id="userCardItem">Aggregate Score: {user?.aggregate_score}</p>
+            <p id="userCardItem">Quiz Count: {user?.quiz_count}</p>
           </div>
-          <div>
-            <h2>Your Topics: </h2>
+
+          <div id="yourTopicsCard">
+            <h3 id="yourTopicsHeadline">Your Topics: </h3>
             <ul>
               {user?.user_topics?.map(({ Topics }) => (
                 <TopicCard key={Topics?.id} topic={Topics} />
               ))}
-              <button>
-                <Link to={`/topics/${id}`}>Change Topics</Link>
-              </button>
             </ul>
           </div>
-        </section>
-        <section>
           <div>
+            <button id="changeTopicsButton">
+              <Link to={`/topics/${id}`}>Change Topics</Link>
+            </button>
+          </div>
+        </section>
+
+        <section>
+          {/*<div>
             <h3>YOUR RANK</h3>
             <h4>*this is still to be determined*</h4>
-          </div>
-          <div>
-            <h3>TOP PLAYERS:</h3>
+              </div>*/}
+          <div id="topPlayersCard">
+            <h3 id="topPlayersHeadline">Top Players:</h3>
             <ul>
               {users?.length > 0 &&
                 [...users]

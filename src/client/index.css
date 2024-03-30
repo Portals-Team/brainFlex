@@ -78,7 +78,6 @@ a {
   margin: 0.1rem;
   box-sizing: border-box;
   border-radius: 5px;
-  
 }
 
 #revealedLetter {
@@ -95,10 +94,10 @@ a {
 #button {
   font-size: 1rem;
   color: #5e80a8;
-  border: .1rem solid #71adf1;
+  border: 0.1rem solid #71adf1;
   border-radius: 15px;
   background-color: rgb(232, 238, 243);
-  padding: .4rem;
+  padding: 0.4rem;
   padding: 0.5rem;
   margin: 0.5rem;
   border-radius: 10px;
@@ -111,9 +110,9 @@ a {
 /* navbar styling*/
 .navbar {
   background-color: rgb(248, 247, 242);
-  border-bottom: .3rem solid rgb(191, 189, 196);
+  border-bottom: 0.3rem solid rgb(191, 189, 196);
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
   width: 100%;
@@ -122,20 +121,96 @@ a {
 
 #navbarEmoji {
   font-size: 2.5rem;
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 25% 10%;
   background: linear-gradient(#dfe5f0, #71adf1);
-  filter: drop-shadow(2px 5px 2px rgb(128, 131, 129));  
+  filter: drop-shadow(2px 5px 2px rgb(128, 131, 129));
 }
 
 #navLink {
   color: #5e80a8;
-  border: .1rem solid #71adf1;
+  border: 0.1rem solid #71adf1;
   border-radius: 15px;
   background-color: rgb(232, 238, 243);
-  padding: .4rem;
+  padding: 0.4rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   text-decoration: none;
   cursor: pointer;
+}
+
+/*user stats styling*/
+
+#userCard {
+  color: #5e80a8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  border: 0.1rem solid #71adf1;
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 15px;
+}
+
+#userCardItem {
+  color: #0654ad;
+  margin: .5rem;
+}
+
+#yourTopicsCard {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #0654ad;
+  border: 0.1rem solid #71adf1;
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 15px;
+}
+
+#yourTopicsHeadline, #userCardHeadline, #topPlayersHeadline {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5e80a8;
+  margin-bottom: 1rem;
+}
+
+#playQuizButton {
+  color: #5e80a8;
+  border: 0.1rem solid #71adf1;
+  border-radius: 15px;
+  background-color: rgb(232, 238, 243);
+  margin: 0.5rem;
+  padding: 0.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#changeTopicsButton {
+  color: #5e80a8;
+  border: 0.1rem solid #71adf1;
+  border-radius: 15px;
+  background-color: rgb(232, 238, 243);
+  margin-left: 1rem;
+  padding: .6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#topPlayersCard {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0654ad;
+  border: 0.1rem solid #71adf1;
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 15px;
+}
+
+#topUserScores {
+  margin-bottom: 1rem;
 }
