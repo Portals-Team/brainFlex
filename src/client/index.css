@@ -6,7 +6,7 @@
 }
 
 body {
-  background: linear-gradient(rgb(250, 251, 252), rgb(177, 190, 235));
+  background: linear-gradient(45deg, rgb(193, 203, 238) 30%, white 70%);
   height: 100%;
   width: 100%;
   min-height: 100vh;
@@ -43,6 +43,7 @@ a {
   margin-bottom: 1rem;
   border-radius: 25px;
   overflow: hidden;
+  filter: drop-shadow(0px 0px .1rem #62a3ee);
 }
 #image {
   max-width: 100%;
@@ -108,32 +109,43 @@ a {
 
 /* navbar styling*/
 .navbar {
-  background-color: rgb(248, 247, 242);
-  border-bottom: 0.3rem solid rgb(191, 189, 196);
+  /*background-color: white;*/
+  border-bottom: 0.1rem solid #71adf1;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items:flex-end;
   height: 100%;
   width: 100%;
   padding: 1rem;
 }
 
+#gameTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #5e80a8;
+  font-size: 1.5rem;
+  text-align: end;
+  padding-bottom: 1rem;
+}
+
+
+
 #navbarEmoji {
   font-size: 2.5rem;
   padding: 0.5rem;
   border-radius: 25% 10%;
-  background: linear-gradient(#dfe5f0, #71adf1);
-  filter: drop-shadow(2px 5px 2px rgb(128, 131, 129));
+  background: linear-gradient(#c7d6f1, #71adf1);
 }
 
 #navLink {
   color: #5e80a8;
   border: 0.1rem solid #71adf1;
-  border-radius: 15px;
-  background-color: rgb(232, 238, 243);
+  border-radius: 10px;
+  background-color: rgb(239, 244, 248);
   padding: 0.4rem;
+  margin-left: .5rem;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: .8rem;
   text-decoration: none;
   cursor: pointer;
 }

@@ -21,16 +21,23 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <p id="navbarEmoji">🧠</p>
-      <NavLink id="navLink" to="/">
-        Home
-      </NavLink>
-      <NavLink id="navLink" to="/account">
-        Account
-      </NavLink>
-      <NavLink id="navLink" to="/auth">
-        Login/Logout
-      </NavLink>
+      <div>
+        <p id="navbarEmoji">🧠</p>
+      </div>
+      <div>
+        <p id="gameTitle">brainFLEX</p>
+        <div>
+          <NavLink id="navLink" to="/">
+            Home
+          </NavLink>
+          <NavLink id="navLink" to="/account">
+            Account
+          </NavLink>
+          <NavLink id="navLink" to="/auth">
+            Login/Logout
+          </NavLink>
+        </div>
+      </div>
     </nav>
   );
 }
