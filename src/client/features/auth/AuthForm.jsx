@@ -44,38 +44,45 @@ export default function AuthForm() {
 
   return (
     <>
-      <h1>{authAction}</h1>
+      <h1 id="loginTitle">{authAction}</h1>
       <form onSubmit={attemptAuth}>
-        <label>
-          Name
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            autoComplete="name"
-          />
-        </label>
-        <label>
-          Username
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            autoComplete="username"
-          />
-        </label>
-        <label>
-          Password
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            autoComplete="current-password"
-          />
-        </label>
-        <button>{authAction}</button>
+        <div id="authForm">
+          <label className="formName">
+            Name
+            <input
+              className="input"
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              autoComplete="name"
+            />
+          </label>
+          <label className="formName">
+            Username
+            <input
+              className="input"
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              autoComplete="username"
+            />
+          </label>
+          <label className="formName">
+            Password
+            <input
+              className="input"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="current-password"
+            />
+          </label>
+        </div>
+        <button id="loginButton">{authAction}</button>
       </form>
-      <a onClick={() => setIsLogin(!isLogin)}>{altCopy}</a>
+      <a id="bottomMessage" onClick={() => setIsLogin(!isLogin)}>
+        {altCopy}
+      </a>
 
       {(loginLoading || registerLoading) && <p>Please wait...</p>}
       {loginError && <p role="alert">{loginError}</p>}
