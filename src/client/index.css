@@ -207,7 +207,7 @@ a {
   margin-left: 1rem;
   padding: .6rem;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: none;
   cursor: pointer;
 }
@@ -273,4 +273,62 @@ a {
   margin: 0.5rem;
   border-radius: 10px;
   margin-left: 2rem;
+}
+
+/* choose topics styling */
+
+#chooseTopicsHeadline {
+  color: rgb(248, 119, 54);
+  font-size: 2rem;
+  margin-top: 0rem;
+  margin-left: 1rem;
+  text-align: left;
+}
+
+#chooseTopicsTag {
+  color: #5e80a8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+#categoryCard {
+  color: #5e80a8;
+  filter: drop-shadow(0px 0px .1rem #62a3ee);
+  background-color: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: .5rem;
+  border-radius: 15px;
+}
+
+#categoryName {
+  color: #5e80a8;
+}
+
+#topicsNames {
+  color: #5e80a8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin-bottom: .2rem;
+  padding: 1rem;
+}
+
+#checkbox {
+  margin-right: 1rem;
+}
+
+#submitTopicsButton {
+  font-size: 1rem;
+  color: #5e80a8;
+  border: 0.1rem solid #71adf1;
+  border-radius: 15px;
+  background-color: rgb(232, 238, 243);
+  padding: 0.4rem;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  border-radius: 10px;
 }
