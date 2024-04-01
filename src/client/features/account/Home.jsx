@@ -16,7 +16,7 @@ export default function Home() {
         <div id="imageContainerHomePage">
           <img
             id="homeImage"
-            src="https://res-console.cloudinary.com/dzpne110u/thumbnails/v1/image/upload/v1711830071/QjA3QUIyM0YtMjcyRC00RjgzLUE4MEItMUUyODc3N0ZFMEI5X3ZrcmFhdg==/grid_landscape"
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1711830071/B07AB23F-272D-4F83-A80B-1E28777FE0B9_vkraav.jpg"
             alt="illustration of a brain lifting weights"
           />
         </div>
