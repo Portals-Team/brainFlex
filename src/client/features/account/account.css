@@ -57,6 +57,10 @@
   margin-left: 2rem;
 }
 
+#buttonHome {
+  margin-bottom: 2rem;
+}
+
 /* choose topics styling */
 
 #chooseTopicsHeadline, #pickQuizHeadline {
