@@ -1,7 +1,10 @@
 /* home landing page styling*/
-#homePageConatiner {
+#homePageContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #homePageTitle,
@@ -19,6 +22,7 @@
 }
 
 #imageContainerHomePage {
+  display: flex;
   justify-content: center;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -30,6 +34,12 @@
   height: auto;
   display: block;
   border-radius: 25px;
+}
+
+@media (min-width: 555px) {
+  #homeImage {
+   width: 30%
+  }
 }
 
 #buttonHome,
