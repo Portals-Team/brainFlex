@@ -1,3 +1,18 @@
+ /*game home & score correct & score incorrect styling*/
+#imageContainer {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 25px;
+    overflow: hidden;
+    filter: drop-shadow(0px 0px .1rem #62a3ee);
+  }
+  #image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 
 .blur-50 { filter: blur(50px); }
 .blur-45 { filter: blur(45px); }
@@ -10,5 +25,156 @@
 .blur-10 { filter: blur(10px); }
 .blur-5 { filter: blur(5px); }
 .blur-0 { filter: blur(0px); }
+  
+  #answerGridTitle {
+    font-size: 1.5rem;
+    color: rgb(248, 119, 54);
+    margin: 0.7rem;
+    text-align: center;
+  }
+
+  #answerGrid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem;
+  }
+  
+  #userLetter,
+  #revealedLetter {
+    color: rgb(20, 144, 218);
+    background-color: rgb(248, 247, 242);
+    font-family: monospace;
+    font-size: 25px;
+    text-align: center;
+    width: 30px;
+    height: 40px;
+    margin: 0.1rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  
+  #revealedLetter {
+    background-color:rgb(20, 144, 218);
+    color: white;
+  }
+  
+  #gameHomeButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  #button, #buttonGame, #submitAnswerButton, #backHomeButton, #backHomeButtonAnswerPage {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #5e80a8;
+    border: 0.1rem solid #71adf1;
+    border-radius: 15px;
+    background-color: rgb(232, 238, 243);
+    padding: 0.4rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+  }
+
+  #buttonGame {
+    margin-left: 1.5rem;
+  }
+  
+  #link {
+    background-color: rgb(232, 238, 243);
+  }
+  
+  #correctAnswer, #quizScore {
+    color: rgb(248, 119, 54);
+    text-align: left;
+    margin-left: 1.5rem;
+  }
+  
+  #quizScore {
+    color: #5e80a8;
+  }
+
+  /* quiz styling */
+
+  #questionSection, #factSection {
+    margin: 1rem;
+display: flex;
+    align-items: flex-end;
+    text-align: center;
+  }
+
+  #iconContainer {
+    justify-content: center; 
+    align-items: center; 
+    width: 55px; 
+    height: auto; 
+    background: linear-gradient(#c7d6f1, #71adf1); 
+    border-radius: 25% 10%; 
+    padding-bottom: .5rem;
+  }
+
+  #questionIcon {
+    color: white;
+    font-size: 2.5rem;
+  }
+
+  #question, #funFact {
+    color: #5e80a8;
+    margin-left: .5rem;
+  }
+
+  #questionAnswers {
+    color: #5e80a8;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .questionAnswer {
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: solid #5e80a8; 1px;
+  }
+
+  #answerA, #answerB, #answerC, #answerD {
+    margin-left: 1rem;
+  }
+
+  .answerIcon, .answerIconCorrect, #yourAnswer {
+    margin-left: 1rem;
+  }
+
+  #yourAnswer, .answerIconCorrect {
+    color: rgb(248, 119, 54);
+  }
+
+  #buttonSection {
+    display: flex;
+  }
+
+  #funFactContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center; 
+    background: linear-gradient(#c7d6f1, #71adf1); 
+    border-radius: 25% 10%; 
+    padding: .5rem;
+    padding-top: 0;
+    margin-right: .2rem;
+    margin-top: 1rem;
+  }
+
+  #funFactIcon {
+    color: white;
+    font-size: 2rem;
+  }
+
+  #backHomeButtonAnswerPage {
+    margin-left: 1rem;
+  }
 
   
+   

@@ -2,7 +2,22 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border: 1px solid green;
+  border: 0px solid green;
+  font-family: "Paytone One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background: linear-gradient(45deg, rgb(223, 228, 247) 30%, white 70%);
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
 }
 
 ul,
@@ -12,20 +27,8 @@ menu {
 }
 
 a {
+  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
-
-#userStats, #yourTopics {
-    display: flex;
-    flex-direction: row;
-}
-
-
-
-
 

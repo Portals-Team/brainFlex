@@ -6,6 +6,8 @@ import {
 } from "./accountSlice";
 import { useParams } from "react-router-dom";
 
+import "./account.css";
+
 export default function ChooseTopics() {
   const { data: categories } = useGetCategoriesQuery();
   const [selectedTopics, setSelectedTopics] = useState([]);
@@ -38,13 +40,14 @@ export default function ChooseTopics() {
 
   function CategoryItem({ category, onCheckboxChange, selectedTopics }) {
     return (
-      <div>
-        <h3>{category.name}</h3>
+      <div id="categoryCard">
+        <h3 id="categoryName">{category.name}</h3>
         <ul>
           {category.Category_topics.map(({ topic }) => (
             <li key={topic.id}>
-              <label>
+              <label id="topicsNames">
                 <input
+                  id="checkbox"
                   type="checkbox"
                   value={topic.id}
                   checked={selectedTopics.includes(topic.id)}
@@ -61,9 +64,10 @@ export default function ChooseTopics() {
 
   return (
     <>
-      <h2>Pick 3 Favorite Quiz Topics</h2>
+      <p id="chooseTopicsHeadline">Favorite Quiz Topics:</p>
+      <p id="chooseTopicsTag">Pick 3</p>
       <div>
-        <ul id="pickTopics">
+        <ul>
           {categories?.map((category) => (
             <CategoryItem
               key={category.id}
@@ -74,7 +78,7 @@ export default function ChooseTopics() {
           ))}
         </ul>
       </div>
-      <button onClick={handleSumbit}>
+      <button id="submitTopicsButton" onClick={handleSumbit}>
         <Link to={`/account/${id}`}>Submit Topics</Link>
       </button>
     </>
