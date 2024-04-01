@@ -13,3 +13,24 @@ router.get("/", async (req, res, next) => {
     next(e);
   }
 });
+
+router.get("/:id", async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    const topicById = await prisma.topics.findUnique({
+      where: {
+        id: +id,
+      },
+      include: {
+        user_topics: true,
+        Quiz: true,
+        Question: true,
+        Categories_topics: true,
+        Image_Word: true,
+      },
+    });
+    res.json(topicById);
+  } catch (e) {
+    next(e);
+  }
+});

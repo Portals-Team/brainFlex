@@ -19,6 +19,12 @@ const accountApi = api.injectEndpoints({
       providesTags: ["Topics"],
     }),
 
+    //gets all information about a specific topic
+    getTopicById: builder.query({
+      query: (id) => "/topics/" + id,
+      providesTags: ["Topic"],
+    }),
+
     //getUserTopics gets the users topic picks by id
     getUserTopics: builder.query({
       query: (id) => "/user_topics/" + id,
@@ -38,6 +44,19 @@ const accountApi = api.injectEndpoints({
       }),
       invalidatesTags: ["UserTopics"],
     }),
+    createNewQuiz: builder.mutation({
+      query: (payload) => ({
+        url: "/quizes",
+        method: "POST",
+        body: {
+          user_Id: payload.user_Id,
+          category_Id: payload.category_Id,
+          topic_Id: payload.topic_Id,
+          questionsarray: payload.questionsarray,
+          image_Word_Id: payload.image_Word_Id,
+        },
+      }),
+    }),
   }),
 });
 
@@ -48,4 +67,6 @@ export const {
   useGetTopicsQuery,
   useGetUserTopicsQuery,
   useUpdateUserTopicsMutation,
+  useGetTopicByIdQuery,
+  useCreateNewQuizMutation,
 } = accountApi;

@@ -1,3 +1,4 @@
+const { parse } = require("dotenv");
 const prisma = require("../../prisma");
 const game = require("express").Router();
 module.exports = game;
@@ -117,3 +118,44 @@ game.patch("/:id", async (req, res, next) => {
 // POST /api/quizes =>
 //    Create the Quiz
 //    Associate all questions with the newly created quiz
+
+game.post("/", async (req, res, next) => {
+  const { user_Id, category_Id, topic_Id, questionsarray, image_Word_Id } =
+    req.body;
+  try {
+    const parsedArray = JSON.parse(questionsarray);
+    console.log(JSON.parse(questionsarray));
+    const newQuiz = await prisma.quiz.create({
+      data: {
+        User: { connect: { id: +user_Id } },
+        category: { connect: { id: +category_Id } },
+        topic: { connect: { id: +topic_Id } },
+        quiz_completed: false,
+        image_word: { connect: { id: +image_Word_Id } },
+        current_question: 1,
+      },
+    });
+
+    for (i = 0; i < parsedArray.length; i++) {
+      await prisma.quiz_problems.create({
+        data: {
+          quiz: { connect: { id: newQuiz.id } },
+          question: { connect: { id: parsedArray[i] } },
+        },
+      });
+    }
+    // const quizWithQuestions = await prisma.quiz.update({
+    //   where: { id: newQuiz.id },
+    //   data: {
+    //     questions: {
+    //       connect: JSON.parse(questionsarray).map((questionId) => ({
+    //         id: +questionId,
+    //       })),
+    //     },
+    //   },
+    // });
+    res.json(newQuiz);
+  } catch (e) {
+    next(e);
+  }
+});
