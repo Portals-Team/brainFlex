@@ -41,7 +41,7 @@ model Quiz_problems {
   id          Int      @id @default(autoincrement())
   quiz        Quiz     @relation(fields: [quiz_id], references: [id])
   quiz_id     Int
-  user_answer String
+  user_answer String?
   question    Question @relation(fields: [question_id], references: [id])
   question_id Int
 }

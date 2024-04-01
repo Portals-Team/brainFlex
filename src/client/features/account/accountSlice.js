@@ -19,6 +19,12 @@ const accountApi = api.injectEndpoints({
       providesTags: ["Topics"],
     }),
 
+    //gets all information about a specific topic
+    getTopicById: builder.query({
+      query: (id) => "/topics/" + id,
+      providesTags: ["Topic"],
+    }),
+
     //getUserTopics gets the users topic picks by id
     getUserTopics: builder.query({
       query: (id) => "/user_topics/" + id,
@@ -48,4 +54,5 @@ export const {
   useGetTopicsQuery,
   useGetUserTopicsQuery,
   useUpdateUserTopicsMutation,
+  useGetTopicByIdQuery,
 } = accountApi;

@@ -4,8 +4,8 @@ CREATE TABLE "User" (
     "username" TEXT NOT NULL,
     "password" TEXT NOT NULL,
     "name" TEXT NOT NULL,
-    "aggregate_score" INTEGER NOT NULL,
-    "quiz_count" INTEGER NOT NULL
+    "aggregate_score" INTEGER NOT NULL DEFAULT 0,
+    "quiz_count" INTEGER NOT NULL DEFAULT 0
 );
 
 -- CreateTable
@@ -28,7 +28,7 @@ CREATE TABLE "Quiz" (
 CREATE TABLE "Quiz_problems" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "quiz_id" INTEGER NOT NULL,
-    "user_answer" TEXT NOT NULL,
+    "user_answer" TEXT,
     "question_id" INTEGER NOT NULL,
     CONSTRAINT "Quiz_problems_quiz_id_fkey" FOREIGN KEY ("quiz_id") REFERENCES "Quiz" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT "Quiz_problems_question_id_fkey" FOREIGN KEY ("question_id") REFERENCES "Question" ("id") ON DELETE RESTRICT ON UPDATE CASCADE

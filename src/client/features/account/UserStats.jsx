@@ -3,14 +3,52 @@ import { useParams } from "react-router-dom";
 
 import { useGetUserQuery } from "./accountSlice";
 import { useGetUsersQuery } from "./accountSlice";
+import { useGetTopicByIdQuery } from "./accountSlice";
 
 import "./account.css";
 
 function TopicCard({ topic }) {
+  //logic for creating a new quiz
+  //first get everything associated with that particular topic
+  let { data: topicInformation } = useGetTopicByIdQuery(topic?.id);
+
+  //this function gets a random image word
+  function getRandomImageWord() {
+    const randomImageIndex = Math.floor(
+      Math.random() * topicInformation.Image_Word.length
+    );
+    console.log(topicInformation.Image_Word[randomImageIndex]);
+    return topicInformation.Image_Word[randomImageIndex];
+  }
+
+  function getRandomQuizIds() {
+    const numberArray = Array.from(
+      { length: topicInformation.Question.length - 1 },
+      (_, i) => i + 1
+    );
+    const shuffledNumbers = numberArray.sort(() => Math.random() - 0.5);
+    const firstTen = shuffledNumbers.slice(0, 10);
+    for (let i = 0; i < firstTen.length; i++) {
+      console.log(topicInformation.Question[firstTen[i]]);
+    }
+  }
+
+  const createNewQuiz = async (evt) => {
+    evt.preventDefault();
+    try {
+      getRandomImageWord();
+      getRandomQuizIds();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <li>
       <p id="topicName">{topic?.name}</p>
-      <button id="playQuizButton">Play Quiz</button>
+      <form onSubmit={createNewQuiz}>
+        <button id="playQuizButton">Play Quiz</button>
+      </form>
       {/* make this button a Link tag to generated quiz for the users picked topic*/}
     </li>
   );
