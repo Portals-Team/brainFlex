@@ -89,7 +89,7 @@ game.patch("/:id", async (req, res, next) => {
       const updatedQuizCompleted = await prisma.quiz.update({
         where: {
           id: +id,
-          user_id: res.locals.user.id,
+          //user_id: res.locals.user.id,
         },
         data: {
           quiz_completed: true,

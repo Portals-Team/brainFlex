@@ -6,6 +6,7 @@ import {
   useGetQuestionsQuery,
   useGetGameQuery,
   useUpdateQuizQuestionUnsolvedMutation,
+  useUpdateQuizQuestionSolvedMutation,
 } from "../game/gameSlice";
 
 export default function QuizAnswer() {
@@ -17,6 +18,7 @@ export default function QuizAnswer() {
   const currentQuestion =
     quiz?.questions[currentQuestionIndex].question.question;
   const [setNextQuestion] = useUpdateQuizQuestionUnsolvedMutation();
+  const [setSolved] = useUpdateQuizQuestionSolvedMutation();
   const navigate = useNavigate();
 
   const compareAnswer = (letter) => {
@@ -35,7 +37,13 @@ export default function QuizAnswer() {
   };
   const goBackIncreaseQuestion = async (evt) => {
     evt.preventDefault();
-    setNextQuestion(quiz?.id);
+    console.log(currentQuestion);
+    if(currentQuestion === 10) {
+      setSolved(quiz?.id);
+    }
+    else {
+      setNextQuestion(quiz?.id);
+    }
     navigate(`/game/home/${id}`);
   };
 

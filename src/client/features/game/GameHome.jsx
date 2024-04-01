@@ -103,11 +103,13 @@ export default function GameHome() {
             Solve
           </button>
         </form>
-        <button id="button">
-          <Link id="link" to={`/game/quiz/${id}`}>
-            Ready for Next Question?
-          </Link>
-        </button>
+        {!quiz?.quiz_completed && (
+          <button id="button">
+            <Link id="link" to={`/game/quiz/${id}`}>
+              Ready for Next Question?
+            </Link>
+          </button>
+        )}
       </section>
     </>
   );
