@@ -1,18 +1,32 @@
  /*game home & score correct & score incorrect styling*/
-#imageContainer {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    border-radius: 25px;
-    overflow: hidden;
-    filter: drop-shadow(0px 0px .1rem #62a3ee);
+ #imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 25px;
+  overflow: hidden;
+  filter: drop-shadow(0px 0px 0.1rem #62a3ee);
+  background: white;
+}
+#image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 25px;
+}
+
+@media (min-width: 555px) {
+  #imageContainer {
+    max-width: 60%; 
+    margin: 2rem auto; 
   }
   #image {
-    max-width: 100%;
-    height: auto;
-    display: block;
+    width: auto; 
   }
+}
 
 .blur-50 { filter: blur(50px); }
 .blur-45 { filter: blur(45px); }
