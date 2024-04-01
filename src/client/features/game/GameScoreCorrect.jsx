@@ -25,22 +25,22 @@ export default function GameScoreCorrect() {
       <section id="imageContainer">
         <img id="image" src={imageandword?.image_url} />
       </section>
-      <section id="correctAnswer">
-        <h1>Correct! : {imageandword?.topic_word}</h1>
-      </section>
-      <section>
-        <p id="quizScore">
-          FINAL QUIZ SCORE: {calculateScore(quiz?.current_question)}
-        </p>
-      </section>
-      <section>
-        <button id="buttonGame">
-          {/* there is no longer a dashboard page*/}
-          <Link id="link" to="/dashboard">
-            HOME
-          </Link>
-        </button>
-      </section>
+      <article id="answerInformation">
+        <section id="correctAnswer">
+          <h1>Correct! : {imageandword?.topic_word}</h1>
+        </section>
+        <section>
+          <p id="quizScore">
+            FINAL QUIZ SCORE: {calculateScore(quiz?.current_question)}
+          </p>
+        </section>
+      </article>
+
+      <button id="buttonGame">
+        <Link id="link" to="/account/:id">
+          HOME
+        </Link>
+      </button>
     </>
   );
 }

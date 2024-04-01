@@ -20,20 +20,19 @@ export default function GameScoreIncorrect() {
       <section id="imageContainer">
         <img id="image" src={imageandword?.image_url} />
       </section>
-      <section id="correctAnswer">
-        <h1>The Correct Word Was: {imageandword?.topic_word}</h1>
-      </section>
-      <section id="quizScore">
-        <p>FINAL QUIZ SCORE: 0/10</p>
-      </section>
-      <section>
-        <button id="buttonGame">
-          {/*link path should be changed here*/}
-          <Link id="link" to="/dashboard">
-            HOME
-          </Link>
-        </button>
-      </section>
+      <article id="answerInformation">
+        <section id="correctAnswer">
+          <h1>The Correct Word Was: {imageandword?.topic_word}</h1>
+        </section>
+        <section id="quizScore">
+          <p>FINAL QUIZ SCORE: 0/10</p>
+        </section>
+      </article>
+      <button id="buttonGame">
+        <Link id="link" to="/account/id:">
+          HOME
+        </Link>
+      </button>
     </>
   );
 }

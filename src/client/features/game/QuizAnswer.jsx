@@ -6,6 +6,7 @@ import {
   useGetQuestionsQuery,
   useGetGameQuery,
   useUpdateQuizQuestionUnsolvedMutation,
+  useUpdateQuizQuestionSolvedMutation,
 } from "../game/gameSlice";
 
 export default function QuizAnswer() {
@@ -17,6 +18,7 @@ export default function QuizAnswer() {
   const currentQuestion =
     quiz?.questions[currentQuestionIndex].question.question;
   const [setNextQuestion] = useUpdateQuizQuestionUnsolvedMutation();
+  const [setSolved] = useUpdateQuizQuestionSolvedMutation();
   const navigate = useNavigate();
 
   const compareAnswer = (letter) => {
@@ -35,7 +37,13 @@ export default function QuizAnswer() {
   };
   const goBackIncreaseQuestion = async (evt) => {
     evt.preventDefault();
-    setNextQuestion(quiz?.id);
+    console.log(currentQuestion);
+    if(currentQuestion === 10) {
+      setSolved(quiz?.id);
+    }
+    else {
+      setNextQuestion(quiz?.id);
+    }
     navigate(`/game/home/${id}`);
   };
 
@@ -93,7 +101,7 @@ export default function QuizAnswer() {
           {quiz?.questions[currentQuestionIndex].question.fun_fact}
         </h3>
       </section>
-      <section>
+      <section id="buttonSection">
         <form onSubmit={goBackIncreaseQuestion}>
           <button id="backHomeButtonAnswerPage">Back To Game Home</button>
         </form>
