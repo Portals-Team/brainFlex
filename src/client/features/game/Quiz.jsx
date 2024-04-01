@@ -9,15 +9,6 @@ import {
   useUpdateProblemMutation,
   useUpdateQuizQuestionUnsolvedMutation,
 } from "../game/gameSlice";
-// will need the quiz problem, that corresponds with the current question of the quiz table, and the question of the get quiz problem id
-
-/*Current question will fetch from the database Quiz_problems to show the tally of how many questions have been answered in the quiz*/
-
-/*Question will fetch from the database via the Question table to display the question*/
-
-/*Question answers will be fetched from the database via the Question table to display all the possible answers for the question*/
-
-/*Score will be fetched from the database via the Quiz_problems table to display a tally of how many questions the players got wrong or right*/
 
 export default function Quiz() {
   const { id } = useParams();
@@ -46,17 +37,21 @@ export default function Quiz() {
 
   return (
     <>
-      <h1>Quiz</h1>
-      flex this section into a row
-      <section>
-        <li>Quiz Current</li>
+      <section id="questionSection">
+        <div id="iconContainer">
+          <div id="questionIcon">Q:</div>
+        </div>
         <div>
-          <h3>{quiz?.questions[currentQuestionIndex].question.question}</h3>
-          {/*this will display the question*/}
-          <ol>
-            {/*function-upon entering an answer the user will be directed to the quiz answer page*/}
+          <h3 id="question">
+            {quiz?.questions[currentQuestionIndex].question.question}
+          </h3>
+        </div>
+      </section>
+      <section>
+        <div>
+          <ol id="questionAnswers">
             <li>
-              <label htmlFor="answerA">
+              <label className="questionAnswer" htmlFor="answerA">
                 {quiz?.questions[currentQuestionIndex].question.answer_a}
                 <input
                   type="radio"
@@ -68,7 +63,7 @@ export default function Quiz() {
               </label>
             </li>
             <li>
-              <label htmlFor="answerA">
+              <label className="questionAnswer" htmlFor="answerA">
                 {quiz?.questions[currentQuestionIndex].question.answer_b}
                 <input
                   type="radio"
@@ -80,7 +75,7 @@ export default function Quiz() {
               </label>
             </li>
             <li>
-              <label htmlFor="answerA">
+              <label className="questionAnswer" htmlFor="answerA">
                 {quiz?.questions[currentQuestionIndex].question.answer_c}
                 <input
                   type="radio"
@@ -92,7 +87,7 @@ export default function Quiz() {
               </label>
             </li>
             <li>
-              <label htmlFor="answerA">
+              <label className="questionAnswer" htmlFor="answerA">
                 {quiz?.questions[currentQuestionIndex].question.answer_d}
                 <input
                   type="radio"
@@ -104,13 +99,16 @@ export default function Quiz() {
               </label>
             </li>
           </ol>
-          <form onSubmit={pickAnswer}>
-            <button>Submit Answer</button>
-          </form>
         </div>
-        <li>Score</li>
       </section>
-      <NavLink to={`/game/home/${id}`}>Back To Game Home</NavLink>
+      <section id="buttonSection">
+        <form onSubmit={pickAnswer}>
+          <button id="submitAnswerButton">Submit Answer</button>
+        </form>
+        <NavLink to={`/game/home/${id}`}>
+          <button id="backHomeButton">Back To Game Home</button>
+        </NavLink>
+      </section>
     </>
   );
 }
