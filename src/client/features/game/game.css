@@ -160,7 +160,7 @@ display: flex;
     justify-content: center; 
     align-items: center; 
     background: linear-gradient(#c7d6f1, #71adf1); 
-    border-radius: 25% 10%; 
+    border-radius: 25% 5%; 
     padding: .5rem;
     padding-top: 0;
     margin-right: .2rem;
@@ -170,6 +170,7 @@ display: flex;
   #funFactIcon {
     color: white;
     font-size: 2rem;
+    padding: .2rem
   }
 
   #backHomeButtonAnswerPage {
