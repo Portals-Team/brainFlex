@@ -4,24 +4,29 @@ import { useParams } from "react-router-dom";
 import { useGetUserQuery } from "./accountSlice";
 import { useGetUsersQuery } from "./accountSlice";
 import { useGetTopicByIdQuery } from "./accountSlice";
+import { useCreateNewQuizMutation } from "./accountSlice";
 
 import "./account.css";
 
 function TopicCard({ topic }) {
   //logic for creating a new quiz
   //first get everything associated with that particular topic
+  const { id } = useParams();
   let { data: topicInformation } = useGetTopicByIdQuery(topic?.id);
+  let [createNewQuiz] = useCreateNewQuizMutation();
+  const { data: user } = useGetUserQuery(id);
 
   //this function gets a random image word
   function getRandomImageWord() {
     const randomImageIndex = Math.floor(
       Math.random() * topicInformation.Image_Word.length
     );
-    console.log(topicInformation.Image_Word[randomImageIndex]);
-    return topicInformation.Image_Word[randomImageIndex];
+    console.log(topicInformation.Image_Word[randomImageIndex].id);
+    return topicInformation.Image_Word[randomImageIndex].id;
   }
 
   function getRandomQuizIds() {
+    const arrayOfTopics = [];
     const numberArray = Array.from(
       { length: topicInformation.Question.length - 1 },
       (_, i) => i + 1
@@ -29,15 +34,26 @@ function TopicCard({ topic }) {
     const shuffledNumbers = numberArray.sort(() => Math.random() - 0.5);
     const firstTen = shuffledNumbers.slice(0, 10);
     for (let i = 0; i < firstTen.length; i++) {
-      console.log(topicInformation.Question[firstTen[i]]);
+      const quiz_id = topicInformation.Question[firstTen[i]];
+      arrayOfTopics.push(quiz_id.id);
     }
+    return arrayOfTopics;
   }
 
-  const createNewQuiz = async (evt) => {
+  const createQuiz = async (evt) => {
     evt.preventDefault();
     try {
-      getRandomImageWord();
-      getRandomQuizIds();
+      const image_topic_id = getRandomImageWord();
+      const arrayOfTopics = getRandomQuizIds();
+      console.log(arrayOfTopics);
+      console.log(topicInformation?.Categories_topics[0].category_id);
+      createNewQuiz({
+        user_Id: user?.id,
+        category_Id: topicInformation?.Categories_topics[0].category_id,
+        topic_Id: topicInformation?.id,
+        questionsarray: arrayOfTopics,
+        image_Word_Id: image_topic_id,
+      });
     } catch (error) {
       console.log(error);
     }
@@ -46,7 +62,7 @@ function TopicCard({ topic }) {
   return (
     <li>
       <p id="topicName">{topic?.name}</p>
-      <form onSubmit={createNewQuiz}>
+      <form onSubmit={createQuiz}>
         <button id="playQuizButton">Play Quiz</button>
       </form>
       {/* make this button a Link tag to generated quiz for the users picked topic*/}

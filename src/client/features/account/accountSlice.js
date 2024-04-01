@@ -44,6 +44,19 @@ const accountApi = api.injectEndpoints({
       }),
       invalidatesTags: ["UserTopics"],
     }),
+    createNewQuiz: builder.mutation({
+      query: (payload) => ({
+        url: "/quizes",
+        method: "POST",
+        body: {
+          user_Id: payload.user_Id,
+          category_Id: payload.category_Id,
+          topic_Id: payload.topic_Id,
+          questionsarray: payload.questionsarray,
+          image_Word_Id: payload.image_Word_Id,
+        },
+      }),
+    }),
   }),
 });
 
@@ -55,4 +68,5 @@ export const {
   useGetUserTopicsQuery,
   useUpdateUserTopicsMutation,
   useGetTopicByIdQuery,
+  useCreateNewQuizMutation,
 } = accountApi;
