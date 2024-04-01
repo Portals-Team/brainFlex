@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+import "./account.css";
+
 export default function Home() {
   const { id } = useParams();
   const token = useSelector(selectToken);

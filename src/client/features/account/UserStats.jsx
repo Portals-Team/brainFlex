@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import { useGetUserQuery } from "./accountSlice";
 import { useGetUsersQuery } from "./accountSlice";
 
+import "./account.css";
+
 function TopicCard({ topic }) {
   return (
     <li>

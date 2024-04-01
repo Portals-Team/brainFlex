@@ -27,8 +27,7 @@ export default function Quiz() {
     useUpdateProblemMutation();
   const { data: quiz } = useGetGameQuery(id);
   const currentQuestionIndex = quiz?.current_question - 1; // Adjusting for zero-based indexing
-  const currentQuestion =
-    quiz?.questions[currentQuestionIndex].question?.question;
+
   const [setNextQuestion] = useUpdateQuizQuestionUnsolvedMutation();
 
   //every page of game logic will have in the URL quiz id as the parameter.

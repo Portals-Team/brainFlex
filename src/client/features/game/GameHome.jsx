@@ -6,6 +6,8 @@ import {
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
+import "./game.css";
+
 export default function GameHome() {
   const { id } = useParams();
   const { data: quiz } = useGetGameQuery(+id);

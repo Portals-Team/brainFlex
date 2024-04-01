@@ -6,6 +6,8 @@ import {
 } from "./accountSlice";
 import { useParams } from "react-router-dom";
 
+import "./account.css";
+
 export default function ChooseTopics() {
   const { data: categories } = useGetCategoriesQuery();
   const [selectedTopics, setSelectedTopics] = useState([]);
