@@ -1,7 +1,10 @@
 /* home landing page styling*/
-#homePageConatiner {
+#homePageContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #homePageTitle,
@@ -19,6 +22,7 @@
 }
 
 #imageContainerHomePage {
+  display: flex;
   justify-content: center;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -32,8 +36,14 @@
   border-radius: 25px;
 }
 
+@media (min-width: 555px) {
+  #homeImage {
+   width: 50%
+  }
+}
+
 #buttonHome,
-#submitTopicsButton {
+#submitTopicsButton, #playQuizButton {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   color: #5e80a8;
@@ -47,9 +57,13 @@
   margin-left: 2rem;
 }
 
+#buttonHome {
+  margin-bottom: 2rem;
+}
+
 /* choose topics styling */
 
-#chooseTopicsHeadline {
+#chooseTopicsHeadline, #pickQuizHeadline {
   color: rgb(248, 119, 54);
   font-size: 2rem;
   margin-left: 1rem;
@@ -57,7 +71,7 @@
 }
 
 #chooseTopicsTag,
-#topicsNames {
+#pickQuizTag, #topicsNames {
   color: #5e80a8;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.4rem;
@@ -65,7 +79,7 @@
   margin-left: 1rem;
 }
 
-#categoryCard {
+#categoryCard, #pickQuizCard {
   color: #5e80a8;
   filter: drop-shadow(0px 0px 0.1rem #62a3ee);
   background-color: white;
@@ -75,6 +89,18 @@
   margin-right: 1rem;
   margin-bottom: 0.5rem;
   border-radius: 15px;
+}
+
+@media (min-width: 555px) {
+  #categoryCard, #pickQuizCard {
+    justify-content: center;
+    max-width: 60%; 
+    margin: 1rem auto; 
+  }
+  #buttonSection {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 #categoryName {
@@ -101,6 +127,14 @@
 #yourTopics {
   display: flex;
   flex-direction: row;
+}
+
+@media (min-width: 555px) {
+  #userStats {
+    justify-content: center;
+    max-width: 60%; 
+    margin: 2rem auto; 
+  }
 }
 
 #userCard,
@@ -143,7 +177,7 @@
 }
 
 #playQuizButton,
-#changeTopicsButton {
+#changeTopicsButton, #playRandomQuizButton {
   color: #5e80a8;
   border: 0.1rem solid #71adf1;
   border-radius: 10px;
@@ -164,4 +198,23 @@
 
 #topUserScores {
   margin-bottom: 1rem;
+}
+
+/* pick quiz page styling */
+
+#pickQuizSection {
+  display: flex;
+  justify-content: center;
+}
+
+#topicCard {
+  display: flex;
+  justify-content: center;
+}
+
+#buttonSection {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: .5rem;
 }
