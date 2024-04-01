@@ -5,9 +5,9 @@ import { useGetUserQuery } from "./accountSlice";
 
 function TopicCard({ topic }) {
   return (
-    <li>
-      <h4>{topic?.name}</h4>
-      <button>Play Quiz</button>
+    <li id="topicCard">
+      <h3>{topic?.name}</h3>
+      <button id="playQuizButton">Play Quiz</button>
       {/* make this button a Link tag to generated quiz for the users picked topic*/}
     </li>
   );
@@ -19,18 +19,20 @@ export default function PickQuizPage() {
 
   return (
     <>
-      <h1>Pick Quiz Page</h1>
+      <p id="pickQuizHeadline">Pick Quiz Page</p>
       <div>
-        <h2>Your Topics: </h2>
-        <div>
-          <ul id="yourTopics">
+        <p id="pickQuizTag">Your Topics: </p>
+        <div id="pickQuizSection">
+          <ul id="pickQuizCard">
             {user?.user_topics?.map(({ Topics }) => (
               <TopicCard key={Topics?.id} topic={Topics} />
             ))}
           </ul>
         </div>
-        {/* make this button a Link tag to generated random quiz for the users picked topic*/}
-        <button>Play Random Quiz</button>
+        <div id="buttonSection">
+          {/* make this button a Link tag to generated random quiz for the users picked topic*/}
+          <button id="playRandomQuizButton">Play Random Quiz</button>
+        </div>
       </div>
     </>
   );

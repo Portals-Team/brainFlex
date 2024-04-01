@@ -43,7 +43,7 @@
 }
 
 #buttonHome,
-#submitTopicsButton {
+#submitTopicsButton, #playQuizButton {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   color: #5e80a8;
@@ -59,7 +59,7 @@
 
 /* choose topics styling */
 
-#chooseTopicsHeadline {
+#chooseTopicsHeadline, #pickQuizHeadline {
   color: rgb(248, 119, 54);
   font-size: 2rem;
   margin-left: 1rem;
@@ -67,7 +67,7 @@
 }
 
 #chooseTopicsTag,
-#topicsNames {
+#pickQuizTag, #topicsNames {
   color: #5e80a8;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.4rem;
@@ -75,7 +75,7 @@
   margin-left: 1rem;
 }
 
-#categoryCard {
+#categoryCard, #pickQuizCard {
   color: #5e80a8;
   filter: drop-shadow(0px 0px 0.1rem #62a3ee);
   background-color: white;
@@ -88,7 +88,7 @@
 }
 
 @media (min-width: 555px) {
-  #categoryCard {
+  #categoryCard, #pickQuizCard {
     justify-content: center;
     max-width: 60%; 
     margin: 1rem auto; 
@@ -173,7 +173,7 @@
 }
 
 #playQuizButton,
-#changeTopicsButton {
+#changeTopicsButton, #playRandomQuizButton {
   color: #5e80a8;
   border: 0.1rem solid #71adf1;
   border-radius: 10px;
@@ -194,4 +194,23 @@
 
 #topUserScores {
   margin-bottom: 1rem;
+}
+
+/* pick quiz page styling */
+
+#pickQuizSection {
+  display: flex;
+  justify-content: center;
+}
+
+#topicCard {
+  display: flex;
+  justify-content: center;
+}
+
+#buttonSection {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: .5rem;
 }

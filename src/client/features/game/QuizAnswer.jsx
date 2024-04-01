@@ -93,7 +93,7 @@ export default function QuizAnswer() {
           {quiz?.questions[currentQuestionIndex].question.fun_fact}
         </h3>
       </section>
-      <section>
+      <section id="buttonSection">
         <form onSubmit={goBackIncreaseQuestion}>
           <button id="backHomeButtonAnswerPage">Back To Game Home</button>
         </form>

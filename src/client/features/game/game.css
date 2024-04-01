@@ -105,6 +105,18 @@
     text-align: left;
     margin-left: 1.5rem;
   }
+
+  @media (min-width: 555px) {
+    #answerInformation  {
+      display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    }
+    #buttonGame {
+      display: block;
+      margin: auto;
+    }
+  }
   
   #quizScore {
     color: #5e80a8;
@@ -114,19 +126,32 @@
 
   #questionSection, #factSection {
     margin: 1rem;
-display: flex;
-    align-items: flex-end;
+    display: flex;
+    align-items: flex-start;
     text-align: center;
   }
 
   #iconContainer {
-    justify-content: center; 
-    align-items: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
     width: 55px; 
     height: auto; 
     background: linear-gradient(#c7d6f1, #71adf1); 
     border-radius: 25% 10%; 
     padding-bottom: .5rem;
+  }
+
+  #funFactContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    background: linear-gradient(#c7d6f1, #71adf1); 
+    border-radius: 25% 5%; 
+    padding: .5rem;
+    padding-top: 0;
+    margin-right: 0rem;
+    margin-top: 0rem;
   }
 
   #questionIcon {
@@ -138,6 +163,8 @@ display: flex;
     color: #5e80a8;
     margin-left: .5rem;
   }
+
+
 
   #questionAnswers {
     color: #5e80a8;
@@ -170,15 +197,14 @@ display: flex;
 
   #funFactContainer {
     display: flex;
-    flex-direction: row;
-    justify-content: center; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: flex-start; 
     background: linear-gradient(#c7d6f1, #71adf1); 
     border-radius: 25% 5%; 
     padding: .5rem;
     padding-top: 0;
-    margin-right: .2rem;
-    margin-top: 1rem;
+    margin-right: 0rem;
+    margin-top: 0rem;
   }
 
   #funFactIcon {
