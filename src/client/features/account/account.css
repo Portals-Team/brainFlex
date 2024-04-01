@@ -38,7 +38,7 @@
 
 @media (min-width: 555px) {
   #homeImage {
-   width: 30%
+   width: 50%
   }
 }
 
@@ -111,6 +111,14 @@
 #yourTopics {
   display: flex;
   flex-direction: row;
+}
+
+@media (min-width: 555px) {
+  #userStats {
+    justify-content: center;
+    max-width: 60%; 
+    margin: 2rem auto; 
+  }
 }
 
 #userCard,
