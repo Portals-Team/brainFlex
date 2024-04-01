@@ -38,7 +38,7 @@ export default function GameHome() {
         numberOfCorrectQuestions++;
       }
     }
-    return numberOfCorrectQuestions;
+    return numberOfCorrectQuestions+1;
   }
 
   function showRevealedLetters(numberOfCorrectQuestions) {
