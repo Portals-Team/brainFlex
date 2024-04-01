@@ -17,7 +17,7 @@ export default function GameHome() {
   const [updateUser] = useUpdatedUserMutation();
   const gameWord = image_word?.topic_word;
   const currentQuestion = quiz?.current_question;
-  const blur = 50 - 5 * numberOfCorrectQuestions;
+  const blur = 50 - 5 * (numberOfCorrectQuestions-1);
   const blurClass = `blur-${blur}`;
   let acc = 1;
   const [userInput, setUserInput] = useState(Array(gameWord?.length).fill(""));
