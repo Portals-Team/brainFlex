@@ -48,7 +48,7 @@ export default function QuizAnswer() {
 
   return (
     <>
-      <section id="questionSection">
+      {/*<section id="questionSection">
         <div id="iconContainer">
           <p id="questionIcon">A:</p>
         </div>
@@ -57,7 +57,7 @@ export default function QuizAnswer() {
             {quiz?.questions[currentQuestionIndex].question.question}
           </h3>
         </div>
-      </section>
+  </section>*/}
       <section>
         <div>
           <ol id="questionAnswers">

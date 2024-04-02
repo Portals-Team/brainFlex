@@ -57,7 +57,7 @@
   margin-left: 2rem;
 }
 
-#buttonHome {
+#buttonHome,#submitTopicsButton {
   margin-bottom: 2rem;
 }
 
@@ -94,7 +94,7 @@
 @media (min-width: 555px) {
   #categoryCard, #pickQuizCard {
     justify-content: center;
-    max-width: 60%; 
+    max-width: 40%; 
     margin: 1rem auto; 
   }
   #buttonSection {
