@@ -4,12 +4,15 @@ import React from "react";
 import { useState } from "react";
 
 import {
-  useGetQuestionsQuery,
   useGetGameQuery,
   useUpdateProblemMutation,
   useUpdateQuizQuestionUnsolvedMutation,
 } from "../game/gameSlice";
 
+/**
+ *
+ * @component Quiz returns the current quiz question along with the multiple choice answers to the current quiz question of the Quiz.
+ */
 export default function Quiz() {
   const { id } = useParams();
   const [user_answer, setUserAnswer] = useState("");
@@ -18,14 +21,12 @@ export default function Quiz() {
     useUpdateProblemMutation();
   const { data: quiz } = useGetGameQuery(id);
   const currentQuestionIndex = quiz?.current_question - 1; // Adjusting for zero-based indexing
+  // do we need this? const [setNextQuestion] = useUpdateQuizQuestionUnsolvedMutation();
 
-  const [setNextQuestion] = useUpdateQuizQuestionUnsolvedMutation();
-
-  //every page of game logic will have in the URL quiz id as the parameter.
-  //will get the id from use params, the id will be the current quiz that we are on id
-
-  //this will on click of one of the input radio buttons, send to the database the answer they picked
-  //and this will also redirect them to the correct quiz answer page
+  /**
+   *
+   * @description pickAnswer will update the user_answer of the user in the database via the useUpdateProblemMutation by way of the submit answer button which also navigates the user to the QuizAnswer page. The users answer is recorded by the setter on change event connected to the radio button the user picks for their answer choice.
+   */
   const pickAnswer = async (evt) => {
     evt.preventDefault();
     updateProblem({
