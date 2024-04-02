@@ -18,12 +18,14 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div>
-        <p id="navbarEmoji">🧠</p>
+        <NavLink to="/">
+          <p id="navbarEmoji">🧠 </p>
+        </NavLink>
       </div>
       <div>
-        <NavLink className="navLink" to="/">
+        {/*<NavLink className="navLink" to="/">
           Home
-        </NavLink>
+  </NavLink>*/}
         <NavLink className="navLink" to="/account">
           Account
         </NavLink>
