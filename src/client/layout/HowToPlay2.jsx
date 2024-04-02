@@ -2,6 +2,13 @@ import { Link } from "react-router-dom";
 
 import "./navbar.css";
 
+/**
+ *
+ * @component HowToPlay2 returns a tutorial page on ow to play the quiz game.
+ */
+
+//show an image of the quiz question page.
+//show an image of the game home page with the image half in focus and some letters revealed.
 export default function HowToPlay2() {
   return (
     <section>
