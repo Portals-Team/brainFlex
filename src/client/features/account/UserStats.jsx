@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import { useGetUserQuery } from "./accountSlice";
@@ -84,6 +84,64 @@ export default function UserStats() {
   const { data: users } = useGetUsersQuery();
   const { data: user } = useGetUserQuery(id);
 
+  //
+  const showCreateContinueFinished = () => {
+    //found quiz today is if there is a quiz for that user that exists today
+    let foundQuizToday = false;
+    //isfoundquizcompleted is if it finds a quiz for that user today, is that quiz completed or not
+    let isFoundQuizCompleted = null;
+    //if there is a quiz that already exists for today, then this is the id of that quiz
+    let todaysQuiz = null;
+    const isThereAQuiz = () => {
+      //this function looks at all of a users quizzes, thn for each of them takes the datetime of that quiz
+      // and converts it to month date year format, then compares it to todays date in the same format
+      // it then for each of the quizes if it finds a quiz, sets foundquiz today to true, and then after that sees if that quiz is completed.
+      // there should never be more than one quiz for a user on a day, so shouldnt run into overlap
+      for (let i = 0; i < user?.quizzes.length; i++) {
+        const thedate = new Date(user?.quizzes[i].date_time).toString();
+        const datechanged = thedate.split(" ").slice(1, 4).join(" ");
+        if (datechanged === Date().split(" ").slice(1, 4).join(" ")) {
+          foundQuizToday = true;
+          todaysQuiz = user?.quizzes[i].id;
+          if (user?.quizzes[i].quiz_completed === true) {
+            isFoundQuizCompleted = true;
+          } else {
+            false;
+          }
+        }
+      }
+    };
+    //this calls the isthereaquiz function
+    isThereAQuiz();
+    //this logic uses found quiz today and isfoundquizcompleted to see one if there is a found quiz,
+    //if there is a found quiz, it checks to see if that quiz is completed or not. if it is completed already,
+    //then it will say you have already done your quiz for the day come back tomorrow. if you have a quiz
+    // that is incomplete for today, then it will navigate you to continue that quiz
+    // if no quiz found for today, then will show you your topics you can take a quiz on.
+    if (foundQuizToday === true) {
+      if (isFoundQuizCompleted === true) {
+        return (
+          <>
+            <p> You have already completed a quiz today. </p>
+            <p>Come back tomorrow for a new quiz!</p>
+          </>
+        );
+      } else {
+        return <p>Click here to continue your quiz</p>;
+      }
+    } else {
+      return (
+        <div id="yourTopicsCard">
+          <h3 id="yourTopicsHeadline">Your Topics: </h3>
+          <ul>
+            {user?.user_topics?.map(({ Topics }) => (
+              <TopicCard key={Topics?.id} topic={Topics} />
+            ))}
+          </ul>
+        </div>
+      );
+    }
+  };
   return (
     <>
       <article id="userStats">
@@ -94,14 +152,15 @@ export default function UserStats() {
             <p id="userCardItem">Aggregate Score: {user?.aggregate_score}</p>
             <p id="userCardItem">Quiz Count: {user?.quiz_count}</p>
           </div>
-          <div id="yourTopicsCard">
+          {showCreateContinueFinished()}
+          {/* <div id="yourTopicsCard">
             <h3 id="yourTopicsHeadline">Your Topics: </h3>
             <ul>
               {user?.user_topics?.map(({ Topics }) => (
                 <TopicCard key={Topics?.id} topic={Topics} />
               ))}
             </ul>
-          </div>
+          </div> */}
           <div>
             <button id="changeTopicsButton">
               <Link to={`/topics/${id}`}>Change Topics</Link>

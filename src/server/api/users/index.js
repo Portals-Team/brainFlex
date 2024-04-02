@@ -30,6 +30,7 @@ router.get("/:id", async (req, res, next) => {
             Topics: true,
           },
         },
+        quizzes: true,
       },
     });
     if (!user) {
