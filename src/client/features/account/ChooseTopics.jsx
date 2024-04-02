@@ -40,7 +40,7 @@ export default function ChooseTopics() {
 
   function CategoryItem({ category, onCheckboxChange, selectedTopics }) {
     return (
-      <div id="categoryCard">
+      <section id="categoryCard">
         <h3 id="categoryName">{category.name}</h3>
         <ul>
           {category.Category_topics.map(({ topic }) => (
@@ -58,15 +58,15 @@ export default function ChooseTopics() {
             </li>
           ))}
         </ul>
-      </div>
+      </section>
     );
   }
 
   return (
     <>
-      <p id="chooseTopicsHeadline">Favorite Quiz Topics:</p>
+      <header id="chooseTopicsHeadline">Favorite Quiz Topics:</header>
       <p id="chooseTopicsTag">Pick 3</p>
-      <div>
+      <article>
         <ul>
           {categories?.map((category) => (
             <CategoryItem
@@ -82,7 +82,7 @@ export default function ChooseTopics() {
             <Link to={`/account/${id}`}>Submit Topics</Link>
           </button>
         </div>
-      </div>
+      </article>
     </>
   );
 }

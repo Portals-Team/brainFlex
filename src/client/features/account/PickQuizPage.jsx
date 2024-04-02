@@ -19,21 +19,21 @@ export default function PickQuizPage() {
 
   return (
     <>
-      <p id="pickQuizHeadline">Pick Quiz Page</p>
-      <div>
+      <header id="pickQuizHeadline">Pick Quiz Page</header>
+      <article>
         <p id="pickQuizTag">Your Topics: </p>
-        <div id="pickQuizSection">
+        <section id="pickQuizSection">
           <ul id="pickQuizCard">
             {user?.user_topics?.map(({ Topics }) => (
               <TopicCard key={Topics?.id} topic={Topics} />
             ))}
           </ul>
-        </div>
-        <div id="buttonSection">
+        </section>
+        <section id="buttonSection">
           {/* make this button a Link tag to generated random quiz for the users picked topic*/}
           <button id="playRandomQuizButton">Play Random Quiz</button>
-        </div>
-      </div>
+        </section>
+      </article>
     </>
   );
 }
