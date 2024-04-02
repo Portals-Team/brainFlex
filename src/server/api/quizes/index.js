@@ -123,8 +123,6 @@ game.post("/", async (req, res, next) => {
   const { user_Id, category_Id, topic_Id, questionsarray, image_Word_Id } =
     req.body;
   try {
-    const parsedArray = JSON.parse(questionsarray);
-    console.log(JSON.parse(questionsarray));
     const newQuiz = await prisma.quiz.create({
       data: {
         User: { connect: { id: +user_Id } },
@@ -136,11 +134,11 @@ game.post("/", async (req, res, next) => {
       },
     });
 
-    for (i = 0; i < parsedArray.length; i++) {
+    for (i = 0; i < questionsarray.length; i++) {
       await prisma.quiz_problems.create({
         data: {
           quiz: { connect: { id: newQuiz.id } },
-          question: { connect: { id: parsedArray[i] } },
+          question: { connect: { id: questionsarray[i] } },
         },
       });
     }
