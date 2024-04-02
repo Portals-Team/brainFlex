@@ -16,7 +16,9 @@ export default function Footer() {
           <Link to="/auth">login/logout</Link>
         </p>
       </div>
-      <h3 id="howToPlay">how to play</h3>
+      <Link to="howtoplay/1">
+        <h3 id="howToPlay">how to play </h3>
+      </Link>
       <p id="creators">creators: ian / kyle / rich</p>
     </section>
   );

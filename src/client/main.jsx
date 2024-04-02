@@ -17,6 +17,9 @@ import GameScoreIncorrect from "./features/game/GameScoreIncorrect.jsx";
 import Quiz from "./features/game/Quiz.jsx";
 import QuizAnswer from "./features/game/QuizAnswer.jsx";
 import PickQuizPage from "./features/account/PickQuizPage.jsx";
+import HowToPlay1 from "./layout/HowToPlay1.jsx";
+import HowToPlay2 from "./layout/HowToPlay2.jsx";
+import HowToPlay3 from "./layout/HowToPlay3.jsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
@@ -34,6 +37,9 @@ const router = createBrowserRouter([
       { path: "/game/quiz/:id", element: <Quiz /> },
       { path: "/game/quiz/answer/:id", element: <QuizAnswer /> },
       { path: "/pickquiz/:id", element: <PickQuizPage /> },
+      { path: "/howtoplay/1", element: <HowToPlay1 /> },
+      { path: "/howtoplay/2", element: <HowToPlay2 /> },
+      { path: "/howtoplay/3", element: <HowToPlay3 /> },
     ],
   },
 ]);
