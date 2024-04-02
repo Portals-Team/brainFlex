@@ -4,6 +4,10 @@ import { logout, selectToken } from "../features/auth/authSlice";
 
 import "./navbar.css";
 
+/**
+ *
+ * @component Navbar universal component via Root.jsx can be viewed on every page of the application with links to home, account and indicates if a user is logged in or logged out.
+ */
 export default function Navbar() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -23,9 +27,6 @@ export default function Navbar() {
         </NavLink>
       </div>
       <div>
-        {/*<NavLink className="navLink" to="/">
-          Home
-  </NavLink>*/}
         <NavLink className="navLink" to="/account">
           Account
         </NavLink>
