@@ -23,8 +23,9 @@ export default function Footer() {
       <Link to="howtoplay/1">
         <h3 id="howToPlay">how to play </h3>
       </Link>
-      <div id="creators">
-        <p className="creators">creators: </p>
+      {/*<div id="creators">*/}
+      <p className="creators">creators: </p>
+      <div id="creatorNames">
         <a
           className="creators"
           target="_blank"
@@ -33,7 +34,7 @@ export default function Footer() {
           Ian Braverman
         </a>
         <a
-          className="creators"
+          className="creatorsMiddle"
           target="_blank"
           href="https://www.linkedin.com/in/kyle-cogan-268aa1a9/"
         >
