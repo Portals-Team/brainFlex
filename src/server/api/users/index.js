@@ -2,7 +2,7 @@ const prisma = require("../../prisma");
 const router = require("express").Router();
 module.exports = router;
 
-// GET /api/users/
+// GET /api/users/ get all users
 router.get("/", async (req, res, next) => {
   try {
     const users = await prisma.user.findMany();
@@ -18,7 +18,7 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-// GET /api/users/:id *includes user_topics and topics joined tables
+// GET /api/users/:id get users by id and include relational tables user_topics and topics tables
 router.get("/:id", async (req, res, next) => {
   const { id } = req.params;
   try {
@@ -44,7 +44,7 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
-// PATCH /api/users/:id
+// PATCH /api/users/:id patch users quiz score by id
 router.patch("/:id", async (req, res, next) => {
   const { id } = req.params;
   const { quizScore } = req.body;

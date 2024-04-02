@@ -1,18 +1,18 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import React from "react";
 import {
-  useGetQuizProblemsQuery,
-  useGetQuestionsQuery,
   useGetGameQuery,
   useUpdateQuizQuestionUnsolvedMutation,
   useUpdateQuizQuestionSolvedMutation,
 } from "../game/gameSlice";
 
+/**
+ *
+ * @component QuizAnswer returns the answer of the current quiz question the user has answered. The page shows the users answer, if its correct or not along with an indication of the correct and incorrect multiple choice answers as well as a fun fact that goes along with the topic quiz.
+ */
 export default function QuizAnswer() {
   const { id } = useParams();
-  //every page of game logic will have in the URL quiz id as the parameter.
-  //will get the id from use params, the id will be the current quiz that we are on id
   const { data: quiz } = useGetGameQuery(id);
   const currentQuestionIndex = quiz?.current_question - 1; // Adjusting for zero-based indexing
   const currentQuestion =
@@ -21,6 +21,12 @@ export default function QuizAnswer() {
   const [setSolved] = useUpdateQuizQuestionSolvedMutation();
   const navigate = useNavigate();
 
+  /**
+   *
+   * @function compareAnswer checks the correct answer letter of the multiple choice answers and compares it to the other answers letters of the quiz.
+   * @param {String} letter
+   * @returns If answer letter is the correct answer it returns a checkmark if wrong it returns an 'X'
+   */
   const compareAnswer = (letter) => {
     if (
       quiz?.questions[currentQuestionIndex].question.correct_answer === letter
@@ -30,14 +36,26 @@ export default function QuizAnswer() {
       return <span className="answerIcon">&#10005;</span>;
     }
   };
+
+  /**
+   *
+   * @function yourAnswer checks what letter answer is the users answer letter.
+   * @param {String} letter
+   * @returns the string 'Your Answer' next to the users answer choice.
+   */
   const yourAnswer = (letter) => {
     if (quiz?.questions[currentQuestionIndex].user_answer === letter) {
       return <span id="yourAnswer">Your Answer</span>;
     }
   };
+
+  /**
+   *
+   * @function goBackIncreaseQuestion
+   * @description if the current question is the 10th question then the users quiz is set to solved via the useUpdateQuizQuestionSolvedMutation. Else the next quiz question is set via the useUpdateQuizQuestionUnsolvedMutation. all is initiated by way of the back to game home button which also navigates the user back to the game home page.
+   */
   const goBackIncreaseQuestion = async (evt) => {
     evt.preventDefault();
-    console.log(currentQuestion);
     if (currentQuestion === 10) {
       setSolved(quiz?.id);
     } else {
@@ -48,7 +66,7 @@ export default function QuizAnswer() {
 
   return (
     <>
-      <section id="questionSection">
+      {/*<section id="questionSection">
         <div id="iconContainer">
           <p id="questionIcon">A:</p>
         </div>
@@ -57,7 +75,7 @@ export default function QuizAnswer() {
             {quiz?.questions[currentQuestionIndex].question.question}
           </h3>
         </div>
-      </section>
+  </section>*/}
       <section>
         <div>
           <ol id="questionAnswers">

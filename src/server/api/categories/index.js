@@ -2,15 +2,14 @@ const prisma = require("../../prisma");
 const router = require("express").Router();
 module.exports = router;
 
-// Get /api/categories
+// Get /api/categories gets all categories and the topics related to them
 router.get("/", async (req, res, next) => {
   try {
     const categories = await prisma.categories.findMany({
       include: {
         Category_topics: {
-          // Adjust this if your relation name differs
           include: {
-            topic: true, // Adjust this based on your actual relation field name
+            topic: true,
           },
         },
       },

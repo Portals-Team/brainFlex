@@ -14,6 +14,7 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+//get topics by id and include it's relational connection to the tables listed below
 router.get("/:id", async (req, res, next) => {
   const { id } = req.params;
   try {

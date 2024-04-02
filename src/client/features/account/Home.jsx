@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 
 import "./account.css";
 
+/**
+ *
+ * @component Home returns the landing page for the application this view is shown whether a user is logged in or not.
+ */
 export default function Home() {
   const { id } = useParams();
   const token = useSelector(selectToken);
@@ -21,15 +25,20 @@ export default function Home() {
           />
         </div>
         <p id="homePageTitleTag">your daily quiz workout</p>
-        {token ? (
-          <Link to={`/pickquiz/${id}`}>
-            <button id="buttonHome">Play Game!</button>
+        <section id="buttonSectionHome">
+          {token ? (
+            <Link to={`/pickquiz/${id}`}>
+              <button className="buttonHome">Play Game!</button>
+            </Link>
+          ) : (
+            <Link to={"/auth"}>
+              <button className="buttonHome">Play Game!</button>
+            </Link>
+          )}
+          <Link to="/howtoplay/1">
+            <button className="buttonHome">How To Play</button>
           </Link>
-        ) : (
-          <Link to={"/auth"}>
-            <button id="buttonHome">Play Game!</button>
-          </Link>
-        )}
+        </section>
       </article>
     </>
   );

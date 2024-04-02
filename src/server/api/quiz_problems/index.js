@@ -2,7 +2,7 @@ const prisma = require("../../prisma");
 const router = require("express").Router();
 module.exports = router;
 
-// GET /api/quiz_problems/
+// GET /api/quiz_problems/ get all quiz problems
 router.get("/", async (req, res, next) => {
   try {
     const quiz_problems = await prisma.quiz_problems.findMany();
@@ -18,7 +18,7 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-// GET /api/quiz_problems/:id
+// GET /api/quiz_problems/:id get all quiz problems by id
 router.get("/:id", async (req, res, next) => {
   try {
     if (!res.locals.user) {
@@ -43,7 +43,7 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
-// PATCH /api/quiz_problems/:id
+// PATCH /api/quiz_problems/:id patch the user_answer to its quiz problem by id
 router.patch("/:id", async (req, res, next) => {
   const { user_answer } = req.body;
   const { id } = req.params;

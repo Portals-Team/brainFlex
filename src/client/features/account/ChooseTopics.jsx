@@ -8,12 +8,20 @@ import { useParams } from "react-router-dom";
 
 import "./account.css";
 
+/**
+ *
+ * @component ChooseTopics shows a list categories and category topics. The logged in user can pick 3 topics from the categories as their favorites topics to play on quiz on.
+ */
 export default function ChooseTopics() {
   const { data: categories } = useGetCategoriesQuery();
   const [selectedTopics, setSelectedTopics] = useState([]);
   const [updateUserTopics] = useUpdateUserTopicsMutation();
   const { id } = useParams();
 
+  /**
+   *
+   * @description handleCheckChange allows the user to only choose 3 topics from the list of topics.
+   */
   const handleCheckChange = (topicId, isChecked) => {
     if (isChecked) {
       if (selectedTopics.length < 3) {
@@ -28,16 +36,27 @@ export default function ChooseTopics() {
     }
   };
 
+  /**
+   *
+   * @description handleSubmit updates the logged in users topics via the useUpdateUserTopicsMutation by way of the handleCheckChange topics chosen.
+   */
   const handleSumbit = async () => {
     try {
-      console.log(selectedTopics);
-      console.log(id);
       await updateUserTopics({ id, topicIds: selectedTopics }).unwrap();
     } catch (error) {
       console.error("Failed to update user topics:", error);
     }
   };
 
+  /**
+   *
+   * @function CategoryItem
+   * @param {Object} param0
+   * @param {*} param0.category
+   * @param {*} param0.onCheckboxChange
+   * @param {*} param0.selectedTopics
+   * @returns the category from the database and it's corresponding topics for the logged in user to pick from.
+   */
   function CategoryItem({ category, onCheckboxChange, selectedTopics }) {
     return (
       <section id="categoryCard">

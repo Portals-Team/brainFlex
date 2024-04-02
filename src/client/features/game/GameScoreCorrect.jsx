@@ -9,16 +9,26 @@ import {
 
 import "./game.css";
 
+/**
+ *
+ * @function calculateScore
+ * @param {Integer} currentQuestion
+ * @returns the users score on the game, the amount of quiz questions it takes the user to solve the image word subtracted from the amount of quiz questions.
+ */
 const calculateScore = (currentquestion) => {
   const yourScore = 11 - currentquestion;
   return yourScore + "/10";
 };
 
+/**
+ *
+ * @component GameScoreCorrect returns the final view of the game if the users answer is correct. The user can view the unblurred image, the correct answer word and their final score for the game.
+ */
 export default function GameScoreCorrect() {
   const { id } = useParams();
   const { data: quiz } = useGetGameQuery(id);
   const { data: imageandword } = useGetImageWordQuery(quiz?.image_Word_id);
-  const [updateUser] = useUpdatedUserMutation();
+  // do we need this? const [updateUser] = useUpdatedUserMutation();
 
   return (
     <>
