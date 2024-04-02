@@ -2,7 +2,7 @@ const prisma = require("../../prisma");
 const router = require("express").Router();
 module.exports = router;
 
-//we don't need this because getUser provides thsi information
+//we don't need this because getUser provides this information
 //leave here til final clean up incase we need it
 //GET /api/user_topics/:id
 router.get("/:id", async (req, res, next) => {
@@ -17,7 +17,9 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
-//write PATCH /api/user_topics/
+/**PATCH /api/user_topics/ PATCH new user topics by the users id by first deleting current topics.
+ *and if the user hasn't previously picked topics then create them
+ */
 router.patch("/:id", async (req, res, next) => {
   const { id } = req.params;
   const { topicIds } = req.body;

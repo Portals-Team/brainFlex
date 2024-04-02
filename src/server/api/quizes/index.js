@@ -3,7 +3,7 @@ const prisma = require("../../prisma");
 const game = require("express").Router();
 module.exports = game;
 
-// GET /api/quizes/
+// GET /api/quizes/ get all quizes
 game.get("/", async (req, res, next) => {
   try {
     const quizes = await prisma.quiz.findMany();
@@ -19,7 +19,7 @@ game.get("/", async (req, res, next) => {
   }
 });
 
-// GET /api/quizes/:id
+// GET /api/quizes/:id get quizes by id and include the relation to the questions of that quiz
 game.get("/:id", async (req, res, next) => {
   const { id } = req.params;
   try {
