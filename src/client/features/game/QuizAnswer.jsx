@@ -38,10 +38,9 @@ export default function QuizAnswer() {
   const goBackIncreaseQuestion = async (evt) => {
     evt.preventDefault();
     console.log(currentQuestion);
-    if(currentQuestion === 10) {
+    if (currentQuestion === 10) {
       setSolved(quiz?.id);
-    }
-    else {
+    } else {
       setNextQuestion(quiz?.id);
     }
     navigate(`/game/home/${id}`);
@@ -51,7 +50,7 @@ export default function QuizAnswer() {
     <>
       <section id="questionSection">
         <div id="iconContainer">
-          <div id="questionIcon">A:</div>
+          <p id="questionIcon">A:</p>
         </div>
         <div>
           <h3 id="question">
@@ -95,7 +94,7 @@ export default function QuizAnswer() {
       </section>
       <section id="factSection">
         <div id="funFactContainer">
-          <div id="funFactIcon">Fun Fact:</div>
+          <p id="funFactIcon">Fun Fact:</p>
         </div>
         <h3 id="funFact">
           {quiz?.questions[currentQuestionIndex].question.fun_fact}

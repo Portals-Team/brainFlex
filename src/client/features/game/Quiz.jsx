@@ -39,7 +39,7 @@ export default function Quiz() {
     <>
       <section id="questionSection">
         <div id="iconContainer">
-          <div id="questionIcon">Q:</div>
+          <p id="questionIcon">Q:</p>
         </div>
         <div>
           <h3 id="question">
