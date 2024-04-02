@@ -22,13 +22,13 @@ const calculateScore = (currentquestion) => {
 
 /**
  *
- * @component GameScoreCorrect returns the final view of the game where the user can view the unblurred image, if their answer word is correct and their final score for the game.
+ * @component GameScoreCorrect returns the final view of the game if the users answer is correct. The user can view the unblurred image, the correct answer word and their final score for the game.
  */
 export default function GameScoreCorrect() {
   const { id } = useParams();
   const { data: quiz } = useGetGameQuery(id);
   const { data: imageandword } = useGetImageWordQuery(quiz?.image_Word_id);
-  const [updateUser] = useUpdatedUserMutation();
+  // do we need this? const [updateUser] = useUpdatedUserMutation();
 
   return (
     <>
