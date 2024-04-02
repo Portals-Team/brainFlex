@@ -26,16 +26,15 @@ export default function GameScoreCorrect() {
         <img id="image" src={imageandword?.image_url} />
       </section>
       <article id="answerInformation">
-        <section id="correctAnswer">
+        <div id="correctAnswer">
           <h1>Correct! : {imageandword?.topic_word}</h1>
-        </section>
-        <section>
+        </div>
+        <div>
           <p id="quizScore">
             FINAL QUIZ SCORE: {calculateScore(quiz?.current_question)}
           </p>
-        </section>
+        </div>
       </article>
-
       <button id="buttonGame">
         <Link id="link" to="/account/:id">
           HOME

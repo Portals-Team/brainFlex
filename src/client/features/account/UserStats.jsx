@@ -94,7 +94,6 @@ export default function UserStats() {
             <p id="userCardItem">Aggregate Score: {user?.aggregate_score}</p>
             <p id="userCardItem">Quiz Count: {user?.quiz_count}</p>
           </div>
-
           <div id="yourTopicsCard">
             <h3 id="yourTopicsHeadline">Your Topics: </h3>
             <ul>
@@ -109,7 +108,6 @@ export default function UserStats() {
             </button>
           </div>
         </section>
-
         <section>
           {/*<div>
             <h3>YOUR RANK</h3>

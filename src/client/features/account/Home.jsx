@@ -11,8 +11,8 @@ export default function Home() {
 
   return (
     <>
-      <section id="homePageContainer">
-        <p id="homePageTitle">brainFLEX</p>
+      <article id="homePageContainer">
+        <header id="homePageTitle">brainFLEX</header>
         <div id="imageContainerHomePage">
           <img
             id="homeImage"
@@ -30,7 +30,7 @@ export default function Home() {
             <button id="buttonHome">Play Game!</button>
           </Link>
         )}
-      </section>
+      </article>
     </>
   );
 }
