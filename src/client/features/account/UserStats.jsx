@@ -1,8 +1,9 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import { useGetUserQuery } from "./accountSlice";
 import { useGetUsersQuery } from "./accountSlice";
+import { useGetTopicsQuery } from "./accountSlice";
 import { useGetTopicByIdQuery } from "./accountSlice";
 import { useCreateNewQuizMutation } from "./accountSlice";
 
@@ -12,6 +13,7 @@ function TopicCard({ topic }) {
   //logic for creating a new quiz
   //first get everything associated with that particular topic
   const { id } = useParams();
+  const navigate = useNavigate();
   let { data: topicInformation } = useGetTopicByIdQuery(topic?.id);
   let [createNewQuiz] = useCreateNewQuizMutation();
   const { data: user } = useGetUserQuery(id);
@@ -47,13 +49,20 @@ function TopicCard({ topic }) {
       const arrayOfTopics = getRandomQuizIds();
       console.log(arrayOfTopics);
       console.log(topicInformation?.Categories_topics[0].category_id);
-      createNewQuiz({
+      const newQuiz = await createNewQuiz({
         user_Id: user?.id,
         category_Id: topicInformation?.Categories_topics[0].category_id,
         topic_Id: topicInformation?.id,
         questionsarray: arrayOfTopics,
         image_Word_Id: image_topic_id,
       });
+      console.log(newQuiz);
+      //found quiz today is if there is a quiz for that user that exists today
+
+      //isfoundquizcompleted is if it finds a quiz for that user today, is that quiz completed or not
+      //if there is a quiz that already exists for today, then this is the id of that quiz
+
+      navigate(`/game/home/${newQuiz.data.id}`);
     } catch (error) {
       console.log(error);
     }
@@ -83,6 +92,7 @@ export default function UserStats() {
   const { id } = useParams();
   const { data: users } = useGetUsersQuery();
   const { data: user } = useGetUserQuery(id);
+  let { data: alltopics } = useGetTopicsQuery();
 
   //
   const showCreateContinueFinished = () => {
@@ -93,7 +103,7 @@ export default function UserStats() {
     //if there is a quiz that already exists for today, then this is the id of that quiz
     let todaysQuiz = null;
     const isThereAQuiz = () => {
-      //this function looks at all of a users quizzes, thn for each of them takes the datetime of that quiz
+      //this function looks at all of a users quizzes, then for each of them takes the datetime of that quiz
       // and converts it to month date year format, then compares it to todays date in the same format
       // it then for each of the quizes if it finds a quiz, sets foundquiz today to true, and then after that sees if that quiz is completed.
       // there should never be more than one quiz for a user on a day, so shouldnt run into overlap
@@ -127,7 +137,30 @@ export default function UserStats() {
           </>
         );
       } else {
-        return <p>Click here to continue your quiz</p>;
+        //this looks through all of the quizes that player has and finds the one where the quiz.id is the
+        //todaysquiz id that was stored previously
+        let currentQuiz = user?.quizzes.filter(
+          (quiz) => quiz.id === todaysQuiz
+        );
+        let currentQuizQuestion = currentQuiz[0]?.current_question;
+        //this gets the index 0 of the new array that was made from the filter
+        let currentQuizIndexed = currentQuiz[0];
+        let currentQuizTopicId = currentQuiz[0]?.topic_id;
+        console.log(currentQuizIndexed);
+        let currentQuizTopic = alltopics?.filter(
+          (topic) => topic.id === currentQuizTopicId
+        );
+
+        return (
+          <>
+            <p>Current Quiz Information: </p>
+            <p>Current Quiz Topic:{currentQuizTopic?.[0].name}</p>
+            <p>Current Quiz Question:{currentQuizQuestion}</p>
+            <NavLink to={`/game/home/${currentQuizIndexed.id}`}>
+              <button>To Continue Quiz</button>
+            </NavLink>
+          </>
+        );
       }
     } else {
       return (
