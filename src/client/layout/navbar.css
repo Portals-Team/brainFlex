@@ -63,4 +63,30 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 1rem;
   }
+
+  /* how to play styling */
+
+  .howToPlaySection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #howToPlayHeader, #howToPlayTagline {
+    color:  rgb(248, 119, 54);
+    font-size: 2rem;
+  }
+
+  #howToPlayTagline {
+    font-size: 1.5rem;
+  }
+
+  #howToPlayInstructions {
+    color: #5e80a8;
+    font-size: 1rem;
+    margin: 1rem;
+  }
+
+
   
