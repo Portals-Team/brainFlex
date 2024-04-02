@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 
 import "./account.css";
 
+/**
+ *
+ * @component Home returns the landing page for the application this view is shown whether a user is logged in or not.
+ */
 export default function Home() {
   const { id } = useParams();
   const token = useSelector(selectToken);
