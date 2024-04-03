@@ -18,7 +18,38 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-// GET /api/users/:id get users by id and include relational tables user_topics and topics tables
+router.get("/me", async (req, res, next) => {
+  try {
+    if(!res.locals.user) {
+      return next({
+          status: 400,
+          message: "You are not logged into the correct account"
+      });
+    }
+    const { id } = res.locals.user;
+    const user = await prisma.user.findUnique({
+      where: { id: +id },
+      include: {
+        user_topics: {
+          include: {
+            Topics: true,
+          },
+        },
+        quizzes: true,
+      },
+    });
+    if (!user) {
+      return next({
+        status: 400,
+        message: `No user found with id ${id}`,
+      });
+    }
+    res.json(user);
+  } catch (e) {
+    next(e);
+  }
+});
+
 router.get("/:id", async (req, res, next) => {
   const { id } = req.params;
   try {
@@ -44,6 +75,8 @@ router.get("/:id", async (req, res, next) => {
     next(e);
   }
 });
+
+
 
 // PATCH /api/users/:id patch users quiz score by id
 router.patch("/:id", async (req, res, next) => {

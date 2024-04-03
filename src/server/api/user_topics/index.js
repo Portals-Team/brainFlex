@@ -21,9 +21,18 @@ router.get("/:id", async (req, res, next) => {
  *and if the user hasn't previously picked topics then create them
  */
 router.patch("/:id", async (req, res, next) => {
-  const { id } = req.params;
-  const { topicIds } = req.body;
   try {
+      const { data: me } = res.locals.user
+      const id = me?.id
+      const { topicIds } = req.body;
+      // make sure we're logged in
+       if(!res.locals.user) {
+        return next({
+            status: 400,
+            message: "You are not logged into the correct account"
+        });
+      }
+   
     // if user has 3 topics delete them
     const user_topics = await prisma.user_topics.findMany({
       where: {
@@ -40,9 +49,6 @@ router.patch("/:id", async (req, res, next) => {
         });
       }
     }
-
-    // make sure we're logged in
-
     const user_topics_arr = [];
     // if user has no user_topics create them
     for (const topicId of topicIds) {

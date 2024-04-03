@@ -12,7 +12,10 @@ const accountApi = api.injectEndpoints({
       query: (id) => "/users/" + id,
       providesTags: ["User"],
     }),
-
+    getMe: builder.query({
+      query: () => "/users/me",
+      providesTags: ["User"]
+  }),
     //getTopics gets all topics
     getTopics: builder.query({
       query: () => "/topics",
@@ -69,4 +72,5 @@ export const {
   useUpdateUserTopicsMutation,
   useGetTopicByIdQuery,
   useCreateNewQuizMutation,
+  useGetMeQuery,
 } = accountApi;

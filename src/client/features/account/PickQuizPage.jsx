@@ -14,8 +14,8 @@ function TopicCard({ topic }) {
 }
 
 export default function PickQuizPage() {
-  const { id } = useParams();
-  const { data: user } = useGetUserQuery(id);
+  
+  const { data: user } = useGetUserQuery();
 
   return (
     <>

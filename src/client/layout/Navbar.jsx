@@ -27,7 +27,7 @@ export default function Navbar() {
         </NavLink>
       </div>
       <div>
-        <NavLink className="navLink" to="/account">
+        <NavLink className="navLink" to="/account/me">
           Account
         </NavLink>
         <NavLink className="navLink" to="/auth">
