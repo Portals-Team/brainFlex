@@ -21,8 +21,15 @@ export default function HowToPlay2() {
           word puzzle, bringing you closer to the secret word. Bonus: snag a fun
           fact with every question to flex your brain!
         </p>
+        <div id="imageContainerTutorial">
+          <img
+            id="tutorialOneImage"
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1712152717/tutorialPage2_jkg4rg.png"
+            alt="image shows how to pick a topic and what the starting game page looks like"
+          />
+        </div>
       </section>
-      <section id="buttonSection">
+      <section id="buttonSectionTutorial">
         <Link to="/">
           <button id="button">HOME</button>
         </Link>
