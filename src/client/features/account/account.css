@@ -155,7 +155,7 @@
   border-radius: 15px;
 }
 
-#userCardItem {
+#userCardItem, .quizMessage {
   font-family: Arial, Helvetica, sans-serif;
   color: #5e80a8;
   margin: 0.5rem;
@@ -177,7 +177,7 @@
 }
 
 #playQuizButton,
-#changeTopicsButton, #playRandomQuizButton {
+#changeTopicsButton, #playRandomQuizButton, #continueQuizButton{
   color: #5e80a8;
   border: 0.1rem solid #71adf1;
   border-radius: 10px;
@@ -190,7 +190,7 @@
   cursor: pointer;
 }
 
-#changeTopicsButton {
+#changeTopicsButton, #continueQuizButton {
   border-radius: 15px;
   margin-left: 1rem;
   padding: 0.6rem;

@@ -153,11 +153,15 @@ export default function UserStats() {
 
         return (
           <>
-            <p>Current Quiz Information: </p>
-            <p>Current Quiz Topic:{currentQuizTopic?.[0].name}</p>
-            <p>Current Quiz Question:{currentQuizQuestion}</p>
+            <p className="quizMessage">Current Quiz Information: </p>
+            <p className="quizMessage">
+              Current Quiz Topic:{currentQuizTopic?.[0].name}
+            </p>
+            <p className="quizMessage">
+              Current Quiz Question:{currentQuizQuestion}
+            </p>
             <NavLink to={`/game/home/${currentQuizIndexed.id}`}>
-              <button>To Continue Quiz</button>
+              <button id="continueQuizButton">To Continue Quiz</button>
             </NavLink>
           </>
         );
