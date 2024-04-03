@@ -2,6 +2,7 @@ import {
   useGetImageWordQuery,
   useGetGameQuery,
   useUpdatedUserMutation,
+  useUpdateQuizQuestionSolvedMutation,
 } from "../game/gameSlice";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -25,6 +26,7 @@ export default function GameHome() {
   const blurClass = `blur-${blur}`;
   let acc = 1;
   const [userInput, setUserInput] = useState(Array(gameWord?.length).fill(""));
+  const [setSolved] = useUpdateQuizQuestionSolvedMutation();
 
   /**
    * @description handleInputChange sets specific values of user inputted strings for the word guess
@@ -88,6 +90,7 @@ export default function GameHome() {
    * @param {String} guessWord
    */
   function submitAnswer(guessWord) {
+    setSolved(quiz?.id);
     if (isGuessCorrect(guessWord)) {
       updateAggregateScore();
       navigate(`/game/score/correct/${id}`);
