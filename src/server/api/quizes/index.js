@@ -123,6 +123,7 @@ game.post("/", async (req, res, next) => {
   const { user_Id, category_Id, topic_Id, questionsarray, image_Word_Id } =
     req.body;
   try {
+    console.log("userID: ",user_Id," categoryId: ",category_Id, "topicID: ",topic_Id, " questionsArray: ",questionsarray," imageWordID: ",image_Word_Id);
     const newQuiz = await prisma.quiz.create({
       data: {
         User: { connect: { id: +user_Id } },

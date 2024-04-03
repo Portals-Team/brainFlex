@@ -4,7 +4,7 @@ import {
   useGetCategoriesQuery,
   useUpdateUserTopicsMutation,
 } from "./accountSlice";
-import { useParams } from "react-router-dom";
+import { useGetMeQuery } from "./accountSlice";
 
 import "./account.css";
 
@@ -16,7 +16,8 @@ export default function ChooseTopics() {
   const { data: categories } = useGetCategoriesQuery();
   const [selectedTopics, setSelectedTopics] = useState([]);
   const [updateUserTopics] = useUpdateUserTopicsMutation();
-  const { id } = useParams();
+  const {data: me} = useGetMeQuery();
+  const id = me?.id;
 
   /**
    *

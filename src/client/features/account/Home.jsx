@@ -2,6 +2,7 @@ import { selectToken } from "../auth/authSlice";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useGetMeQuery } from "./accountSlice";
 
 import "./account.css";
 
@@ -10,11 +11,12 @@ import "./account.css";
  * @component Home returns the landing page for the application this view is shown whether a user is logged in or not.
  */
 export default function Home() {
-  const { id } = useParams();
+  
+  const {data: me} = useGetMeQuery();
+  const id = me?.id;
   const token = useSelector(selectToken);
 
   return (
-    <>
       <article id="homePageContainer">
         <header id="homePageTitle">brainFLEX</header>
         <div id="imageContainerHomePage">
@@ -40,6 +42,5 @@ export default function Home() {
           </Link>
         </section>
       </article>
-    </>
   );
 }

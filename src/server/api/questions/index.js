@@ -22,12 +22,12 @@ router.get("/", async (req, res, next) => {
 router.get("/:id", async (req, res, next) => {
   const { id } = req.params;
   try {
-    // if(!res.locals.user) {
-    //     return next({
-    //         status: 400,
-    //         message: "You are not logged into the correct account"
-    //     });
-    //   }
+    if(!res.locals.user) {
+        return next({
+            status: 400,
+            message: "You are not logged into the correct account"
+        });
+      }
 
     const question = await prisma.question.findUnique({ where: { id: +id } });
     if (!question) {
