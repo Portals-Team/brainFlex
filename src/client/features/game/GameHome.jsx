@@ -123,7 +123,6 @@ export default function GameHome() {
               );
               console.log("this is the revealed count " + revealedCount);
               console.log(numberOfAnswersCorrect());
-
               return (
                 <div key={index}>
                   {index < revealedCount ? (
