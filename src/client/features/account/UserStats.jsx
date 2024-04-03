@@ -132,8 +132,10 @@ export default function UserStats() {
       if (isFoundQuizCompleted === true) {
         return (
           <>
-            <p> You have already completed a quiz today. </p>
-            <p>Come back tomorrow for a new quiz!</p>
+            <p className="quizMessage">
+              You have already completed a quiz today.{" "}
+            </p>
+            <p className="quizMessage">Come back tomorrow for a new quiz!</p>
           </>
         );
       } else {
