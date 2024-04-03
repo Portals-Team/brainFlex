@@ -6,29 +6,26 @@ import "./howToPlay.css";
  *
  * @component HowToPlay1 returns a tutorial page on ow to play the quiz game.
  */
-
-//show an image of the pick topics page
-//show an image of the the game home page
 export default function HowToPlay1() {
   return (
     <>
       <section className="howToPlaySection">
-        <header id="howToPlayHeader">🌟 Step 1: </header>
-        <p id="howToPlayTagline">Choose Your Adventure!</p>
-        <p id="howToPlayInstructions">
+        <header className="howToPlayHeader">🌟 Step 1: </header>
+        <p className="howToPlayTagline">Choose Your Adventure!</p>
+        <p className="howToPlayInstructions">
           Pick a topic and let the game begin. You’ll get a mysterious blurred
           image and a word puzzle of empty letters waiting to reveal a secret
           word related to your chosen theme. It’s your brain’s warm-up!
         </p>
-        <div id="imageContainerTutorial">
+        <div className="imageContainerTutorial">
           <img
-            id="tutorialOneImage"
+            className="tutorialImage"
             src="https://res.cloudinary.com/dzpne110u/image/upload/v1712154841/tutorialOne_goiwjk.png"
             alt="image shows how to pick a topic and what the starting game page looks like"
           />
         </div>
       </section>
-      <section id="buttonSectionTutorial">
+      <section className="buttonSectionTutorial">
         <Link to="/">
           <button id="button">HOME</button>
         </Link>
