@@ -22,29 +22,29 @@ router.get("/:id", async (req, res, next) => {
  */
 router.patch("/:id", async (req, res, next) => {
   try {
-      const { data: me } = res.locals.user
-      const id = me?.id
-      const { topicIds } = req.body;
-      // make sure we're logged in
-       if(!res.locals.user) {
-        return next({
-            status: 400,
-            message: "You are not logged into the correct account"
-        });
-      }
-   
+    // make sure we're logged in
+    if(!res.locals.user) {
+      return next({
+        status: 400,
+        message: "You are not logged into the correct account"
+      });
+    }
+    const me = res.locals.user
+    const id = me?.id
+    const { topicIds } = req.body;
+    
     // if user has 3 topics delete them
     const user_topics = await prisma.user_topics.findMany({
       where: {
         user_id: +id,
       },
     });
-
+    
     if (user_topics.length) {
       for (const user_topic of user_topics) {
         await prisma.user_topics.delete({
           where: {
-            id: user_topic.id,
+            id: user_topic?.id,
           },
         });
       }

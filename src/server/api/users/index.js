@@ -26,7 +26,7 @@ router.get("/me", async (req, res, next) => {
           message: "You are not logged into the correct account"
       });
     }
-    const { id } = res.locals.user;
+    const {id} = res.locals.user;
     const user = await prisma.user.findUnique({
       where: { id: +id },
       include: {

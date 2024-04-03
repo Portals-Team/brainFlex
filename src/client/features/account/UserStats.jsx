@@ -1,7 +1,7 @@
 import { Link, useNavigate, NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
-import { useGetUserQuery } from "./accountSlice";
+import { useGetMeQuery, useGetUserQuery } from "./accountSlice";
 import { useGetUsersQuery } from "./accountSlice";
 import { useGetTopicsQuery } from "./accountSlice";
 import { useGetTopicByIdQuery } from "./accountSlice";
@@ -12,11 +12,11 @@ import "./account.css";
 function TopicCard({ topic }) {
   //logic for creating a new quiz
   //first get everything associated with that particular topic
-  const { id } = useParams();
+  const {data: me} = useGetMeQuery();
+  const id = me?.id;
   const navigate = useNavigate();
   let { data: topicInformation } = useGetTopicByIdQuery(topic?.id);
   let [createNewQuiz] = useCreateNewQuizMutation();
-  const { data: user } = useGetUserQuery(id);
 
   //this function gets a random image word
   function getRandomImageWord() {
@@ -50,7 +50,7 @@ function TopicCard({ topic }) {
       console.log(arrayOfTopics);
       console.log(topicInformation?.Categories_topics[0].category_id);
       const newQuiz = await createNewQuiz({
-        user_Id: user?.id,
+        user_Id: +me?.id,
         category_Id: topicInformation?.Categories_topics[0].category_id,
         topic_Id: topicInformation?.id,
         questionsarray: arrayOfTopics,
@@ -89,9 +89,9 @@ function UserScores({ user }) {
 }
 
 export default function UserStats() {
-  const { id } = useParams();
+  const {data: me} = useGetMeQuery();
+  const id = me?.id;
   const { data: users } = useGetUsersQuery();
-  const { data: user } = useGetUserQuery(id);
   let { data: alltopics } = useGetTopicsQuery();
 
   //
@@ -107,13 +107,13 @@ export default function UserStats() {
       // and converts it to month date year format, then compares it to todays date in the same format
       // it then for each of the quizes if it finds a quiz, sets foundquiz today to true, and then after that sees if that quiz is completed.
       // there should never be more than one quiz for a user on a day, so shouldnt run into overlap
-      for (let i = 0; i < user?.quizzes.length; i++) {
-        const thedate = new Date(user?.quizzes[i].date_time).toString();
+      for (let i = 0; i < me?.quizzes.length; i++) {
+        const thedate = new Date(me?.quizzes[i].date_time).toString();
         const datechanged = thedate.split(" ").slice(1, 4).join(" ");
         if (datechanged === Date().split(" ").slice(1, 4).join(" ")) {
           foundQuizToday = true;
-          todaysQuiz = user?.quizzes[i].id;
-          if (user?.quizzes[i].quiz_completed === true) {
+          todaysQuiz = me?.quizzes[i].id;
+          if (me?.quizzes[i].quiz_completed === true) {
             isFoundQuizCompleted = true;
           } else {
             false;
@@ -139,7 +139,7 @@ export default function UserStats() {
       } else {
         //this looks through all of the quizes that player has and finds the one where the quiz.id is the
         //todaysquiz id that was stored previously
-        let currentQuiz = user?.quizzes.filter(
+        let currentQuiz = me?.quizzes.filter(
           (quiz) => quiz.id === todaysQuiz
         );
         let currentQuizQuestion = currentQuiz[0]?.current_question;
@@ -167,7 +167,7 @@ export default function UserStats() {
         <div id="yourTopicsCard">
           <h3 id="yourTopicsHeadline">Your Topics: </h3>
           <ul>
-            {user?.user_topics?.map(({ Topics }) => (
+            {me?.user_topics?.map(({ Topics }) => (
               <TopicCard key={Topics?.id} topic={Topics} />
             ))}
           </ul>
@@ -180,10 +180,10 @@ export default function UserStats() {
       <article id="userStats">
         <section>
           <div id="userCard">
-            <h3 id="userCardHeadline">Welcome {user?.name}!</h3>
-            <p id="userCardItem">Username: {user?.username}</p>
-            <p id="userCardItem">Aggregate Score: {user?.aggregate_score}</p>
-            <p id="userCardItem">Quiz Count: {user?.quiz_count}</p>
+            <h3 id="userCardHeadline">Welcome {me?.name}!</h3>
+            <p id="userCardItem">Username: {me?.username}</p>
+            <p id="userCardItem">Aggregate Score: {me?.aggregate_score}</p>
+            <p id="userCardItem">Quiz Count: {me?.quiz_count}</p>
           </div>
           {showCreateContinueFinished()}
           {/* <div id="yourTopicsCard">
