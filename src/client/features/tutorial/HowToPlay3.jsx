@@ -20,6 +20,13 @@ export default function HowToPlay3() {
           word to complete your quest. The fewer questions you need, the higher
           your score! It’s a race of wits!
         </p>
+        <div id="imageContainerTutorial">
+          <img
+            id="tutorialOneImage"
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1712155683/tutorialPage3_nppnah.png"
+            alt="image shows how to pick a topic and what the starting game page looks like"
+          />
+        </div>
       </section>
       <section id="buttonSection">
         <Link to="/">
