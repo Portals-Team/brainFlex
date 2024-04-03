@@ -20,8 +20,15 @@ export default function HowToPlay1() {
           image and a word puzzle of empty letters waiting to reveal a secret
           word related to your chosen theme. It’s your brain’s warm-up!
         </p>
+        <div id="imageContainerTutorial">
+          <img
+            id="tutorialOneImage"
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1712148615/tutorialOne_hrnjco.png"
+            alt="image shows how to pick a topic and what the starting game page looks like"
+          />
+        </div>
       </section>
-      <section id="buttonSection">
+      <section id="buttonSectionTutorial">
         <Link to="/">
           <button id="button">HOME</button>
         </Link>
