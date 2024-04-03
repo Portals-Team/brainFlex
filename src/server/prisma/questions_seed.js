@@ -2223,6 +2223,356 @@ const beethovenData = [
     answer_d: "German",
   },
 ];
+const WorldWarTwoData = [
+  {
+    difficulty: "Easy",
+    question: "Which event marked the beginning of World War II?",
+    correct_answer: "B",
+    fun_fact:
+      "The invasion of Poland by Germany on September 1, 1939, marked the beginning of World War II in Europe.",
+    answer_a: "Attack on Pearl Harbor",
+    answer_b: "Invasion of Poland",
+    answer_c: "Battle of Stalingrad",
+    answer_d: "D-Day Invasion",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who was the Supreme Commander of the Allied Expeditionary Force during World War II?",
+    correct_answer: "C",
+    fun_fact:
+      "Dwight D. Eisenhower served as the Supreme Commander of the Allied Expeditionary Force during World War II and later became the 34th President of the United States.",
+    answer_a: "Winston Churchill",
+    answer_b: "Adolf Hitler",
+    answer_c: "Dwight D. Eisenhower",
+    answer_d: "Joseph Stalin",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the code name for the German invasion of the Soviet Union?",
+    correct_answer: "A",
+    fun_fact:
+      "Operation Barbarossa was the largest military operation in human history in terms of manpower and casualties.",
+    answer_a: "Operation Barbarossa",
+    answer_b: "Operation Overlord",
+    answer_c: "Operation Sea Lion",
+    answer_d: "Operation Market Garden",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which country was not a member of the Axis powers during World War II?",
+    correct_answer: "D",
+    fun_fact:
+      "The Soviet Union was initially allied with Germany under the Molotov-Ribbentrop Pact but later joined the Allies after Operation Barbarossa.",
+    answer_a: "Germany",
+    answer_b: "Italy",
+    answer_c: "Japan",
+    answer_d: "Soviet Union",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which battle is often considered the turning point of the war in the Pacific?",
+    correct_answer: "B",
+    fun_fact:
+      "The Battle of Midway was a decisive naval battle in the Pacific Theater of World War II, resulting in a significant victory for the Allies.",
+    answer_a: "Battle of Stalingrad",
+    answer_b: "Battle of Midway",
+    answer_c: "Battle of Iwo Jima",
+    answer_d: "Battle of Okinawa",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the name of the project to develop the atomic bomb during World War II?",
+    correct_answer: "D",
+    fun_fact:
+      "The Manhattan Project was a research and development undertaking during World War II that produced the first nuclear weapons.",
+    answer_a: "Operation Paperclip",
+    answer_b: "Project Apollo",
+    answer_c: "Operation Overlord",
+    answer_d: "Manhattan Project",
+  },
+  {
+    difficulty: "Easy",
+    question: "Who was the leader of Nazi Germany during World War II?",
+    correct_answer: "C",
+    fun_fact:
+      "Adolf Hitler served as the Chancellor of Germany from 1933 to 1945 and Führer ('Leader') from 1934 to 1945.",
+    answer_a: "Benito Mussolini",
+    answer_b: "Joseph Stalin",
+    answer_c: "Adolf Hitler",
+    answer_d: "Winston Churchill",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which country did Japan attack to initiate the Pacific War?",
+    correct_answer: "A",
+    fun_fact:
+      "The attack on Pearl Harbor on December 7, 1941, led to the United States' entry into World War II.",
+    answer_a: "United States",
+    answer_b: "China",
+    answer_c: "Australia",
+    answer_d: "Philippines",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which battle marked the end of Nazi Germany's last major offensive on the Western Front?",
+    correct_answer: "D",
+    fun_fact:
+      "The Battle of the Bulge was the largest and bloodiest single battle fought by the United States during World War II.",
+    answer_a: "Battle of Stalingrad",
+    answer_b: "Battle of Kursk",
+    answer_c: "Battle of El Alamein",
+    answer_d: "Battle of the Bulge",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which country surrendered to Germany on June 22, 1940, effectively ending the Battle of France?",
+    correct_answer: "B",
+    fun_fact:
+      "The Fall of France resulted in the occupation of France by Nazi Germany during World War II.",
+    answer_a: "United Kingdom",
+    answer_b: "France",
+    answer_c: "Italy",
+    answer_d: "Soviet Union",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the name of the American strategy for island-hopping in the Pacific Theater?",
+    correct_answer: "C",
+    fun_fact:
+      "The island-hopping strategy involved bypassing heavily fortified Japanese positions and seizing strategically important islands.",
+    answer_a: "Operation Overlord",
+    answer_b: "Operation Market Garden",
+    answer_c: "Island-Hopping",
+    answer_d: "Operation Torch",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Who was the commander of the German Afrika Korps during the North African Campaign?",
+    correct_answer: "A",
+    fun_fact:
+      "Erwin Rommel, also known as the Desert Fox, was a highly respected military leader known for his innovative tactics.",
+    answer_a: "Erwin Rommel",
+    answer_b: "Heinz Guderian",
+    answer_c: "Ernst Röhm",
+    answer_d: "Hermann Göring",
+  },
+  {
+    difficulty: "Easy",
+    question: "Which event prompted the United States to enter World War II?",
+    correct_answer: "D",
+    fun_fact:
+      "The attack on Pearl Harbor by the Imperial Japanese Navy on December 7, 1941, led to the United States' declaration of war on Japan.",
+    answer_a: "Battle of Stalingrad",
+    answer_b: "D-Day Invasion",
+    answer_c: "Bombing of London",
+    answer_d: "Attack on Pearl Harbor",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who was the British Prime Minister during most of World War II?",
+    correct_answer: "B",
+    fun_fact:
+      "Winston Churchill's leadership and oratory skills played a crucial role in rallying the British people during the war.",
+    answer_a: "Neville Chamberlain",
+    answer_b: "Winston Churchill",
+    answer_c: "Clement Attlee",
+    answer_d: "Anthony Eden",
+  },
+  {
+    difficulty: "Hard",
+    question: "What was the main objective of the D-Day Invasion?",
+    correct_answer: "C",
+    fun_fact:
+      "The D-Day Invasion was the largest amphibious assault in history and marked the beginning of the liberation of German-occupied France.",
+    answer_a: "Capture Berlin",
+    answer_b: "Defeat Italy",
+    answer_c: "Establish a Western Front",
+    answer_d: "Secure North Africa",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which city was the target of the atomic bomb dropped by the United States during World War II?",
+    correct_answer: "A",
+    fun_fact:
+      "The atomic bomb was dropped on Hiroshima on August 6, 1945, leading to significant casualties and the surrender of Japan.",
+    answer_a: "Hiroshima",
+    answer_b: "Tokyo",
+    answer_c: "Nagasaki",
+    answer_d: "Osaka",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which country was invaded by Germany to begin World War II?",
+    correct_answer: "B",
+    fun_fact:
+      "The invasion of Poland by Germany on September 1, 1939, marked the beginning of World War II in Europe.",
+    answer_a: "France",
+    answer_b: "Poland",
+    answer_c: "Belgium",
+    answer_d: "Netherlands",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Who was the Japanese Prime Minister during most of World War II?",
+    correct_answer: "D",
+    fun_fact:
+      "Hideki Tojo served as the Prime Minister of Japan during most of World War II and was later convicted of war crimes by an international tribunal.",
+    answer_a: "Hirohito",
+    answer_b: "Emperor Meiji",
+    answer_c: "Yamamoto Isoroku",
+    answer_d: "Hideki Tojo",
+  },
+  {
+    difficulty: "Easy",
+    question: "Which battle is known as the largest naval battle in history?",
+    correct_answer: "C",
+    fun_fact:
+      "The Battle of Leyte Gulf was a series of naval engagements fought between the Allies and the Imperial Japanese Navy.",
+    answer_a: "Battle of Midway",
+    answer_b: "Battle of Okinawa",
+    answer_c: "Battle of Leyte Gulf",
+    answer_d: "Battle of the Atlantic",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which country was the first to declare war in World War II?",
+    correct_answer: "A",
+    fun_fact:
+      "Germany's invasion of Poland on September 1, 1939, prompted both the United Kingdom and France to declare war on Germany.",
+    answer_a: "United Kingdom",
+    answer_b: "France",
+    answer_c: "Soviet Union",
+    answer_d: "United States",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the main objective of the Tehran Conference held during World War II?",
+    correct_answer: "D",
+    fun_fact:
+      "The Tehran Conference was a meeting between the leaders of the United States, the United Kingdom, and the Soviet Union to plan the final strategy for the war.",
+    answer_a: "Discuss post-war reconstruction",
+    answer_b: "Coordinate military operations",
+    answer_c: "Negotiate peace terms",
+    answer_d: "Plan the opening of a second front in Europe",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which country did Germany invade on April 9, 1940, to begin the Battle of Norway?",
+    correct_answer: "C",
+    fun_fact:
+      "The German invasion of Norway and Denmark marked the first time in history that paratroopers were used in large-scale combat.",
+    answer_a: "Sweden",
+    answer_b: "Finland",
+    answer_c: "Denmark",
+    answer_d: "Netherlands",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which battle is often called the 'Stalingrad of the Pacific'?",
+    correct_answer: "A",
+    fun_fact:
+      "The Battle of Okinawa was one of the bloodiest battles of the Pacific Theater and resulted in significant casualties on both sides.",
+    answer_a: "Battle of Okinawa",
+    answer_b: "Battle of Iwo Jima",
+    answer_c: "Battle of Midway",
+    answer_d: "Battle of Leyte Gulf",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the code name for the Allied invasion of Sicily during World War II?",
+    correct_answer: "B",
+    fun_fact:
+      "Operation Husky was the largest amphibious operation in the Mediterranean theater of World War II.",
+    answer_a: "Operation Overlord",
+    answer_b: "Operation Husky",
+    answer_c: "Operation Torch",
+    answer_d: "Operation Avalanche",
+  },
+  {
+    difficulty: "Easy",
+    question: "Who was the leader of the Soviet Union during World War II?",
+    correct_answer: "B",
+    fun_fact:
+      "Joseph Stalin served as the General Secretary of the Communist Party of the Soviet Union from 1922 until his death in 1953.",
+    answer_a: "Leon Trotsky",
+    answer_b: "Joseph Stalin",
+    answer_c: "Vladimir Lenin",
+    answer_d: "Nikita Khrushchev",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which country was not occupied by Nazi Germany during World War II?",
+    correct_answer: "C",
+    fun_fact:
+      "Switzerland remained neutral during World War II and avoided occupation by Nazi Germany despite its proximity to Axis-controlled territory.",
+    answer_a: "France",
+    answer_b: "Netherlands",
+    answer_c: "Switzerland",
+    answer_d: "Belgium",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Who was the British General responsible for the successful defense of Malta during World War II?",
+    correct_answer: "D",
+    fun_fact:
+      "Bernard Montgomery, also known as Monty, was one of the most successful British military commanders of World War II.",
+    answer_a: "Douglas MacArthur",
+    answer_b: "George S. Patton",
+    answer_c: "Erwin Rommel",
+    answer_d: "Bernard Montgomery",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "What was the name of the treaty that ended World War II in Europe?",
+    correct_answer: "A",
+    fun_fact:
+      "The signing of the unconditional surrender of Germany took place on May 7-8, 1945, in Reims, France.",
+    answer_a: "Treaty of Reims",
+    answer_b: "Treaty of Versailles",
+    answer_c: "Yalta Agreement",
+    answer_d: "Molotov-Ribbentrop Pact",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which battle was the last major German offensive on the Western Front during World War II?",
+    correct_answer: "C",
+    fun_fact:
+      "The Battle of the Bulge was the largest and bloodiest single battle fought by the United States during World War II.",
+    answer_a: "Battle of Stalingrad",
+    answer_b: "Battle of Kursk",
+    answer_c: "Battle of the Bulge",
+    answer_d: "Battle of El Alamein",
+  },
+  {
+    difficulty: "Hard",
+    question: "Which city was the site of the Potsdam Conference in 1945?",
+    correct_answer: "D",
+    fun_fact:
+      "The Potsdam Conference was a meeting of the Allied leaders to discuss post-war Europe and the administration of Germany.",
+    answer_a: "Paris",
+    answer_b: "London",
+    answer_c: "Moscow",
+    answer_d: "Berlin",
+  },
+];
 
 module.exports = {
   football_questions,
@@ -2234,4 +2584,5 @@ module.exports = {
   starWarsData,
   lotrData,
   beatlesData,
+  WorldWarTwoData,
 };

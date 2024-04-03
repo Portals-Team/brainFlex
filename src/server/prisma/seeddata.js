@@ -53,6 +53,9 @@ const categories = [
   {
     name: "Sports",
   },
+  {
+    name: "History",
+  },
 ];
 
 const topics = [
@@ -82,6 +85,9 @@ const topics = [
   },
   {
     name: "Hockey",
+  },
+  {
+    name: "World War II",
   },
 ];
 
@@ -400,6 +406,41 @@ const image_word = [
       "https://res.cloudinary.com/dzpne110u/image/upload/v1710951037/TheBeatles_Help__1copy_f9hcvh.jpg",
     topic_id: 4,
     categories_id: 2,
+  },
+  {
+    topic_word: "Adolf Hitler",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712169943/History/Adolf-Hitler-1933_zlgmid.jpg",
+    topic_id: 10,
+    categories_id: 4,
+  },
+  {
+    topic_word: "Joseph Stalin",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712169959/History/220px-StalinCropped1943_28b_29_ckgt1w.jpg",
+    topic_id: 10,
+    categories_id: 4,
+  },
+  {
+    topic_word: "Franklin Roosevelt",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712169977/History/32_franklin_d_roosevelt_bdmr9y.jpg",
+    topic_id: 10,
+    categories_id: 4,
+  },
+  {
+    topic_word: "Benito Mussolini",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712169995/History/Benito-Mussolini_rhrisf.jpg",
+    topic_id: 10,
+    categories_id: 4,
+  },
+  {
+    topic_word: "Winston Churchill",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712170022/History/winston-churchill-9248164-1-402_hvmttd.jpg",
+    topic_id: 10,
+    categories_id: 4,
   },
 ];
 
