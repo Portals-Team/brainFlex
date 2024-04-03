@@ -2,6 +2,7 @@ import {
   useGetImageWordQuery,
   useGetGameQuery,
   useUpdatedUserMutation,
+  useUpdateQuizQuestionSolvedMutation,
 } from "../game/gameSlice";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -21,10 +22,11 @@ export default function GameHome() {
   const [updateUser] = useUpdatedUserMutation();
   const gameWord = image_word?.topic_word;
   const currentQuestion = quiz?.current_question;
-  const blur = 50 - 5 * (numberOfCorrectQuestions - 1);
+  const blur = 50 - 5 * numberOfCorrectQuestions;
   const blurClass = `blur-${blur}`;
   let acc = 1;
   const [userInput, setUserInput] = useState(Array(gameWord?.length).fill(""));
+  const [setSolved] = useUpdateQuizQuestionSolvedMutation();
 
   /**
    * @description handleInputChange sets specific values of user inputted strings for the word guess
@@ -52,7 +54,7 @@ export default function GameHome() {
         numberOfCorrectQuestions++;
       }
     }
-    return numberOfCorrectQuestions + 1;
+    return numberOfCorrectQuestions;
   }
 
   /**
@@ -63,7 +65,7 @@ export default function GameHome() {
    */
   function showRevealedLetters(numberOfCorrectQuestions) {
     let revealedLetters = "";
-    for (let i = 0; i < numberOfCorrectQuestions - 1; i++) {
+    for (let i = 0; i < numberOfCorrectQuestions; i++) {
       revealedLetters += gameWord?.charAt(i);
     }
     return revealedLetters;
@@ -88,6 +90,7 @@ export default function GameHome() {
    * @param {String} guessWord
    */
   function submitAnswer(guessWord) {
+    setSolved(quiz?.id);
     if (isGuessCorrect(guessWord)) {
       updateAggregateScore();
       navigate(`/game/score/correct/${id}`);
@@ -114,17 +117,26 @@ export default function GameHome() {
         <form>
           <div id="answerGrid">
             {gameWord?.split("").map((letter, index) => {
-              const currentAcc = acc++;
-              return currentAcc < numberOfCorrectQuestions ? (
-                <p id="revealedLetter">{letter}</p>
-              ) : (
-                <input
-                  id="userLetter"
-                  maxLength="1"
-                  key={index}
-                  value={userInput[index]}
-                  onChange={(e) => handleInputChange(index, e.target.value)}
-                />
+              const revealedCount = Math.round(
+                (numberOfAnswersCorrect() / quiz?.questions.length) *
+                  gameWord.length
+              );
+              console.log("this is the revealed count " + revealedCount);
+              console.log(numberOfAnswersCorrect());
+              return (
+                <div key={index}>
+                  {index < revealedCount ? (
+                    <p id="revealedLetter">{letter}</p>
+                  ) : (
+                    <input
+                      id="userLetter"
+                      maxLength="1"
+                      key={index}
+                      value={userInput[index]}
+                      onChange={(e) => handleInputChange(index, e.target.value)}
+                    />
+                  )}
+                </div>
               );
             })}
           </div>
