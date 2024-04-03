@@ -48,12 +48,12 @@ router.patch("/:id", async (req, res, next) => {
   const { user_answer } = req.body;
   const { id } = req.params;
   try {
-    // if (!res.locals.user) {
-    //   return next({
-    //     status: 400,
-    //     message: "You are not logged into the correct account"
-    //   });
-    // }
+    if (!res.locals.user) {
+      return next({
+        status: 400,
+        message: "You are not logged into the correct account"
+      });
+    }
 
     const quizProblemId = +id;
     if (!quizProblemId) {
