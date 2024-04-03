@@ -51,12 +51,12 @@ router.patch("/:id", async (req, res, next) => {
   const { quizScore } = req.body;
 
   try {
-    // if (!res.locals.user) {
-    //   return next({
-    //     status: 400,
-    //     message: "You are not logged into the correct account",
-    //   });
-    // }
+    if (!res.locals.user) {
+      return next({
+        status: 400,
+        message: "You are not logged into the correct account",
+      });
+    }
 
     const user = await prisma.user.findFirst({ where: { id: +id } });
 
