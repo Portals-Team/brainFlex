@@ -62,7 +62,31 @@ game.patch("/:id", async (req, res, next) => {
     //       "You are not allowed to access this information. Please Log In",
     //   });
     // }
+    const currentQuiz = await prisma.quiz.findUnique({
+      where: {
+        id: +id,
+        // user_id: res.locals.user.id,
+      },
+    });
+    // this finds the current quiz
     if (solved === true) {
+      const currentQuiz = await prisma.quiz.findUnique({
+        where: {
+          id: +id,
+          // user_id: res.locals.user.id,
+        },
+      });
+      //this finds the user whos quiz that is
+      const user = await prisma.user.findFirst({
+        where: { id: currentQuiz.user_id },
+      });
+      // this increases their quiz count by one if they have pressed solve.
+      const updatedUser = await prisma.user.update({
+        where: { id: currentQuiz.user_id },
+        data: {
+          quiz_count: user.quiz_count + 1,
+        },
+      });
       const updatedQuizCompleted = await prisma.quiz.update({
         where: {
           id: +id,
@@ -74,18 +98,14 @@ game.patch("/:id", async (req, res, next) => {
       });
       res.json(updatedQuizCompleted);
     }
-    const currentQuiz = await prisma.quiz.findUnique({
-      where: {
-        id: +id,
-        // user_id: res.locals.user.id,
-      },
-    });
+
     if (currentQuiz.quiz_completed) {
       return next({
         status: 500,
         message: "Quiz is already completed",
       });
     }
+
     if (currentQuiz.current_question === 10) {
       const updatedQuizCompleted = await prisma.quiz.update({
         where: {
@@ -108,6 +128,7 @@ game.patch("/:id", async (req, res, next) => {
           current_question: currentQuiz.current_question + 1,
         },
       });
+
       res.json(updatedQuizQuestions);
     }
   } catch (e) {
@@ -123,7 +144,18 @@ game.post("/", async (req, res, next) => {
   const { user_Id, category_Id, topic_Id, questionsarray, image_Word_Id } =
     req.body;
   try {
-    console.log("userID: ",user_Id," categoryId: ",category_Id, "topicID: ",topic_Id, " questionsArray: ",questionsarray," imageWordID: ",image_Word_Id);
+    console.log(
+      "userID: ",
+      user_Id,
+      " categoryId: ",
+      category_Id,
+      "topicID: ",
+      topic_Id,
+      " questionsArray: ",
+      questionsarray,
+      " imageWordID: ",
+      image_Word_Id
+    );
     const newQuiz = await prisma.quiz.create({
       data: {
         User: { connect: { id: +user_Id } },

@@ -19,7 +19,7 @@ const gameApi = api.injectEndpoints({
      */
 
     updatedUser: builder.mutation({
-      query: ({id, quizScore}) => ({
+      query: ({ id, quizScore }) => ({
         url: "/users/" + id,
         method: "PATCH",
         body: { quizScore: quizScore },
@@ -27,6 +27,11 @@ const gameApi = api.injectEndpoints({
       //invalidatesTags: ["users"],
       // transformResponse: (response) => response.users,
     }),
+
+    /**
+     * @description increaseQuizCount when submitted increases quiz count by 1
+     * @method PATCH
+     */
 
     /**
      * @description getGame query gets a Quiz for the logged in user
@@ -136,4 +141,5 @@ export const {
   useUpdateProblemMutation,
   useGetQuestionsQuery,
   useGetImageWordQuery,
+  useIncreaseQuizCountMutation,
 } = gameApi;
