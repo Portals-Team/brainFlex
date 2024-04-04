@@ -20,13 +20,13 @@ router.get("/", async (req, res, next) => {
 
 router.get("/me", async (req, res, next) => {
   try {
-    if(!res.locals.user) {
+    if (!res.locals.user) {
       return next({
-          status: 400,
-          message: "You are not logged into the correct account"
+        status: 400,
+        message: "You are not logged into the correct account",
       });
     }
-    const {id} = res.locals.user;
+    const { id } = res.locals.user;
     const user = await prisma.user.findUnique({
       where: { id: +id },
       include: {
@@ -75,8 +75,6 @@ router.get("/:id", async (req, res, next) => {
     next(e);
   }
 });
-
-
 
 // PATCH /api/users/:id patch users quiz score by id
 router.patch("/:id", async (req, res, next) => {

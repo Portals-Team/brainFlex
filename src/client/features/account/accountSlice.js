@@ -27,13 +27,9 @@ const accountApi = api.injectEndpoints({
      */
     getMe: builder.query({
       query: () => "/users/me",
-      providesTags: ["User"],
-    }),
-
-    /**
-     * @description getTopics query gets all topics.
-     * @method GET
-     */
+      providesTags: ["User", "UserTopics"]
+  }),
+    //getTopics gets all topics
     getTopics: builder.query({
       query: () => "/topics",
       providesTags: ["Topics"],

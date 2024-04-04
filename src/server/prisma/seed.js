@@ -12,6 +12,8 @@ const {
   starWarsData,
   lotrData,
   beatlesData,
+  WorldWarTwoData,
+  WorldWarOneData,
 } = require("./questions_seed.js");
 
 const seed = async () => {
@@ -101,11 +103,24 @@ const seed = async () => {
       },
     });
   }
+  for (let i = 10; i < 12; i++) {
+    await prisma.categories_topics.upsert({
+      where: { id: i },
+      update: {},
+      create: {
+        category_id: 4,
+        topic_id: i,
+      },
+    });
+  }
 
-  for (let i = 0; i < football_questions.length; i++) {
-    const data = football_questions[i];
+  let current_question_index = 0;
+
+  for (const question of football_questions) {
+    const data = question;
+    current_question_index = current_question_index + 1;
     await prisma.question.upsert({
-      where: { id: i + 1 },
+      where: { id: current_question_index },
       update: {},
       create: {
         difficulty: data.difficulty,
@@ -121,10 +136,11 @@ const seed = async () => {
       },
     });
   }
-  for (let i = 14; i < ledZeppelinData.length + 14; i++) {
-    const data = ledZeppelinData[i - 14];
+  for (const question of ledZeppelinData) {
+    const data = question;
+    current_question_index = current_question_index + 1;
     await prisma.question.upsert({
-      where: { id: i + 15 },
+      where: { id: current_question_index },
       update: {},
       create: {
         difficulty: data.difficulty,
@@ -140,10 +156,11 @@ const seed = async () => {
       },
     });
   }
-  for (let i = 24; i < nhlData.length + 24; i++) {
-    const data = nhlData[i - 24];
+  for (const question of nhlData) {
+    const data = question;
+    current_question_index = current_question_index + 1;
     await prisma.question.upsert({
-      where: { id: i + 24 },
+      where: { id: current_question_index },
       update: {},
       create: {
         difficulty: data.difficulty,
@@ -159,10 +176,11 @@ const seed = async () => {
       },
     });
   }
-  for (let i = 47; i < beethovenData.length + 47; i++) {
-    const data = beethovenData[i - 47];
+  for (const question of beethovenData) {
+    const data = question;
+    current_question_index = current_question_index + 1;
     await prisma.question.upsert({
-      where: { id: i + 47 },
+      where: { id: current_question_index },
       update: {},
       create: {
         difficulty: data.difficulty,
@@ -178,10 +196,11 @@ const seed = async () => {
       },
     });
   }
-  for (let i = 57; i < nbaData.length + 57; i++) {
-    const data = nbaData[i - 57];
+  for (const question of nbaData) {
+    const data = question;
+    current_question_index = current_question_index + 1;
     await prisma.question.upsert({
-      where: { id: i + 57 },
+      where: { id: current_question_index },
       update: {},
       create: {
         difficulty: data.difficulty,
@@ -197,10 +216,11 @@ const seed = async () => {
       },
     });
   }
-  for (let i = 89; i < harryPotterData.length + 89; i++) {
-    const data = harryPotterData[i - 89];
+  for (const question of harryPotterData) {
+    const data = question;
+    current_question_index = current_question_index + 1;
     await prisma.question.upsert({
-      where: { id: i + 89 },
+      where: { id: current_question_index },
       update: {},
       create: {
         difficulty: data.difficulty,
@@ -216,10 +236,11 @@ const seed = async () => {
       },
     });
   }
-  for (let i = 118; i < starWarsData.length + 118; i++) {
-    const data = starWarsData[i - 118];
+  for (const question of starWarsData) {
+    const data = question;
+    current_question_index = current_question_index + 1;
     await prisma.question.upsert({
-      where: { id: i + 118 },
+      where: { id: current_question_index },
       update: {},
       create: {
         difficulty: data.difficulty,
@@ -235,10 +256,11 @@ const seed = async () => {
       },
     });
   }
-  for (let i = 145; i < lotrData.length + 145; i++) {
-    const data = lotrData[i - 145];
+  for (const question of lotrData) {
+    const data = question;
+    current_question_index = current_question_index + 1;
     await prisma.question.upsert({
-      where: { id: i + 145 },
+      where: { id: current_question_index },
       update: {},
       create: {
         difficulty: data.difficulty,
@@ -254,10 +276,11 @@ const seed = async () => {
       },
     });
   }
-  for (let i = 184; i < beatlesData.length + 184; i++) {
-    const data = beatlesData[i - 184];
+  for (const question of beatlesData) {
+    const data = question;
+    current_question_index = current_question_index + 1;
     await prisma.question.upsert({
-      where: { id: i + 184 },
+      where: { id: current_question_index },
       update: {},
       create: {
         difficulty: data.difficulty,
@@ -273,7 +296,46 @@ const seed = async () => {
       },
     });
   }
-
+  for (const question of WorldWarOneData) {
+    const data = question;
+    current_question_index = current_question_index + 1;
+    await prisma.question.upsert({
+      where: { id: current_question_index },
+      update: {},
+      create: {
+        difficulty: data.difficulty,
+        question: data.question,
+        correct_answer: data.correct_answer,
+        fun_fact: data.fun_fact,
+        category_id: 4,
+        topic_id: 11,
+        answer_a: data.answer_a,
+        answer_b: data.answer_b,
+        answer_c: data.answer_c,
+        answer_d: data.answer_d,
+      },
+    });
+  }
+  for (const question of WorldWarTwoData) {
+    const data = question;
+    current_question_index = current_question_index + 1;
+    await prisma.question.upsert({
+      where: { id: current_question_index },
+      update: {},
+      create: {
+        difficulty: data.difficulty,
+        question: data.question,
+        correct_answer: data.correct_answer,
+        fun_fact: data.fun_fact,
+        category_id: 4,
+        topic_id: 10,
+        answer_a: data.answer_a,
+        answer_b: data.answer_b,
+        answer_c: data.answer_c,
+        answer_d: data.answer_d,
+      },
+    });
+  }
   for (let i = 145; i < 155; i++) {
     await prisma.quiz_problems.upsert({
       where: { id: i },

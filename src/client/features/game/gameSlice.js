@@ -17,6 +17,11 @@ const gameApi = api.injectEndpoints({
     }),
 
     /**
+     * @description increaseQuizCount when submitted increases quiz count by 1
+     * @method PATCH
+     */
+
+    /**
      * @description getGame query gets a Quiz for the logged in user
      * @param {integer} id
      * @method GET
@@ -109,4 +114,5 @@ export const {
   useUpdateProblemMutation,
   useGetQuestionsQuery,
   useGetImageWordQuery,
+  useIncreaseQuizCountMutation,
 } = gameApi;
