@@ -20,6 +20,7 @@ export default function GameHome() {
   const numberOfCorrectQuestions = numberOfAnswersCorrect();
   const navigate = useNavigate();
   const [updateUser] = useUpdatedUserMutation();
+
   const gameWord = image_word?.topic_word;
   const currentQuestion = quiz?.current_question;
   const blur = 50 - 5 * numberOfCorrectQuestions;
@@ -83,10 +84,12 @@ export default function GameHome() {
   function isGuessCorrect(guessWord) {
     return (
       (
-        showRevealedLetters(Math.round(
-          (numberOfAnswersCorrect() / quiz?.questions.length) *
-            gameWord.length
-        )) + guessWord
+        showRevealedLetters(
+          Math.round(
+            (numberOfAnswersCorrect() / quiz?.questions.length) *
+              gameWord.length
+          )
+        ) + guessWord
       ).toLowerCase() === gameWord?.toLowerCase()
     );
   }
@@ -96,6 +99,8 @@ export default function GameHome() {
    * @param {String} guessWord
    */
   function submitAnswer(guessWord) {
+    console.log("this is the quiz.id: " + quiz?.id);
+    //set solved increases quiz count by one, and makes it so quiz is complete in database
     setSolved(quiz?.id);
     if (isGuessCorrect(guessWord)) {
       updateAggregateScore();
@@ -115,7 +120,6 @@ export default function GameHome() {
 
   return (
     <>
-      
       <section id="imageContainer">
         <img id="image" className={blurClass} src={image_word?.image_url} />
       </section>
