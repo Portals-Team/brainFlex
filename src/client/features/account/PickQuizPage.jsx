@@ -2,7 +2,6 @@ import { useNavigate, NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import { useGetMeQuery, useGetUserQuery } from "./accountSlice";
-import { useGetUsersQuery } from "./accountSlice";
 import { useGetTopicsQuery } from "./accountSlice";
 import { useGetTopicByIdQuery } from "./accountSlice";
 import { useCreateNewQuizMutation } from "./accountSlice";
@@ -13,7 +12,7 @@ import { useCreateNewQuizMutation } from "./accountSlice";
  * @returns will create a quiz for a users choosen topics when the play quiz button is clicked
  */
 function TopicCard({ topic }) {
-  const {data: user} = useGetMeQuery();
+  const { data: user } = useGetMeQuery();
   const navigate = useNavigate();
   let { data: topicInformation } = useGetTopicByIdQuery(topic?.id);
   let [createNewQuiz] = useCreateNewQuizMutation();
@@ -69,7 +68,6 @@ function TopicCard({ topic }) {
         questionsarray: arrayOfTopics,
         image_Word_Id: image_topic_id,
       });
-
       navigate(`/game/home/${newQuiz.data.id}`);
     } catch (error) {
       console.log(error);
@@ -91,7 +89,7 @@ function TopicCard({ topic }) {
  * @component PickQuizPage returns a list of quizes the logged in user can play from their choosen topcis. If they have played a quiz on current day or if they have started a quiz but have not completed it on the current day it will return a message.
  */
 export default function PickQuizPage() {
-  const {data: user} = useGetMeQuery();
+  const { data: user } = useGetMeQuery();
   let { data: alltopics } = useGetTopicsQuery();
 
   /**

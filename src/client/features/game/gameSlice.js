@@ -3,21 +3,9 @@ import api from "../../store/api";
 const gameApi = api.injectEndpoints({
   endpoints: (builder) => ({
     /**
-     * @description getUsers query gets a list of all Users.
-     * @method GET
-     */
-    getUsers: builder.query({
-      query: () => "/users",
-      providesTags: ["users"],
-      transformResponse: (response) => response.users,
-      transformErrorResponse: (response) => response.data.error.message,
-    }),
-
-    /**
      * @description updatedUser query updates the logged in Users.aggregate_score
      * @method PATCH
      */
-
     updatedUser: builder.mutation({
       query: ({ id, quizScore }) => ({
         url: "/users/" + id,
@@ -43,7 +31,6 @@ const gameApi = api.injectEndpoints({
      * @param {integer} id
      * @method PATCH
      */
-
     updateQuizQuestionSolved: builder.mutation({
       query: (id) => ({
         url: "/quizes/" + id,
@@ -71,12 +58,9 @@ const gameApi = api.injectEndpoints({
      * @param {integer} id
      * @method GET
      */
-
     getQuizProblems: builder.query({
       query: (id) => "/quiz_problems/" + id,
       providesTags: ["quiz_problems"],
-      // transformResponse: (response) => response.users,
-      // transformErrorResponse: (response) => response.data.error.message,
     }),
 
     /**
