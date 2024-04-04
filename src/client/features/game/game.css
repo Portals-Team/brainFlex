@@ -131,11 +131,12 @@
 
   /* quiz styling */
 
-  #questionSection, #factSection {
+  #questionSection, #factSection, #quizAnswersSection {
     margin: 1rem;
     display: flex;
     align-items: flex-start;
     text-align: center;
+    justify-content: center;
   }
 
   #iconContainer {
@@ -202,6 +203,7 @@
 
   #buttonSection {
     display: flex;
+    margin-bottom: 2rem;
   }
 
   #funFactContainer {

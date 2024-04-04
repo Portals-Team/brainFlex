@@ -66,17 +66,7 @@ export default function QuizAnswer() {
 
   return (
     <>
-      {/*<section id="questionSection">
-        <div id="iconContainer">
-          <p id="questionIcon">A:</p>
-        </div>
-        <div>
-          <h3 id="question">
-            {quiz?.questions[currentQuestionIndex].question.question}
-          </h3>
-        </div>
-  </section>*/}
-      <section>
+      <section id="quizAnswersSection">
         <div>
           <ol id="questionAnswers">
             <li>

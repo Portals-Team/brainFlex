@@ -48,7 +48,7 @@ export default function Quiz() {
           </h3>
         </div>
       </section>
-      <section>
+      <section id="quizAnswersSection">
         <div>
           <ol id="questionAnswers">
             <li>
