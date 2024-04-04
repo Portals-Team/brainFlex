@@ -68,6 +68,7 @@ game.patch("/:id", async (req, res, next) => {
         // user_id: res.locals.user.id,
       },
     });
+    // this finds the current quiz
     if (solved === true) {
       const currentQuiz = await prisma.quiz.findUnique({
         where: {
@@ -75,11 +76,11 @@ game.patch("/:id", async (req, res, next) => {
           // user_id: res.locals.user.id,
         },
       });
-
+      //this finds the user whos quiz that is
       const user = await prisma.user.findFirst({
         where: { id: currentQuiz.user_id },
       });
-
+      // this increases their quiz count by one if they have pressed solve.
       const updatedUser = await prisma.user.update({
         where: { id: currentQuiz.user_id },
         data: {
