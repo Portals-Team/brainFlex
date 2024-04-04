@@ -188,11 +188,7 @@ export default function PickQuizPage() {
       <header id="pickQuizHeadline">Pick Quiz Page</header>
       <article>
         <p id="pickQuizTag">Your Topics: </p>
-        <section id="pickQuizSection"></section>
-        {showCreateContinueFinished()}
-        <section id="buttonSection">
-          <button id="playRandomQuizButton">Play Random Quiz</button>
-        </section>
+        <section id="pickQuizSection">{showCreateContinueFinished()}</section>
       </article>
     </>
   );

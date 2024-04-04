@@ -177,7 +177,7 @@
 }
 
 #playQuizButton,
-#changeTopicsButton, #playRandomQuizButton, #continueQuizButton{
+#changeTopicsButton, #continueQuizButton{
   color: #5e80a8;
   border: 0.1rem solid #71adf1;
   border-radius: 10px;
