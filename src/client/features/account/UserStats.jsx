@@ -7,16 +7,23 @@ import { useCreateNewQuizMutation } from "./accountSlice";
 
 import "./account.css";
 
+/**
+ *
+ * @function TopicCard
+ * @returns will create a quiz for a users choosen topics when the play quiz button is clicked
+ */
 function TopicCard({ topic }) {
-  //logic for creating a new quiz
-  //first get everything associated with that particular topic
-  const {data: me} = useGetMeQuery();
+  const { data: me } = useGetMeQuery();
   const id = me?.id;
   const navigate = useNavigate();
   let { data: topicInformation } = useGetTopicByIdQuery(topic?.id);
   let [createNewQuiz] = useCreateNewQuizMutation();
 
-  //this function gets a random image word
+  /**
+   *
+   * @function getRandomImageWord
+   * @returns a random image word for the choosen user topic by id.
+   */
   function getRandomImageWord() {
     const randomImageIndex = Math.floor(
       Math.random() * topicInformation.Image_Word.length
@@ -25,6 +32,12 @@ function TopicCard({ topic }) {
     return topicInformation.Image_Word[randomImageIndex].id;
   }
 
+  /**
+   *
+   * @function getRandomQuizIds
+   * @description creates an array of 10 random questions from all of the questions of the choosen topic.
+   * @returns a set of 10 questions for a quiz.
+   */
   function getRandomQuizIds() {
     const arrayOfTopics = [];
     const numberArray = Array.from(
@@ -40,6 +53,12 @@ function TopicCard({ topic }) {
     return arrayOfTopics;
   }
 
+  /**
+   *
+   * @function createQuiz
+   * @description creates a new quiz with an random image, its answer word and ten random questions all related to the users chosen topic.
+   * @returns createQuiz is actived by the play quiz button and navigates the user to the created quiz for that topic.
+   */
   const createQuiz = async (evt) => {
     evt.preventDefault();
     try {
@@ -70,11 +89,15 @@ function TopicCard({ topic }) {
       <form onSubmit={createQuiz}>
         <button id="playQuizButton">Play Quiz</button>
       </form>
-      {/* make this button a Link tag to generated quiz for the users picked topic*/}
     </li>
   );
 }
 
+/**
+ *
+ * @function UserScores
+ * @returns a list of the top three players of the game and their aggreate score.
+ */
 function UserScores({ user }) {
   return (
     <ul>
@@ -84,25 +107,31 @@ function UserScores({ user }) {
   );
 }
 
+/**
+ *
+ * @component UserStats returns a list of the logged in users account info, their current topics and a list of the top game players/
+ */
 export default function UserStats() {
-  const {data: me} = useGetMeQuery();
+  const { data: me } = useGetMeQuery();
   const id = me?.id;
   const { data: users } = useGetUsersQuery();
   let { data: alltopics } = useGetTopicsQuery();
 
-  //
+  /**
+   *
+   * @function showCreateContinueFinished
+   * @description declares that no quiz exists of the topic for the day, that there is not a quiz played by the user on the current day and that if there is a quiz for the day that the user has choosen, it has not yet been completed.
+   */
   const showCreateContinueFinished = () => {
-    //found quiz today is if there is a quiz for that user that exists today
     let foundQuizToday = false;
-    //isfoundquizcompleted is if it finds a quiz for that user today, is that quiz completed or not
     let isFoundQuizCompleted = null;
-    //if there is a quiz that already exists for today, then this is the id of that quiz
     let todaysQuiz = null;
+
+    /**
+     * @function isThereAQuiz
+     * @description checks all of the users quizzes and converts the dateTime of each quiz to a string month, day, year format and compares that string to a string of the current day. If a quiz is found it is set to true in the database and then checks if the quiz has been completed.
+     */
     const isThereAQuiz = () => {
-      //this function looks at all of a users quizzes, then for each of them takes the datetime of that quiz
-      // and converts it to month date year format, then compares it to todays date in the same format
-      // it then for each of the quizes if it finds a quiz, sets foundquiz today to true, and then after that sees if that quiz is completed.
-      // there should never be more than one quiz for a user on a day, so shouldnt run into overlap
       for (let i = 0; i < me?.quizzes.length; i++) {
         const thedate = new Date(me?.quizzes[i].date_time).toString();
         const datechanged = thedate.split(" ").slice(1, 4).join(" ");
@@ -117,13 +146,12 @@ export default function UserStats() {
         }
       }
     };
-    //this calls the isthereaquiz function
     isThereAQuiz();
-    //this logic uses found quiz today and isfoundquizcompleted to see one if there is a found quiz,
-    //if there is a found quiz, it checks to see if that quiz is completed or not. if it is completed already,
-    //then it will say you have already done your quiz for the day come back tomorrow. if you have a quiz
-    // that is incomplete for today, then it will navigate you to continue that quiz
-    // if no quiz found for today, then will show you your topics you can take a quiz on.
+
+    /**
+     * @description checks if there is a quiz for the day and if that quiz has been completed or how many questions into the quiz the user has answered so far.
+     * @returns if quiz has been completed a message indicates the user has already done a quiz for the day. Else if the user has started a quiz a message indicates the users current quiz topic and current quiz question as well as a button to navigate the user to continue the quiz at there current unanswered quiz question.
+     */
     if (foundQuizToday === true) {
       if (isFoundQuizCompleted === true) {
         return (
@@ -135,13 +163,9 @@ export default function UserStats() {
           </>
         );
       } else {
-        //this looks through all of the quizes that player has and finds the one where the quiz.id is the
-        //todaysquiz id that was stored previously
-        let currentQuiz = me?.quizzes.filter(
-          (quiz) => quiz.id === todaysQuiz
-        );
+        //checks to see the current quiz question the user is on in a quiz that has not been completed.
+        let currentQuiz = me?.quizzes.filter((quiz) => quiz.id === todaysQuiz);
         let currentQuizQuestion = currentQuiz[0]?.current_question;
-        //this gets the index 0 of the new array that was made from the filter
         let currentQuizIndexed = currentQuiz[0];
         let currentQuizTopicId = currentQuiz[0]?.topic_id;
         console.log(currentQuizIndexed);
@@ -188,14 +212,6 @@ export default function UserStats() {
             <p id="userCardItem">Quiz Count: {me?.quiz_count}</p>
           </div>
           {showCreateContinueFinished()}
-          {/* <div id="yourTopicsCard">
-            <h3 id="yourTopicsHeadline">Your Topics: </h3>
-            <ul>
-              {user?.user_topics?.map(({ Topics }) => (
-                <TopicCard key={Topics?.id} topic={Topics} />
-              ))}
-            </ul>
-          </div> */}
           <div>
             <button id="changeTopicsButton">
               <Link to={`/topics`}>Change Topics</Link>
@@ -203,10 +219,6 @@ export default function UserStats() {
           </div>
         </section>
         <section>
-          {/*<div>
-            <h3>YOUR RANK</h3>
-            <h4>*this is still to be determined*</h4>
-              </div>*/}
           <div id="topPlayersCard">
             <h3 id="topPlayersHeadline">Top Players:</h3>
             <ul id="topPlayers">

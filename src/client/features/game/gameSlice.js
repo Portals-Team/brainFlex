@@ -3,21 +3,9 @@ import api from "../../store/api";
 const gameApi = api.injectEndpoints({
   endpoints: (builder) => ({
     /**
-     * @description getUsers query gets a list of all Users.
-     * @method GET
-     */
-    getUsers: builder.query({
-      query: () => "/users",
-      providesTags: ["users"],
-      transformResponse: (response) => response.users,
-      transformErrorResponse: (response) => response.data.error.message,
-    }),
-
-    /**
      * @description updatedUser query updates the logged in Users.aggregate_score
      * @method PATCH
      */
-
     updatedUser: builder.mutation({
       query: ({ id, quizScore }) => ({
         url: "/users/" + id,
@@ -38,12 +26,9 @@ const gameApi = api.injectEndpoints({
      * @param {integer} id
      * @method GET
      */
-    //do I need to speficy the user id here as well?
     getGame: builder.query({
       query: (id) => "/quizes/" + id,
       providesTags: ["quizes"],
-      // transformResponse: (response) => response.quizes,
-      // transformErrorResponse: (response) => response.data.error.message,
     }),
 
     /**
@@ -51,7 +36,6 @@ const gameApi = api.injectEndpoints({
      * @param {integer} id
      * @method PATCH
      */
-
     updateQuizQuestionSolved: builder.mutation({
       query: (id) => ({
         url: "/quizes/" + id,
@@ -59,7 +43,6 @@ const gameApi = api.injectEndpoints({
         body: { solved: true },
       }),
       invalidatesTags: ["quizes"],
-      // transformResponse: (response) => response.quizes,
     }),
     /**
      * @description updatedQuizQuestionUnsolved query updates the logged in users Quiz.current_question to increase question by 1
@@ -73,7 +56,6 @@ const gameApi = api.injectEndpoints({
         body: { solved: false },
       }),
       invalidatesTags: ["quizes"],
-      // transformResponse: (response) => response.quizes,
     }),
 
     /**
@@ -81,12 +63,9 @@ const gameApi = api.injectEndpoints({
      * @param {integer} id
      * @method GET
      */
-
     getQuizProblems: builder.query({
       query: (id) => "/quiz_problems/" + id,
       providesTags: ["quiz_problems"],
-      // transformResponse: (response) => response.users,
-      // transformErrorResponse: (response) => response.data.error.message,
     }),
 
     /**
@@ -94,7 +73,6 @@ const gameApi = api.injectEndpoints({
      * @param {integer} id
      * @method PATCH
      */
-
     updateProblem: builder.mutation({
       query: (payload) => ({
         url: "/quiz_problems/" + payload.id,
@@ -102,7 +80,6 @@ const gameApi = api.injectEndpoints({
         body: { user_answer: payload.user_answer },
       }),
       invalidatesTags: ["quizes"],
-      // transformResponse: (response) => response.quizes,
     }),
 
     /**
@@ -110,12 +87,9 @@ const gameApi = api.injectEndpoints({
      * @param {integer} id
      * @method GET
      */
-
     getQuestions: builder.query({
       query: (id) => "/questions/" + id,
       providesTags: ["questions"],
-      // transformResponse: (response) => response.questions,
-      // transformErrorResponse: (response) => response.data.error.message,
     }),
 
     /**
@@ -123,7 +97,6 @@ const gameApi = api.injectEndpoints({
      * @param {integer} id
      * @method GET
      */
-
     getImageWord: builder.query({
       query: (id) => "/image_words/" + id,
       providesTags: ["image_word"],

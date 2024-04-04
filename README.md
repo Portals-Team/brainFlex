@@ -66,8 +66,10 @@ Players are motivated to improve through a dynamic system of scoring and ranking
 
 Our goal is to create a platform where learning is seamlessly integrated with gaming elements, encouraging users to make exploring new knowledge areas a daily habit. We aim to foster a community of learners who revel in discovery and self-improvement, transforming each quiz from a mere test of knowledge into an opportunity to broaden one’s horizons.
 
-App diagram:
+![App Diagram](sketches/wireFrameBrainFlex.jpg)
 
-Backend schema diagram: (https://dbdiagram.io/d/BrainFLEX-schema-66016031ae072629cee22ba9)
+![Backend Schema Diagram](sketches/brainFLEX_schema.jpg)
 
-Wireframe: (https://app.diagrams.net/#G1Ruo6exV34HW1uCr8I5lOWMJlwSd7eukP#%7B%22pageId%22%3A%22stNXeFv7y3JxxAb2-zd5%22%7D)
+![Initial Account Wireframe](sketches/accountWireFrame.jpg)
+
+![Intial Game Wireframe](sketches/gameWireFrame.jpg)

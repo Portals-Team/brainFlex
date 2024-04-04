@@ -2,16 +2,29 @@ import api from "../../store/api";
 
 const accountApi = api.injectEndpoints({
   endpoints: (builder) => ({
-    //getUsers gets all users
+    /**
+     * @description getUsers query gets a list of all Users.
+     * @method GET
+     */
     getUsers: builder.query({
       query: () => "/users",
       providesTags: ["User"],
     }),
-    //getUser gets user by id
+
+    /**
+     * @description getUser query gets a user by id.
+     * @param {integer} id
+     * @method GET
+     */
     getUser: builder.query({
       query: (id) => "/users/" + id,
       providesTags: ["User"],
     }),
+
+    /**
+     * @description getMe query gets the logged in user.
+     * @method GET
+     */
     getMe: builder.query({
       query: () => "/users/me",
       providesTags: ["User", "UserTopics"]
@@ -22,23 +35,40 @@ const accountApi = api.injectEndpoints({
       providesTags: ["Topics"],
     }),
 
-    //gets all information about a specific topic
+    /**
+     * @description getTopicById query gets all topics by id.
+     * @param {integer} id
+     * @method GET
+     */
     getTopicById: builder.query({
       query: (id) => "/topics/" + id,
       providesTags: ["Topic"],
     }),
 
-    //getUserTopics gets the users topic picks by id
+    /**
+     * @description getUserTopics query gets all user topics by id.
+     * @param {integer} id
+     * @method GET
+     */
     getUserTopics: builder.query({
       query: (id) => "/user_topics/" + id,
       providesTags: ["UserTopics"],
     }),
-    //write a query to get all categories
+
+    /**
+     * @description getCategories query gets all categories.
+     * @method GET
+     */
     getCategories: builder.query({
       query: () => "/categories",
       providesTags: ["Categories"],
     }),
-    //write PATCH query to update a users user_topics
+
+    /**
+     * @description updatedUserTopics query updates the logged in users topics by topic id
+     * @param {integer} id
+     * @method PATCH
+     */
     updateUserTopics: builder.mutation({
       query: (payload) => ({
         url: "/user_topics/" + payload.id,
@@ -47,6 +77,11 @@ const accountApi = api.injectEndpoints({
       }),
       invalidatesTags: ["UserTopics"],
     }),
+
+    /**
+     * @description createNewQuiz posts a new quiz for a user to play when there is no quiz for tghe users topic
+     * @method POST
+     */
     createNewQuiz: builder.mutation({
       query: (payload) => ({
         url: "/quizes",
