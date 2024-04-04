@@ -57,3 +57,17 @@ Application state is managed with [Redux Toolkit](https://redux-toolkit.js.org/)
 [RTK Query](https://redux-toolkit.js.org/rtk-query/overview) is used to handle data fetching. The central API slice is defined in `src/client/store/api.js` and is intended to stay empty. Additional endpoints should be injected separately in `src/client/features`.
 
 [Less](https://lesscss.org/) is used as the CSS preprocessor.
+
+# Capstone Project
+
+Our project is a daily quiz game designed to blend learning with entertainment, transforming education into an engaging and fun experience. At its core, the game invites users to select from a wide array of topics—from Harry Potter to Beethoven, to Hockey—and tailors daily quizzes to these preferences. It features a unique picture-revealing quiz format, where images are gradually unblurred and word answers unveiled letter by letter, all based on the player's correct responses to a series of questions. This method not only boosts recall and learning but also introduces an element of mystery and discovery.
+
+Players are motivated to improve through a dynamic system of scoring and ranking, designed to foster growth and reward progress with increasingly challenging content. Moreover, the game enriches the learning experience by providing insightful fun facts with each answered question.
+
+Our goal is to create a platform where learning is seamlessly integrated with gaming elements, encouraging users to make exploring new knowledge areas a daily habit. We aim to foster a community of learners who revel in discovery and self-improvement, transforming each quiz from a mere test of knowledge into an opportunity to broaden one’s horizons.
+
+App diagram:
+
+Backend schema diagram: (https://dbdiagram.io/d/BrainFLEX-schema-66016031ae072629cee22ba9)
+
+Wireframe: (https://app.diagrams.net/#G1Ruo6exV34HW1uCr8I5lOWMJlwSd7eukP#%7B%22pageId%22%3A%22stNXeFv7y3JxxAb2-zd5%22%7D)

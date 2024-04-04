@@ -121,8 +121,6 @@ export default function GameHome() {
                 (numberOfAnswersCorrect() / quiz?.questions.length) *
                   gameWord.length
               );
-              console.log("this is the revealed count " + revealedCount);
-              console.log(numberOfAnswersCorrect());
               return (
                 <div key={index}>
                   {index < revealedCount ? (

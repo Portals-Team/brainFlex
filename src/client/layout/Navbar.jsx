@@ -26,13 +26,25 @@ export default function Navbar() {
           <p id="navbarEmoji">🧠 </p>
         </NavLink>
       </div>
-      <div>
-        <NavLink className="navLink" to="/account/me">
-          Account
-        </NavLink>
-        <NavLink className="navLink" to="/auth">
-          Login/Logout
-        </NavLink>
+      <div id="navBarSectionRight">
+        <li className="login">
+          <NavLink className="navLink" to="/account/me">
+            Account
+          </NavLink>
+        </li>
+        {token ? (
+          <li className="login">
+            <a className="navLink" onClick={handleLogout}>
+              Log Out
+            </a>
+          </li>
+        ) : (
+          <li className="login">
+            <NavLink className="navLink" to="/auth">
+              Log In
+            </NavLink>
+          </li>
+        )}
       </div>
     </nav>
   );
