@@ -6,7 +6,6 @@ import { useState } from "react";
 import {
   useGetGameQuery,
   useUpdateProblemMutation,
-  useUpdateQuizQuestionUnsolvedMutation,
 } from "../game/gameSlice";
 
 /**

@@ -1,8 +1,5 @@
 import { useNavigate, NavLink } from "react-router-dom";
-import { useParams } from "react-router-dom";
-
-import { useGetMeQuery, useGetUserQuery } from "./accountSlice";
-import { useGetUsersQuery } from "./accountSlice";
+import { useGetMeQuery } from "./accountSlice";
 import { useGetTopicsQuery } from "./accountSlice";
 import { useGetTopicByIdQuery } from "./accountSlice";
 import { useCreateNewQuizMutation } from "./accountSlice";

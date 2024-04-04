@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import {
   useGetCategoriesQuery,
   useUpdateUserTopicsMutation,
+  useGetMeQuery
 } from "./accountSlice";
-import { useGetMeQuery } from "./accountSlice";
-
 import "./account.css";
 
 /**
