@@ -4,17 +4,46 @@ import {
   useUpdatedUserMutation,
   useUpdateQuizQuestionSolvedMutation,
 } from "../game/gameSlice";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import {useGetMeQuery} from "../account/accountSlice"
+import { Link, useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
 
 import "./game.css";
+
+const isThereAQuiz = () => {
+  const {data: me} = useGetMeQuery();
+  let foundQuizToday = false;
+//isfoundquizcompleted is if it finds a quiz for that user today, is that quiz completed or not
+let todaysQuiz = null;
+  //this function looks at all of a users quizzes, then for each of them takes the datetime of that quiz
+  // and converts it to month date year format, then compares it to todays date in the same format
+  // it then for each of the quizes if it finds a quiz, sets foundquiz today to true, and then after that sees if that quiz is completed.
+  // there should never be more than one quiz for a user on a day, so shouldnt run into overlap
+  for (let i = 0; i < me?.quizzes.length; i++) {
+    const thedate = new Date(me?.quizzes[i].date_time).toString();
+    const datechanged = thedate.split(" ").slice(1, 4).join(" ");
+    if (datechanged === Date().split(" ").slice(1, 4).join(" ")) {
+      foundQuizToday = true;
+      todaysQuiz = me?.quizzes[i].id;
+      if (me?.quizzes[i].quiz_completed === true) {
+        isFoundQuizCompleted = true;
+      } else {
+        false;
+      }
+    }
+  }
+
+  return todaysQuiz;
+
+}
 
 /**
  *
  * @returns GameHome react component, where the quiz lives throughout
  */
 export default function GameHome() {
-  const { id } = useParams();
+  const todaysQuiz = isThereAQuiz();
+  const id = todaysQuiz;
   const { data: quiz } = useGetGameQuery(+id);
   const { data: image_word } = useGetImageWordQuery(quiz?.image_Word_id);
   const numberOfCorrectQuestions = numberOfAnswersCorrect();
@@ -29,7 +58,7 @@ export default function GameHome() {
   const [userInput, setUserInput] = useState(Array(gameWord?.length).fill(""));
   const [setSolved] = useUpdateQuizQuestionSolvedMutation();
 
-  const itemsRef = useRef([]);
+  // const itemsRef = useRef([]);
 
   /**
    * @description handleInputChange sets specific values of user inputted strings for the word guess
@@ -40,7 +69,7 @@ export default function GameHome() {
     const updatedInput = [...userInput];
     updatedInput[index] = value;
     setUserInput(updatedInput);
-    itemsRef.current[index + 1].focus();
+    // itemsRef.current[index + 1].focus();
   };
 
   /**
@@ -104,8 +133,8 @@ export default function GameHome() {
     setSolved(quiz?.id);
     if (isGuessCorrect(guessWord)) {
       updateAggregateScore();
-      navigate(`/game/score/correct/${id}`);
-    } else navigate(`/game/score/incorrect/${id}`);
+      navigate(`/game/score/correct`);
+    } else navigate(`/game/score/incorrect`);
   }
 
   /**
@@ -138,8 +167,8 @@ export default function GameHome() {
                     <p id="revealedLetter">{letter}</p>
                   ) : (
                     <input
-                      ref={ref=>itemsRef.current.push(ref)}
-                      name={`code-${index}`}
+                      // ref={ref=>itemsRef.current.push(ref)}
+                      // name={`code-${index}`}
                       id="userLetter"
                       maxLength="1"
                       key={index}
@@ -161,7 +190,7 @@ export default function GameHome() {
         </form>
         {!quiz?.quiz_completed && (
           <button id="button">
-            <Link id="link" to={`/game/quiz/${id}`}>
+            <Link id="link" to={`/game/quiz`}>
               Ready for Next Question?
             </Link>
           </button>

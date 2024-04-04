@@ -45,8 +45,6 @@ function TopicCard({ topic }) {
     try {
       const image_topic_id = getRandomImageWord();
       const arrayOfTopics = getRandomQuizIds();
-      console.log(arrayOfTopics);
-      console.log(topicInformation?.Categories_topics[0].category_id);
       const newQuiz = await createNewQuiz({
         user_Id: +me?.id,
         category_Id: topicInformation?.Categories_topics[0].category_id,
@@ -60,7 +58,7 @@ function TopicCard({ topic }) {
       //isfoundquizcompleted is if it finds a quiz for that user today, is that quiz completed or not
       //if there is a quiz that already exists for today, then this is the id of that quiz
 
-      navigate(`/game/home/${newQuiz.data.id}`);
+      navigate(`/game/home/`);
     } catch (error) {
       console.log(error);
     }
@@ -160,7 +158,7 @@ export default function UserStats() {
             <p className="quizMessage">
               Current Quiz Question:{currentQuizQuestion}
             </p>
-            <NavLink to={`/game/home/${currentQuizIndexed.id}`}>
+            <NavLink to={`/game/home`}>
               <button id="continueQuizButton">To Continue Quiz</button>
             </NavLink>
           </>
@@ -200,7 +198,7 @@ export default function UserStats() {
           </div> */}
           <div>
             <button id="changeTopicsButton">
-              <Link to={`/topics/${id}`}>Change Topics</Link>
+              <Link to={`/topics`}>Change Topics</Link>
             </button>
           </div>
         </section>
