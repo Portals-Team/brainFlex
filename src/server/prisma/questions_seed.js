@@ -150,6 +150,199 @@ const football_questions = [
     answer_c: "Lovie Smith",
     answer_d: "Dennis Green",
   },
+  {
+    difficulty: "Medium",
+    question: "Which team has won the most Super Bowl championships?",
+    correct_answer: "C",
+    fun_fact:
+      "The Pittsburgh Steelers have won the most Super Bowl championships, with a total of six titles.",
+    answer_a: "New England Patriots",
+    answer_b: "San Francisco 49ers",
+    answer_c: "Pittsburgh Steelers",
+    answer_d: "Dallas Cowboys",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who holds the record for the most career passing yards in NFL history?",
+    correct_answer: "B",
+    fun_fact:
+      "Drew Brees holds the record for the most career passing yards in NFL history, with 80,358 yards.",
+    answer_a: "Peyton Manning",
+    answer_b: "Drew Brees",
+    answer_c: "Tom Brady",
+    answer_d: "Brett Favre",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which player has the most career touchdowns in NFL history?",
+    correct_answer: "A",
+    fun_fact:
+      "Jerry Rice holds the record for the most career touchdowns in NFL history, with 208 total touchdowns.",
+    answer_a: "Jerry Rice",
+    answer_b: "Emmitt Smith",
+    answer_c: "Randy Moss",
+    answer_d: "LaDainian Tomlinson",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who was the first overall pick in the 2020 NFL Draft?",
+    correct_answer: "C",
+    fun_fact:
+      "Joe Burrow was the first overall pick in the 2020 NFL Draft, selected by the Cincinnati Bengals.",
+    answer_a: "Chase Young",
+    answer_b: "Tua Tagovailoa",
+    answer_c: "Joe Burrow",
+    answer_d: "Justin Herbert",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which team has the most appearances in the Super Bowl?",
+    correct_answer: "D",
+    fun_fact:
+      "The New England Patriots hold the record for the most appearances in the Super Bowl, with 11 appearances.",
+    answer_a: "Pittsburgh Steelers",
+    answer_b: "Dallas Cowboys",
+    answer_c: "San Francisco 49ers",
+    answer_d: "New England Patriots",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who holds the record for the longest field goal in NFL history?",
+    correct_answer: "B",
+    fun_fact:
+      "Matt Prater holds the record for the longest field goal in NFL history, kicking a 64-yard field goal in 2013.",
+    answer_a: "Justin Tucker",
+    answer_b: "Matt Prater",
+    answer_c: "Sebastian Janikowski",
+    answer_d: "Jason Elam",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who is the youngest quarterback to win the Super Bowl?",
+    correct_answer: "A",
+    fun_fact:
+      "Ben Roethlisberger is the youngest quarterback to win the Super Bowl, leading the Pittsburgh Steelers to victory in Super Bowl XL at the age of 23.",
+    answer_a: "Ben Roethlisberger",
+    answer_b: "Tom Brady",
+    answer_c: "Joe Montana",
+    answer_d: "Patrick Mahomes",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which team won the first-ever Super Bowl?",
+    correct_answer: "D",
+    fun_fact:
+      "The Green Bay Packers won the first-ever Super Bowl, defeating the Kansas City Chiefs 35-10 in Super Bowl I.",
+    answer_a: "Dallas Cowboys",
+    answer_b: "Miami Dolphins",
+    answer_c: "San Francisco 49ers",
+    answer_d: "Green Bay Packers",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who holds the record for the most career interceptions in NFL history?",
+    correct_answer: "C",
+    fun_fact:
+      "Paul Krause holds the record for the most career interceptions in NFL history, with 81 interceptions.",
+    answer_a: "Rod Woodson",
+    answer_b: "Deion Sanders",
+    answer_c: "Paul Krause",
+    answer_d: "Night Train Lane",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who was the first African American head coach to win a Super Bowl?",
+    correct_answer: "A",
+    fun_fact:
+      "Tony Dungy was the first African American head coach to win a Super Bowl, leading the Indianapolis Colts to victory in Super Bowl XLI.",
+    answer_a: "Tony Dungy",
+    answer_b: "Mike Tomlin",
+    answer_c: "Lovie Smith",
+    answer_d: "Herman Edwards",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which player holds the record for the most career sacks in NFL history?",
+    correct_answer: "B",
+    fun_fact:
+      "Bruce Smith holds the record for the most career sacks in NFL history, with 200 sacks.",
+    answer_a: "Reggie White",
+    answer_b: "Bruce Smith",
+    answer_c: "Michael Strahan",
+    answer_d: "Deacon Jones",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who won the Super Bowl MVP in Super Bowl LIV?",
+    correct_answer: "D",
+    fun_fact:
+      "Patrick Mahomes won the Super Bowl MVP in Super Bowl LIV, leading the Kansas City Chiefs to victory over the San Francisco 49ers.",
+    answer_a: "Jimmy Garoppolo",
+    answer_b: "Travis Kelce",
+    answer_c: "Nick Bosa",
+    answer_d: "Patrick Mahomes",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which team won the first-ever NFL Super Bowl?",
+    correct_answer: "C",
+    fun_fact:
+      "The Green Bay Packers won the first-ever NFL Super Bowl, defeating the Kansas City Chiefs in Super Bowl I.",
+    answer_a: "Dallas Cowboys",
+    answer_b: "Miami Dolphins",
+    answer_c: "Green Bay Packers",
+    answer_d: "Pittsburgh Steelers",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who holds the record for the most career rushing yards in NFL history?",
+    correct_answer: "A",
+    fun_fact:
+      "Emmitt Smith holds the record for the most career rushing yards in NFL history, with 18,355 yards.",
+    answer_a: "Emmitt Smith",
+    answer_b: "Walter Payton",
+    answer_c: "Barry Sanders",
+    answer_d: "Frank Gore",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which player holds the record for the longest interception return in NFL history?",
+    correct_answer: "D",
+    fun_fact:
+      "Ed Reed holds the record for the longest interception return in NFL history, with a 107-yard interception return for a touchdown.",
+    answer_a: "Deion Sanders",
+    answer_b: "Aeneas Williams",
+    answer_c: "Ronnie Lott",
+    answer_d: "Ed Reed",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who is the only player to win five Super Bowl MVP awards?",
+    correct_answer: "C",
+    fun_fact:
+      "Tom Brady is the only player to win five Super Bowl MVP awards, winning the award in Super Bowls XXXVI, XXXVIII, XLIX, LI, and LV.",
+    answer_a: "Joe Montana",
+    answer_b: "Terry Bradshaw",
+    answer_c: "Tom Brady",
+    answer_d: "Joe Namath",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which team won the Super Bowl in 2021?",
+    correct_answer: "A",
+    fun_fact:
+      "The Tampa Bay Buccaneers won the Super Bowl in 2021, defeating the Kansas City Chiefs 31-9 in Super Bowl LV.",
+    answer_a: "Tampa Bay Buccaneers",
+    answer_b: "Kansas City Chiefs",
+    answer_c: "Buffalo Bills",
+    answer_d: "Green Bay Packers",
+  },
 ];
 
 const nhlData = [
@@ -415,32 +608,89 @@ const nhlData = [
     answer_c: "Bobby Orr",
     answer_d: "Wayne Gretzky",
   },
+  {
+    difficulty: "Medium",
+    question: "Which team has won the most Stanley Cup championships?",
+    correct_answer: "C",
+    fun_fact:
+      "The Montreal Canadiens have won the most Stanley Cup championships, with a total of 24 titles.",
+    answer_a: "Toronto Maple Leafs",
+    answer_b: "Detroit Red Wings",
+    answer_c: "Montreal Canadiens",
+    answer_d: "Boston Bruins",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who holds the record for the most career points in NHL history?",
+    correct_answer: "B",
+    fun_fact:
+      "Wayne Gretzky holds the record for the most career points in NHL history, with 2,857 points.",
+    answer_a: "Mario Lemieux",
+    answer_b: "Wayne Gretzky",
+    answer_c: "Jaromir Jagr",
+    answer_d: "Gordie Howe",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which player holds the record for the most career goals in NHL history?",
+    correct_answer: "C",
+    fun_fact:
+      "Wayne Gretzky holds the record for the most career goals in NHL history, with 894 goals.",
+    answer_a: "Mario Lemieux",
+    answer_b: "Jaromir Jagr",
+    answer_c: "Wayne Gretzky",
+    answer_d: "Gordie Howe",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who was the first overall pick in the 2020 NHL Draft?",
+    correct_answer: "D",
+    fun_fact:
+      "Alexis Lafrenière was the first overall pick in the 2020 NHL Draft, selected by the New York Rangers.",
+    answer_a: "Quinton Byfield",
+    answer_b: "Tim Stutzle",
+    answer_c: "Kirill Kaprizov",
+    answer_d: "Alexis Lafrenière",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which team has won the most Presidents' Trophy awards?",
+    correct_answer: "A",
+    fun_fact:
+      "The Detroit Red Wings and the Boston Bruins are tied for the most Presidents' Trophy awards, with each team winning it six times.",
+    answer_a: "Detroit Red Wings",
+    answer_b: "Boston Bruins",
+    answer_c: "Washington Capitals",
+    answer_d: "Chicago Blackhawks",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who holds the record for the most career shutouts in NHL history?",
+    correct_answer: "C",
+    fun_fact:
+      "Martin Brodeur holds the record for the most career shutouts in NHL history, with 125 shutouts.",
+    answer_a: "Dominik Hasek",
+    answer_b: "Terry Sawchuk",
+    answer_c: "Martin Brodeur",
+    answer_d: "Patrick Roy",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which player won the Conn Smythe Trophy as the most valuable player in the NHL playoffs in 2020?",
+    correct_answer: "B",
+    fun_fact:
+      "Victor Hedman won the Conn Smythe Trophy as the most valuable player in the NHL playoffs in 2020, becoming the first defenseman to win the award since 2015.",
+    answer_a: "Nikita Kucherov",
+    answer_b: "Victor Hedman",
+    answer_c: "Brayden Point",
+    answer_d: "Andrei Vasilevskiy",
+  },
 ];
 
 const nbaData = [
-  {
-    difficulty: "Medium",
-    question: "Who holds the record for the most career points in NBA history?",
-    correct_answer: "D",
-    fun_fact:
-      "Kareem Abdul-Jabbar holds the record for the most career points in NBA history with 38,387 points.",
-    answer_a: "LeBron James",
-    answer_b: "Kobe Bryant",
-    answer_c: "Michael Jordan",
-    answer_d: "Kareem Abdul-Jabbar",
-  },
-  {
-    difficulty: "Hard",
-    question:
-      "Who is the youngest player to win the NBA Most Valuable Player (MVP) award?",
-    correct_answer: "B",
-    fun_fact:
-      "Derrick Rose is the youngest player to win the NBA MVP award at the age of 22.",
-    answer_a: "LeBron James",
-    answer_b: "Derrick Rose",
-    answer_c: "Kevin Durant",
-    answer_d: "Giannis Antetokounmpo",
-  },
   {
     difficulty: "Easy",
     question: "Which team has won the most NBA championships?",
@@ -1219,6 +1469,18 @@ const lotrData = [
     answer_c: "Celeborn",
     answer_d: "Legolas",
   },
+  {
+    difficulty: "Medium",
+    question:
+      "What is the name of the ancient realm ruled by the Witch-king of Angmar in 'The Lord of the Rings'?",
+    correct_answer: "C",
+    fun_fact:
+      "The Witch-king of Angmar ruled the ancient realm of Angmar, a land shrouded in darkness and inhabited by evil creatures.",
+    answer_a: "Gondor",
+    answer_b: "Rohan",
+    answer_c: "Angmar",
+    answer_d: "Mordor",
+  },
 ];
 
 const harryPotterData = [
@@ -1990,6 +2252,240 @@ const ledZeppelinData = [
     answer_c: "When the Levee Breaks",
     answer_d: "Good Times Bad Times",
   },
+
+  {
+    difficulty: "Medium",
+    question:
+      "Which Led Zeppelin album features the song 'Stairway to Heaven'?",
+    correct_answer: "B",
+    fun_fact:
+      "'Stairway to Heaven' is featured on Led Zeppelin's fourth studio album, often referred to as 'Led Zeppelin IV.'",
+    answer_a: "Led Zeppelin",
+    answer_b: "Led Zeppelin IV",
+    answer_c: "Led Zeppelin II",
+    answer_d: "Physical Graffiti",
+  },
+  {
+    difficulty: "Medium",
+    question: "What is the name of Led Zeppelin's lead guitarist?",
+    correct_answer: "C",
+    fun_fact:
+      "Jimmy Page is the lead guitarist of Led Zeppelin, known for his virtuosic guitar playing and songwriting.",
+    answer_a: "Robert Plant",
+    answer_b: "John Bonham",
+    answer_c: "Jimmy Page",
+    answer_d: "John Paul Jones",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which song by Led Zeppelin features a famous riff played on a bowed guitar?",
+    correct_answer: "A",
+    fun_fact:
+      "'Dazed and Confused' features a famous riff played by Jimmy Page on a bowed guitar, creating a haunting and distinctive sound.",
+    answer_a: "Dazed and Confused",
+    answer_b: "Whole Lotta Love",
+    answer_c: "Black Dog",
+    answer_d: "Rock and Roll",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the name of Led Zeppelin's debut album, released in 1969?",
+    correct_answer: "D",
+    fun_fact:
+      "Led Zeppelin's debut album, released in 1969, was self-titled and often referred to as 'Led Zeppelin I.'",
+    answer_a: "Houses of the Holy",
+    answer_b: "Physical Graffiti",
+    answer_c: "Led Zeppelin II",
+    answer_d: "Led Zeppelin",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which Led Zeppelin song features lyrics inspired by J.R.R. Tolkien's 'The Lord of the Rings'?",
+    correct_answer: "B",
+    fun_fact:
+      "'Ramble On' features lyrics inspired by J.R.R. Tolkien's 'The Lord of the Rings,' making references to characters and locations from the book.",
+    answer_a: "Stairway to Heaven",
+    answer_b: "Ramble On",
+    answer_c: "Whole Lotta Love",
+    answer_d: "Kashmir",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What is the name of Led Zeppelin's iconic symbol, often referred to as the 'Zoso' symbol?",
+    correct_answer: "C",
+    fun_fact:
+      "The symbol associated with Led Zeppelin's Jimmy Page is often referred to as the 'Zoso' symbol, although its meaning remains mysterious.",
+    answer_a: "Swan Song",
+    answer_b: "The Hermit",
+    answer_c: "Four Symbols",
+    answer_d: "Trinity",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which Led Zeppelin album features the song 'Whole Lotta Love'?",
+    correct_answer: "A",
+    fun_fact:
+      "'Whole Lotta Love' is featured on Led Zeppelin's second studio album, simply titled 'Led Zeppelin II.'",
+    answer_a: "Led Zeppelin II",
+    answer_b: "Led Zeppelin IV",
+    answer_c: "Physical Graffiti",
+    answer_d: "Houses of the Holy",
+  },
+  {
+    difficulty: "Medium",
+    question: "What is the name of Led Zeppelin's drummer?",
+    correct_answer: "D",
+    fun_fact:
+      "John Bonham was the drummer for Led Zeppelin, known for his powerful and innovative drumming style.",
+    answer_a: "Jimmy Page",
+    answer_b: "Robert Plant",
+    answer_c: "John Paul Jones",
+    answer_d: "John Bonham",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which Led Zeppelin song features a distinctive slide guitar riff by Jimmy Page?",
+    correct_answer: "C",
+    fun_fact:
+      "'In My Time of Dying' features a distinctive slide guitar riff by Jimmy Page, adding to the song's bluesy and raw atmosphere.",
+    answer_a: "Heartbreaker",
+    answer_b: "Black Dog",
+    answer_c: "In My Time of Dying",
+    answer_d: "Since I've Been Loving You",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the name of Led Zeppelin's double album released in 1975?",
+    correct_answer: "B",
+    fun_fact:
+      "Led Zeppelin's double album released in 1975 was titled 'Physical Graffiti,' featuring a mix of studio and live recordings.",
+    answer_a: "Led Zeppelin II",
+    answer_b: "Physical Graffiti",
+    answer_c: "Houses of the Holy",
+    answer_d: "Presence",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which Led Zeppelin song is known for its complex time signature changes?",
+    correct_answer: "A",
+    fun_fact:
+      "'Kashmir' is known for its complex time signature changes, adding to the song's epic and mystical quality.",
+    answer_a: "Kashmir",
+    answer_b: "Dazed and Confused",
+    answer_c: "Whole Lotta Love",
+    answer_d: "Rock and Roll",
+  },
+  {
+    difficulty: "Medium",
+    question: "What is the name of Led Zeppelin's bassist and keyboardist?",
+    correct_answer: "C",
+    fun_fact:
+      "John Paul Jones was the bassist and keyboardist for Led Zeppelin, also contributing to the band's songwriting and arrangement.",
+    answer_a: "Jimmy Page",
+    answer_b: "Robert Plant",
+    answer_c: "John Paul Jones",
+    answer_d: "John Bonham",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which Led Zeppelin album features the song 'Black Dog'?",
+    correct_answer: "B",
+    fun_fact:
+      "'Black Dog' is featured on Led Zeppelin's fourth studio album, often referred to as 'Led Zeppelin IV.'",
+    answer_a: "Led Zeppelin II",
+    answer_b: "Led Zeppelin IV",
+    answer_c: "Physical Graffiti",
+    answer_d: "Houses of the Holy",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What is the name of Led Zeppelin's record label, founded in 1974?",
+    correct_answer: "A",
+    fun_fact:
+      "Swan Song Records was the record label founded by Led Zeppelin in 1974, providing a platform for the band's releases as well as other artists.",
+    answer_a: "Swan Song",
+    answer_b: "Atlantic Records",
+    answer_c: "Mercury Records",
+    answer_d: "Columbia Records",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which Led Zeppelin song features a distinctive riff played on a double-necked guitar?",
+    correct_answer: "D",
+    fun_fact:
+      "'Stairway to Heaven' features a distinctive riff played by Jimmy Page on a double-necked guitar, contributing to the song's iconic status.",
+    answer_a: "Whole Lotta Love",
+    answer_b: "Heartbreaker",
+    answer_c: "Communication Breakdown",
+    answer_d: "Stairway to Heaven",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What is the title of Led Zeppelin's epic fantasy-inspired song suite?",
+    correct_answer: "C",
+    fun_fact:
+      "The title of Led Zeppelin's epic fantasy-inspired song suite is 'The Song Remains the Same,' which also serves as the title of their concert film.",
+    answer_a: "Dazed and Confused",
+    answer_b: "Kashmir",
+    answer_c: "The Song Remains the Same",
+    answer_d: "Achilles Last Stand",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who produced most of Led Zeppelin's albums?",
+    correct_answer: "B",
+    fun_fact:
+      "Jimmy Page, the guitarist of Led Zeppelin, produced most of the band's albums, demonstrating his skills as both a musician and a producer.",
+    answer_a: "Robert Plant",
+    answer_b: "Jimmy Page",
+    answer_c: "John Paul Jones",
+    answer_d: "John Bonham",
+  },
+  {
+    difficulty: "Medium",
+    question: "What is the name of Led Zeppelin's first studio album?",
+    correct_answer: "A",
+    fun_fact:
+      "Led Zeppelin's first studio album, released in 1969, was self-titled and often referred to as 'Led Zeppelin I.'",
+    answer_a: "Led Zeppelin",
+    answer_b: "Led Zeppelin II",
+    answer_c: "Physical Graffiti",
+    answer_d: "Presence",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which Led Zeppelin song features an extended drum solo by John Bonham?",
+    correct_answer: "C",
+    fun_fact:
+      "'Moby Dick' features an extended drum solo by John Bonham, showcasing his exceptional skill and power as a drummer.",
+    answer_a: "Black Dog",
+    answer_b: "Whole Lotta Love",
+    answer_c: "Moby Dick",
+    answer_d: "Good Times Bad Times",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which Led Zeppelin song features lyrics inspired by Norse mythology?",
+    correct_answer: "D",
+    fun_fact:
+      "'Immigrant Song' features lyrics inspired by Norse mythology, with references to Viking conquests and the gods of Valhalla.",
+    answer_a: "Good Times Bad Times",
+    answer_b: "Since I've Been Loving You",
+    answer_c: "Babe I'm Gonna Leave You",
+    answer_d: "Immigrant Song",
+  },
 ];
 
 const beatlesData = [
@@ -2108,6 +2604,243 @@ const beatlesData = [
     answer_c: "Lucy in the Sky with Diamonds",
     answer_d: "A Day in the Life",
   },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the original name of the band that eventually became known as The Beatles?",
+    correct_answer: "C",
+    fun_fact:
+      "The Beatles were initially called The Quarrymen, formed by John Lennon in 1956.",
+    answer_a: "The Silver Beetles",
+    answer_b: "The Quarrymen",
+    answer_c: "The Silver Beatles",
+    answer_d: "The Moondogs",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which Beatles album is often considered one of the greatest albums of all time and features a cover with the band crossing a zebra crossing?",
+    correct_answer: "B",
+    fun_fact:
+      "The Beatles' album 'Abbey Road,' released in 1969, features the iconic zebra crossing photo on its cover.",
+    answer_a: "Rubber Soul",
+    answer_b: "Abbey Road",
+    answer_c: "Revolver",
+    answer_d: "Sgt. Pepper's Lonely Hearts Club Band",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the title of the animated film featuring The Beatles that was released in 1968?",
+    correct_answer: "D",
+    fun_fact:
+      "The film 'Yellow Submarine' was an animated psychedelic journey featuring the music of The Beatles.",
+    answer_a: "Magical Mystery Tour",
+    answer_b: "Help!",
+    answer_c: "A Hard Day's Night",
+    answer_d: "Yellow Submarine",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which member of The Beatles is known for his interest in Eastern spirituality and meditation?",
+    correct_answer: "A",
+    fun_fact:
+      "George Harrison was heavily influenced by Indian spirituality and introduced The Beatles to meditation and Eastern philosophies.",
+    answer_a: "George Harrison",
+    answer_b: "John Lennon",
+    answer_c: "Paul McCartney",
+    answer_d: "Ringo Starr",
+  },
+  {
+    difficulty: "Medium",
+    question: "What was the last studio album released by The Beatles?",
+    correct_answer: "C",
+    fun_fact:
+      "The Beatles' final studio album, 'Let It Be,' was released in 1970, after the band had already disbanded.",
+    answer_a: "Abbey Road",
+    answer_b: "Sgt. Pepper's Lonely Hearts Club Band",
+    answer_c: "Let It Be",
+    answer_d: "The White Album",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who was often referred to as the 'Fifth Beatle'?",
+    correct_answer: "B",
+    fun_fact:
+      "Brian Epstein, The Beatles' manager, is frequently called the 'Fifth Beatle' due to his significant influence on the band's success.",
+    answer_a: "George Martin",
+    answer_b: "Brian Epstein",
+    answer_c: "Stuart Sutcliffe",
+    answer_d: "Pete Best",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the title of The Beatles' first feature film, released in 1964?",
+    correct_answer: "A",
+    fun_fact:
+      "'A Hard Day's Night' was The Beatles' first feature film, showcasing their charisma and music.",
+    answer_a: "A Hard Day's Night",
+    answer_b: "Help!",
+    answer_c: "Yellow Submarine",
+    answer_d: "Magical Mystery Tour",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which Beatles song features a sitar, reflecting George Harrison's interest in Indian music?",
+    correct_answer: "D",
+    fun_fact:
+      "The song 'Norwegian Wood (This Bird Has Flown)' from the album 'Rubber Soul' prominently features a sitar, marking The Beatles' venture into Indian music.",
+    answer_a: "Strawberry Fields Forever",
+    answer_b: "Lucy in the Sky with Diamonds",
+    answer_c: "Within You Without You",
+    answer_d: "Norwegian Wood (This Bird Has Flown)",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which member of The Beatles was tragically murdered in December 1980?",
+    correct_answer: "B",
+    fun_fact:
+      "John Lennon, one of the founding members of The Beatles, was fatally shot outside his apartment in New York City.",
+    answer_a: "George Harrison",
+    answer_b: "John Lennon",
+    answer_c: "Paul McCartney",
+    answer_d: "Ringo Starr",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the title of The Beatles' self-produced television film, aired in 1967?",
+    correct_answer: "C",
+    fun_fact:
+      "The Beatles' television film 'Magical Mystery Tour' received mixed reviews but has since gained a cult following.",
+    answer_a: "A Hard Day's Night",
+    answer_b: "Help!",
+    answer_c: "Magical Mystery Tour",
+    answer_d: "Yellow Submarine",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which album marked a significant departure from The Beatles' earlier sound, incorporating elements of Indian music and psychedelia?",
+    correct_answer: "B",
+    fun_fact:
+      "The Beatles' album 'Revolver,' released in 1966, showcased their experimentation with new sounds and recording techniques.",
+    answer_a: "Rubber Soul",
+    answer_b: "Revolver",
+    answer_c: "Sgt. Pepper's Lonely Hearts Club Band",
+    answer_d: "Abbey Road",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the title of the Beatles' rooftop concert, held atop their Apple Corps headquarters in London in 1969?",
+    correct_answer: "A",
+    fun_fact:
+      "The Beatles' rooftop concert, often referred to simply as the 'Rooftop Concert,' was their final live performance as a group.",
+    answer_a: "Rooftop Concert",
+    answer_b: "Let It Be Live",
+    answer_c: "Apple Rooftop Jam",
+    answer_d: "London Sky Session",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who primarily wrote the song 'Yesterday,' which is one of The Beatles' most covered songs?",
+    correct_answer: "C",
+    fun_fact:
+      "Paul McCartney wrote and recorded 'Yesterday,' which has been covered by numerous artists and is one of the most recorded songs in history.",
+    answer_a: "John Lennon",
+    answer_b: "George Harrison",
+    answer_c: "Paul McCartney",
+    answer_d: "Ringo Starr",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which Beatles album features the song 'Hey Jude,' one of the band's longest-running singles?",
+    correct_answer: "B",
+    fun_fact:
+      "'Hey Jude' was initially released as a single and later included on The Beatles' album 'The Beatles,' commonly known as the 'White Album.'",
+    answer_a: "Abbey Road",
+    answer_b: "The Beatles (White Album)",
+    answer_c: "Revolver",
+    answer_d: "Sgt. Pepper's Lonely Hearts Club Band",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who was the original drummer for The Beatles before being replaced by Ringo Starr?",
+    correct_answer: "D",
+    fun_fact:
+      "Pete Best was The Beatles' original drummer but was replaced by Ringo Starr in 1962, just before the band's rise to international fame.",
+    answer_a: "John Bonham",
+    answer_b: "Keith Moon",
+    answer_c: "Charlie Watts",
+    answer_d: "Pete Best",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the title of The Beatles' final studio album before their breakup?",
+    correct_answer: "B",
+    fun_fact:
+      "The Beatles' album 'Abbey Road,' released in 1969, was their last recorded album, although 'Let It Be' was the last one released.",
+    answer_a: "Sgt. Pepper's Lonely Hearts Club Band",
+    answer_b: "Abbey Road",
+    answer_c: "The Beatles (White Album)",
+    answer_d: "Let It Be",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which Beatles album is known for its innovative cover design featuring a 3D-like image that appears when tilted?",
+    correct_answer: "D",
+    fun_fact:
+      "The Beatles' album 'Revolver' features a cover designed by Klaus Voormann, which creates a 3D-like effect when tilted.",
+    answer_a: "Rubber Soul",
+    answer_b: "Help!",
+    answer_c: "Magical Mystery Tour",
+    answer_d: "Revolver",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which Beatles song was banned by the BBC due to its lyrics?",
+    correct_answer: "C",
+    fun_fact:
+      "The BBC banned 'I Am the Walrus' due to its nonsensical and supposedly drug-related lyrics, although The Beatles denied any drug references.",
+    answer_a: "Lucy in the Sky with Diamonds",
+    answer_b: "A Day in the Life",
+    answer_c: "I Am the Walrus",
+    answer_d: "Happiness Is a Warm Gun",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the title of The Beatles' first album released in the United States?",
+    correct_answer: "A",
+    fun_fact:
+      "The album 'Introducing... The Beatles' was the first U.S. release by The Beatles, although it was not authorized by the band.",
+    answer_a: "Introducing... The Beatles",
+    answer_b: "Meet the Beatles!",
+    answer_c: "A Hard Day's Night",
+    answer_d: "Please Please Me",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which Beatles album features the song 'Eleanor Rigby,' known for its innovative use of a string octet?",
+    correct_answer: "B",
+    fun_fact:
+      "'Eleanor Rigby' is featured on The Beatles' album 'Revolver,' which showcased their experimentation with different musical styles and arrangements.",
+    answer_a: "Help!",
+    answer_b: "Revolver",
+    answer_c: "Rubber Soul",
+    answer_d: "Sgt. Pepper's Lonely Hearts Club Band",
+  },
 ];
 
 const beethovenData = [
@@ -2222,6 +2955,1068 @@ const beethovenData = [
     answer_c: "Italian",
     answer_d: "German",
   },
+  {
+    difficulty: "Medium",
+    question: "In what year was Ludwig van Beethoven born?",
+    correct_answer: "A",
+    fun_fact:
+      "Ludwig van Beethoven was born in Bonn, Germany, in 1770, during the Classical period of music.",
+    answer_a: "1770",
+    answer_b: "1756",
+    answer_c: "1809",
+    answer_d: "1827",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the name of Beethoven's most famous symphony, which features the 'Ode to Joy'?",
+    correct_answer: "C",
+    fun_fact:
+      "Beethoven's Symphony No. 9 in D minor, Op. 125, commonly known as the 'Choral Symphony,' includes the celebrated 'Ode to Joy' in its final movement.",
+    answer_a: "Symphony No. 5",
+    answer_b: "Symphony No. 6",
+    answer_c: "Symphony No. 9",
+    answer_d: "Symphony No. 3",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which composition by Beethoven is often referred to as the 'Moonlight Sonata'?",
+    correct_answer: "B",
+    fun_fact:
+      "Beethoven's Piano Sonata No. 14 in C-sharp minor, Op. 27, No. 2, is popularly known as the 'Moonlight Sonata' due to its serene and introspective first movement.",
+    answer_a: "Symphony No. 5",
+    answer_b: "Piano Sonata No. 14",
+    answer_c: "Symphony No. 9",
+    answer_d: "Für Elise",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which composer was Beethoven strongly influenced by, leading him to study with him in Vienna?",
+    correct_answer: "D",
+    fun_fact:
+      "Ludwig van Beethoven studied with Joseph Haydn in Vienna, where he further developed his compositional skills under Haydn's guidance.",
+    answer_a: "Wolfgang Amadeus Mozart",
+    answer_b: "Johann Sebastian Bach",
+    answer_c: "Franz Schubert",
+    answer_d: "Joseph Haydn",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What is the name of Beethoven's only opera, which premiered in Vienna in 1805?",
+    correct_answer: "A",
+    fun_fact:
+      "Beethoven's only opera, 'Fidelio,' originally titled 'Leonore,' premiered at the Theater an der Wien in Vienna in 1805.",
+    answer_a: "Fidelio",
+    answer_b: "Egmont",
+    answer_c: "Appassionata",
+    answer_d: "Für Elise",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which symphony by Beethoven is known for its use of Turkish instruments in the final movement?",
+    correct_answer: "C",
+    fun_fact:
+      "Beethoven's Symphony No. 9 in D minor, Op. 125, features Turkish percussion instruments such as cymbals and triangle in its triumphant final movement.",
+    answer_a: "Symphony No. 3",
+    answer_b: "Symphony No. 5",
+    answer_c: "Symphony No. 9",
+    answer_d: "Symphony No. 6",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which composition by Beethoven is commonly known as the 'Emperor Concerto'?",
+    correct_answer: "B",
+    fun_fact:
+      "Beethoven's Piano Concerto No. 5 in E-flat major, Op. 73, is often referred to as the 'Emperor Concerto,' reflecting its grandeur and virtuosity.",
+    answer_a: "Symphony No. 5",
+    answer_b: "Piano Concerto No. 5",
+    answer_c: "Symphony No. 9",
+    answer_d: "Für Elise",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the title of Beethoven's only violin concerto, which premiered in Vienna in 1806?",
+    correct_answer: "D",
+    fun_fact:
+      "Beethoven's Violin Concerto in D major, Op. 61, premiered in Vienna in 1806 and is now considered one of the greatest works in the violin repertoire.",
+    answer_a: "Symphony No. 5",
+    answer_b: "Piano Concerto No. 5",
+    answer_c: "Symphony No. 9",
+    answer_d: "Violin Concerto",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which piece by Beethoven is often considered one of the greatest compositions for solo piano?",
+    correct_answer: "A",
+    fun_fact:
+      "Beethoven's Piano Sonata No. 8 in C minor, Op. 13, commonly known as the 'Pathétique Sonata,' is revered for its emotional depth and technical challenges.",
+    answer_a: "Piano Sonata No. 8",
+    answer_b: "Piano Sonata No. 14",
+    answer_c: "Symphony No. 9",
+    answer_d: "Für Elise",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who dedicated his Third Symphony, also known as the 'Eroica,' to Napoleon Bonaparte before renouncing the dedication?",
+    correct_answer: "B",
+    fun_fact:
+      "Ludwig van Beethoven originally dedicated his Symphony No. 3 in E-flat major, Op. 55, to Napoleon Bonaparte as a tribute to his ideals of liberty and equality, but later withdrew the dedication.",
+    answer_a: "Johann Sebastian Bach",
+    answer_b: "Ludwig van Beethoven",
+    answer_c: "Wolfgang Amadeus Mozart",
+    answer_d: "Franz Schubert",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the title of Beethoven's only ballet, composed in 1801?",
+    correct_answer: "C",
+    fun_fact:
+      "Beethoven's only ballet, 'The Creatures of Prometheus,' Op. 43, premiered in Vienna in 1801 and is known for its lively and expressive music.",
+    answer_a: "Fidelio",
+    answer_b: "Egmont",
+    answer_c: "The Creatures of Prometheus",
+    answer_d: "Für Elise",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which composition by Beethoven is often described as his 'Pastoral Symphony'?",
+    correct_answer: "A",
+    fun_fact:
+      "Beethoven's Symphony No. 6 in F major, Op. 68, is commonly known as the 'Pastoral Symphony' due to its depiction of scenes from the countryside.",
+    answer_a: "Symphony No. 6",
+    answer_b: "Symphony No. 5",
+    answer_c: "Symphony No. 9",
+    answer_d: "Symphony No. 3",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What is the name of the famous piano piece by Beethoven that is often mistaken for a love letter?",
+    correct_answer: "D",
+    fun_fact:
+      "Beethoven's 'Für Elise,' WoO 59, is a popular piano piece often mistaken for a love letter due to its lyrical and expressive melody.",
+    answer_a: "Moonlight Sonata",
+    answer_b: "Pathétique Sonata",
+    answer_c: "Emperor Concerto",
+    answer_d: "Für Elise",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which symphony by Beethoven is sometimes called the 'Eroica,' meaning 'Heroic'?",
+    correct_answer: "C",
+    fun_fact:
+      "Beethoven's Symphony No. 3 in E-flat major, Op. 55, is often referred to as the 'Eroica Symphony' due to its monumental scale and revolutionary character.",
+    answer_a: "Symphony No. 5",
+    answer_b: "Symphony No. 6",
+    answer_c: "Symphony No. 3",
+    answer_d: "Symphony No. 9",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the name of the famous pianist and composer who was Beethoven's close friend and dedicated his 'Hammerklavier' Sonata to him?",
+    correct_answer: "B",
+    fun_fact:
+      "Johann Nepomuk Hummel, a renowned pianist and composer, dedicated his 'Hammerklavier' Sonata to Beethoven as a mark of their friendship and mutual admiration.",
+    answer_a: "Franz Liszt",
+    answer_b: "Johann Nepomuk Hummel",
+    answer_c: "Frédéric Chopin",
+    answer_d: "Wolfgang Amadeus Mozart",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the name of Beethoven's final complete symphony, completed in 1824?",
+    correct_answer: "A",
+    fun_fact:
+      "Beethoven's Symphony No. 9 in D minor, Op. 125, also known as the 'Choral Symphony,' is his final complete symphony, featuring a choir in its final movement.",
+    answer_a: "Symphony No. 9",
+    answer_b: "Symphony No. 7",
+    answer_c: "Symphony No. 8",
+    answer_d: "Symphony No. 5",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which famous pianist and composer was taught by Beethoven during his early years in Vienna?",
+    correct_answer: "C",
+    fun_fact:
+      "Carl Czerny, a prolific composer and influential piano teacher, studied with Beethoven in Vienna during his formative years, absorbing the master's teachings.",
+    answer_a: "Franz Schubert",
+    answer_b: "Johann Nepomuk Hummel",
+    answer_c: "Carl Czerny",
+    answer_d: "Franz Liszt",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What is the subtitle of Beethoven's Symphony No. 6, reflecting its programmatic nature?",
+    correct_answer: "B",
+    fun_fact:
+      "Beethoven's Symphony No. 6 in F major, Op. 68, is subtitled the 'Pastoral Symphony,' as it evokes scenes and feelings associated with the countryside.",
+    answer_a: "Symphony of Fate",
+    answer_b: "Pastoral Symphony",
+    answer_c: "Ode to Joy",
+    answer_d: "Eroica Symphony",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the title of Beethoven's only violin concerto, which premiered in Vienna in 1806?",
+    correct_answer: "D",
+    fun_fact:
+      "Beethoven's Violin Concerto in D major, Op. 61, premiered in Vienna in 1806 and is now considered one of the greatest works in the violin repertoire.",
+    answer_a: "Symphony No. 5",
+    answer_b: "Piano Concerto No. 5",
+    answer_c: "Symphony No. 9",
+    answer_d: "Violin Concerto",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which piece by Beethoven is often considered one of the greatest compositions for solo piano?",
+    correct_answer: "A",
+    fun_fact:
+      "Beethoven's Piano Sonata No. 8 in C minor, Op. 13, commonly known as the 'Pathétique Sonata,' is revered for its emotional depth and technical challenges.",
+    answer_a: "Piano Sonata No. 8",
+    answer_b: "Piano Sonata No. 14",
+    answer_c: "Symphony No. 9",
+    answer_d: "Für Elise",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who dedicated his Third Symphony, also known as the 'Eroica,' to Napoleon Bonaparte before renouncing the dedication?",
+    correct_answer: "B",
+    fun_fact:
+      "Ludwig van Beethoven originally dedicated his Symphony No. 3 in E-flat major, Op. 55, to Napoleon Bonaparte as a tribute to his ideals of liberty and equality, but later withdrew the dedication.",
+    answer_a: "Johann Sebastian Bach",
+    answer_b: "Ludwig van Beethoven",
+    answer_c: "Wolfgang Amadeus Mozart",
+    answer_d: "Franz Schubert",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the title of Beethoven's only ballet, composed in 1801?",
+    correct_answer: "C",
+    fun_fact:
+      "Beethoven's only ballet, 'The Creatures of Prometheus,' Op. 43, premiered in Vienna in 1801 and is known for its lively and expressive music.",
+    answer_a: "Fidelio",
+    answer_b: "Egmont",
+    answer_c: "The Creatures of Prometheus",
+    answer_d: "Für Elise",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which composition by Beethoven is often described as his 'Pastoral Symphony'?",
+    correct_answer: "A",
+    fun_fact:
+      "Beethoven's Symphony No. 6 in F major, Op. 68, is commonly known as the 'Pastoral Symphony' due to its depiction of scenes from the countryside.",
+    answer_a: "Symphony No. 6",
+    answer_b: "Symphony No. 5",
+    answer_c: "Symphony No. 9",
+    answer_d: "Symphony No. 3",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What is the name of the famous piano piece by Beethoven that is often mistaken for a love letter?",
+    correct_answer: "D",
+    fun_fact:
+      "Beethoven's 'Für Elise,' WoO 59, is a popular piano piece often mistaken for a love letter due to its lyrical and expressive melody.",
+    answer_a: "Moonlight Sonata",
+    answer_b: "Pathétique Sonata",
+    answer_c: "Emperor Concerto",
+    answer_d: "Für Elise",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which symphony by Beethoven is sometimes called the 'Eroica,' meaning 'Heroic'?",
+    correct_answer: "C",
+    fun_fact:
+      "Beethoven's Symphony No. 3 in E-flat major, Op. 55, is often referred to as the 'Eroica Symphony' due to its monumental scale and revolutionary character.",
+    answer_a: "Symphony No. 5",
+    answer_b: "Symphony No. 6",
+    answer_c: "Symphony No. 3",
+    answer_d: "Symphony No. 9",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the name of the famous pianist and composer who was Beethoven's close friend and dedicated his 'Hammerklavier' Sonata to him?",
+    correct_answer: "B",
+    fun_fact:
+      "Johann Nepomuk Hummel, a renowned pianist and composer, dedicated his 'Hammerklavier' Sonata to Beethoven as a mark of their friendship and mutual admiration.",
+    answer_a: "Franz Liszt",
+    answer_b: "Johann Nepomuk Hummel",
+    answer_c: "Frédéric Chopin",
+    answer_d: "Wolfgang Amadeus Mozart",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the name of Beethoven's final complete symphony, completed in 1824?",
+    correct_answer: "A",
+    fun_fact:
+      "Beethoven's Symphony No. 9 in D minor, Op. 125, also known as the 'Choral Symphony,' is his final complete symphony, featuring a choir in its final movement.",
+    answer_a: "Symphony No. 9",
+    answer_b: "Symphony No. 7",
+    answer_c: "Symphony No. 8",
+    answer_d: "Symphony No. 5",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which famous pianist and composer was taught by Beethoven during his early years in Vienna?",
+    correct_answer: "C",
+    fun_fact:
+      "Carl Czerny, a prolific composer and influential piano teacher, studied with Beethoven in Vienna during his formative years, absorbing the master's teachings.",
+    answer_a: "Franz Schubert",
+    answer_b: "Johann Nepomuk Hummel",
+    answer_c: "Carl Czerny",
+    answer_d: "Franz Liszt",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What is the subtitle of Beethoven's Symphony No. 6, reflecting its programmatic nature?",
+    correct_answer: "B",
+    fun_fact:
+      "Beethoven's Symphony No. 6 in F major, Op. 68, is subtitled the 'Pastoral Symphony,' as it evokes scenes and feelings associated with the countryside.",
+    answer_a: "Symphony of Fate",
+    answer_b: "Pastoral Symphony",
+    answer_c: "Ode to Joy",
+    answer_d: "Eroica Symphony",
+  },
+  {
+    difficulty: "Medium",
+    question: "What was the title of Beethoven's only opera?",
+    correct_answer: "B",
+    fun_fact:
+      "Beethoven's only opera, 'Fidelio,' premiered in 1805 and underwent several revisions before reaching its final form.",
+    answer_a: "Egmont",
+    answer_b: "Fidelio",
+    answer_c: "The Creatures of Prometheus",
+    answer_d: "Für Elise",
+  },
+];
+const WorldWarTwoData = [
+  {
+    difficulty: "Easy",
+    question: "Which event marked the beginning of World War II?",
+    correct_answer: "B",
+    fun_fact:
+      "The invasion of Poland by Germany on September 1, 1939, marked the beginning of World War II in Europe.",
+    answer_a: "Attack on Pearl Harbor",
+    answer_b: "Invasion of Poland",
+    answer_c: "Battle of Stalingrad",
+    answer_d: "D-Day Invasion",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who was the Supreme Commander of the Allied Expeditionary Force during World War II?",
+    correct_answer: "C",
+    fun_fact:
+      "Dwight D. Eisenhower served as the Supreme Commander of the Allied Expeditionary Force during World War II and later became the 34th President of the United States.",
+    answer_a: "Winston Churchill",
+    answer_b: "Adolf Hitler",
+    answer_c: "Dwight D. Eisenhower",
+    answer_d: "Joseph Stalin",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the code name for the German invasion of the Soviet Union?",
+    correct_answer: "A",
+    fun_fact:
+      "Operation Barbarossa was the largest military operation in human history in terms of manpower and casualties.",
+    answer_a: "Operation Barbarossa",
+    answer_b: "Operation Overlord",
+    answer_c: "Operation Sea Lion",
+    answer_d: "Operation Market Garden",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which country was not a member of the Axis powers during World War II?",
+    correct_answer: "D",
+    fun_fact:
+      "The Soviet Union was initially allied with Germany under the Molotov-Ribbentrop Pact but later joined the Allies after Operation Barbarossa.",
+    answer_a: "Germany",
+    answer_b: "Italy",
+    answer_c: "Japan",
+    answer_d: "Soviet Union",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which battle is often considered the turning point of the war in the Pacific?",
+    correct_answer: "B",
+    fun_fact:
+      "The Battle of Midway was a decisive naval battle in the Pacific Theater of World War II, resulting in a significant victory for the Allies.",
+    answer_a: "Battle of Stalingrad",
+    answer_b: "Battle of Midway",
+    answer_c: "Battle of Iwo Jima",
+    answer_d: "Battle of Okinawa",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the name of the project to develop the atomic bomb during World War II?",
+    correct_answer: "D",
+    fun_fact:
+      "The Manhattan Project was a research and development undertaking during World War II that produced the first nuclear weapons.",
+    answer_a: "Operation Paperclip",
+    answer_b: "Project Apollo",
+    answer_c: "Operation Overlord",
+    answer_d: "Manhattan Project",
+  },
+  {
+    difficulty: "Easy",
+    question: "Who was the leader of Nazi Germany during World War II?",
+    correct_answer: "C",
+    fun_fact:
+      "Adolf Hitler served as the Chancellor of Germany from 1933 to 1945 and Führer ('Leader') from 1934 to 1945.",
+    answer_a: "Benito Mussolini",
+    answer_b: "Joseph Stalin",
+    answer_c: "Adolf Hitler",
+    answer_d: "Winston Churchill",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which country did Japan attack to initiate the Pacific War?",
+    correct_answer: "A",
+    fun_fact:
+      "The attack on Pearl Harbor on December 7, 1941, led to the United States' entry into World War II.",
+    answer_a: "United States",
+    answer_b: "China",
+    answer_c: "Australia",
+    answer_d: "Philippines",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which battle marked the end of Nazi Germany's last major offensive on the Western Front?",
+    correct_answer: "D",
+    fun_fact:
+      "The Battle of the Bulge was the largest and bloodiest single battle fought by the United States during World War II.",
+    answer_a: "Battle of Stalingrad",
+    answer_b: "Battle of Kursk",
+    answer_c: "Battle of El Alamein",
+    answer_d: "Battle of the Bulge",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which country surrendered to Germany on June 22, 1940, effectively ending the Battle of France?",
+    correct_answer: "B",
+    fun_fact:
+      "The Fall of France resulted in the occupation of France by Nazi Germany during World War II.",
+    answer_a: "United Kingdom",
+    answer_b: "France",
+    answer_c: "Italy",
+    answer_d: "Soviet Union",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the name of the American strategy for island-hopping in the Pacific Theater?",
+    correct_answer: "C",
+    fun_fact:
+      "The island-hopping strategy involved bypassing heavily fortified Japanese positions and seizing strategically important islands.",
+    answer_a: "Operation Overlord",
+    answer_b: "Operation Market Garden",
+    answer_c: "Island-Hopping",
+    answer_d: "Operation Torch",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Who was the commander of the German Afrika Korps during the North African Campaign?",
+    correct_answer: "A",
+    fun_fact:
+      "Erwin Rommel, also known as the Desert Fox, was a highly respected military leader known for his innovative tactics.",
+    answer_a: "Erwin Rommel",
+    answer_b: "Heinz Guderian",
+    answer_c: "Ernst Röhm",
+    answer_d: "Hermann Göring",
+  },
+  {
+    difficulty: "Easy",
+    question: "Which event prompted the United States to enter World War II?",
+    correct_answer: "D",
+    fun_fact:
+      "The attack on Pearl Harbor by the Imperial Japanese Navy on December 7, 1941, led to the United States' declaration of war on Japan.",
+    answer_a: "Battle of Stalingrad",
+    answer_b: "D-Day Invasion",
+    answer_c: "Bombing of London",
+    answer_d: "Attack on Pearl Harbor",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who was the British Prime Minister during most of World War II?",
+    correct_answer: "B",
+    fun_fact:
+      "Winston Churchill's leadership and oratory skills played a crucial role in rallying the British people during the war.",
+    answer_a: "Neville Chamberlain",
+    answer_b: "Winston Churchill",
+    answer_c: "Clement Attlee",
+    answer_d: "Anthony Eden",
+  },
+  {
+    difficulty: "Hard",
+    question: "What was the main objective of the D-Day Invasion?",
+    correct_answer: "C",
+    fun_fact:
+      "The D-Day Invasion was the largest amphibious assault in history and marked the beginning of the liberation of German-occupied France.",
+    answer_a: "Capture Berlin",
+    answer_b: "Defeat Italy",
+    answer_c: "Establish a Western Front",
+    answer_d: "Secure North Africa",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which city was the target of the atomic bomb dropped by the United States during World War II?",
+    correct_answer: "A",
+    fun_fact:
+      "The atomic bomb was dropped on Hiroshima on August 6, 1945, leading to significant casualties and the surrender of Japan.",
+    answer_a: "Hiroshima",
+    answer_b: "Tokyo",
+    answer_c: "Nagasaki",
+    answer_d: "Osaka",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which country was invaded by Germany to begin World War II?",
+    correct_answer: "B",
+    fun_fact:
+      "The invasion of Poland by Germany on September 1, 1939, marked the beginning of World War II in Europe.",
+    answer_a: "France",
+    answer_b: "Poland",
+    answer_c: "Belgium",
+    answer_d: "Netherlands",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Who was the Japanese Prime Minister during most of World War II?",
+    correct_answer: "D",
+    fun_fact:
+      "Hideki Tojo served as the Prime Minister of Japan during most of World War II and was later convicted of war crimes by an international tribunal.",
+    answer_a: "Hirohito",
+    answer_b: "Emperor Meiji",
+    answer_c: "Yamamoto Isoroku",
+    answer_d: "Hideki Tojo",
+  },
+  {
+    difficulty: "Easy",
+    question: "Which battle is known as the largest naval battle in history?",
+    correct_answer: "C",
+    fun_fact:
+      "The Battle of Leyte Gulf was a series of naval engagements fought between the Allies and the Imperial Japanese Navy.",
+    answer_a: "Battle of Midway",
+    answer_b: "Battle of Okinawa",
+    answer_c: "Battle of Leyte Gulf",
+    answer_d: "Battle of the Atlantic",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which country was the first to declare war in World War II?",
+    correct_answer: "A",
+    fun_fact:
+      "Germany's invasion of Poland on September 1, 1939, prompted both the United Kingdom and France to declare war on Germany.",
+    answer_a: "United Kingdom",
+    answer_b: "France",
+    answer_c: "Soviet Union",
+    answer_d: "United States",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the main objective of the Tehran Conference held during World War II?",
+    correct_answer: "D",
+    fun_fact:
+      "The Tehran Conference was a meeting between the leaders of the United States, the United Kingdom, and the Soviet Union to plan the final strategy for the war.",
+    answer_a: "Discuss post-war reconstruction",
+    answer_b: "Coordinate military operations",
+    answer_c: "Negotiate peace terms",
+    answer_d: "Plan the opening of a second front in Europe",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which country did Germany invade on April 9, 1940, to begin the Battle of Norway?",
+    correct_answer: "C",
+    fun_fact:
+      "The German invasion of Norway and Denmark marked the first time in history that paratroopers were used in large-scale combat.",
+    answer_a: "Sweden",
+    answer_b: "Finland",
+    answer_c: "Denmark",
+    answer_d: "Netherlands",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which battle is often called the 'Stalingrad of the Pacific'?",
+    correct_answer: "A",
+    fun_fact:
+      "The Battle of Okinawa was one of the bloodiest battles of the Pacific Theater and resulted in significant casualties on both sides.",
+    answer_a: "Battle of Okinawa",
+    answer_b: "Battle of Iwo Jima",
+    answer_c: "Battle of Midway",
+    answer_d: "Battle of Leyte Gulf",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the code name for the Allied invasion of Sicily during World War II?",
+    correct_answer: "B",
+    fun_fact:
+      "Operation Husky was the largest amphibious operation in the Mediterranean theater of World War II.",
+    answer_a: "Operation Overlord",
+    answer_b: "Operation Husky",
+    answer_c: "Operation Torch",
+    answer_d: "Operation Avalanche",
+  },
+  {
+    difficulty: "Easy",
+    question: "Who was the leader of the Soviet Union during World War II?",
+    correct_answer: "B",
+    fun_fact:
+      "Joseph Stalin served as the General Secretary of the Communist Party of the Soviet Union from 1922 until his death in 1953.",
+    answer_a: "Leon Trotsky",
+    answer_b: "Joseph Stalin",
+    answer_c: "Vladimir Lenin",
+    answer_d: "Nikita Khrushchev",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which country was not occupied by Nazi Germany during World War II?",
+    correct_answer: "C",
+    fun_fact:
+      "Switzerland remained neutral during World War II and avoided occupation by Nazi Germany despite its proximity to Axis-controlled territory.",
+    answer_a: "France",
+    answer_b: "Netherlands",
+    answer_c: "Switzerland",
+    answer_d: "Belgium",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Who was the British General responsible for the successful defense of Malta during World War II?",
+    correct_answer: "D",
+    fun_fact:
+      "Bernard Montgomery, also known as Monty, was one of the most successful British military commanders of World War II.",
+    answer_a: "Douglas MacArthur",
+    answer_b: "George S. Patton",
+    answer_c: "Erwin Rommel",
+    answer_d: "Bernard Montgomery",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "What was the name of the treaty that ended World War II in Europe?",
+    correct_answer: "A",
+    fun_fact:
+      "The signing of the unconditional surrender of Germany took place on May 7-8, 1945, in Reims, France.",
+    answer_a: "Treaty of Reims",
+    answer_b: "Treaty of Versailles",
+    answer_c: "Yalta Agreement",
+    answer_d: "Molotov-Ribbentrop Pact",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which battle was the last major German offensive on the Western Front during World War II?",
+    correct_answer: "C",
+    fun_fact:
+      "The Battle of the Bulge was the largest and bloodiest single battle fought by the United States during World War II.",
+    answer_a: "Battle of Stalingrad",
+    answer_b: "Battle of Kursk",
+    answer_c: "Battle of the Bulge",
+    answer_d: "Battle of El Alamein",
+  },
+  {
+    difficulty: "Hard",
+    question: "Which city was the site of the Potsdam Conference in 1945?",
+    correct_answer: "D",
+    fun_fact:
+      "The Potsdam Conference was a meeting of the Allied leaders to discuss post-war Europe and the administration of Germany.",
+    answer_a: "Paris",
+    answer_b: "London",
+    answer_c: "Moscow",
+    answer_d: "Berlin",
+  },
+];
+const WorldWarOneData = [
+  {
+    difficulty: "Easy",
+    question:
+      "Who was the Archduke whose assassination sparked the outbreak of World War I?",
+    correct_answer: "C",
+    fun_fact:
+      "The assassination of Archduke Franz Ferdinand of Austria-Hungary in Sarajevo on June 28, 1914, is widely regarded as the event that triggered the First World War.",
+    answer_a: "Archduke Leopold",
+    answer_b: "Archduke Maximilian",
+    answer_c: "Archduke Franz Ferdinand",
+    answer_d: "Archduke Karl",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which battle is often considered the bloodiest of World War I?",
+    correct_answer: "B",
+    fun_fact:
+      "The Battle of the Somme, fought from July to November 1916, resulted in over one million casualties and is often cited as one of the deadliest battles in history.",
+    answer_a: "Battle of Verdun",
+    answer_b: "Battle of the Somme",
+    answer_c: "Battle of Ypres",
+    answer_d: "Battle of Tannenberg",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the name of the treaty that officially ended World War I?",
+    correct_answer: "D",
+    fun_fact:
+      "The Treaty of Versailles was signed on June 28, 1919, in the Hall of Mirrors at the Palace of Versailles, France, and imposed heavy penalties on Germany.",
+    answer_a: "Treaty of Brest-Litovsk",
+    answer_b: "Treaty of Trianon",
+    answer_c: "Treaty of Saint-Germain-en-Laye",
+    answer_d: "Treaty of Versailles",
+  },
+  {
+    difficulty: "Easy",
+    question: "Which country was the first to declare war in World War I?",
+    correct_answer: "A",
+    fun_fact:
+      "Austria-Hungary declared war on Serbia on July 28, 1914, following the assassination of Archduke Franz Ferdinand.",
+    answer_a: "Austria-Hungary",
+    answer_b: "Germany",
+    answer_c: "France",
+    answer_d: "Russia",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who was the leader of the Bolshevik Party during the Russian Revolution?",
+    correct_answer: "C",
+    fun_fact:
+      "Vladimir Lenin led the Bolshevik Party, which seized power in Russia during the October Revolution of 1917.",
+    answer_a: "Joseph Stalin",
+    answer_b: "Leon Trotsky",
+    answer_c: "Vladimir Lenin",
+    answer_d: "Nicholas II",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which battle saw the first large-scale use of poison gas during World War I?",
+    correct_answer: "B",
+    fun_fact:
+      "The Second Battle of Ypres, fought from April 22 to May 25, 1915, witnessed the first large-scale use of poison gas by the German army.",
+    answer_a: "Battle of Verdun",
+    answer_b: "Second Battle of Ypres",
+    answer_c: "Battle of the Marne",
+    answer_d: "Battle of Tannenberg",
+  },
+  {
+    difficulty: "Easy",
+    question: "Which country was the last to surrender in World War I?",
+    correct_answer: "D",
+    fun_fact:
+      "Germany signed the Armistice of Compiègne on November 11, 1918, marking the end of World War I.",
+    answer_a: "Austria-Hungary",
+    answer_b: "Ottoman Empire",
+    answer_c: "Bulgaria",
+    answer_d: "Germany",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who was the Prime Minister of the United Kingdom during most of World War I?",
+    correct_answer: "A",
+    fun_fact:
+      "David Lloyd George served as Prime Minister of the United Kingdom from 1916 to 1922, leading the country through much of World War I.",
+    answer_a: "David Lloyd George",
+    answer_b: "Winston Churchill",
+    answer_c: "Herbert Asquith",
+    answer_d: "Stanley Baldwin",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the code name for Germany's invasion of Belgium and France in 1914?",
+    correct_answer: "C",
+    fun_fact:
+      "The Schlieffen Plan was a strategic plan developed by the German General Staff to ensure victory in a two-front war against France and Russia.",
+    answer_a: "Operation Overlord",
+    answer_b: "Operation Barbarossa",
+    answer_c: "Schlieffen Plan",
+    answer_d: "Operation Michael",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "What was the name of the ocean liner sunk by a German U-boat in 1915, leading to the deaths of over 1,000 civilians?",
+    correct_answer: "B",
+    fun_fact:
+      "The sinking of the Lusitania on May 7, 1915, was a significant factor in the United States' decision to enter World War I.",
+    answer_a: "RMS Titanic",
+    answer_b: "RMS Lusitania",
+    answer_c: "SS Californian",
+    answer_d: "HMHS Britannic",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which battle marked the first major use of tanks in warfare?",
+    correct_answer: "D",
+    fun_fact:
+      "The Battle of the Somme, fought from July to November 1916, saw the debut of the tank as a new weapon of war.",
+    answer_a: "Battle of Verdun",
+    answer_b: "Battle of Tannenberg",
+    answer_c: "Battle of Gallipoli",
+    answer_d: "Battle of the Somme",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Who was the last Emperor of Germany, abdicating at the end of World War I?",
+    correct_answer: "A",
+    fun_fact:
+      "Wilhelm II abdicated the German throne on November 9, 1918, following the German Revolution and the end of World War I.",
+    answer_a: "Wilhelm II",
+    answer_b: "Franz Joseph I",
+    answer_c: "Karl I",
+    answer_d: "Nicholas II",
+  },
+  {
+    difficulty: "Easy",
+    question: "Which treaty ended Russia's involvement in World War I?",
+    correct_answer: "C",
+    fun_fact:
+      "The Treaty of Brest-Litovsk, signed on March 3, 1918, between Soviet Russia and the Central Powers, ended Russia's participation in World War I.",
+    answer_a: "Treaty of Versailles",
+    answer_b: "Treaty of Trianon",
+    answer_c: "Treaty of Brest-Litovsk",
+    answer_d: "Treaty of Saint-Germain-en-Laye",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who was the President of the United States during World War I?",
+    correct_answer: "D",
+    fun_fact:
+      "Woodrow Wilson served as President of the United States from 1913 to 1921, leading the country through World War I.",
+    answer_a: "Theodore Roosevelt",
+    answer_b: "William Howard Taft",
+    answer_c: "Warren G. Harding",
+    answer_d: "Woodrow Wilson",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which battle marked the end of Italy's participation in World War I?",
+    correct_answer: "B",
+    fun_fact:
+      "The Battle of Vittorio Veneto, fought from October 24 to November 3, 1918, resulted in a decisive victory for the Allies and led to the collapse of the Austro-Hungarian Empire.",
+    answer_a: "Battle of Caporetto",
+    answer_b: "Battle of Vittorio Veneto",
+    answer_c: "Battle of Piave River",
+    answer_d: "Battle of Asiago",
+  },
+  {
+    difficulty: "Easy",
+    question: "Who was the leader of the Ottoman Empire during World War I?",
+    correct_answer: "A",
+    fun_fact:
+      "Mehmed V reigned as Sultan of the Ottoman Empire from 1909 to 1918, leading the empire through World War I.",
+    answer_a: "Mehmed V",
+    answer_b: "Abdul Hamid II",
+    answer_c: "Mehmed VI",
+    answer_d: "Mustafa Kemal Atatürk",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the name of the alliance formed by Germany, Austria-Hungary, and Italy before World War I?",
+    correct_answer: "C",
+    fun_fact:
+      "The Triple Alliance, also known as the Central Powers, was a military alliance between Germany, Austria-Hungary, and Italy that existed from 1882 to 1914.",
+    answer_a: "Entente Cordiale",
+    answer_b: "Allied Powers",
+    answer_c: "Triple Alliance",
+    answer_d: "Triple Entente",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which battle saw the first use of aerial combat between fighter aircraft?",
+    correct_answer: "D",
+    fun_fact:
+      "The Battle of Neuve Chapelle, fought from March 10 to 13, 1915, was one of the earliest examples of the use of aerial combat in warfare.",
+    answer_a: "Battle of Tannenberg",
+    answer_b: "First Battle of the Marne",
+    answer_c: "Battle of Jutland",
+    answer_d: "Battle of Neuve Chapelle",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Who was the leader of the United Kingdom's Royal Navy during World War I?",
+    correct_answer: "C",
+    fun_fact:
+      "Admiral Sir John Jellicoe served as Commander-in-Chief of the British Grand Fleet during World War I.",
+    answer_a: "Admiral Horatio Nelson",
+    answer_b: "Admiral David Beatty",
+    answer_c: "Admiral John Jellicoe",
+    answer_d: "Admiral Jackie Fisher",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which country withdrew from World War I after the Bolshevik Revolution?",
+    correct_answer: "A",
+    fun_fact:
+      "The Bolshevik Revolution, led by Vladimir Lenin and the Bolshevik Party, resulted in Russia's withdrawal from World War I.",
+    answer_a: "Russia",
+    answer_b: "France",
+    answer_c: "Italy",
+    answer_d: "United Kingdom",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the name of the British liner sunk by a German U-boat in 1915, resulting in over 1,000 deaths?",
+    correct_answer: "B",
+    fun_fact:
+      "The sinking of the RMS Lusitania on May 7, 1915, contributed to the United States' eventual entry into World War I.",
+    answer_a: "HMHS Britannic",
+    answer_b: "RMS Lusitania",
+    answer_c: "SS Californian",
+    answer_d: "RMS Titanic",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which battle marked the first use of trench warfare on the Western Front?",
+    correct_answer: "C",
+    fun_fact:
+      "The First Battle of the Marne, fought from September 6 to 12, 1914, saw the introduction of trench warfare on the Western Front.",
+    answer_a: "Battle of Tannenberg",
+    answer_b: "Battle of the Somme",
+    answer_c: "First Battle of the Marne",
+    answer_d: "Battle of Verdun",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who was the Prime Minister of France during most of World War I?",
+    correct_answer: "D",
+    fun_fact:
+      "Raymond Poincaré served as Prime Minister of France from 1912 to 1913 and again from 1922 to 1924, but he was President of France during most of World War I.",
+    answer_a: "Aristide Briand",
+    answer_b: "Georges Clemenceau",
+    answer_c: "Paul Painlevé",
+    answer_d: "Raymond Poincaré",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Who was the commander of the German Eastern Front during World War I?",
+    correct_answer: "B",
+    fun_fact:
+      "Paul von Hindenburg, along with his chief of staff Erich Ludendorff, achieved significant victories for Germany on the Eastern Front during World War I.",
+    answer_a: "Wilhelm II",
+    answer_b: "Paul von Hindenburg",
+    answer_c: "Erich Ludendorff",
+    answer_d: "Erich von Falkenhayn",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which country declared war on Serbia, leading to the outbreak of World War I?",
+    correct_answer: "B",
+    fun_fact:
+      "Austria-Hungary declared war on Serbia on July 28, 1914, after the assassination of Archduke Franz Ferdinand.",
+    answer_a: "Russia",
+    answer_b: "Austria-Hungary",
+    answer_c: "Germany",
+    answer_d: "France",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who was the leader of the Austro-Hungarian Empire during World War I?",
+    correct_answer: "A",
+    fun_fact:
+      "Franz Joseph I ruled the Austro-Hungarian Empire from 1848 until his death in 1916, overseeing the empire during World War I.",
+    answer_a: "Franz Joseph I",
+    answer_b: "Franz Ferdinand",
+    answer_c: "Karl I",
+    answer_d: "Joseph II",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which battle is often considered the turning point of the Eastern Front during World War I?",
+    correct_answer: "D",
+    fun_fact:
+      "The Battle of Tannenberg, fought from August 26 to 30, 1914, resulted in a decisive victory for the German Empire over the Russian Empire.",
+    answer_a: "First Battle of the Marne",
+    answer_b: "Battle of Verdun",
+    answer_c: "Battle of the Somme",
+    answer_d: "Battle of Tannenberg",
+  },
+  {
+    difficulty: "Easy",
+    question: "Which empire collapsed at the end of World War I?",
+    correct_answer: "C",
+    fun_fact:
+      "The Ottoman Empire, also known as the Turkish Empire, collapsed at the end of World War I, leading to the emergence of modern Turkey.",
+    answer_a: "British Empire",
+    answer_b: "French Empire",
+    answer_c: "Ottoman Empire",
+    answer_d: "Austro-Hungarian Empire",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who was the Commander-in-Chief of the British Expeditionary Force on the Western Front?",
+    correct_answer: "B",
+    fun_fact:
+      "Field Marshal Sir John French commanded the British Expeditionary Force on the Western Front from 1914 to 1915.",
+    answer_a: "Field Marshal Douglas Haig",
+    answer_b: "Field Marshal Sir John French",
+    answer_c: "General Edmund Allenby",
+    answer_d: "General Horace Smith-Dorrien",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the name of the French defense strategy employed during World War I?",
+    correct_answer: "D",
+    fun_fact:
+      "The Maginot Line was a series of fortifications built by France along its eastern border as a defense against potential German invasion.",
+    answer_a: "Plan XVII",
+    answer_b: "Operation Dynamo",
+    answer_c: "Siege of Maubeuge",
+    answer_d: "Maginot Line",
+  },
 ];
 
 module.exports = {
@@ -2234,4 +4029,6 @@ module.exports = {
   starWarsData,
   lotrData,
   beatlesData,
+  WorldWarTwoData,
+  WorldWarOneData,
 };
