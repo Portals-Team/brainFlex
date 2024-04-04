@@ -2573,6 +2573,360 @@ const WorldWarTwoData = [
     answer_d: "Berlin",
   },
 ];
+const WorldWarOneData = [
+  {
+    difficulty: "Easy",
+    question:
+      "Who was the Archduke whose assassination sparked the outbreak of World War I?",
+    correct_answer: "C",
+    fun_fact:
+      "The assassination of Archduke Franz Ferdinand of Austria-Hungary in Sarajevo on June 28, 1914, is widely regarded as the event that triggered the First World War.",
+    answer_a: "Archduke Leopold",
+    answer_b: "Archduke Maximilian",
+    answer_c: "Archduke Franz Ferdinand",
+    answer_d: "Archduke Karl",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which battle is often considered the bloodiest of World War I?",
+    correct_answer: "B",
+    fun_fact:
+      "The Battle of the Somme, fought from July to November 1916, resulted in over one million casualties and is often cited as one of the deadliest battles in history.",
+    answer_a: "Battle of Verdun",
+    answer_b: "Battle of the Somme",
+    answer_c: "Battle of Ypres",
+    answer_d: "Battle of Tannenberg",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the name of the treaty that officially ended World War I?",
+    correct_answer: "D",
+    fun_fact:
+      "The Treaty of Versailles was signed on June 28, 1919, in the Hall of Mirrors at the Palace of Versailles, France, and imposed heavy penalties on Germany.",
+    answer_a: "Treaty of Brest-Litovsk",
+    answer_b: "Treaty of Trianon",
+    answer_c: "Treaty of Saint-Germain-en-Laye",
+    answer_d: "Treaty of Versailles",
+  },
+  {
+    difficulty: "Easy",
+    question: "Which country was the first to declare war in World War I?",
+    correct_answer: "A",
+    fun_fact:
+      "Austria-Hungary declared war on Serbia on July 28, 1914, following the assassination of Archduke Franz Ferdinand.",
+    answer_a: "Austria-Hungary",
+    answer_b: "Germany",
+    answer_c: "France",
+    answer_d: "Russia",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who was the leader of the Bolshevik Party during the Russian Revolution?",
+    correct_answer: "C",
+    fun_fact:
+      "Vladimir Lenin led the Bolshevik Party, which seized power in Russia during the October Revolution of 1917.",
+    answer_a: "Joseph Stalin",
+    answer_b: "Leon Trotsky",
+    answer_c: "Vladimir Lenin",
+    answer_d: "Nicholas II",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which battle saw the first large-scale use of poison gas during World War I?",
+    correct_answer: "B",
+    fun_fact:
+      "The Second Battle of Ypres, fought from April 22 to May 25, 1915, witnessed the first large-scale use of poison gas by the German army.",
+    answer_a: "Battle of Verdun",
+    answer_b: "Second Battle of Ypres",
+    answer_c: "Battle of the Marne",
+    answer_d: "Battle of Tannenberg",
+  },
+  {
+    difficulty: "Easy",
+    question: "Which country was the last to surrender in World War I?",
+    correct_answer: "D",
+    fun_fact:
+      "Germany signed the Armistice of Compiègne on November 11, 1918, marking the end of World War I.",
+    answer_a: "Austria-Hungary",
+    answer_b: "Ottoman Empire",
+    answer_c: "Bulgaria",
+    answer_d: "Germany",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who was the Prime Minister of the United Kingdom during most of World War I?",
+    correct_answer: "A",
+    fun_fact:
+      "David Lloyd George served as Prime Minister of the United Kingdom from 1916 to 1922, leading the country through much of World War I.",
+    answer_a: "David Lloyd George",
+    answer_b: "Winston Churchill",
+    answer_c: "Herbert Asquith",
+    answer_d: "Stanley Baldwin",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the code name for Germany's invasion of Belgium and France in 1914?",
+    correct_answer: "C",
+    fun_fact:
+      "The Schlieffen Plan was a strategic plan developed by the German General Staff to ensure victory in a two-front war against France and Russia.",
+    answer_a: "Operation Overlord",
+    answer_b: "Operation Barbarossa",
+    answer_c: "Schlieffen Plan",
+    answer_d: "Operation Michael",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "What was the name of the ocean liner sunk by a German U-boat in 1915, leading to the deaths of over 1,000 civilians?",
+    correct_answer: "B",
+    fun_fact:
+      "The sinking of the Lusitania on May 7, 1915, was a significant factor in the United States' decision to enter World War I.",
+    answer_a: "RMS Titanic",
+    answer_b: "RMS Lusitania",
+    answer_c: "SS Californian",
+    answer_d: "HMHS Britannic",
+  },
+  {
+    difficulty: "Medium",
+    question: "Which battle marked the first major use of tanks in warfare?",
+    correct_answer: "D",
+    fun_fact:
+      "The Battle of the Somme, fought from July to November 1916, saw the debut of the tank as a new weapon of war.",
+    answer_a: "Battle of Verdun",
+    answer_b: "Battle of Tannenberg",
+    answer_c: "Battle of Gallipoli",
+    answer_d: "Battle of the Somme",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Who was the last Emperor of Germany, abdicating at the end of World War I?",
+    correct_answer: "A",
+    fun_fact:
+      "Wilhelm II abdicated the German throne on November 9, 1918, following the German Revolution and the end of World War I.",
+    answer_a: "Wilhelm II",
+    answer_b: "Franz Joseph I",
+    answer_c: "Karl I",
+    answer_d: "Nicholas II",
+  },
+  {
+    difficulty: "Easy",
+    question: "Which treaty ended Russia's involvement in World War I?",
+    correct_answer: "C",
+    fun_fact:
+      "The Treaty of Brest-Litovsk, signed on March 3, 1918, between Soviet Russia and the Central Powers, ended Russia's participation in World War I.",
+    answer_a: "Treaty of Versailles",
+    answer_b: "Treaty of Trianon",
+    answer_c: "Treaty of Brest-Litovsk",
+    answer_d: "Treaty of Saint-Germain-en-Laye",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who was the President of the United States during World War I?",
+    correct_answer: "D",
+    fun_fact:
+      "Woodrow Wilson served as President of the United States from 1913 to 1921, leading the country through World War I.",
+    answer_a: "Theodore Roosevelt",
+    answer_b: "William Howard Taft",
+    answer_c: "Warren G. Harding",
+    answer_d: "Woodrow Wilson",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which battle marked the end of Italy's participation in World War I?",
+    correct_answer: "B",
+    fun_fact:
+      "The Battle of Vittorio Veneto, fought from October 24 to November 3, 1918, resulted in a decisive victory for the Allies and led to the collapse of the Austro-Hungarian Empire.",
+    answer_a: "Battle of Caporetto",
+    answer_b: "Battle of Vittorio Veneto",
+    answer_c: "Battle of Piave River",
+    answer_d: "Battle of Asiago",
+  },
+  {
+    difficulty: "Easy",
+    question: "Who was the leader of the Ottoman Empire during World War I?",
+    correct_answer: "A",
+    fun_fact:
+      "Mehmed V reigned as Sultan of the Ottoman Empire from 1909 to 1918, leading the empire through World War I.",
+    answer_a: "Mehmed V",
+    answer_b: "Abdul Hamid II",
+    answer_c: "Mehmed VI",
+    answer_d: "Mustafa Kemal Atatürk",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the name of the alliance formed by Germany, Austria-Hungary, and Italy before World War I?",
+    correct_answer: "C",
+    fun_fact:
+      "The Triple Alliance, also known as the Central Powers, was a military alliance between Germany, Austria-Hungary, and Italy that existed from 1882 to 1914.",
+    answer_a: "Entente Cordiale",
+    answer_b: "Allied Powers",
+    answer_c: "Triple Alliance",
+    answer_d: "Triple Entente",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which battle saw the first use of aerial combat between fighter aircraft?",
+    correct_answer: "D",
+    fun_fact:
+      "The Battle of Neuve Chapelle, fought from March 10 to 13, 1915, was one of the earliest examples of the use of aerial combat in warfare.",
+    answer_a: "Battle of Tannenberg",
+    answer_b: "First Battle of the Marne",
+    answer_c: "Battle of Jutland",
+    answer_d: "Battle of Neuve Chapelle",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Who was the leader of the United Kingdom's Royal Navy during World War I?",
+    correct_answer: "C",
+    fun_fact:
+      "Admiral Sir John Jellicoe served as Commander-in-Chief of the British Grand Fleet during World War I.",
+    answer_a: "Admiral Horatio Nelson",
+    answer_b: "Admiral David Beatty",
+    answer_c: "Admiral John Jellicoe",
+    answer_d: "Admiral Jackie Fisher",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which country withdrew from World War I after the Bolshevik Revolution?",
+    correct_answer: "A",
+    fun_fact:
+      "The Bolshevik Revolution, led by Vladimir Lenin and the Bolshevik Party, resulted in Russia's withdrawal from World War I.",
+    answer_a: "Russia",
+    answer_b: "France",
+    answer_c: "Italy",
+    answer_d: "United Kingdom",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the name of the British liner sunk by a German U-boat in 1915, resulting in over 1,000 deaths?",
+    correct_answer: "B",
+    fun_fact:
+      "The sinking of the RMS Lusitania on May 7, 1915, contributed to the United States' eventual entry into World War I.",
+    answer_a: "HMHS Britannic",
+    answer_b: "RMS Lusitania",
+    answer_c: "SS Californian",
+    answer_d: "RMS Titanic",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which battle marked the first use of trench warfare on the Western Front?",
+    correct_answer: "C",
+    fun_fact:
+      "The First Battle of the Marne, fought from September 6 to 12, 1914, saw the introduction of trench warfare on the Western Front.",
+    answer_a: "Battle of Tannenberg",
+    answer_b: "Battle of the Somme",
+    answer_c: "First Battle of the Marne",
+    answer_d: "Battle of Verdun",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who was the Prime Minister of France during most of World War I?",
+    correct_answer: "D",
+    fun_fact:
+      "Raymond Poincaré served as Prime Minister of France from 1912 to 1913 and again from 1922 to 1924, but he was President of France during most of World War I.",
+    answer_a: "Aristide Briand",
+    answer_b: "Georges Clemenceau",
+    answer_c: "Paul Painlevé",
+    answer_d: "Raymond Poincaré",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Who was the commander of the German Eastern Front during World War I?",
+    correct_answer: "B",
+    fun_fact:
+      "Paul von Hindenburg, along with his chief of staff Erich Ludendorff, achieved significant victories for Germany on the Eastern Front during World War I.",
+    answer_a: "Wilhelm II",
+    answer_b: "Paul von Hindenburg",
+    answer_c: "Erich Ludendorff",
+    answer_d: "Erich von Falkenhayn",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which country declared war on Serbia, leading to the outbreak of World War I?",
+    correct_answer: "B",
+    fun_fact:
+      "Austria-Hungary declared war on Serbia on July 28, 1914, after the assassination of Archduke Franz Ferdinand.",
+    answer_a: "Russia",
+    answer_b: "Austria-Hungary",
+    answer_c: "Germany",
+    answer_d: "France",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who was the leader of the Austro-Hungarian Empire during World War I?",
+    correct_answer: "A",
+    fun_fact:
+      "Franz Joseph I ruled the Austro-Hungarian Empire from 1848 until his death in 1916, overseeing the empire during World War I.",
+    answer_a: "Franz Joseph I",
+    answer_b: "Franz Ferdinand",
+    answer_c: "Karl I",
+    answer_d: "Joseph II",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which battle is often considered the turning point of the Eastern Front during World War I?",
+    correct_answer: "D",
+    fun_fact:
+      "The Battle of Tannenberg, fought from August 26 to 30, 1914, resulted in a decisive victory for the German Empire over the Russian Empire.",
+    answer_a: "First Battle of the Marne",
+    answer_b: "Battle of Verdun",
+    answer_c: "Battle of the Somme",
+    answer_d: "Battle of Tannenberg",
+  },
+  {
+    difficulty: "Easy",
+    question: "Which empire collapsed at the end of World War I?",
+    correct_answer: "C",
+    fun_fact:
+      "The Ottoman Empire, also known as the Turkish Empire, collapsed at the end of World War I, leading to the emergence of modern Turkey.",
+    answer_a: "British Empire",
+    answer_b: "French Empire",
+    answer_c: "Ottoman Empire",
+    answer_d: "Austro-Hungarian Empire",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who was the Commander-in-Chief of the British Expeditionary Force on the Western Front?",
+    correct_answer: "B",
+    fun_fact:
+      "Field Marshal Sir John French commanded the British Expeditionary Force on the Western Front from 1914 to 1915.",
+    answer_a: "Field Marshal Douglas Haig",
+    answer_b: "Field Marshal Sir John French",
+    answer_c: "General Edmund Allenby",
+    answer_d: "General Horace Smith-Dorrien",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the name of the French defense strategy employed during World War I?",
+    correct_answer: "D",
+    fun_fact:
+      "The Maginot Line was a series of fortifications built by France along its eastern border as a defense against potential German invasion.",
+    answer_a: "Plan XVII",
+    answer_b: "Operation Dynamo",
+    answer_c: "Siege of Maubeuge",
+    answer_d: "Maginot Line",
+  },
+];
 
 module.exports = {
   football_questions,
@@ -2585,4 +2939,5 @@ module.exports = {
   lotrData,
   beatlesData,
   WorldWarTwoData,
+  WorldWarOneData,
 };

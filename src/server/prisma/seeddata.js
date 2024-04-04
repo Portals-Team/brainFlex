@@ -89,6 +89,9 @@ const topics = [
   {
     name: "World War II",
   },
+  {
+    name: "World War I",
+  },
 ];
 
 const image_word = [
@@ -440,6 +443,41 @@ const image_word = [
     image_url:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1712170022/History/winston-churchill-9248164-1-402_hvmttd.jpg",
     topic_id: 10,
+    categories_id: 4,
+  },
+  {
+    topic_word: "Woodrow Wilson",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712171006/History/28_woodrow_wilson_vlm4lm.jpg",
+    topic_id: 11,
+    categories_id: 4,
+  },
+  {
+    topic_word: "Franz Ferdinand",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712171026/History/800px-Ferdinand_Schmutzer_-_Franz_Ferdinand_von__C3_96sterreich-Este_2C_um_1914_igdumt.jpg",
+    topic_id: 11,
+    categories_id: 4,
+  },
+  {
+    topic_word: "David Lloyd George",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712171057/History/800px-David_Lloyd_George_zcljqf.jpg",
+    topic_id: 11,
+    categories_id: 4,
+  },
+  {
+    topic_word: "Gavrilo Princip",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712171080/History/800px-Gavrilo_Princip_2C_cell_2C_headshot_2C_bw_wj0ewv.jpg",
+    topic_id: 11,
+    categories_id: 4,
+  },
+  {
+    topic_word: "Paul von Hindenburg",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712171100/History/Paul-von-Hindenburg_hrqfkh.jpg",
+    topic_id: 11,
     categories_id: 4,
   },
 ];
