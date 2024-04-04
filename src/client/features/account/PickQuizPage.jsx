@@ -157,7 +157,7 @@ export default function PickQuizPage() {
             <p className="quizMessage">
               Current Quiz Question:{currentQuizQuestion}
             </p>
-            <NavLink to={`/game/home/${currentQuizIndexed.id}`}>
+            <NavLink to={`/game/home`}>
               <button id="continueQuizButton">To Continue Quiz</button>
             </NavLink>
           </>
