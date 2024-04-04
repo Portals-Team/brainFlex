@@ -19,7 +19,7 @@ const gameApi = api.injectEndpoints({
      */
 
     updatedUser: builder.mutation({
-      query: ({id, quizScore}) => ({
+      query: ({ id, quizScore }) => ({
         url: "/users/" + id,
         method: "PATCH",
         body: { quizScore: quizScore },
@@ -33,12 +33,9 @@ const gameApi = api.injectEndpoints({
      * @param {integer} id
      * @method GET
      */
-    //do I need to speficy the user id here as well?
     getGame: builder.query({
       query: (id) => "/quizes/" + id,
       providesTags: ["quizes"],
-      // transformResponse: (response) => response.quizes,
-      // transformErrorResponse: (response) => response.data.error.message,
     }),
 
     /**
@@ -54,7 +51,6 @@ const gameApi = api.injectEndpoints({
         body: { solved: true },
       }),
       invalidatesTags: ["quizes"],
-      // transformResponse: (response) => response.quizes,
     }),
     /**
      * @description updatedQuizQuestionUnsolved query updates the logged in users Quiz.current_question to increase question by 1
@@ -68,7 +64,6 @@ const gameApi = api.injectEndpoints({
         body: { solved: false },
       }),
       invalidatesTags: ["quizes"],
-      // transformResponse: (response) => response.quizes,
     }),
 
     /**
@@ -89,7 +84,6 @@ const gameApi = api.injectEndpoints({
      * @param {integer} id
      * @method PATCH
      */
-
     updateProblem: builder.mutation({
       query: (payload) => ({
         url: "/quiz_problems/" + payload.id,
@@ -97,7 +91,6 @@ const gameApi = api.injectEndpoints({
         body: { user_answer: payload.user_answer },
       }),
       invalidatesTags: ["quizes"],
-      // transformResponse: (response) => response.quizes,
     }),
 
     /**
@@ -105,12 +98,9 @@ const gameApi = api.injectEndpoints({
      * @param {integer} id
      * @method GET
      */
-
     getQuestions: builder.query({
       query: (id) => "/questions/" + id,
       providesTags: ["questions"],
-      // transformResponse: (response) => response.questions,
-      // transformErrorResponse: (response) => response.data.error.message,
     }),
 
     /**
@@ -118,7 +108,6 @@ const gameApi = api.injectEndpoints({
      * @param {integer} id
      * @method GET
      */
-
     getImageWord: builder.query({
       query: (id) => "/image_words/" + id,
       providesTags: ["image_word"],
