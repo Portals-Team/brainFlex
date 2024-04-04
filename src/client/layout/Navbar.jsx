@@ -27,11 +27,14 @@ export default function Navbar() {
         </NavLink>
       </div>
       <div id="navBarSectionRight">
-        <li className="login">
+        {token && (
+
+          <li className="login">
           <NavLink className="navLink" to="/account/me">
             Account
           </NavLink>
         </li>
+        )}
         {token ? (
           <li className="login">
             <a className="navLink" onClick={handleLogout}>

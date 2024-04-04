@@ -5,7 +5,7 @@ import {
   useUpdateQuizQuestionSolvedMutation,
 } from "../game/gameSlice";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import "./game.css";
 
@@ -29,6 +29,8 @@ export default function GameHome() {
   const [userInput, setUserInput] = useState(Array(gameWord?.length).fill(""));
   const [setSolved] = useUpdateQuizQuestionSolvedMutation();
 
+  const itemsRef = useRef([]);
+
   /**
    * @description handleInputChange sets specific values of user inputted strings for the word guess
    * @param {Integer} index index of the user input word guess
@@ -38,6 +40,7 @@ export default function GameHome() {
     const updatedInput = [...userInput];
     updatedInput[index] = value;
     setUserInput(updatedInput);
+    itemsRef.current[index + 1].focus();
   };
 
   /**
@@ -68,7 +71,6 @@ export default function GameHome() {
     let revealedLetters = "";
     for (let i = 0; i < numberOfCorrectQuestions; i++) {
       revealedLetters += gameWord?.charAt(i);
-      console.log("RevealedLetters: ", revealedLetters);
     }
     return revealedLetters;
   }
@@ -80,10 +82,6 @@ export default function GameHome() {
    * @returns a boolean if the word guessed by the user is correct or not.
    */
   function isGuessCorrect(guessWord) {
-    // console.log(`guessWord: ${guessWord}`);
-    // console.log(`numberOfCorrectQuestions: ${numberOfAnswersCorrect}`);
-    // console.log(`showRevealedLetters: ${showRevealedLetters(numberOfCorrectQuestions)}`);
-    // console.log(`gameword: ${gameWord}`);
     return (
       (
         showRevealedLetters(
@@ -140,6 +138,8 @@ export default function GameHome() {
                     <p id="revealedLetter">{letter}</p>
                   ) : (
                     <input
+                      ref={ref=>itemsRef.current.push(ref)}
+                      name={`code-${index}`}
                       id="userLetter"
                       maxLength="1"
                       key={index}

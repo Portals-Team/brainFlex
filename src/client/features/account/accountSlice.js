@@ -14,7 +14,7 @@ const accountApi = api.injectEndpoints({
     }),
     getMe: builder.query({
       query: () => "/users/me",
-      providesTags: ["User"]
+      providesTags: ["User", "UserTopics"]
   }),
     //getTopics gets all topics
     getTopics: builder.query({
