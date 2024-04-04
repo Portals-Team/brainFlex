@@ -67,6 +67,7 @@ export default function GameHome() {
     let revealedLetters = "";
     for (let i = 0; i < numberOfCorrectQuestions; i++) {
       revealedLetters += gameWord?.charAt(i);
+      console.log("RevealedLetters: ",revealedLetters);
     }
     return revealedLetters;
   }
@@ -78,9 +79,16 @@ export default function GameHome() {
    * @returns a boolean if the word guessed by the user is correct or not.
    */
   function isGuessCorrect(guessWord) {
+    // console.log(`guessWord: ${guessWord}`);
+    // console.log(`numberOfCorrectQuestions: ${numberOfAnswersCorrect}`);
+    // console.log(`showRevealedLetters: ${showRevealedLetters(numberOfCorrectQuestions)}`);
+    // console.log(`gameword: ${gameWord}`);
     return (
       (
-        showRevealedLetters(numberOfCorrectQuestions) + guessWord
+        showRevealedLetters(Math.round(
+          (numberOfAnswersCorrect() / quiz?.questions.length) *
+            gameWord.length
+        )) + guessWord
       ).toLowerCase() === gameWord?.toLowerCase()
     );
   }
@@ -109,6 +117,7 @@ export default function GameHome() {
 
   return (
     <>
+      
       <section id="imageContainer">
         <img id="image" className={blurClass} src={image_word?.image_url} />
       </section>
