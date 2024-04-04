@@ -17,6 +17,7 @@ const {
   theColdWarData,
   ComediesData,
   thrillersData,
+  scienceFictionMoviesData,
 } = require("./questions_seed.js");
 
 const seed = async () => {
@@ -116,7 +117,7 @@ const seed = async () => {
       },
     });
   }
-  for (let i = 13; i < 15; i++) {
+  for (let i = 13; i < 16; i++) {
     await prisma.categories_topics.upsert({
       where: { id: i },
       update: {},
@@ -402,6 +403,26 @@ const seed = async () => {
         fun_fact: data.fun_fact,
         category_id: 5,
         topic_id: 14,
+        answer_a: data.answer_a,
+        answer_b: data.answer_b,
+        answer_c: data.answer_c,
+        answer_d: data.answer_d,
+      },
+    });
+  }
+  for (const question of scienceFictionMoviesData) {
+    const data = question;
+    current_question_index = current_question_index + 1;
+    await prisma.question.upsert({
+      where: { id: current_question_index },
+      update: {},
+      create: {
+        difficulty: data.difficulty,
+        question: data.question,
+        correct_answer: data.correct_answer,
+        fun_fact: data.fun_fact,
+        category_id: 5,
+        topic_id: 15,
         answer_a: data.answer_a,
         answer_b: data.answer_b,
         answer_c: data.answer_c,

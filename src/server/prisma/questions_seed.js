@@ -5164,6 +5164,368 @@ const thrillersData = [
   },
 ];
 
+const scienceFictionMoviesData = [
+  {
+    difficulty: "Hard",
+    question:
+      "Which science fiction film features a character named Roy Batty, who is seeking a longer lifespan for himself and his fellow androids?",
+    correct_answer: "C",
+    fun_fact:
+      "'Blade Runner' (1982), directed by Ridley Scott and based on Philip K. Dick's novel 'Do Androids Dream of Electric Sheep?', explores themes of identity, humanity, and mortality.",
+    answer_a: "The Matrix",
+    answer_b: "Alien",
+    answer_c: "Blade Runner",
+    answer_d: "2001: A Space Odyssey",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "In the film 'Inception,' what is the name of the technology used to enter and manipulate dreams?",
+    correct_answer: "D",
+    fun_fact:
+      "In 'Inception' (2010), directed by Christopher Nolan, the characters use a device called the PASIV (Portable Automated Somnacin IntraVenous) to share and navigate dreamscapes.",
+    answer_a: "Dreamlink",
+    answer_b: "Neurosync",
+    answer_c: "Dreamweaver",
+    answer_d: "PASIV",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which science fiction film features a character named HAL 9000, a sentient computer with a chillingly calm voice?",
+    correct_answer: "A",
+    fun_fact:
+      "'2001: A Space Odyssey' (1968), directed by Stanley Kubrick and based on a story by Arthur C. Clarke, is renowned for its groundbreaking visual effects and philosophical themes.",
+    answer_a: "2001: A Space Odyssey",
+    answer_b: "The Terminator",
+    answer_c: "The Matrix",
+    answer_d: "Alien",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What is the name of the alien race in the film 'District 9' that arrives on Earth as refugees?",
+    correct_answer: "B",
+    fun_fact:
+      "'District 9' (2009), directed by Neill Blomkamp, uses a mockumentary style to explore themes of segregation, xenophobia, and corporate greed in a near-future South Africa.",
+    answer_a: "Zorgons",
+    answer_b: "Prawns",
+    answer_c: "Kaijus",
+    answer_d: "Ewoks",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which science fiction film features a character named Dr. Mann, who is part of a mission to find habitable planets?",
+    correct_answer: "D",
+    fun_fact:
+      "'Interstellar' (2014), directed by Christopher Nolan, blends speculative science with emotional storytelling as it explores themes of love, sacrifice, and the fate of humanity.",
+    answer_a: "The Martian",
+    answer_b: "Moon",
+    answer_c: "Gravity",
+    answer_d: "Interstellar",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What is the name of the virtual reality world in the film 'Ready Player One'?",
+    correct_answer: "C",
+    fun_fact:
+      "The Oasis, a sprawling virtual universe where players can escape reality and engage in adventures, serves as the primary setting for 'Ready Player One' (2018), directed by Steven Spielberg.",
+    answer_a: "Dreamscape",
+    answer_b: "Cyberverse",
+    answer_c: "The Oasis",
+    answer_d: "Networld",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which science fiction film features a group of astronauts investigating a mysterious monolith on the moon?",
+    correct_answer: "A",
+    fun_fact:
+      "'2001: A Space Odyssey' (1968), directed by Stanley Kubrick, is renowned for its enigmatic storytelling and groundbreaking visual effects, including the depiction of space travel and artificial intelligence.",
+    answer_a: "2001: A Space Odyssey",
+    answer_b: "Gravity",
+    answer_c: "Apollo 13",
+    answer_d: "The Martian",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What is the name of the giant space station that serves as the setting for much of the action in the film 'Elysium'?",
+    correct_answer: "B",
+    fun_fact:
+      "'Elysium' (2013), directed by Neill Blomkamp, presents a dystopian future where the wealthy reside on the luxurious space station Elysium, while the rest of humanity suffers on an overpopulated and polluted Earth.",
+    answer_a: "Prometheus",
+    answer_b: "Elysium",
+    answer_c: "Valerian",
+    answer_d: "Galactica",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "In the film 'The Fifth Element,' what is the name of the supreme being who holds the key to saving the universe?",
+    correct_answer: "C",
+    fun_fact:
+      "'The Fifth Element' (1997), directed by Luc Besson, is known for its colorful visuals, eccentric characters, and imaginative world-building.",
+    answer_a: "Zorg",
+    answer_b: "Korben Dallas",
+    answer_c: "Leeloo",
+    answer_d: "Ruby Rhod",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which science fiction film features a sentient computer named GERTY, who aids a lone astronaut on the moon?",
+    correct_answer: "D",
+    fun_fact:
+      "'Moon' (2009), directed by Duncan Jones, is a thought-provoking and atmospheric film that explores themes of identity, isolation, and the nature of consciousness.",
+    answer_a: "Solaris",
+    answer_b: "2001: A Space Odyssey",
+    answer_c: "Interstellar",
+    answer_d: "Moon",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which science fiction film features a character named Ellen Ripley, who battles extraterrestrial creatures aboard a spaceship?",
+    correct_answer: "B",
+    fun_fact:
+      "'Alien' (1979), directed by Ridley Scott, is a landmark in the sci-fi horror genre and launched the iconic character of Ellen Ripley, played by Sigourney Weaver.",
+    answer_a: "The Terminator",
+    answer_b: "Alien",
+    answer_c: "Blade Runner",
+    answer_d: "The Matrix",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "In the film 'Back to the Future,' what is the name of the eccentric scientist who invents the time-traveling DeLorean?",
+    correct_answer: "C",
+    fun_fact:
+      "Doc Brown, portrayed by Christopher Lloyd, is the inventor of the time machine in the 'Back to the Future' trilogy, directed by Robert Zemeckis.",
+    answer_a: "Dr. Emmett Smith",
+    answer_b: "Dr. Henry Jones",
+    answer_c: "Dr. Emmett Brown",
+    answer_d: "Dr. Victor Frankenstein",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which science fiction film features a character named Neo, who discovers the truth about reality and battles intelligent machines?",
+    correct_answer: "D",
+    fun_fact:
+      "'The Matrix' (1999), directed by the Wachowskis, revolutionized action filmmaking with its innovative visual effects and philosophical themes.",
+    answer_a: "Blade Runner",
+    answer_b: "Inception",
+    answer_c: "Avatar",
+    answer_d: "The Matrix",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What is the name of the giant robot piloted by protagonist Renton Thurston in the anime film 'Eureka Seven: Hi-Evolution'?",
+    correct_answer: "A",
+    fun_fact:
+      "The Nirvash TypeZERO is a powerful mecha in the 'Eureka Seven' series, known for its unique design and abilities.",
+    answer_a: "Nirvash TypeZERO",
+    answer_b: "Gurren Lagann",
+    answer_c: "EVA Unit-01",
+    answer_d: "RX-78-2 Gundam",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which science fiction film follows the journey of a young woman named Sarah Connor, who is targeted by a time-traveling killer robot?",
+    correct_answer: "C",
+    fun_fact:
+      "'The Terminator' (1984), directed by James Cameron, launched the iconic sci-fi franchise and introduced audiences to the menacing Terminator, portrayed by Arnold Schwarzenegger.",
+    answer_a: "Aliens",
+    answer_b: "RoboCop",
+    answer_c: "The Terminator",
+    answer_d: "Predator",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What is the name of the android character played by Michael Fassbender in the 'Alien' prequel films?",
+    correct_answer: "B",
+    fun_fact:
+      "David, an android with a complex personality, plays a pivotal role in 'Prometheus' (2012) and its sequel 'Alien: Covenant' (2017), both directed by Ridley Scott.",
+    answer_a: "Walter",
+    answer_b: "David",
+    answer_c: "Bishop",
+    answer_d: "Ash",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which science fiction film features a virtual reality universe called the 'Grid' and a protagonist named Sam Flynn?",
+    correct_answer: "A",
+    fun_fact:
+      "'Tron: Legacy' (2010), directed by Joseph Kosinski, is a visually stunning sequel to the 1982 cult classic 'Tron' and features cutting-edge CGI and electronic music.",
+    answer_a: "Tron: Legacy",
+    answer_b: "The Matrix Reloaded",
+    answer_c: "Ready Player One",
+    answer_d: "Avatar",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "In the film 'Starship Troopers,' what is the name of the alien species that humanity battles against?",
+    correct_answer: "C",
+    fun_fact:
+      "'Starship Troopers' (1997), directed by Paul Verhoeven, is a satirical take on military propaganda and fascist imagery, based on the novel by Robert A. Heinlein.",
+    answer_a: "Klingons",
+    answer_b: "Predators",
+    answer_c: "Arachnids",
+    answer_d: "Xenomorphs",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which science fiction film features a character named Deckard, who is tasked with hunting down rogue androids known as replicants?",
+    correct_answer: "D",
+    fun_fact:
+      "'Blade Runner' (1982), directed by Ridley Scott, explores themes of identity, morality, and the nature of humanity in a dystopian future where synthetic beings are virtually indistinguishable from humans.",
+    answer_a: "The Fifth Element",
+    answer_b: "The Terminator",
+    answer_c: "Inception",
+    answer_d: "Blade Runner",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What is the name of the spaceship piloted by Captain Malcolm Reynolds in the science fiction series 'Firefly'?",
+    correct_answer: "B",
+    fun_fact:
+      "Serenity, a Firefly-class spaceship, serves as the main setting for the television series 'Firefly' (2002) created by Joss Whedon, as well as its follow-up film 'Serenity' (2005).",
+    answer_a: "Defiant",
+    answer_b: "Serenity",
+    answer_c: "Galactica",
+    answer_d: "Millennium Falcon",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "In the film 'Star Wars,' what is the name of the desert planet where Luke Skywalker is raised?",
+    correct_answer: "C",
+    fun_fact:
+      "Tatooine is the remote desert world where much of the action in 'Star Wars: Episode IV - A New Hope' (1977) takes place, serving as the backdrop for Luke Skywalker's journey.",
+    answer_a: "Endor",
+    answer_b: "Hoth",
+    answer_c: "Tatooine",
+    answer_d: "Naboo",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "What is the name of the friendly extraterrestrial in the film 'E.T. the Extra-Terrestrial'?",
+    correct_answer: "B",
+    fun_fact:
+      "E.T., short for 'Extra-Terrestrial,' is the lovable alien protagonist of the film 'E.T. the Extra-Terrestrial' (1982), directed by Steven Spielberg.",
+    answer_a: "Alf",
+    answer_b: "E.T.",
+    answer_c: "Yoda",
+    answer_d: "Gizmo",
+  },
+  {
+    difficulty: "Easy",
+    question: "Which science fiction film features a time-traveling DeLorean?",
+    correct_answer: "A",
+    fun_fact:
+      "The DeLorean time machine is the iconic vehicle featured in the 'Back to the Future' trilogy (1985-1990), directed by Robert Zemeckis.",
+    answer_a: "Back to the Future",
+    answer_b: "The Terminator",
+    answer_c: "Blade Runner",
+    answer_d: "The Matrix",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "What is the name of the artificial intelligence system that assists Tony Stark in the 'Iron Man' films?",
+    correct_answer: "C",
+    fun_fact:
+      "J.A.R.V.I.S. (Just A Rather Very Intelligent System) is an AI created by Tony Stark (Iron Man) to assist him in tasks ranging from managing his home to piloting his Iron Man suits.",
+    answer_a: "Skynet",
+    answer_b: "HAL 9000",
+    answer_c: "J.A.R.V.I.S.",
+    answer_d: "Cortana",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which science fiction film features a group of astronauts stranded on a dangerous planet ruled by intelligent apes?",
+    correct_answer: "B",
+    fun_fact:
+      "'Planet of the Apes' (1968), directed by Franklin J. Schaffner, is based on the novel by Pierre Boulle and spawned a successful franchise that includes sequels, remakes, and spin-offs.",
+    answer_a: "Interstellar",
+    answer_b: "Planet of the Apes",
+    answer_c: "Avatar",
+    answer_d: "Alien",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "What is the name of the intelligent computer that controls the spaceship Discovery One in '2001: A Space Odyssey'?",
+    correct_answer: "D",
+    fun_fact:
+      "HAL 9000, voiced by Douglas Rain, is the sentient computer system in '2001: A Space Odyssey' (1968), directed by Stanley Kubrick.",
+    answer_a: "GLaDOS",
+    answer_b: "Mother",
+    answer_c: "Cortana",
+    answer_d: "HAL 9000",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which science fiction film features a group of dinosaurs brought back to life through genetic engineering?",
+    correct_answer: "C",
+    fun_fact:
+      "'Jurassic Park' (1993), directed by Steven Spielberg and based on the novel by Michael Crichton, revolutionized CGI effects and remains a beloved classic.",
+    answer_a: "Aliens",
+    answer_b: "Avatar",
+    answer_c: "Jurassic Park",
+    answer_d: "Starship Troopers",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "What is the name of the alien symbiote that bonds with Eddie Brock to become the anti-hero Venom?",
+    correct_answer: "A",
+    fun_fact:
+      "The alien symbiote known as Venom is a recurring antagonist in the Spider-Man comics and serves as an anti-hero in the film 'Venom' (2018), directed by Ruben Fleischer.",
+    answer_a: "Venom",
+    answer_b: "Carnage",
+    answer_c: "Riot",
+    answer_d: "Toxin",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which science fiction film features a group of kids who encounter a friendly alien trying to return home?",
+    correct_answer: "B",
+    fun_fact:
+      "'E.T. the Extra-Terrestrial' (1982), directed by Steven Spielberg, is renowned for its heartwarming story, groundbreaking effects, and memorable portrayal of childhood wonder.",
+    answer_a: "Close Encounters of the Third Kind",
+    answer_b: "E.T. the Extra-Terrestrial",
+    answer_c: "Close Encounters of the Fifth Kind",
+    answer_d: "The Iron Giant",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "What is the name of the futuristic city where 'Blade Runner' takes place?",
+    correct_answer: "C",
+    fun_fact:
+      "Los Angeles in the year 2019 serves as the dystopian setting for 'Blade Runner' (1982), directed by Ridley Scott and based on the novel by Philip K. Dick.",
+    answer_a: "Neo-Tokyo",
+    answer_b: "Mega City One",
+    answer_c: "Los Angeles",
+    answer_d: "New Seoul",
+  },
+];
+
 module.exports = {
   football_questions,
   ledZeppelinData,
@@ -5179,4 +5541,5 @@ module.exports = {
   theColdWarData,
   ComediesData,
   thrillersData,
+  scienceFictionMoviesData,
 };

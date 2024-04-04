@@ -99,10 +99,13 @@ const topics = [
     name: "The Cold War",
   },
   {
-    name: "Comedies",
+    name: "Comedy Movies",
   },
   {
-    name: "Thrillers",
+    name: "Scary Movies",
+  },
+  {
+    name: "Sci-Fi Movies",
   },
 ];
 
