@@ -56,6 +56,9 @@ const categories = [
   {
     name: "History",
   },
+  {
+    name: "Movies",
+  },
 ];
 
 const topics = [
@@ -75,7 +78,7 @@ const topics = [
     name: "Beethoven",
   },
   {
-    name: "Led Zeplin",
+    name: "Led Zeppelin",
   },
   {
     name: "Football",
@@ -92,6 +95,15 @@ const topics = [
   {
     name: "World War I",
   },
+  {
+    name: "The Cold War",
+  },
+  {
+    name: "Comedies",
+  },
+  {
+    name: "Thrillers",
+  },
 ];
 
 const image_word = [
@@ -103,7 +115,7 @@ const image_word = [
     categories_id: 1,
   },
   {
-    topic_word: "DarthVader",
+    topic_word: "Darth Vader",
     image_url:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1710951111/Fantasy/Star%20Wars/CW_DarthVaderFinale_Milestone_05__87681.1695056865_qngsjv.jpg",
     topic_id: 3,
@@ -173,7 +185,7 @@ const image_word = [
     categories_id: 1,
   },
   {
-    topic_word: "Gandalfthe",
+    topic_word: "Gandalf",
     image_url:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1710951001/Fantasy/Lord%20Of%20The%20Rings/gandalf-042223-2000-6eca4461d296452d87f86df0a36ba955_f3erdx.jpg",
     topic_id: 1,
@@ -390,7 +402,7 @@ const image_word = [
     categories_id: 2,
   },
   {
-    topic_word: "Sgt. Pepper",
+    topic_word: "Sgt Pepper",
     image_url:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1710950902/Paul-Sgt-Pepper_mmjhn9.jpg",
     topic_id: 4,
@@ -479,6 +491,111 @@ const image_word = [
       "https://res.cloudinary.com/dzpne110u/image/upload/v1712171100/History/Paul-von-Hindenburg_hrqfkh.jpg",
     topic_id: 11,
     categories_id: 4,
+  },
+  {
+    topic_word: "Fidel Castro",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712259959/History/Fidel-Castro-2003_nrvaln.jpg",
+    topic_id: 12,
+    categories_id: 4,
+  },
+  {
+    topic_word: "Mao Zedong",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712259974/History/Mao_Zedong_in_1959__28cropped_29_xhjm4p.jpg",
+    topic_id: 12,
+    categories_id: 4,
+  },
+  {
+    topic_word: "Margaret Thatcher",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712259987/History/Margaret-Thatcher-1980_qpdxoc.jpg",
+    topic_id: 12,
+    categories_id: 4,
+  },
+  {
+    topic_word: "John F Kennedy",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712260026/History/35_john_f_kennedy_d8tlbx.jpg",
+    topic_id: 12,
+    categories_id: 4,
+  },
+  {
+    topic_word: "Nikita Khrushchev",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712260049/History/Nikita-Khrushchev-1960_hrdz61.jpg",
+    topic_id: 12,
+    categories_id: 4,
+  },
+  {
+    topic_word: "Monty Python and the Holy Grail (1975)",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712260049/History/Nikita-Khrushchev-1960_hrdz61.jpg",
+    topic_id: 13,
+    categories_id: 5,
+  },
+  {
+    topic_word: "Ferris Bueller's Day Off",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712260049/History/Nikita-Khrushchev-1960_hrdz61.jpg",
+    topic_id: 13,
+    categories_id: 5,
+  },
+  {
+    topic_word: "Groundhog Day",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712260049/History/Nikita-Khrushchev-1960_hrdz61.jpg",
+    topic_id: 13,
+    categories_id: 5,
+  },
+  {
+    topic_word: "Dumb and Dumber",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712260049/History/Nikita-Khrushchev-1960_hrdz61.jpg",
+    topic_id: 13,
+    categories_id: 5,
+  },
+  {
+    topic_word: "The Hangover",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712260049/History/Nikita-Khrushchev-1960_hrdz61.jpg",
+    topic_id: 13,
+    categories_id: 5,
+  },
+  {
+    topic_word: "The Shining",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712263288/Movies/p40_v_v12_sk_vgk6a1.jpg",
+    topic_id: 14,
+    categories_id: 5,
+  },
+  {
+    topic_word: "The Exorcist",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712263301/Movies/MV5BMTNkYjc4YTYtZTVjNS00ZWI5LWI3MjItMWZiYTYzNTVmMWVjXkEyXkFqcGdeQXVyODE5NzE3OTE_._V1_FMjpg_UX1000__v6zcpo.jpg",
+    topic_id: 14,
+    categories_id: 5,
+  },
+  {
+    topic_word: "The Silence Of The Lambs",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712263313/Movies/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY_._V1__uborh1.jpg",
+    topic_id: 14,
+    categories_id: 5,
+  },
+  {
+    topic_word: "Get Out",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712263328/Movies/Get_Out_poster_rquzgn.png",
+    topic_id: 14,
+    categories_id: 5,
+  },
+  {
+    topic_word: "The Conjuring",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712263345/Movies/MV5BMTM3NjA1NDMyMV5BMl5BanBnXkFtZTcwMDQzNDMzOQ_._V1__wv1b0p.jpg",
+    topic_id: 14,
+    categories_id: 5,
   },
 ];
 

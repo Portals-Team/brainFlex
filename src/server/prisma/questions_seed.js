@@ -4018,6 +4018,1151 @@ const WorldWarOneData = [
     answer_d: "Maginot Line",
   },
 ];
+const theColdWarData = [
+  {
+    difficulty: "Hard",
+    question: "Which event marked the beginning of the Cold War?",
+    correct_answer: "C",
+    fun_fact:
+      "The Yalta Conference, held in February 1945, laid the groundwork for the division of Europe and the start of the Cold War.",
+    answer_a: "Potsdam Conference",
+    answer_b: "Berlin Airlift",
+    answer_c: "Yalta Conference",
+    answer_d: "Truman Doctrine",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the name of the US government program aimed at rebuilding post-World War II Europe to prevent the spread of communism?",
+    correct_answer: "B",
+    fun_fact:
+      "The Marshall Plan, officially known as the European Recovery Program, provided billions of dollars in economic aid to Western European countries.",
+    answer_a: "Containment Policy",
+    answer_b: "Marshall Plan",
+    answer_c: "Truman Doctrine",
+    answer_d: "Berlin Airlift",
+  },
+  {
+    difficulty: "Hard",
+    question: "Who led the Soviet Union during much of the Cold War?",
+    correct_answer: "A",
+    fun_fact:
+      "Joseph Stalin was the leader of the Soviet Union from the mid-1920s until his death in 1953, overseeing much of the early Cold War period.",
+    answer_a: "Joseph Stalin",
+    answer_b: "Nikita Khrushchev",
+    answer_c: "Leonid Brezhnev",
+    answer_d: "Mikhail Gorbachev",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which US president coined the term 'Iron Curtain' to describe the division between Western Europe and the Soviet-controlled Eastern Bloc?",
+    correct_answer: "C",
+    fun_fact:
+      "Winston Churchill, the Prime Minister of the United Kingdom, used the term 'Iron Curtain' in a speech delivered in Fulton, Missouri, in 1946.",
+    answer_a: "Franklin D. Roosevelt",
+    answer_b: "Harry S. Truman",
+    answer_c: "Winston Churchill",
+    answer_d: "Dwight D. Eisenhower",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the name of the Soviet Union's policy of relaxing tensions with the West during the 1970s?",
+    correct_answer: "D",
+    fun_fact:
+      "Detente was characterized by negotiations, arms control agreements, and cultural exchanges between the Soviet Union and the United States.",
+    answer_a: "Containment",
+    answer_b: "Red Scare",
+    answer_c: "Brezhnev Doctrine",
+    answer_d: "Detente",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the name of the US policy aimed at preventing the spread of communism in Asia during the Cold War?",
+    correct_answer: "A",
+    fun_fact:
+      "The Domino Theory posited that if one country fell to communism, neighboring countries would also succumb, like falling dominoes.",
+    answer_a: "Domino Theory",
+    answer_b: "Truman Doctrine",
+    answer_c: "Containment Policy",
+    answer_d: "Eisenhower Doctrine",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which Soviet leader initiated the reforms of glasnost (openness) and perestroika (restructuring) in the 1980s?",
+    correct_answer: "D",
+    fun_fact:
+      "Mikhail Gorbachev's policies of glasnost and perestroika aimed to modernize the Soviet Union's political and economic systems but ultimately contributed to its dissolution.",
+    answer_a: "Joseph Stalin",
+    answer_b: "Nikita Khrushchev",
+    answer_c: "Leonid Brezhnev",
+    answer_d: "Mikhail Gorbachev",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which country was divided into North and South during the Cold War, resulting in a conflict known as the Korean War?",
+    correct_answer: "B",
+    fun_fact:
+      "The Korean War, which lasted from 1950 to 1953, saw the intervention of both the United States and China on opposing sides.",
+    answer_a: "Vietnam",
+    answer_b: "Korea",
+    answer_c: "Germany",
+    answer_d: "Cuba",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which US president famously negotiated arms reduction agreements with the Soviet Union during the Cold War?",
+    correct_answer: "C",
+    fun_fact:
+      "The Strategic Arms Limitation Talks (SALT) and the Intermediate-Range Nuclear Forces (INF) Treaty were key arms reduction agreements negotiated between the US and the Soviet Union.",
+    answer_a: "Dwight D. Eisenhower",
+    answer_b: "John F. Kennedy",
+    answer_c: "Ronald Reagan",
+    answer_d: "Richard Nixon",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What was the name of the military alliance formed by the Soviet Union and its satellite states in response to NATO?",
+    correct_answer: "C",
+    fun_fact:
+      "The Warsaw Pact was established in 1955 as a counterbalance to NATO's influence in Europe.",
+    answer_a: "COMECON",
+    answer_b: "CSTO",
+    answer_c: "Warsaw Pact",
+    answer_d: "SEATO",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which two superpowers were the primary participants in the Cold War conflict?",
+    correct_answer: "C",
+    fun_fact:
+      "The United States and the Soviet Union emerged from World War II as the dominant global powers and became locked in a rivalry known as the Cold War.",
+    answer_a: "United States and China",
+    answer_b: "United States and United Kingdom",
+    answer_c: "United States and Soviet Union",
+    answer_d: "Soviet Union and China",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the name of the barrier built by East Germany to prevent citizens from fleeing to the West?",
+    correct_answer: "A",
+    fun_fact:
+      "The Berlin Wall, constructed in 1961, became a symbol of the division between East and West during the Cold War.",
+    answer_a: "Berlin Wall",
+    answer_b: "Iron Curtain",
+    answer_c: "Great Wall",
+    answer_d: "Molotov Line",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which country did the United States engage in a tense standoff with during the Cuban Missile Crisis?",
+    correct_answer: "B",
+    fun_fact:
+      "The Cuban Missile Crisis, occurring in 1962, brought the world to the brink of nuclear war as the US discovered Soviet missiles in Cuba.",
+    answer_a: "Vietnam",
+    answer_b: "Soviet Union",
+    answer_c: "China",
+    answer_d: "North Korea",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the name of the US foreign policy aimed at containing the spread of communism?",
+    correct_answer: "C",
+    fun_fact:
+      "The Truman Doctrine, announced in 1947, marked the beginning of the US policy of containment against Soviet expansionism.",
+    answer_a: "Marshall Plan",
+    answer_b: "Domino Theory",
+    answer_c: "Truman Doctrine",
+    answer_d: "Eisenhower Doctrine",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which city was divided into East and West sectors during the Cold War?",
+    correct_answer: "D",
+    fun_fact:
+      "Berlin, the capital of Germany, was divided by the Berlin Wall, separating the democratic West Berlin from the communist East Berlin.",
+    answer_a: "Vienna",
+    answer_b: "Paris",
+    answer_c: "Rome",
+    answer_d: "Berlin",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the name of the Soviet leader who succeeded Stalin and initiated a policy of de-Stalinization?",
+    correct_answer: "B",
+    fun_fact:
+      "Nikita Khrushchev's leadership marked a significant departure from Stalin's totalitarianism, although he maintained strict control over the Soviet Union.",
+    answer_a: "Joseph Stalin",
+    answer_b: "Nikita Khrushchev",
+    answer_c: "Leonid Brezhnev",
+    answer_d: "Mikhail Gorbachev",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which conflict was fought between communist and US-backed forces in Southeast Asia during the Cold War?",
+    correct_answer: "A",
+    fun_fact:
+      "The Vietnam War, lasting from 1955 to 1975, saw North Vietnam supported by the Soviet Union and China, while South Vietnam was backed by the United States.",
+    answer_a: "Vietnam War",
+    answer_b: "Korean War",
+    answer_c: "Cuban Missile Crisis",
+    answer_d: "Suez Crisis",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What was the name of the first artificial satellite launched into space by the Soviet Union in 1957, sparking the space race?",
+    correct_answer: "D",
+    fun_fact:
+      "Sputnik 1's successful launch by the Soviet Union marked the beginning of the space age and intensified the rivalry between the US and the USSR.",
+    answer_a: "Apollo 11",
+    answer_b: "Voyager 1",
+    answer_c: "Hubble Space Telescope",
+    answer_d: "Sputnik 1",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which term describes the period of thawing relations between the United States and the Soviet Union during the 1970s?",
+    correct_answer: "C",
+    fun_fact:
+      "Detente saw a reduction in Cold War tensions through negotiations, arms control agreements, and cultural exchanges between the two superpowers.",
+    answer_a: "Iron Curtain",
+    answer_b: "Containment",
+    answer_c: "Detente",
+    answer_d: "Red Scare",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which organization, founded in 1949, served as a military alliance for Western powers during the Cold War?",
+    correct_answer: "B",
+    fun_fact:
+      "NATO's primary purpose was to provide collective defense against the Soviet Union and its allies, ensuring the security of its member states.",
+    answer_a: "United Nations",
+    answer_b: "NATO",
+    answer_c: "Warsaw Pact",
+    answer_d: "SEATO",
+  },
+  {
+    difficulty: "Easy",
+    question: "Which two major powers were involved in the Cold War conflict?",
+    correct_answer: "B",
+    fun_fact:
+      "The United States and the Soviet Union were the main participants in the Cold War, representing the capitalist West and the communist East, respectively.",
+    answer_a: "United States and China",
+    answer_b: "United States and Soviet Union",
+    answer_c: "United States and United Kingdom",
+    answer_d: "United States and France",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "What was the name of the policy introduced by the United States to contain the spread of communism?",
+    correct_answer: "C",
+    fun_fact:
+      "The Truman Doctrine, announced in 1947, pledged to support countries threatened by communism, effectively establishing the containment policy.",
+    answer_a: "Marshall Plan",
+    answer_b: "Domino Theory",
+    answer_c: "Truman Doctrine",
+    answer_d: "Eisenhower Doctrine",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which city became a symbol of the Cold War division between East and West?",
+    correct_answer: "A",
+    fun_fact:
+      "Berlin, the capital of Germany, was divided into East and West sectors, with the Berlin Wall serving as a physical barrier between them.",
+    answer_a: "Berlin",
+    answer_b: "Paris",
+    answer_c: "London",
+    answer_d: "Rome",
+  },
+  {
+    difficulty: "Easy",
+    question: "Who led the Soviet Union during much of the Cold War?",
+    correct_answer: "D",
+    fun_fact:
+      "Joseph Stalin, a key figure in Soviet history, ruled the Soviet Union from the mid-1920s until his death in 1953, overseeing much of the early Cold War period.",
+    answer_a: "Nikita Khrushchev",
+    answer_b: "Vladimir Lenin",
+    answer_c: "Leonid Brezhnev",
+    answer_d: "Joseph Stalin",
+  },
+  {
+    difficulty: "Easy",
+    question: "What was the primary ideological conflict during the Cold War?",
+    correct_answer: "C",
+    fun_fact:
+      "The Cold War was characterized by the ideological struggle between capitalism, represented by the United States, and communism, represented by the Soviet Union.",
+    answer_a: "Nationalism vs Imperialism",
+    answer_b: "Fascism vs Democracy",
+    answer_c: "Capitalism vs Communism",
+    answer_d: "Socialism vs Anarchism",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which country did the United States engage in a tense standoff with over the installation of missiles in 1962?",
+    correct_answer: "B",
+    fun_fact:
+      "The Cuban Missile Crisis, a 13-day confrontation between the US and the Soviet Union, was triggered by the discovery of Soviet missiles in Cuba.",
+    answer_a: "Vietnam",
+    answer_b: "Soviet Union",
+    answer_c: "China",
+    answer_d: "North Korea",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "What term is used to describe the period of tension and rivalry between the United States and the Soviet Union after World War II?",
+    correct_answer: "A",
+    fun_fact:
+      "The Cold War, spanning from the late 1940s to the early 1990s, was characterized by political, ideological, and military competition between the two superpowers.",
+    answer_a: "Cold War",
+    answer_b: "World War II",
+    answer_c: "Great Depression",
+    answer_d: "Industrial Revolution",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which US president famously advocated for the policy of containment?",
+    correct_answer: "D",
+    fun_fact:
+      "Harry S. Truman, the 33rd President of the United States, implemented the containment policy as a response to Soviet expansionism.",
+    answer_a: "Franklin D. Roosevelt",
+    answer_b: "Dwight D. Eisenhower",
+    answer_c: "John F. Kennedy",
+    answer_d: "Harry S. Truman",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "What was the name of the space race between the United States and the Soviet Union?",
+    correct_answer: "C",
+    fun_fact:
+      "The space race was characterized by a series of competitive achievements in space exploration, including the first human in space and the first manned lunar landing.",
+    answer_a: "Atomic Race",
+    answer_b: "Technology Race",
+    answer_c: "Space Race",
+    answer_d: "Arms Race",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which country was divided into North and South during the Cold War, resulting in a conflict known as the Korean War?",
+    correct_answer: "B",
+    fun_fact:
+      "The Korean War, fought between 1950 and 1953, ended in an armistice agreement that divided Korea along the 38th parallel.",
+    answer_a: "Vietnam",
+    answer_b: "Korea",
+    answer_c: "Germany",
+    answer_d: "China",
+  },
+];
+const ComediesData = [
+  {
+    difficulty: "Easy",
+    question:
+      "Which actor portrayed the character of Mr. Bean in the comedy film series?",
+    correct_answer: "C",
+    fun_fact:
+      "Rowan Atkinson is best known for his portrayal of the iconic character Mr. Bean.",
+    answer_a: "Jim Carrey",
+    answer_b: "Eddie Murphy",
+    answer_c: "Rowan Atkinson",
+    answer_d: "Will Ferrell",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which movie features a group of friends embarking on a road trip to Las Vegas for a bachelor party?",
+    correct_answer: "A",
+    fun_fact:
+      "'The Hangover' follows the misadventures of friends during a wild bachelor party in Las Vegas.",
+    answer_a: "The Hangover",
+    answer_b: "Bridesmaids",
+    answer_c: "Superbad",
+    answer_d: "Old School",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Who played the character of Elle Woods in the comedy film 'Legally Blonde'?",
+    correct_answer: "B",
+    fun_fact:
+      "Reese Witherspoon portrayed the character of Elle Woods in 'Legally Blonde.'",
+    answer_a: "Jennifer Aniston",
+    answer_b: "Reese Witherspoon",
+    answer_c: "Cameron Diaz",
+    answer_d: "Emma Stone",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Who played the character of Elle Woods in the comedy film 'Legally Blonde'?",
+    correct_answer: "B",
+    fun_fact:
+      "Reese Witherspoon portrayed the character of Elle Woods in 'Legally Blonde.'",
+    answer_a: "Jennifer Aniston",
+    answer_b: "Reese Witherspoon",
+    answer_c: "Cameron Diaz",
+    answer_d: "Emma Stone",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which movie features a man raised by elves who goes to New York City in search of his biological father?",
+    correct_answer: "D",
+    fun_fact:
+      "'Elf' stars Will Ferrell as Buddy, the man raised by elves, on his journey to find his father.",
+    answer_a: "Dumb and Dumber",
+    answer_b: "Anchorman",
+    answer_c: "The 40-Year-Old Virgin",
+    answer_d: "Elf",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which movie revolves around a group of friends trying to return a briefcase full of money to its rightful owner?",
+    correct_answer: "A",
+    fun_fact:
+      "'Dumb and Dumber' follows the comedic misadventures of friends Lloyd and Harry as they attempt to return a briefcase full of money.",
+    answer_a: "Dumb and Dumber",
+    answer_b: "The Hangover",
+    answer_c: "Superbad",
+    answer_d: "Old School",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who directed the comedy film 'Monty Python and the Holy Grail'?",
+    correct_answer: "C",
+    fun_fact:
+      "Terry Gilliam and Terry Jones co-directed 'Monty Python and the Holy Grail,' a classic comedy.",
+    answer_a: "Mel Brooks",
+    answer_b: "John Hughes",
+    answer_c: "Terry Gilliam and Terry Jones",
+    answer_d: "Woody Allen",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which comedy movie features a talking raccoon and a humanoid tree as part of its main cast?",
+    correct_answer: "D",
+    fun_fact:
+      "'Guardians of the Galaxy' features Rocket Raccoon and Groot as part of its main cast of characters.",
+    answer_a: "Anchorman",
+    answer_b: "Superbad",
+    answer_c: "The Hangover",
+    answer_d: "Guardians of the Galaxy",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which actor starred in the comedy film 'Ace Ventura: Pet Detective'?",
+    correct_answer: "A",
+    fun_fact: "Jim Carrey starred as the eccentric pet detective Ace Ventura.",
+    answer_a: "Jim Carrey",
+    answer_b: "Will Ferrell",
+    answer_c: "Adam Sandler",
+    answer_d: "Steve Carell",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which comedy film features a character named Derek Zoolander, known for his signature 'Blue Steel' look?",
+    correct_answer: "B",
+    fun_fact:
+      "'Zoolander' features Ben Stiller as the titular character, a dimwitted male model.",
+    answer_a: "Anchorman",
+    answer_b: "Zoolander",
+    answer_c: "Superbad",
+    answer_d: "Dumb and Dumber",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who directed the comedy film 'The Grand Budapest Hotel'?",
+    correct_answer: "C",
+    fun_fact:
+      "Wes Anderson directed 'The Grand Budapest Hotel,' known for its quirky characters and visual style.",
+    answer_a: "Quentin Tarantino",
+    answer_b: "Judd Apatow",
+    answer_c: "Wes Anderson",
+    answer_d: "Edgar Wright",
+  },
+  {
+    difficulty: "Difficult",
+    question:
+      "Which comedy film features a character named Ignatius J. Reilly and is based on a novel by John Kennedy Toole?",
+    correct_answer: "D",
+    fun_fact:
+      "'A Confederacy of Dunces' is a comedy film based on a novel by John Kennedy Toole, featuring the character Ignatius J. Reilly.",
+    answer_a: "The Big Lebowski",
+    answer_b: "Dazed and Confused",
+    answer_c: "Raising Arizona",
+    answer_d: "A Confederacy of Dunces",
+  },
+  {
+    difficulty: "Difficult",
+    question:
+      "Who directed the comedy film 'Life of Brian,' a satire about a man mistaken for the messiah?",
+    correct_answer: "A",
+    fun_fact:
+      "Terry Jones directed 'Life of Brian,' a Monty Python comedy film.",
+    answer_a: "Terry Jones",
+    answer_b: "Mel Brooks",
+    answer_c: "John Cleese",
+    answer_d: "Eric Idle",
+  },
+  {
+    difficulty: "Difficult",
+    question:
+      "Which comedy film features a fictional heavy metal band called Spinal Tap?",
+    correct_answer: "C",
+    fun_fact:
+      "'This Is Spinal Tap' is a mockumentary comedy film featuring the fictional heavy metal band Spinal Tap.",
+    answer_a: "Anchorman",
+    answer_b: "Superbad",
+    answer_c: "This Is Spinal Tap",
+    answer_d: "Dumb and Dumber",
+  },
+  {
+    difficulty: "Difficult",
+    question:
+      "Who directed the comedy film 'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb'?",
+    correct_answer: "D",
+    fun_fact:
+      "Stanley Kubrick directed 'Dr. Strangelove,' a satirical comedy about nuclear war.",
+    answer_a: "Mel Brooks",
+    answer_b: "Woody Allen",
+    answer_c: "John Hughes",
+    answer_d: "Stanley Kubrick",
+  },
+  {
+    difficulty: "Difficult",
+    question:
+      "Which comedy film stars Bill Murray as a weatherman trapped in a time loop?",
+    correct_answer: "B",
+    fun_fact:
+      "'Groundhog Day' stars Bill Murray as a weatherman experiencing the same day over and over again.",
+    answer_a: "Anchorman",
+    answer_b: "Groundhog Day",
+    answer_c: "The Hangover",
+    answer_d: "Superbad",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who directed the comedy film 'Monty Python and the Holy Grail'?",
+    correct_answer: "C",
+    fun_fact:
+      "Terry Gilliam and Terry Jones co-directed 'Monty Python and the Holy Grail,' a classic comedy.",
+    answer_a: "Mel Brooks",
+    answer_b: "John Hughes",
+    answer_c: "Terry Gilliam and Terry Jones",
+    answer_d: "Woody Allen",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which comedy movie features a talking raccoon and a humanoid tree as part of its main cast?",
+    correct_answer: "D",
+    fun_fact:
+      "'Guardians of the Galaxy' features Rocket Raccoon and Groot as part of its main cast of characters.",
+    answer_a: "Anchorman",
+    answer_b: "Superbad",
+    answer_c: "The Hangover",
+    answer_d: "Guardians of the Galaxy",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which actor starred in the comedy film 'Ace Ventura: Pet Detective'?",
+    correct_answer: "A",
+    fun_fact: "Jim Carrey starred as the eccentric pet detective Ace Ventura.",
+    answer_a: "Jim Carrey",
+    answer_b: "Will Ferrell",
+    answer_c: "Adam Sandler",
+    answer_d: "Steve Carell",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which comedy film features a character named Derek Zoolander, known for his signature 'Blue Steel' look?",
+    correct_answer: "B",
+    fun_fact:
+      "'Zoolander' features Ben Stiller as the titular character, a dimwitted male model.",
+    answer_a: "Anchorman",
+    answer_b: "Zoolander",
+    answer_c: "Superbad",
+    answer_d: "Dumb and Dumber",
+  },
+  {
+    difficulty: "Medium",
+    question: "Who directed the comedy film 'The Grand Budapest Hotel'?",
+    correct_answer: "C",
+    fun_fact:
+      "Wes Anderson directed 'The Grand Budapest Hotel,' known for its quirky characters and visual style.",
+    answer_a: "Quentin Tarantino",
+    answer_b: "Judd Apatow",
+    answer_c: "Wes Anderson",
+    answer_d: "Edgar Wright",
+  },
+  {
+    difficulty: "Difficult",
+    question:
+      "Which comedy film features a character named Ignatius J. Reilly and is based on a novel by John Kennedy Toole?",
+    correct_answer: "D",
+    fun_fact:
+      "'A Confederacy of Dunces' is a comedy film based on a novel by John Kennedy Toole, featuring the character Ignatius J. Reilly.",
+    answer_a: "The Big Lebowski",
+    answer_b: "Dazed and Confused",
+    answer_c: "Raising Arizona",
+    answer_d: "A Confederacy of Dunces",
+  },
+  {
+    difficulty: "Difficult",
+    question:
+      "Who directed the comedy film 'Life of Brian,' a satire about a man mistaken for the messiah?",
+    correct_answer: "A",
+    fun_fact:
+      "Terry Jones directed 'Life of Brian,' a Monty Python comedy film.",
+    answer_a: "Terry Jones",
+    answer_b: "Mel Brooks",
+    answer_c: "John Cleese",
+    answer_d: "Eric Idle",
+  },
+  {
+    difficulty: "Difficult",
+    question:
+      "Which comedy film features a fictional heavy metal band called Spinal Tap?",
+    correct_answer: "C",
+    fun_fact:
+      "'This Is Spinal Tap' is a mockumentary comedy film featuring the fictional heavy metal band Spinal Tap.",
+    answer_a: "Anchorman",
+    answer_b: "Superbad",
+    answer_c: "This Is Spinal Tap",
+    answer_d: "Dumb and Dumber",
+  },
+  {
+    difficulty: "Difficult",
+    question:
+      "Who directed the comedy film 'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb'?",
+    correct_answer: "D",
+    fun_fact:
+      "Stanley Kubrick directed 'Dr. Strangelove,' a satirical comedy about nuclear war.",
+    answer_a: "Mel Brooks",
+    answer_b: "Woody Allen",
+    answer_c: "John Hughes",
+    answer_d: "Stanley Kubrick",
+  },
+  {
+    difficulty: "Difficult",
+    question:
+      "Which comedy film stars Bill Murray as a weatherman trapped in a time loop?",
+    correct_answer: "B",
+    fun_fact:
+      "'Groundhog Day' stars Bill Murray as a weatherman experiencing the same day over and over again.",
+    answer_a: "Anchorman",
+    answer_b: "Groundhog Day",
+    answer_c: "The Hangover",
+    answer_d: "Superbad",
+  },
+
+  {
+    difficulty: "Easy",
+    question:
+      "Which comedy film features a group of friends who go on a quest to find a missing friend before his wedding?",
+    correct_answer: "C",
+    fun_fact:
+      "'The Hangover' follows a group of friends searching for their missing friend in Las Vegas.",
+    answer_a: "Superbad",
+    answer_b: "Anchorman",
+    answer_c: "The Hangover",
+    answer_d: "Old School",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Who plays the role of Michael Scott in the American version of the TV series 'The Office'?",
+    correct_answer: "D",
+    fun_fact:
+      "Steve Carell portrays the character Michael Scott, the bumbling yet lovable manager of Dunder Mifflin's Scranton branch.",
+    answer_a: "John Krasinski",
+    answer_b: "Rainn Wilson",
+    answer_c: "B.J. Novak",
+    answer_d: "Steve Carell",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which comedy film features a group of misfit kids who embark on a quest to find a dead body?",
+    correct_answer: "A",
+    fun_fact:
+      "'Stand by Me' is based on Stephen King's novella 'The Body' and follows four boys on a journey to find a dead body.",
+    answer_a: "Stand by Me",
+    answer_b: "The Sandlot",
+    answer_c: "The Goonies",
+    answer_d: "Superbad",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who directed the comedy film 'Anchorman: The Legend of Ron Burgundy'?",
+    correct_answer: "B",
+    fun_fact:
+      "Adam McKay directed 'Anchorman: The Legend of Ron Burgundy,' starring Will Ferrell as the titular news anchor.",
+    answer_a: "Judd Apatow",
+    answer_b: "Adam McKay",
+    answer_c: "Seth Rogen",
+    answer_d: "Paul Feig",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which comedy film features a group of office workers who decide to rob their company?",
+    correct_answer: "A",
+    fun_fact:
+      "'Office Space' is a comedy film about corporate culture and disenchanted employees who plan to steal money from their employer.",
+    answer_a: "Office Space",
+    answer_b: "The Other Guys",
+    answer_c: "Horrible Bosses",
+    answer_d: "The Wolf of Wall Street",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Who played the role of Leslie Knope in the TV series 'Parks and Recreation'?",
+    correct_answer: "C",
+    fun_fact:
+      "Amy Poehler portrayed the energetic and optimistic Leslie Knope in 'Parks and Recreation.'",
+    answer_a: "Tina Fey",
+    answer_b: "Mindy Kaling",
+    answer_c: "Amy Poehler",
+    answer_d: "Rashida Jones",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which comedy film features a character named Borat Sagdiyev, a journalist from Kazakhstan?",
+    correct_answer: "B",
+    fun_fact:
+      "'Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan' features Sacha Baron Cohen as the titular character.",
+    answer_a: "Superbad",
+    answer_b: "Borat",
+    answer_c: "Anchorman",
+    answer_d: "Tropic Thunder",
+  },
+  {
+    difficulty: "Difficult",
+    question: "Who directed the comedy film 'Napoleon Dynamite'?",
+    correct_answer: "D",
+    fun_fact:
+      "Jared Hess directed 'Napoleon Dynamite,' a quirky comedy about an awkward teenager.",
+    answer_a: "Adam McKay",
+    answer_b: "Edgar Wright",
+    answer_c: "Wes Anderson",
+    answer_d: "Jared Hess",
+  },
+  {
+    difficulty: "Difficult",
+    question:
+      "Which comedy film features a character named Jeff 'The Dude' Lebowski?",
+    correct_answer: "A",
+    fun_fact:
+      "'The Big Lebowski' features Jeff Bridges as the laid-back and bowling-obsessed character known as 'The Dude.'",
+    answer_a: "The Big Lebowski",
+    answer_b: "Dumb and Dumber",
+    answer_c: "Step Brothers",
+    answer_d: "Shaun of the Dead",
+  },
+  {
+    difficulty: "Difficult",
+    question: "Who directed the comedy film 'Hot Fuzz'?",
+    correct_answer: "C",
+    fun_fact: "Edgar Wright directed 'Hot Fuzz,' a buddy cop comedy film.",
+    answer_a: "Adam McKay",
+    answer_b: "Judd Apatow",
+    answer_c: "Edgar Wright",
+    answer_d: "Seth Rogen",
+  },
+];
+
+const thrillersData = [
+  {
+    difficulty: "Hard",
+    question:
+      "Which horror movie is often credited with popularizing the found footage genre?",
+    correct_answer: "D",
+    fun_fact:
+      "The Blair Witch Project (1999) is widely regarded as one of the first successful found footage horror films, influencing many subsequent movies in the genre.",
+    answer_a: "The Exorcist",
+    answer_b: "Psycho",
+    answer_c: "Halloween",
+    answer_d: "The Blair Witch Project",
+  },
+  {
+    difficulty: "Hard",
+    question: "Who directed the classic horror film 'The Shining'?",
+    correct_answer: "B",
+    fun_fact:
+      "Stanley Kubrick, known for his meticulous filmmaking style, brought Stephen King's novel 'The Shining' to the screen with his distinctive vision.",
+    answer_a: "Alfred Hitchcock",
+    answer_b: "Stanley Kubrick",
+    answer_c: "Wes Craven",
+    answer_d: "John Carpenter",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which horror movie features a serial killer named Buffalo Bill who skins his victims?",
+    correct_answer: "C",
+    fun_fact:
+      "'The Silence of the Lambs' (1991), directed by Jonathan Demme, is a psychological horror-thriller that features Buffalo Bill as one of its main antagonists.",
+    answer_a: "Scream",
+    answer_b: "A Nightmare on Elm Street",
+    answer_c: "The Silence of the Lambs",
+    answer_d: "Friday the 13th",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which horror movie features a family's encounter with supernatural forces in a haunted hotel?",
+    correct_answer: "A",
+    fun_fact:
+      "'The Conjuring' (2013), directed by James Wan, is based on the real-life investigations of paranormal investigators Ed and Lorraine Warren.",
+    answer_a: "The Conjuring",
+    answer_b: "Insidious",
+    answer_c: "The Amityville Horror",
+    answer_d: "Poltergeist",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which horror movie franchise features a demonic doll named Annabelle?",
+    correct_answer: "D",
+    fun_fact:
+      "The 'Annabelle' film series is a spin-off of 'The Conjuring' franchise, focusing on the terrifying exploits of the possessed doll.",
+    answer_a: "Saw",
+    answer_b: "The Exorcist",
+    answer_c: "Paranormal Activity",
+    answer_d: "The Conjuring",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What is the subtitle of the third installment in the 'Evil Dead' film series?",
+    correct_answer: "C",
+    fun_fact:
+      "'Army of Darkness' (1992), directed by Sam Raimi, takes protagonist Ash Williams back in time to the Middle Ages to battle an army of undead creatures.",
+    answer_a: "Evil Dead II: Dead by Dawn",
+    answer_b: "Evil Dead III: Army of the Dead",
+    answer_c: "Army of Darkness",
+    answer_d: "Evil Dead: Resurrection",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which horror movie features a group of people trapped in an elevator with the devil?",
+    correct_answer: "B",
+    fun_fact:
+      "'Devil' (2010), directed by John Erick Dowdle and produced by M. Night Shyamalan, presents a supernatural thriller set within the confines of a malfunctioning elevator.",
+    answer_a: "The Exorcism of Emily Rose",
+    answer_b: "Devil",
+    answer_c: "Drag Me to Hell",
+    answer_d: "The Omen",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "What is the name of the hotel in the horror movie '1408' where paranormal events occur?",
+    correct_answer: "D",
+    fun_fact:
+      "'1408' (2007), based on a Stephen King short story, centers around a haunted hotel room where the protagonist encounters terrifying supernatural phenomena.",
+    answer_a: "Overlook Hotel",
+    answer_b: "Bates Motel",
+    answer_c: "The Stanley Hotel",
+    answer_d: "Dolphin Hotel",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "In which horror movie does a group of people become trapped in a remote cabin and are terrorized by demonic forces?",
+    correct_answer: "A",
+    fun_fact:
+      "'The Evil Dead' (1981), directed by Sam Raimi, is a cult classic that spawned a successful franchise and helped launch the careers of director Raimi and actor Bruce Campbell.",
+    answer_a: "The Evil Dead",
+    answer_b: "Cabin Fever",
+    answer_c: "The Cabin in the Woods",
+    answer_d: "The Hills Have Eyes",
+  },
+  {
+    difficulty: "Hard",
+    question:
+      "Which horror movie is based on a true story about a possessed girl and her exorcism?",
+    correct_answer: "C",
+    fun_fact:
+      "'The Exorcism of Emily Rose' (2005) draws inspiration from the real-life case of Anneliese Michel, a German woman who underwent a series of exorcisms in the 1970s.",
+    answer_a: "The Conjuring",
+    answer_b: "The Omen",
+    answer_c: "The Exorcism of Emily Rose",
+    answer_d: "The Last Exorcism",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which horror movie features a group of college students being terrorized by a deformed killer wearing a mask?",
+    correct_answer: "B",
+    fun_fact:
+      "'The Texas Chain Saw Massacre' (1974), directed by Tobe Hooper, is considered a seminal work in the horror genre and inspired numerous slasher films.",
+    answer_a: "A Nightmare on Elm Street",
+    answer_b: "The Texas Chain Saw Massacre",
+    answer_c: "Halloween",
+    answer_d: "Friday the 13th",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What is the name of the demon-possessed doll in the 'Child's Play' franchise?",
+    correct_answer: "D",
+    fun_fact:
+      "Chucky, the iconic antagonist of the 'Child's Play' series, is a Good Guy doll inhabited by the soul of a serial killer.",
+    answer_a: "Billy",
+    answer_b: "Tommy",
+    answer_c: "Andy",
+    answer_d: "Chucky",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which horror movie revolves around a family who moves into a house haunted by a vengeful spirit?",
+    correct_answer: "C",
+    fun_fact:
+      "'Poltergeist' (1982), directed by Tobe Hooper and produced by Steven Spielberg, is known for its groundbreaking special effects and intense supernatural atmosphere.",
+    answer_a: "The Amityville Horror",
+    answer_b: "The Conjuring",
+    answer_c: "Poltergeist",
+    answer_d: "Insidious",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "In the film 'Scream,' what is the name of the masked killer who terrorizes the town of Woodsboro?",
+    correct_answer: "A",
+    fun_fact:
+      "Ghostface, the iconic antagonist of the 'Scream' franchise, wears a distinctive mask inspired by Edvard Munch's painting 'The Scream.'",
+    answer_a: "Ghostface",
+    answer_b: "Jason Voorhees",
+    answer_c: "Michael Myers",
+    answer_d: "Freddy Krueger",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which horror movie franchise features a serial killer who stalks his victims in their dreams?",
+    correct_answer: "B",
+    fun_fact:
+      "Freddy Krueger, the main antagonist of the 'A Nightmare on Elm Street' series, haunts the dreams of teenagers in the fictional town of Springwood.",
+    answer_a: "Halloween",
+    answer_b: "A Nightmare on Elm Street",
+    answer_c: "Friday the 13th",
+    answer_d: "Scream",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "What is the subtitle of the second installment in the 'Halloween' film series?",
+    correct_answer: "D",
+    fun_fact:
+      "'Halloween II' (1981), directed by Rick Rosenthal, continues the story of masked killer Michael Myers as he targets survivors from the first film.",
+    answer_a: "Halloween: Resurrection",
+    answer_b: "Halloween: H20",
+    answer_c: "Halloween: The Return",
+    answer_d: "Halloween II",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which horror movie features a young girl possessed by a demon and her desperate mother's attempts to save her?",
+    correct_answer: "C",
+    fun_fact:
+      "'The Exorcist' (1973), directed by William Friedkin, is based on the novel of the same name by William Peter Blatty and is widely considered one of the scariest films of all time.",
+    answer_a: "Rosemary's Baby",
+    answer_b: "Carrie",
+    answer_c: "The Exorcist",
+    answer_d: "The Omen",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "In the film 'The Ring,' what is the name of the cursed videotape that brings death to anyone who watches it?",
+    correct_answer: "B",
+    fun_fact:
+      "In 'The Ring' (2002), directed by Gore Verbinski, the cursed videotape contains disturbing images and a mysterious message that spells doom for its viewers.",
+    answer_a: "The Curse",
+    answer_b: "The Ring",
+    answer_c: "The Grudge",
+    answer_d: "Ringu",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which horror movie features a group of people trapped in a remote cabin and subjected to sadistic experiments?",
+    correct_answer: "A",
+    fun_fact:
+      "'The Cabin in the Woods' (2012), directed by Drew Goddard and co-written by Joss Whedon, is a meta-horror film that subverts genre conventions and tropes.",
+    answer_a: "The Cabin in the Woods",
+    answer_b: "Evil Dead",
+    answer_c: "Cabin Fever",
+    answer_d: "The Blair Witch Project",
+  },
+  {
+    difficulty: "Medium",
+    question:
+      "Which horror movie centers around a man who is terrorized by a malevolent entity while staying in a secluded cabin?",
+    correct_answer: "D",
+    fun_fact:
+      "'Evil Dead' (2013), directed by Fede Alvarez, is a remake of the 1981 cult classic and received praise for its intense horror and practical effects.",
+    answer_a: "The Conjuring",
+    answer_b: "Insidious",
+    answer_c: "The Cabin in the Woods",
+    answer_d: "Evil Dead",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which horror movie features a masked killer who stalks teenagers in the fictional town of Woodsboro?",
+    correct_answer: "A",
+    fun_fact:
+      "'Scream' (1996), directed by Wes Craven, revitalized the slasher genre with its self-aware humor and clever deconstruction of horror movie tropes.",
+    answer_a: "Scream",
+    answer_b: "A Nightmare on Elm Street",
+    answer_c: "Friday the 13th",
+    answer_d: "Halloween",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "What is the name of the doll possessed by a demonic entity in the 'Child's Play' franchise?",
+    correct_answer: "C",
+    fun_fact:
+      "Chucky, the malevolent doll in the 'Child's Play' series, is possessed by the soul of a serial killer and wreaks havoc on those around him.",
+    answer_a: "Billy",
+    answer_b: "Tommy",
+    answer_c: "Chucky",
+    answer_d: "Andy",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which horror movie franchise features a serial killer who wears a hockey mask?",
+    correct_answer: "B",
+    fun_fact:
+      "Jason Voorhees, the iconic antagonist of the 'Friday the 13th' series, wears a hockey mask while terrorizing camp counselors at Camp Crystal Lake.",
+    answer_a: "Scream",
+    answer_b: "Friday the 13th",
+    answer_c: "A Nightmare on Elm Street",
+    answer_d: "Halloween",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "What is the name of the haunted hotel in Stephen King's novel and its film adaptation?",
+    correct_answer: "D",
+    fun_fact:
+      "The Overlook Hotel, featured in 'The Shining' (1980) directed by Stanley Kubrick, serves as the sinister setting for the supernatural horrors endured by the Torrance family.",
+    answer_a: "Bates Motel",
+    answer_b: "The Stanley Hotel",
+    answer_c: "The Amityville Horror House",
+    answer_d: "The Overlook Hotel",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which horror movie features a possessed girl who spins her head and spews pea soup?",
+    correct_answer: "C",
+    fun_fact:
+      "'The Exorcist' (1973), directed by William Friedkin, shocked audiences with its graphic depiction of demonic possession and remains a landmark in horror cinema.",
+    answer_a: "Carrie",
+    answer_b: "The Omen",
+    answer_c: "The Exorcist",
+    answer_d: "Rosemary's Baby",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "In the film 'Halloween,' what is the name of the masked killer who returns to his hometown to stalk babysitters?",
+    correct_answer: "A",
+    fun_fact:
+      "Michael Myers, also known simply as 'The Shape,' is the central antagonist of the 'Halloween' franchise created by John Carpenter.",
+    answer_a: "Michael Myers",
+    answer_b: "Freddy Krueger",
+    answer_c: "Jason Voorhees",
+    answer_d: "Ghostface",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "What is the name of the supernatural entity that terrorizes the children of Derry, Maine, in the film 'It'?",
+    correct_answer: "D",
+    fun_fact:
+      "Pennywise the Dancing Clown, also known as It, is the shape-shifting antagonist of 'It' (2017) and its sequel, based on the novel by Stephen King.",
+    answer_a: "The Boogeyman",
+    answer_b: "The Creeper",
+    answer_c: "The Babadook",
+    answer_d: "Pennywise",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "Which horror movie features a group of people being terrorized by a great white shark?",
+    correct_answer: "B",
+    fun_fact:
+      "'Jaws' (1975), directed by Steven Spielberg, is often credited with establishing the summer blockbuster phenomenon and inspiring a wave of creature feature films.",
+    answer_a: "Psycho",
+    answer_b: "Jaws",
+    answer_c: "The Exorcist",
+    answer_d: "The Shining",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "What is the name of the doll that torments a family in the film 'Annabelle'?",
+    correct_answer: "A",
+    fun_fact:
+      "Annabelle, a possessed porcelain doll, serves as the focus of supernatural terror in 'Annabelle' (2014) and its sequels within the 'Conjuring' universe.",
+    answer_a: "Annabelle",
+    answer_b: "Emily",
+    answer_c: "Charlotte",
+    answer_d: "Isabelle",
+  },
+  {
+    difficulty: "Easy",
+    question:
+      "In the movie 'The Conjuring,' what is the name of the demonic entity that possesses the Perron family's farmhouse?",
+    correct_answer: "C",
+    fun_fact:
+      "Bathsheba Sherman, a malevolent spirit, is believed to have possessed the Perron family's farmhouse in the events depicted in 'The Conjuring' (2013).",
+    answer_a: "Valak",
+    answer_b: "Annabelle",
+    answer_c: "Bathsheba",
+    answer_d: "Astaroth",
+  },
+];
 
 module.exports = {
   football_questions,
@@ -4031,4 +5176,7 @@ module.exports = {
   beatlesData,
   WorldWarTwoData,
   WorldWarOneData,
+  theColdWarData,
+  ComediesData,
+  thrillersData,
 };
