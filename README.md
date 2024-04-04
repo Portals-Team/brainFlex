@@ -58,6 +58,8 @@ Application state is managed with [Redux Toolkit](https://redux-toolkit.js.org/)
 
 [Less](https://lesscss.org/) is used as the CSS preprocessor.
 
+# Capstone Project
+
 Our project is a daily quiz game designed to blend learning with entertainment, transforming education into an engaging and fun experience. At its core, the game invites users to select from a wide array of topics—from Harry Potter to Beethoven, to Hockey—and tailors daily quizzes to these preferences. It features a unique picture-revealing quiz format, where images are gradually unblurred and word answers unveiled letter by letter, all based on the player's correct responses to a series of questions. This method not only boosts recall and learning but also introduces an element of mystery and discovery.
 
 Players are motivated to improve through a dynamic system of scoring and ranking, designed to foster growth and reward progress with increasingly challenging content. Moreover, the game enriches the learning experience by providing insightful fun facts with each answered question.
