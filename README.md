@@ -67,3 +67,5 @@ Our goal is to create a platform where learning is seamlessly integrated with ga
 App diagram:
 
 Backend schema diagram: (https://dbdiagram.io/d/BrainFLEX-schema-66016031ae072629cee22ba9)
+
+Wireframe: (https://app.diagrams.net/#G1Ruo6exV34HW1uCr8I5lOWMJlwSd7eukP#%7B%22pageId%22%3A%22stNXeFv7y3JxxAb2-zd5%22%7D)
