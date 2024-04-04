@@ -102,6 +102,7 @@ export default function GameHome() {
    */
   function submitAnswer(guessWord) {
     console.log("this is the quiz.id: " + quiz?.id);
+    //set solved increases quiz count by one, and makes it so quiz is complete in database
     setSolved(quiz?.id);
     if (isGuessCorrect(guessWord)) {
       updateAggregateScore();
