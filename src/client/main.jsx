@@ -28,8 +28,8 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/account/:id", element: <UserStats /> },
-      { path: "/topics/:id", element: <ChooseTopics /> },
+      { path: "/account/", element: <UserStats /> },
+      { path: "/topics/", element: <ChooseTopics /> },
       { path: "/auth", element: <AuthForm /> },
       { path: "/game/home/", element: <GameHome /> },
       { path: "/game/score/correct", element: <GameScoreCorrect /> },

@@ -30,7 +30,7 @@ export default function Navbar() {
         {token && (
 
           <li className="login">
-          <NavLink className="navLink" to="/account/me">
+          <NavLink className="navLink" to="/account">
             Account
           </NavLink>
         </li>
