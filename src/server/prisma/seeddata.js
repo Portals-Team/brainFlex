@@ -533,35 +533,35 @@ const image_word = [
   {
     topic_word: "Monty Python and the Holy Grail (1975)",
     image_url:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1712260049/History/Nikita-Khrushchev-1960_hrdz61.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712261924/Movies/p629_p_v8_af_ynbaik.jpg",
     topic_id: 13,
     categories_id: 5,
   },
   {
     topic_word: "Ferris Bueller's Day Off",
     image_url:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1712260049/History/Nikita-Khrushchev-1960_hrdz61.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712261873/Movies/Ferris_Bueller_27s_Day_Off_enjoxd.jpg",
     topic_id: 13,
     categories_id: 5,
   },
   {
     topic_word: "Groundhog Day",
     image_url:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1712260049/History/Nikita-Khrushchev-1960_hrdz61.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712261848/Movies/MV5BZWIxNzM5YzQtY2FmMS00Yjc3LWI1ZjUtNGVjMjMzZTIxZTIxXkEyXkFqcGdeQXVyNjU0OTQ0OTY_._V1__wt0kx3.jpg",
     topic_id: 13,
     categories_id: 5,
   },
   {
     topic_word: "Dumb and Dumber",
     image_url:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1712260049/History/Nikita-Khrushchev-1960_hrdz61.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712261908/Movies/MV5BZDQwMjNiMTQtY2UwYy00NjhiLTk0ZWEtZWM5ZWMzNGFjNTVkXkEyXkFqcGdeQXVyMTQxNzMzNDI_._V1_FMjpg_UX1000__rkgctd.jpg",
     topic_id: 13,
     categories_id: 5,
   },
   {
     topic_word: "The Hangover",
     image_url:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1712260049/History/Nikita-Khrushchev-1960_hrdz61.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712261891/Movies/MV5BNGQwZjg5YmYtY2VkNC00NzliLTljYTctNzI5NmU3MjE2ODQzXkEyXkFqcGdeQXVyNzkwMjQ5NzM_._V1__rrdqc8.jpg",
     topic_id: 13,
     categories_id: 5,
   },
