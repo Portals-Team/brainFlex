@@ -114,5 +114,4 @@ export const {
   useUpdateProblemMutation,
   useGetQuestionsQuery,
   useGetImageWordQuery,
-  useIncreaseQuizCountMutation,
 } = gameApi;
