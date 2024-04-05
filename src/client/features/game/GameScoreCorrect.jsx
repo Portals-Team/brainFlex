@@ -16,7 +16,7 @@ import "./game.css";
  * @returns the users score on the game, the amount of quiz questions it takes the user to solve the image word subtracted from the amount of quiz questions.
  */
 const calculateScore = (currentquestion) => {
-  const yourScore = 11 - currentquestion;
+  const yourScore = 12 - currentquestion;
   return yourScore + "/10";
 };
 
