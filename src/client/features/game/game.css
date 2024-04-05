@@ -226,8 +226,10 @@
 #yourAnswer {
   margin-left: 1rem;
 }
+#yourAnswer {
+  color: #5e80a8
+}
 
-#yourAnswer,
 .answerIconCorrect {
   color: rgb(248, 119, 54);
 }
