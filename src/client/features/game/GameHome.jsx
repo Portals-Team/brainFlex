@@ -69,8 +69,29 @@ export default function GameHome() {
     const updatedInput = [...userInput];
     updatedInput[index] = value;
     setUserInput(updatedInput);
-    // itemsRef.current[index + 1].focus();
-  };
+  //   if(numberOfCorrectQuestions === 0)
+  //     itemsRef.current[index+1].focus();
+  //   else if(numberOfCorrectQuestions === 1)
+  //     itemsRef.current[index-1].focus();
+  //   else if(numberOfCorrectQuestions === 2)
+  //     itemsRef.current[index-2].focus();
+  //   else if(numberOfCorrectQuestions === 3)
+  //     itemsRef.current[index-4].focus();
+  //   else if(numberOfCorrectQuestions === 4)
+  //     itemsRef.current[index-5].focus();
+  //   else if(numberOfCorrectQuestions === 5)
+  //     itemsRef.current[index-7].focus();
+  //   else if(numberOfCorrectQuestions === 6)
+  //     itemsRef.current[index-8].focus();
+  //   else if(numberOfCorrectQuestions === 7)
+  //     itemsRef.current[index-10].focus();
+  //   else if(numberOfCorrectQuestions === 8)
+  //     itemsRef.current[index-11].focus();
+  //   else if(numberOfCorrectQuestions === 9)
+  //     itemsRef.current[index-13].focus();
+  //   else if(numberOfCorrectQuestions === 10)
+  //     itemsRef.current[index-14].focus();
+   };
 
   /**
    *
@@ -149,6 +170,7 @@ export default function GameHome() {
 
   return (
     <>
+      <section>Current Question: {currentQuestion}</section>
       <section id="imageContainer">
         <img id="image" className={blurClass} src={image_word?.image_url} />
       </section>
