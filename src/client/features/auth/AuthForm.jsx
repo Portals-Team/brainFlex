@@ -38,7 +38,7 @@ export default function AuthForm() {
     // so we can use a try/catch to handle it.
     try {
       await authMethod(credentials).unwrap();
-      isLogin ? navigate("/account/me") : navigate("/topics/me");
+      isLogin ? navigate("/account/") : navigate("/topics/");
     } catch (err) {
       console.error(err);
     }

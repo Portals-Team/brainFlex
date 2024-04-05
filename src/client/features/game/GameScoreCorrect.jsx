@@ -75,7 +75,7 @@ export default function GameScoreCorrect() {
         </div>
       </article>
       <button id="buttonGame">
-        <Link id="link" to="/account/:id">
+        <Link id="link" to="/account/">
           HOME
         </Link>
       </button>

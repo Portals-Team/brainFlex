@@ -28,7 +28,7 @@ export default function Home() {
         <p id="homePageTitleTag">your daily quiz workout</p>
         <section id="buttonSectionHome">
           {token ? (
-            <Link to={`/pickquiz/${id}`}>
+            <Link to={`/pickquiz/`}>
               <button className="buttonHome">Play Game!</button>
             </Link>
           ) : (
