@@ -135,7 +135,7 @@ export default function Quiz() {
         <form onSubmit={pickAnswer}>
           <button id="submitAnswerButton">Submit Answer</button>
         </form>
-        <NavLink to={`/game/home/${id}`}>
+        <NavLink to={`/game/home`}>
           <button id="backHomeButton">Back To Game Home</button>
         </NavLink>
       </section>
