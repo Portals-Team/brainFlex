@@ -27,7 +27,7 @@ export default function Footer() {
           <Link to="/">home</Link>
         </p>
         <p className="footerNavElement">
-          <Link to="/account/:id">account</Link>
+          <Link to="/account/">account</Link>
         </p>
         <p className="footerNavElement">
           {token ? (

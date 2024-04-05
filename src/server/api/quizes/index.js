@@ -118,7 +118,7 @@ game.patch("/:id", async (req, res, next) => {
       });
       res.json(updatedQuizCompleted);
     }
-    if (currentQuiz.current_question < 10) {
+    if (currentQuiz.current_question < 10 && !solved) {
       const updatedQuizQuestions = await prisma.quiz.update({
         where: {
           id: +id,
