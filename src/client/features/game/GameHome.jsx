@@ -4,17 +4,17 @@ import {
   useUpdatedUserMutation,
   useUpdateQuizQuestionSolvedMutation,
 } from "../game/gameSlice";
-import {useGetMeQuery} from "../account/accountSlice"
+import { useGetMeQuery } from "../account/accountSlice";
 import { Link, useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
 
 import "./game.css";
 
 const isThereAQuiz = () => {
-  const {data: me} = useGetMeQuery();
+  const { data: me } = useGetMeQuery();
   let foundQuizToday = false;
-//isfoundquizcompleted is if it finds a quiz for that user today, is that quiz completed or not
-let todaysQuiz = null;
+  //isfoundquizcompleted is if it finds a quiz for that user today, is that quiz completed or not
+  let todaysQuiz = null;
   //this function looks at all of a users quizzes, then for each of them takes the datetime of that quiz
   // and converts it to month date year format, then compares it to todays date in the same format
   // it then for each of the quizes if it finds a quiz, sets foundquiz today to true, and then after that sees if that quiz is completed.
@@ -34,8 +34,7 @@ let todaysQuiz = null;
   }
 
   return todaysQuiz;
-
-}
+};
 
 /**
  *
@@ -69,29 +68,29 @@ export default function GameHome() {
     const updatedInput = [...userInput];
     updatedInput[index] = value;
     setUserInput(updatedInput);
-  //   if(numberOfCorrectQuestions === 0)
-  //     itemsRef.current[index+1].focus();
-  //   else if(numberOfCorrectQuestions === 1)
-  //     itemsRef.current[index-1].focus();
-  //   else if(numberOfCorrectQuestions === 2)
-  //     itemsRef.current[index-2].focus();
-  //   else if(numberOfCorrectQuestions === 3)
-  //     itemsRef.current[index-4].focus();
-  //   else if(numberOfCorrectQuestions === 4)
-  //     itemsRef.current[index-5].focus();
-  //   else if(numberOfCorrectQuestions === 5)
-  //     itemsRef.current[index-7].focus();
-  //   else if(numberOfCorrectQuestions === 6)
-  //     itemsRef.current[index-8].focus();
-  //   else if(numberOfCorrectQuestions === 7)
-  //     itemsRef.current[index-10].focus();
-  //   else if(numberOfCorrectQuestions === 8)
-  //     itemsRef.current[index-11].focus();
-  //   else if(numberOfCorrectQuestions === 9)
-  //     itemsRef.current[index-13].focus();
-  //   else if(numberOfCorrectQuestions === 10)
-  //     itemsRef.current[index-14].focus();
-   };
+    //   if(numberOfCorrectQuestions === 0)
+    //     itemsRef.current[index+1].focus();
+    //   else if(numberOfCorrectQuestions === 1)
+    //     itemsRef.current[index-1].focus();
+    //   else if(numberOfCorrectQuestions === 2)
+    //     itemsRef.current[index-2].focus();
+    //   else if(numberOfCorrectQuestions === 3)
+    //     itemsRef.current[index-4].focus();
+    //   else if(numberOfCorrectQuestions === 4)
+    //     itemsRef.current[index-5].focus();
+    //   else if(numberOfCorrectQuestions === 5)
+    //     itemsRef.current[index-7].focus();
+    //   else if(numberOfCorrectQuestions === 6)
+    //     itemsRef.current[index-8].focus();
+    //   else if(numberOfCorrectQuestions === 7)
+    //     itemsRef.current[index-10].focus();
+    //   else if(numberOfCorrectQuestions === 8)
+    //     itemsRef.current[index-11].focus();
+    //   else if(numberOfCorrectQuestions === 9)
+    //     itemsRef.current[index-13].focus();
+    //   else if(numberOfCorrectQuestions === 10)
+    //     itemsRef.current[index-14].focus();
+  };
 
   /**
    *
@@ -169,7 +168,9 @@ export default function GameHome() {
 
   return (
     <>
-      <section>Current Question: {currentQuestion}</section>
+      <section id="currentQuestion">
+        Current Question: {currentQuestion}
+      </section>
       <section id="imageContainer">
         <img id="image" className={blurClass} src={image_word?.image_url} />
       </section>
@@ -204,11 +205,6 @@ export default function GameHome() {
         </form>
       </section>
       <section id="gameHomeButtons">
-        <form onSubmit={(e) => submitAnswer(userInput.join(""))}>
-          <button id="button" type="submit">
-            Solve
-          </button>
-        </form>
         {!quiz?.quiz_completed && (
           <button id="button">
             <Link id="link" to={`/game/quiz`}>
@@ -216,6 +212,11 @@ export default function GameHome() {
             </Link>
           </button>
         )}
+        <form onSubmit={(e) => submitAnswer(userInput.join(""))}>
+          <button id="button" type="submit">
+            Solve
+          </button>
+        </form>
       </section>
     </>
   );
