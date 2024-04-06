@@ -91,6 +91,7 @@
 #revealedLetter {
   background-color: rgb(20, 144, 218);
   color: white;
+  padding-top: .3rem;
 }
 
 #gameHomeButtons {
@@ -162,7 +163,6 @@
   margin: 1rem;
   display: flex;
   align-items: flex-start;
-  /*text-align: center;*/
   justify-content: center;
 }
 
