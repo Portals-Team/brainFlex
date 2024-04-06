@@ -127,12 +127,12 @@ export default function Quiz() {
         </div>
       </section>
       <section id="buttonSection">
-        <form onSubmit={pickAnswer}>
-          <button id="submitAnswerButton">Submit Answer</button>
-        </form>
         <NavLink to="/game/home">
           <button id="backHomeButton">Back To Game Home</button>
         </NavLink>
+        <form onSubmit={pickAnswer}>
+          <button id="submitAnswerButton">Submit Answer</button>
+        </form>
       </section>
     </>
   );

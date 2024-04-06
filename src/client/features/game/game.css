@@ -162,7 +162,7 @@
   margin: 1rem;
   display: flex;
   align-items: flex-start;
-  text-align: center;
+  /*text-align: center;*/
   justify-content: center;
 }
 
