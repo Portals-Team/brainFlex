@@ -33,13 +33,13 @@ export default function Footer() {
           {token ? (
             <li className="footerLoginElement">
               <a className="footerLogin" onClick={handleLogout}>
-                Log Out
+                log in
               </a>
             </li>
           ) : (
             <li className="footerLoginElement">
               <NavLink className="footerLogin" to="/auth">
-                Log In
+                log out
               </NavLink>
             </li>
           )}
