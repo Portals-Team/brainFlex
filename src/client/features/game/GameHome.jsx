@@ -207,9 +207,6 @@ export default function GameHome() {
       <section id="gameHomeButtons">
         {!quiz?.quiz_completed && (
           <button id="button">
-            {/*<Link id="link" to={`/game/quiz`}>
-              Ready for Next Question?
-        </Link>*/}
             <Link id="link" to={`/game/quiz`}>
               {currentQuestion === 1
                 ? "Ready for Your First Question?"
