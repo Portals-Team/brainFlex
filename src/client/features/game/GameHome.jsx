@@ -39,11 +39,7 @@ export default function GameHome() {
   const todaysQuiz = isThereAQuiz();
   const id = todaysQuiz;
   const { data: quiz } = useGetGameQuery(+id);
-  let quizID;
-  setTimeout(() => {
-    quizID = quiz?.image_Word_id;
-    const { data: image_word } = useGetImageWordQuery(quizID);
-  },10000)
+  const { data: image_word } = useGetImageWordQuery(quiz?.image_Word_id);
   const numberOfCorrectQuestions = numberOfAnswersCorrect();
   const navigate = useNavigate();
   const [updateUser] = useUpdatedUserMutation();
