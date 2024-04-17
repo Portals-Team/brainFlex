@@ -52,7 +52,7 @@ export default function GameHome() {
   const [userInput, setUserInput] = useState(Array(gameWord?.length).fill(""));
   const [setSolved] = useUpdateQuizQuestionSolvedMutation();
 
-  // const itemsRef = useRef([]);
+  // const itemsRef = useRef([]); this is to help autofocusing the next input block.
 
   /**
    * @description handleInputChange sets specific values of user inputted strings for the word guess
