@@ -20,7 +20,7 @@ export default function HowToPlay3() {
         <div className="imageContainerTutorial">
           <img
             className="tutorialImage"
-            src="https://res.cloudinary.com/dzpne110u/image/upload/v1712155683/tutorialPage3_nppnah.png"
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1713042631/tutorial3_ocqtqy.png"
             alt="image shows how to pick a topic and what the starting game page looks like"
           />
         </div>

@@ -33,13 +33,13 @@ export default function Footer() {
           {token ? (
             <li className="footerLoginElement">
               <a className="footerLogin" onClick={handleLogout}>
-                Log Out
+                log out
               </a>
             </li>
           ) : (
             <li className="footerLoginElement">
               <NavLink className="footerLogin" to="/auth">
-                Log In
+                log in
               </NavLink>
             </li>
           )}
@@ -48,7 +48,6 @@ export default function Footer() {
       <Link to="howtoplay/1">
         <h3 id="howToPlay">how to play </h3>
       </Link>
-      {/*<div id="creators">*/}
       <p className="creators">creators: </p>
       <div id="creatorNames">
         <a

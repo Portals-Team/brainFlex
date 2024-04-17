@@ -21,7 +21,7 @@ export default function HowToPlay2() {
         <div className="imageContainerTutorial">
           <img
             className="tutorialImage"
-            src="https://res.cloudinary.com/dzpne110u/image/upload/v1712152717/tutorialPage2_jkg4rg.png"
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1713042616/tutorial2_quqcqc.png"
             alt="image shows the quiz question page and how answering a question correctly reveals more letters to the answer word"
           />
         </div>

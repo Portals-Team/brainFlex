@@ -3,6 +3,7 @@
   margin: 2rem auto 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
+  margin-top: .5rem;
   border-radius: 25px;
   overflow: hidden;
   filter: drop-shadow(0px 0px 0.1rem #62a3ee);
@@ -90,6 +91,7 @@
 #revealedLetter {
   background-color: rgb(20, 144, 218);
   color: white;
+  padding-top: .3rem;
 }
 
 #gameHomeButtons {
@@ -161,7 +163,6 @@
   margin: 1rem;
   display: flex;
   align-items: flex-start;
-  text-align: center;
   justify-content: center;
 }
 
@@ -201,12 +202,17 @@
   margin-left: 0.5rem;
 }
 
-#questionAnswers {
+#questionAnswers, #currentQuestion {
   color: #5e80a8;
   font-size: 1.3rem;
   margin-left: 1rem;
   margin-bottom: 1rem;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#currentQuestion {
+  font-size: 1rem;
+  margin-bottom: 0;
 }
 
 .questionAnswer {
