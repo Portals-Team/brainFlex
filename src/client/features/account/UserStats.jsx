@@ -28,7 +28,6 @@ function TopicCard({ topic }) {
     const randomImageIndex = Math.floor(
       Math.random() * topicInformation.Image_Word.length
     );
-    console.log(topicInformation.Image_Word[randomImageIndex].id);
     return topicInformation.Image_Word[randomImageIndex].id;
   }
 
@@ -71,12 +70,10 @@ function TopicCard({ topic }) {
         questionsarray: arrayOfTopics,
         image_Word_Id: image_topic_id,
       });
-      console.log(newQuiz);
       //found quiz today is if there is a quiz for that user that exists today
 
       //isfoundquizcompleted is if it finds a quiz for that user today, is that quiz completed or not
       //if there is a quiz that already exists for today, then this is the id of that quiz
-
       navigate(`/game/home/`);
     } catch (error) {
       console.log(error);
@@ -141,7 +138,7 @@ export default function UserStats() {
           if (me?.quizzes[i].quiz_completed === true) {
             isFoundQuizCompleted = true;
           } else {
-            false;
+            isFoundQuizCompleted = false;
           }
         }
       }

@@ -25,11 +25,6 @@ const isThereAQuiz = () => {
     if (datechanged === Date().split(" ").slice(1, 4).join(" ")) {
       foundQuizToday = true;
       todaysQuiz = me?.quizzes[i].id;
-      if (me?.quizzes[i].quiz_completed === true) {
-        isFoundQuizCompleted = true;
-      } else {
-        false;
-      }
     }
   }
 
@@ -44,7 +39,11 @@ export default function GameHome() {
   const todaysQuiz = isThereAQuiz();
   const id = todaysQuiz;
   const { data: quiz } = useGetGameQuery(+id);
-  const { data: image_word } = useGetImageWordQuery(quiz?.image_Word_id);
+  let quizID;
+  setTimeout(() => {
+    quizID = quiz?.image_Word_id;
+    const { data: image_word } = useGetImageWordQuery(quizID);
+  },10000)
   const numberOfCorrectQuestions = numberOfAnswersCorrect();
   const navigate = useNavigate();
   const [updateUser] = useUpdatedUserMutation();
