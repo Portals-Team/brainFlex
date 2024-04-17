@@ -68,7 +68,7 @@ function TopicCard({ topic }) {
         questionsarray: arrayOfTopics,
         image_Word_Id: image_topic_id,
       });
-      navigate(`/game/home/${newQuiz.data.id}`);
+      navigate(`/game/home/`);
     } catch (error) {
       console.log(error);
     }

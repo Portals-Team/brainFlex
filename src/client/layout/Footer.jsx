@@ -26,9 +26,10 @@ export default function Footer() {
         <p className="footerNavElement">
           <Link to="/">home</Link>
         </p>
-        <p className="footerNavElement">
+        {token && (<p className="footerNavElement">
           <Link to="/account/">account</Link>
-        </p>
+        </p> )
+        }
         <p className="footerNavElement">
           {token ? (
             <li className="footerLoginElement">

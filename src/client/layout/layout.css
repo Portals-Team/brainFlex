@@ -57,6 +57,12 @@
   margin-bottom: 0.5rem;
 }
 
+.footerNavElement a,
+.footerNavElement a:visited {
+  color: white;
+  text-decoration: none;
+}
+
 .footerLoginElement {
   list-style-type: none;
   margin: 0;
@@ -81,10 +87,17 @@
 
 .creators,
 .creatorsMiddle {
+  color: white;
   text-align: center;
   font-size: 0.7rem;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 0.5rem;
+}
+
+.creators a,
+.creators a:visited {
+  color: white;
+  text-decoration: none;
 }
 
 .creatorsMiddle {

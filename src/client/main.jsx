@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       { path: "/game/score/incorrect", element: <GameScoreIncorrect /> },
       { path: "/game/quiz", element: <Quiz /> },
       { path: "/game/quiz/answer", element: <QuizAnswer /> },
-      { path: "/pickquiz/:id", element: <PickQuizPage /> },
+      { path: "/pickquiz/", element: <PickQuizPage /> },
       { path: "/howtoplay/1", element: <HowToPlay1 /> },
       { path: "/howtoplay/2", element: <HowToPlay2 /> },
       { path: "/howtoplay/3", element: <HowToPlay3 /> },
