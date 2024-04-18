@@ -86,7 +86,9 @@ export default function AuthForm() {
         {altCopy}
       </a>
 
-      {(loginLoading || registerLoading) && <p>Please wait...</p>}
+      {(loginLoading || registerLoading) && (
+        <p id="waitMessage">Please wait...</p>
+      )}
       {loginError && <p role="alert">{loginError}</p>}
       {registerError && <p role="alert">{registerError}</p>}
     </>
