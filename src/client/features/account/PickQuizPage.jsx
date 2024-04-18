@@ -130,12 +130,14 @@ export default function PickQuizPage() {
     if (foundQuizToday === true) {
       if (isFoundQuizCompleted === true) {
         return (
-          <>
-            <p className="quizMessage">
+          <section id="pickQuizMessageSection">
+            <p className="pickQuizMessage">
               You have already completed a quiz today.{" "}
             </p>
-            <p className="quizMessage">Come back tomorrow for a new quiz!</p>
-          </>
+            <p className="pickQuizMessage">
+              Come back tomorrow for a new quiz!
+            </p>
+          </section>
         );
       } else {
         let currentQuiz = user?.quizzes.filter(
