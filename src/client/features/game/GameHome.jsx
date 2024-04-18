@@ -171,7 +171,7 @@ export default function GameHome() {
       </section>
       <section>
         <p id="answerGridTitle">Fill in the Empty Letters to Solve</p>
-        <form>
+        <form id="answerGridContainer">
           <div id="answerGrid">
             {gameWord?.split("").map((letter, index) => {
               const revealedCount = Math.round(

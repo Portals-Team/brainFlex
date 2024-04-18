@@ -60,6 +60,12 @@
   filter: blur(0px);
 }
 
+#answerGridContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 #answerGridTitle {
   font-size: 1.5rem;
   color: rgb(248, 119, 54);
@@ -86,6 +92,17 @@
   margin: 0.1rem;
   box-sizing: border-box;
   border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  #answerGridContainer {
+    margin-left: 1rem;
+    margin-right: 1rem; 
+  }
+  #userLetter, #revealedLetter {
+    width: 25px; 
+    height: 25px;
+  }
 }
 
 #revealedLetter {
