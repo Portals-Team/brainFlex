@@ -104,6 +104,32 @@ function UserScores({ user }) {
   );
 }
 
+function distanceToNextRank(userAggregateScore) {
+  let rankRequirements = [0, 50, 100, 200, 500, 1000, Infinity];
+  for (let i = 0; i < rankRequirements.length; i++) {
+    if (userAggregateScore >= 1000) {
+      return (
+        <>
+          <p>You are at the highest rank! Congratulations!</p>
+        </>
+      );
+    }
+
+    if (
+      userAggregateScore >= rankRequirements[i] &&
+      userAggregateScore < rankRequirements[i + 1]
+    ) {
+      return (
+        <>
+          <p>
+            Experience: {userAggregateScore}/{rankRequirements[i + 1]}
+          </p>
+        </>
+      );
+    }
+  }
+}
+
 function displayRank(userAggregateScore) {
   if (userAggregateScore >= 1000) {
     return (
@@ -279,6 +305,7 @@ export default function UserStats() {
           </div>
         </section>
         <section>{displayRank(me?.aggregate_score)}</section>
+        <section>{distanceToNextRank(me?.aggregate_score)}</section>
       </article>
     </>
   );
