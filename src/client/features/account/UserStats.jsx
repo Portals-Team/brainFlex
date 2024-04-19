@@ -110,7 +110,9 @@ function distanceToNextRank(userAggregateScore) {
     if (userAggregateScore >= 1000) {
       return (
         <>
-          <p>You are at the highest rank! Congratulations!</p>
+          <p className="levelStyling">
+            You are at the highest rank! Congratulations!
+          </p>
         </>
       );
     }
@@ -121,7 +123,8 @@ function distanceToNextRank(userAggregateScore) {
     ) {
       return (
         <>
-          <p>
+          <h3 id="rankHeader">Your Rank:</h3>
+          <p className="levelStyling">
             Experience: {userAggregateScore}/{rankRequirements[i + 1]}
           </p>
         </>
@@ -133,49 +136,67 @@ function distanceToNextRank(userAggregateScore) {
 function displayRank(userAggregateScore) {
   if (userAggregateScore >= 1000) {
     return (
-      <>
-        <p>Current rank: Master</p>
-        <img src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455594/Ranking/main-qimg-a0db46609f626689cceb06b6640a3f77-lq_mrvria.jpg"></img>
-      </>
+      <section id="displayRankSection">
+        <p className="levelStyling">Current rank: Master</p>
+        <img
+          className="rankImage"
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455594/Ranking/main-qimg-a0db46609f626689cceb06b6640a3f77-lq_mrvria.jpg"
+        ></img>
+      </section>
     );
   }
   if (userAggregateScore >= 500) {
     return (
       <>
-        <p>Current rank: Diamond</p>
-        <img src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455544/Ranking/supersonic-diamond-rank-icon-as-requested-v0-1sj9vx0855591_iwxktg.png"></img>
+        <p className="levelStyling">Current rank: Diamond</p>
+        <img
+          className="rankImage"
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455544/Ranking/supersonic-diamond-rank-icon-as-requested-v0-1sj9vx0855591_iwxktg.png"
+        ></img>
       </>
     );
   }
   if (userAggregateScore >= 200) {
     return (
       <>
-        <p>Current rank: PLatinum</p>
-        <img src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455526/Ranking/0c8df63e7f721ff427259481285a7e9c8bed3627_00_lzcl7s.jpg"></img>
+        <p className="levelStyling">Current rank: PLatinum</p>
+        <img
+          className="rankImage"
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455526/Ranking/0c8df63e7f721ff427259481285a7e9c8bed3627_00_lzcl7s.jpg"
+        ></img>
       </>
     );
   }
   if (userAggregateScore >= 100) {
     return (
       <>
-        <p>Current rank: Gold</p>
-        <img src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455490/Ranking/flat_750x_075_f-pad_750x1000_f8f8f8_mq8fvp.jpg"></img>
+        <p className="levelStyling">Current rank: Gold</p>
+        <img
+          className="rankImage"
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455490/Ranking/flat_750x_075_f-pad_750x1000_f8f8f8_mq8fvp.jpg"
+        ></img>
       </>
     );
   }
   if (userAggregateScore >= 50) {
     return (
       <>
-        <p>Current rank: Silver</p>
-        <img src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455473/Ranking/bg_f8f8f8-flat_750x_075_f-pad_750x1000_f8f8f8_cviqmi.jpg"></img>
+        <p className="levelStyling">Current rank: Silver</p>
+        <img
+          className="rankImage"
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455473/Ranking/bg_f8f8f8-flat_750x_075_f-pad_750x1000_f8f8f8_cviqmi.jpg"
+        ></img>
       </>
     );
   }
   if (userAggregateScore >= 0) {
     return (
       <>
-        <p>Current rank: Bronze</p>
-        <img src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455460/Ranking/flat_750x_075_f-pad_750x1000_f8f8f8_znl7sa.jpg"></img>
+        <p className="levelStyling">Current rank: Bronze</p>
+        <img
+          className="rankImage"
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455460/Ranking/flat_750x_075_f-pad_750x1000_f8f8f8_znl7sa.jpg"
+        ></img>
       </>
     );
   }
@@ -303,9 +324,11 @@ export default function UserStats() {
                   .map((user) => <UserScores key={user?.id} user={user} />)}
             </ul>
           </div>
+          <section id="rankContainer">
+            <div>{distanceToNextRank(me?.aggregate_score)}</div>
+            <div id="displayRank">{displayRank(me?.aggregate_score)}</div>
+          </section>
         </section>
-        <section>{displayRank(me?.aggregate_score)}</section>
-        <section>{distanceToNextRank(me?.aggregate_score)}</section>
       </article>
     </>
   );
