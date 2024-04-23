@@ -107,10 +107,16 @@
   color: #5e80a8;
 }
 
+#checkBoxContainer {
+  display: flex;
+  flex-direction: column;
+  
+}
+
 #topicsNames {
+  display: block;
   font-size: 1rem;
-  margin-bottom: 0.2rem;
-  padding: 1rem;
+padding: .5rem
 }
 
 #checkbox {
