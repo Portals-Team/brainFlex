@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {
   useGetCategoriesQuery,
   useUpdateUserTopicsMutation,
-  useGetMeQuery
+  useGetMeQuery,
 } from "./accountSlice";
 import "./account.css";
 
@@ -15,7 +15,7 @@ export default function ChooseTopics() {
   const { data: categories } = useGetCategoriesQuery();
   const [selectedTopics, setSelectedTopics] = useState([]);
   const [updateUserTopics] = useUpdateUserTopicsMutation();
-  const {data: me} = useGetMeQuery();
+  const { data: me } = useGetMeQuery();
   const id = me?.id;
 
   /**
@@ -61,7 +61,7 @@ export default function ChooseTopics() {
     return (
       <section id="categoryCard">
         <h3 id="categoryName">{category.name}</h3>
-        <ul>
+        <ul id="checkBoxContainer">
           {category.Category_topics.map(({ topic }) => (
             <li key={topic.id}>
               <label id="topicsNames">
