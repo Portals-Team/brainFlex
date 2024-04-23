@@ -94,6 +94,7 @@ const accountApi = api.injectEndpoints({
           image_Word_Id: payload.image_Word_Id,
         },
       }),
+      invalidatesTags: ["User"]
     }),
   }),
 });

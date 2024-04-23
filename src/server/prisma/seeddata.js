@@ -600,6 +600,41 @@ const image_word = [
     topic_id: 14,
     categories_id: 5,
   },
+  {
+    topic_word: "Avatar",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712267587/Movies/MV5BZDA0OGQxNTItMDZkMC00N2UyLTg3MzMtYTJmNjg3Nzk5MzRiXkEyXkFqcGdeQXVyMjUzOTY1NTc_._V1_FMjpg_UX1000__qwtha6.jpg",
+    topic_id: 15,
+    categories_id: 5,
+  },
+  {
+    topic_word: "Inception",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712267570/Movies/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw_._V1__znzm0m.jpg",
+    topic_id: 15,
+    categories_id: 5,
+  },
+  {
+    topic_word: "Alien",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712267557/Movies/7-alien-movie-poster-alien-1979-jean-darmel_teqmf4.jpg",
+    topic_id: 15,
+    categories_id: 5,
+  },
+  {
+    topic_word: "Matrix",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712267520/Movies/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY_._V1__mab7p3.jpg",
+    topic_id: 15,
+    categories_id: 5,
+  },
+  {
+    topic_word: "Blade Runner",
+    image_url:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1712267504/Movies/Blade_Runner__281982_poster_29_r2ekbl.png",
+    topic_id: 15,
+    categories_id: 5,
+  },
 ];
 
 module.exports = { users, topics, categories, image_word };
