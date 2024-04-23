@@ -55,7 +55,7 @@ export default function GameScoreIncorrect() {
         </div>
       </article>
       <button id="buttonGame">
-        <Link id="link" to="/account/id:">
+        <Link id="link" to="/account/id">
           HOME
         </Link>
       </button>

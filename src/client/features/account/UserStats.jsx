@@ -159,7 +159,7 @@ function displayRank(userAggregateScore) {
   if (userAggregateScore >= 200) {
     return (
       <>
-        <p className="levelStyling">Current rank: PLatinum</p>
+        <p className="levelStyling">Current rank: Platinum</p>
         <img
           className="rankImage"
           src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455526/Ranking/0c8df63e7f721ff427259481285a7e9c8bed3627_00_lzcl7s.jpg"
