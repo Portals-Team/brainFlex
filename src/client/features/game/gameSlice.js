@@ -12,7 +12,7 @@ const gameApi = api.injectEndpoints({
         method: "PATCH",
         body: { quizScore: quizScore },
       }),
-      //invalidatesTags: ["users"],
+      invalidatesTags: ["User"],
       // transformResponse: (response) => response.users,
     }),
 

@@ -35,11 +35,11 @@ let todaysQuiz = null;
     if (datechanged === Date().split(" ").slice(1, 4).join(" ")) {
       foundQuizToday = true;
       todaysQuiz = me?.quizzes[i].id;
-      if (me?.quizzes[i].quiz_completed === true) {
-        isFoundQuizCompleted = true;
-      } else {
-        false;
-      }
+      // if (me?.quizzes[i].quiz_completed === true) {
+      //   isFoundQuizCompleted = true;
+      // } else {
+      //   false;
+      // }
     }
   }
 
