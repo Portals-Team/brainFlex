@@ -79,7 +79,7 @@ const gameApi = api.injectEndpoints({
         method: "PATCH",
         body: { user_answer: payload.user_answer },
       }),
-      invalidatesTags: ["quizes"],
+      //invalidatesTags: ["quizes"],
     }),
 
     /**
