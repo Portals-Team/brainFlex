@@ -4,7 +4,7 @@ const express = require("express");
 const morgan = require("morgan");
 const { createServer: createViteServer } = require("vite");
 
-const PORT = process.env.PORT ?? 3000;
+/*const PORT = process.env.PORT ?? 3000;*/
 
 /**
  * The app has to be created in a separate async function
@@ -34,7 +34,7 @@ const createApp = async () => {
   } else {
     // Pulled from https://vitejs.dev/config/server-options.html#server-middlewaremode
     const vite = await createViteServer({
-      server: { middlewareMode: true }
+      server: { middlewareMode: true },
     });
 
     app.use(vite.middlewares);
