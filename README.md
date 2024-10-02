@@ -75,3 +75,5 @@ Our goal is to create a platform where learning is seamlessly integrated with ga
 ![Intial Game Wireframe](sketches/gameWireFrame.jpg)
 
 This is a test, test, test
+
+This is a test, test, test part 2
